@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Stellar Properties in the Presence of Correlated Noise</title>
+
+<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/theme/default.css">
+
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+    <section>
+    <h1>Stellar Properties in the Presence of Correlated Noise</h1>
+    <h3>Using covariance matrices to cope with systematic errors</h3>
+    <p>by Ian Czekala</p>
+    <p>Harvard CfA, iczekala@cfa.harvard.edu</p>
+    </section>
+
+    <section>
+    <h3> Overview: Determining the properties of stars </h3>
+    Graphical overview of how this works.
+
+    </section>
+    <section>
+        <section>
+        <h3> Fitting synthetic spectra </h3>
+        <img style="float: left" src="lineclasses0.png" />
+        Any spectrum whose line spread function (LSF) is properly sampled will have correlated pixels. This means that any fit to spectra should take the correlated noise into account.
+        </section>
+
+        <section>
+        Class I errors
+        </section>
+
+        <section>
+        Class II errors
+        </section>
+
+        <section>
+        Class III errors: these likely contain <strong>the most</strong> information about stellar properties.
+        </section>
+
+        </section>
+
+    <section>
+    <h3>Continuum normalization</h3>
+    Depending on what kind of spectrum you may be using, it's likely that there will be some sort of continuum mis-match. Our method of dealing with this is to multiply by a Chebyshev polynomial.
+    </section>
+
+    <section>
+    <h3>Covariance kernels</h3>
+    <p>
+    Matern kernel for global covariance structure
+    </p>
+    $$ k_{\nu = 3/2}(r, a, l) = a \left(1 + \frac{\sqrt{3} r}{l} \right ) \exp \left (- \frac{\sqrt{3} r}{l} \right ) $$
+    <p>
+    tapered for compact support with a Haan window
+    </p>
+
+    $$ w(r) = 0.5 + 0.5 \cos \left( \frac{\pi r}{r_0} \right) $$
+    </section>
+
+    <section>
+        <h3>What to do with the bad regions of the spectrum</h3>
+    </section>
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+center: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+
+// Parallax scrolling
+// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+// parallaxBackgroundSize: '2100px 900px',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: 'plugin/math/math.js', async: true}
+]
+});
+
+</script>
+</body>
+</html>
