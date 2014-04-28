@@ -86,6 +86,7 @@ p.eighty
             <li>Residual noise is correlated across ~few pixels</li>
         </ul>
         </div>
+        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
         </section>
         <section>
         <h2>Missing lines</h2>
@@ -100,6 +101,7 @@ p.eighty
             <li>Incorrect atomic constants</li>
         </ul>
         </div>
+        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
         </section>
 
         <section>
@@ -164,6 +166,7 @@ p.eighty
         <h3>Recover the line parameters</h3>
         <img width=550 src="triangle.png" />
         <p class="eighty">Courtesy <a href="https://github.com/dfm/emcee">dfm/emcee</a> &#38; <a href="https://github.com/dfm/triangle.py">dfm/triangle</a></p>
+        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
         </section>
 
         <section>
@@ -173,23 +176,25 @@ p.eighty
         $h$ is a "bandwidth." If $h$ is small, then there will be high-frequency structure. If $h$ is large, then only low-frequency structure will remain.</p>
         </div>
         <div style="margin-left:auto;margin-right:auto">
-        <img src="mann.svg" class="left" width=400 style="background-color:white" /> 
+        <div width=400 style="float:left">
+        <img src="mann.svg" width=400 style="background-color:white" /> 
+        <p class="eighty">Mann et al. 2013</p>
+        </div>
         <img src="mdwarf_matrix.png" width=250 class="left fragment" width=450 />
         <img src="mdwarf.png" width=250 class="left fragment" width=450 />
         </div>
-
-        </section>
-        <section>
-        <h2>Cycle of improvement</h2>
-        <ol>
-        <li>Fit many stellar spectra</li>    
-        <li>Learn the covariance structure, including bad regions</li>    
-        <li>Use the covariances to regress out what the model <em>should</em> be</li>    
-        </ol>
-        <p class="pad">These improvements to the models could be used to inform the modellers what might need improvement.</p>
-        <p class="pad">If you're impatient/a DIY-er, you can also correct the models yourself by "inferring" the correct synthetic spectrum in this region.</p>
         </section>
 
+    </section>
+    <section>
+    <h2>Cycle of improvement</h2>
+    <ol>
+    <li>Fit many stellar spectra</li>    
+    <li>Learn the covariance structure, including bad regions</li>    
+    <li>Use the covariances to regress out what the model <em>should</em> be</li>    
+    </ol>
+    <p class="pad">These improvements to the models could be used to inform the modellers what might need improvement.</p>
+    <p class="pad">If you're impatient/a DIY-er, you can also correct the models yourself by "inferring" the correct synthetic spectrum in this region.</p>
     </section>
 
     <section>
