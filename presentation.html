@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Stellar Properties in the Presence of Correlated Noise</title>
+
+<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/theme/default.css">
+
+<style>
+img.left
+{
+float:left;
+}
+
+img.right
+{
+float:right;
+}
+
+.right
+{
+float:right;
+}
+
+p.pad
+{
+padding:1em;
+}
+
+p.eighty
+{
+    font-size:80%;
+}
+
+</style>
+
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+    <section>
+    <h1>Stellar Spectroscopy with Correlated Noise</h1>
+    <p>by Ian Czekala</p>
+    <p>Harvard CfA</p>
+    <p>iczekala@cfa.harvard.edu</p>
+    </section>
+
+    <section>
+    <h2> Desire: stellar properites</h2>
+    <p>stellar parameters = $T_{\rm eff}$, $\log g$, $[{\rm Fe}/{\rm H}]$</p>
+    <ol>
+        <li class="fragment">Draw a spectrum from a grid of pre-computed synthetic spectra from PHOENIX, Kurucz, and others</li>
+        <li class="fragment">Rotationally broaden, Doppler shift, convolve with instrumental line spread function (LSF), downsample to match data</li>
+        <li class="fragment"><em>compare</em> model to data and estimate which stellar parameters fit best</li>
+        <li class="fragment"><p style="color:green;font-size:150%"><img style="vertical-align:middle" src="dollar.jpg" /> <em>profit</em> <img style="vertical-align:middle" src="dollar.jpg" /> </p></li>
+    </ol>
+
+    <!--  
+        Possibilities of stellar inference, MOOG, SME, synthesis. Synthesis is slow.
+    -->
+
+    </section>
+
+    <section>
+        <section>
+        <h2>Curb your enthusiasm</h2>
+        <p>The comparison step is tricky</p>
+        <ol>
+            <li class="fragment">Any properly sampled line spread function (LSF) will have correlated pixels</li>
+            <li class="fragment">Synthetic stellar spectra are <em>amazing</em> but not <em>perfect</em></li>
+        </ol>
+        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
+        </p>
+
+        <!-- each of these subslides should have the graphic in the same position -->
+        </section>
+        <section>
+        <h2>If everything works</h2>
+        <div style="float:left;width:55%">
+        <img src="class0.png" width=400 />
+        </div>
+        <div style="float:left;width:45%">
+        <ul>
+            <li>Ideal case: model matches data</li>
+            <li>Residual noise is correlated across ~few pixels</li>
+        </ul>
+        </div>
+        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
+        </section>
+        <section>
+        <h2>Missing lines</h2>
+        <div style="float:left;width:55%">
+        <img src="classI_II.png" class="left" width=500 />
+        </div>
+        <div style="float:left;width:45%">
+        <ul>
+            <li>Class I: missing lines in model</li>
+            <li>Class II: extra lines in model</li>
+            <li>Missing opacity source</li>
+            <li>Incorrect atomic constants</li>
+        </ul>
+        </div>
+        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
+        </section>
+
+        <section>
+        <h2>Too strong/weak</h2>
+        <div style="float:left;width:55%">
+        <img src="classIII.png" class="left" width=400 />
+        </div>
+        <div style="float:left;width:45%">
+        <ul>
+            <li>Class III: wrong strength</li>
+            <li>Incorrect atomic constants</li>
+            <li>Incorrect stellar structure</li>
+            <li>Likely contain <em>the most</em> information about stellar properties because they are the hardest to model correctly</li>
+        </ul>
+        </div>
+        </section>
+
+    </section>
+
+    <section>
+    <h2>Covariance kernels to the rescue</h2>
+    <p>Parameterize and understand the noise/residuals, so that our fits are not biased</p>
+
+    <ol class="fragment">
+        <li>Global covariance structure</li>
+        <li>Regional covariance structure (bad lines)</li>
+    </ol>
+    <div class="fragment">
+    <p class="pad">with correlations, likelihood is</p>
+    <p>$$p(\textbf{y}) = \frac{1}{\sqrt{(2 \pi)^N \det(C)}} \exp\left ( -\frac{1}{2} \textbf{r}^T C^{-1} \textbf{r} \right ) $$</p>
+    <p>$$ \ln[p(y)] = -\frac{1}{2} \textbf{r}^T C^{-1} \textbf{r} - \frac{1}{2} \ln \det C  - \frac{N}{2} \ln 2 \pi $$</p>
+    </div>
+
+    </section>
+
+    <section>
+    <h2>Global covariance structure</h2>
+    <p class="eighty">
+    Matern kernel for global covariance structure
+    $$ k_{\nu = 3/2}(r, a, l) = a \left(1 + \frac{\sqrt{3} r}{l} \right ) \exp \left (- \frac{\sqrt{3} r}{l} \right ) $$
+    </p>
+    <img class="left" width=400 src="matern_matrix.png" />
+    <img class="right fragment" width=400 src="matern_draw.png" />
+    </section>
+    <section>
+
+        <section>
+        <h2>Regional covariance</h2>
+        <p>Desire: downweight bad lines like we would outlier points</p>
+
+        <p class="fragment">$$k_{\rm G}(x, x^\prime | a, \mu, \sigma) = \frac{a^2}{2 \pi \sigma} \exp \left ( - \frac{[(x - \mu)^2 + (x^\prime - \mu)^2]}{2 \sigma^2}\right )$$</p>
+
+        <div style="margin-left:auto;margin-right:auto">
+        <img class="left" width=300 src="fake_line.png" />
+        <img class="left fragment" width=300 src="matrix_region_covariance.png" />
+        <img class="left fragment" width=300 src="random_draw.png" />
+        <div>
+        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
+        </p>
+        </section>
+        <section>
+        <h3>Recover the line parameters</h3>
+        <img width=550 src="triangle.png" />
+        <p class="eighty">Courtesy <a href="https://github.com/dfm/emcee">dfm/emcee</a> &#38; <a href="https://github.com/dfm/triangle.py">dfm/triangle</a></p>
+        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
+        </section>
+
+        <section>
+        <h2>More complicated residuals</h2>
+        <div class="fragment">
+        <p> $$k(x, x^\prime | h, a, \mu, \sigma) = \exp \left ( \frac{-( x - x^\prime)^2 }{2 h^2} \right ) k_{\rm G}(x, x^\prime | a, \mu, \sigma)$$
+        $h$ is a "bandwidth." If $h$ is small, then there will be high-frequency structure. If $h$ is large, then only low-frequency structure will remain.</p>
+        </div>
+        <div style="margin-left:auto;margin-right:auto">
+        <img src="mann.svg" class="left" width=400 style="background-color:white" /> 
+        <img src="mdwarf_matrix.png" width=250 class="left fragment" width=450 />
+        <img src="mdwarf.png" width=250 class="left fragment" width=450 />
+        </div>
+
+        </section>
+
+    </section>
+    <section>
+    <h2>Cycle of improvement</h2>
+    <ol>
+    <li>Fit many stellar spectra</li>    
+    <li>Learn the covariance structure, including bad regions</li>    
+    <li>Use the covariances to regress out what the model <em>should</em> be</li>    
+    </ol>
+    <p class="pad">These improvements to the models could be used to inform the modellers what might need improvement.</p>
+    <p class="pad">If you're impatient/a DIY-er, you can also correct the models yourself by "inferring" the correct synthetic spectrum in this region.</p>
+    </section>
+
+    <section>
+        <h3>Conclusions</h3>
+        <ul>
+            <li>Covariance kernels are useful for modelling stellar spectra</li>
+            <li>Specific kernels can be used to account for bad lines</li>
+            <li>Learnt covariance structure can be used to improve the stellar models</li>
+            </li>For an interactive example of a fit to real data, click <a href="http://iancze.github.io/image.html">here</a>. 
+        </ul>
+    </section>
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+center: true,
+width: 960,
+height: 700,
+margin: 0.1,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+//transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+
+// Parallax scrolling
+// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+// parallaxBackgroundSize: '2100px 900px',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: 'plugin/math/math.js', async: true}
+]
+});
+
+</script>
+</body>
+</html>
