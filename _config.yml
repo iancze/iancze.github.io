@@ -1,0 +1,9 @@
+name: Ian Czekala #website name
+markdown: redcarpet
+pygments: true
+timezone: America/New_York
+encoding: utf-8
+work_website: https://www.cfa.harvard.edu/~iczekala/
+email: iczekala@cfa.harvard.edu
+github: iancze
+twitter: iczekala
