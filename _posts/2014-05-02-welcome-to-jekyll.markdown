@@ -1,26 +1,21 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  First post!
 date:   2014-05-02 09:49:32
-categories: jekyll update
+categories: tests odyssey
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+I like programming.
 
 {% highlight python %}
 print("hello world")
 {% endhighlight %}
+
+Posts can be written in markdown.
+
+Here is an example of a figure, scaled properly
+
+<img src="{{ site.url }}/assets/filter_responses.png" width=600 />
 
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
 
