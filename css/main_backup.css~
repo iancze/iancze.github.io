@@ -110,8 +110,6 @@
   background-color: #333;
 }
 
-/* From Bootstrap */
-
 body {
   padding-top: 50px;
 }
