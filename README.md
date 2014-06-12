@@ -7,7 +7,7 @@ Website
 
 Welcome page Jumbotron background image.
 
-Navbar not keeping links correctly
+Navbar not keeping links correctly. Set "active" on the navbar using jquery?
 
 PAPER image
 
