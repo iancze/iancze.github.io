@@ -2,36 +2,54 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title> Stellar Properties in the Presence of Correlated Noise</title>
+<title> Stellar Spectra </title>
 
 <link rel="stylesheet" href="css/reveal.min.css">
-<link rel="stylesheet" href="css/theme/default.css">
+<!-- <link rel="stylesheet" href="css/theme/default.css"> -->
+<link rel="stylesheet" href="css/theme/sky.css">
 
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
 <style>
-img.left
-{
-float:left;
+/* Help from https://github.com/pkgw/htmltalk */
+
+.reveal .slides .slide-full {
+    /* Force certain slides to be full height so that footers and other positioning works */
+    height: 100%;
 }
 
-img.right
+.reveal .highlight
 {
-float:right;
+    background-color:#FFFFCC;
 }
 
-.right
-{
-float:right;
+.reveal .footer {
+    text-align: center;
+    font-size: 80% !important;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 
-p.pad
-{
-padding:1em;
+.reveal img.noborder {
+    border:none;
+    box-shadow:none;
+    background:none;
 }
 
-p.eighty
+.reveal td 
 {
-    font-size:80%;
+    vertical-align: top;
+    padding: 15px;
 }
+
+.reveal .animate-residuals
+{
+    position:absolute;
+    top:0px;
+    left:105px;
+}
+
 
 </style>
 
@@ -39,172 +57,383 @@ p.eighty
 <body>
 <div class="reveal">
     <div class="slides">
-    <section>
-    <h1>Stellar Spectroscopy with Correlated Noise</h1>
-    <p>by Ian Czekala</p>
-    <p>Harvard CfA</p>
-    <p>iczekala@cfa.harvard.edu</p>
+    <section class="slide-full">
+        <h2>Fitting stellar spectra with some help from Gaussian processes</h2>
+        
+        <img src="title.svg" class="noborder"/>
+
+        <p><em>ExoStat</em></p>
+        <p>Wednesday June 18th, 2014</p>
+        <p>Ian Czekala</p>
     </section>
 
     <section>
-    <h2> Desire: stellar properites</h2>
-    <p>stellar parameters = $T_{\rm eff}$, $\log g$, $[{\rm Fe}/{\rm H}]$</p>
-    <ol>
-        <li class="fragment">Draw a spectrum from a grid of pre-computed synthetic spectra from PHOENIX, Kurucz, and others</li>
-        <li class="fragment">Rotationally broaden, Doppler shift, convolve with instrumental line spread function (LSF), downsample to match data</li>
-        <li class="fragment"><em>compare</em> model to data and estimate which stellar parameters fit best</li>
-        <li class="fragment"><p style="color:green;font-size:150%"><img style="vertical-align:middle" src="dollar.jpg" /> <em>profit</em> <img style="vertical-align:middle" src="dollar.jpg" /> </p></li>
-    </ol>
-
-    <!--  
-        Possibilities of stellar inference, MOOG, SME, synthesis. Synthesis is slow.
-    -->
-
+        <h3>Introduction</h3>
+            <ul>
+                <li>the fundamental parameters of stars</li>
+                <li>some problems with fitting spectra</li>
+                <li>how Gaussian processes can help</li>
+                <li>some interesting applications</li>
+            </ul>
     </section>
-
     <section>
         <section>
-        <h2>Curb your enthusiasm</h2>
-        <p>The comparison step is tricky</p>
-        <ol>
-            <li class="fragment">Any properly sampled line spread function (LSF) will have correlated pixels</li>
-            <li class="fragment">Synthetic stellar spectra are <em>amazing</em> but not <em>perfect</em></li>
-        </ol>
-        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
+            <h3>Fundamental parameters of stars</h3>
+            <p class="text-center">
+            <ul class="list-inline" >
+                <li>$M_\star$</li>
+                <li>$T_{\rm eff}$</li>
+                <li>$\log g$</li>
+                <li>$[{\rm Fe}/{\rm H}]$</li>
+            </ul>
+            </p>
+
+            <div class="row fragment">
+                <div class="col-xs-8">
+                    <h5>Stellar evolution</h5> 
+                    <p>
+                    Models make predictions of stellar properties as a function of mass and age. This relationship is rather uncertain for young stars.
+                    </p>
+                </div>
+                <div class="col-xs-4">
+                    <img src="stellar_evolution_cite.jpg" />
+                </div>
+            </div>
+            <div class="row fragment">
+                <div class="col-xs-4">
+                    <img src="Kepler-62e_cite.jpg" />
+                </div>
+                <div class="col-xs-8">
+                    <h5>Exoplanet properties</h5>
+                    <p>
+                    Determined relative to host star properties, and biases or uncertainties strongly affect habitable zone and $\eta_\bigoplus$ <small>(Kane11)</small> 
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <h4>My thesis: <em>Fundamental Properties of Young Stars</em></h4>
+            <h4>Part I: Mass </h4>
+            <div class="row">
+                <div class="col-xs-8">
+                    <img src="chmaps.png" height=400px class="noborder" />
+                </div>
+                <div class="col-xs-4">
+                    <img src="SMA_cite.jpg" />
+                    <img src="ALMA_cite.jpg" />
+                </div>
+            </div>
+            <p>
+            Sub-mm interferometric observations of stars with circumstellar disks. Use <em>Keplerian rotation</em> to derive a very precise and accurate stellar mass ($< 5$%) <small>(Rosenfeld+12)</small></p>
+        </section>
+        <section>
+            <h4>My thesis: <em>Fundamental Properties of Young Stars</em></h4>
+            <h4>Part II: The other properties </h4>
+
+            <p>
+            There are many ways to determine <br />
+            $\{ T_{\rm eff}, \log g, [{\rm Fe}/{\rm H}] \}$
+            </p>
+            <p class="fragment">
+            Depending on your desired precision and the nature of your target, you can use photometric colors, astroseismology, optical/IR interferometry, or <strong>spectroscopy</strong>.
+            </p>
+            <p class="fragment">
+            By far, spectroscopic inference is the most prevalent and general purpose (e.g., <em>spectral typing</em>).
+            </p>
+            <p class="fragment">
+            To leverage the high quality synthetic spectra that now exist, we develop a <strong>forward model</strong> of the observed stellar spectrum.
+            </p>
+        </section>
+    </section>
+    <section>
+        <section>
+            <h2>fitting spectra</h2>
+
+            <table>
+                <tr class="fragment">
+                    <td>Desire</td>
+                    <td>
+                    <ul>
+                        <li>use as much of the spectrum as possible</li>
+                        <li>explore lots of parameters</li>
+                    </ul>
+                    </td>
+                </tr>
+                <tr class="fragment">
+                    <td>Problem</td>
+                    <td>
+                    <ul>
+                        <li>spectral synthesis is computationally difficult</li>
+                    </ul>
+                    </td>
+                </tr>
+                <tr class="fragment">
+                    <td>Solution</td>
+                    <td>
+                    <ul>
+                        <li>use pre-synthesized stellar grids $\{ T_{\rm eff}, \log g, [{\rm Fe}/{\rm H}] \}$</li>
+                        <li>interpolate spectrum from the grid and post-process to make it look like the data</li>
+                    </ul>
+                    </td>
+                </tr>
+            </table>
+
+        </section>
+        <section>
+            <h3>The problem <small>in a nutshell </small></h3>
+            <img src="specfit.svg" class="noborder" />
+            <p>
+            Spectroscopic fits are different from "normal" $ \chi^2$ fits
+            </p>
+
+        </section>
+        <section>
+            <h3>The problem <small>in a nutshell </small></h3>
+
+            <div style="position:relative">
+                <div style="width:750px;height:180px"> </div>
+                <img src="residuals0.svg" class="noborder animate-residuals fragment fade-out" data-fragment-index="0" />
+                <img src="residuals1.svg" class="noborder animate-residuals fragment current-visible" data-fragment-index="0"/>
+                <img src="residuals2.svg" class="noborder animate-residuals fragment current-visible" data-fragment-index="1"/>
+                <img src="residuals0.svg" class="noborder animate-residuals fragment fade-in" data-fragment-index="2"/>
+            </div>
+            <p>
+            Existing stellar synthesis is <em>amazing</em>, but not <em>perfect</em>.
+            </p>
+            <ol style="padding:10px">
+                <li class="fragment" data-fragment-index="0" style="padding:5px">low scale, mild residual structure</li>
+                <li class="fragment" data-fragment-index="1" style="padding:5px">"outlier" spectral lines with the wrong strength</li>
+            </ol>
+            <p class="fragment" data-fragment-index="2" style="padding-top:30px">
+            <em>How can you fit ~1,000 or more lines <br />
+                with only a few parameters?</em>
+            </p>
+
+        </section>
+        <section>
+            <h4>Spectral lines are the fundamental "data points"</h4>
+            <div class="row">
+                <div class="col-xs-6">
+                <img src="class0_residuals.png" />
+                        <div class="caption">
+                            a "good" fit 
+                        </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="fragment">
+                    <img src="class0_autocorrelation.png" />
+                        <div class="caption">
+                            autocorrelation
+                            <p class="text-right"><small>Czekala+14</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <h3>Fitting spectra $\ne$ vanilla $\chi^2$</h3>
+            <ul>
+                <li>the fundamental "data point" of a spectrum is a spectral line</li>
+                <li class="fragment">when the strength of a line is incorrect, it causes several correlated pixel residuals</li>
+                <li class="fragment">you are saved only if your model is <em>perfect</em></li>
+                <li class="fragment">with any large swath of spectrum,</li>
+            </ul>
+            <div class="row fragment">
+                <div class="col-xs-8">
+                <blockquote>
+                <em><del>failure</del> perfection is not an option</em>
+                <footer>Apollo 13</footer>
+                </blockquote>
+                <small>or at least <em>very</em> difficult to attain in practice</small>
+                </div>
+                <div class="col-xs-4">
+                <img src="Kranz.png" width=400px />
+                </div>
+            </div>
+        </section>
+    </section>
+    <section>
+        <section>
+            <h3>How </h3>
+            <h2>Gaussian processes</h2>
+            <h3>can help</h3>
+        </section>
+        <section>
+            <h3>How to cope with imperfection</h3>
+            <p>
+            the residuals are a <em>spectrum</em> $\textbf{R}$
+            </p>
+            <p>
+            the pixel "variances" are now a covariance <em>matrix</em> $C$
+            </p>
+            <p>
+            $$p(D | \theta) = \frac{1}{\sqrt{(2 \pi)^N \det(C)}} \exp\left ( -\frac{1}{2} \textbf{R}^T C^{-1} \textbf{R} \right ) $$
+            </p>
+            <div class="fragment">
+            <p>
+            $$ \ln[p(D | \theta)] = -\frac{1}{2} \textbf{R}^T C^{-1} \textbf{R} - \frac{1}{2} \ln \det C  - \frac{N}{2} \ln 2 \pi $$
+            </p>
+            <p>
+            the structure of $C$ is set by a kernel function <small>analogous, say, to the two-point correlation function</small>
+            </p>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+              <div class="col-md-6">
+                  <p>
+                  $k(\lambda_i, \lambda_j) $
+                  </p>
+              </div>
+              <div class="col-md-6 fragment" data-fragment-index="1">
+                  <p>
+                  $\sim 5$ pixels correlated
+                  </p>
+                <img src="matern_matrix.png"/>
+              </div>
+            </div>
+            <p class="fragment" data-fragment-index="1">
+            This covariance matrix accounts for the correlated structure of the residuals we saw earlier.
+            </p>
+    </section>
+    <section>
+        <h3>Checking the residuals</h3>
+        <p>
+        Zoom in from the previous wide view of the residual spectrum
         </p>
-
-        <!-- each of these subslides should have the graphic in the same position -->
-        </section>
-        <section>
-        <h2>If everything works</h2>
-        <div style="float:left;width:55%">
-        <img src="class0.png" width=400 />
-        </div>
-        <div style="float:left;width:45%">
-        <ul>
-            <li>Ideal case: model matches data</li>
-            <li>Residual noise is correlated across ~few pixels</li>
-        </ul>
-        </div>
-        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
-        </section>
-        <section>
-        <h2>Missing lines</h2>
-        <div style="float:left;width:55%">
-        <img src="classI_II.png" class="left" width=500 />
-        </div>
-        <div style="float:left;width:45%">
-        <ul>
-            <li>Class I: missing lines in model</li>
-            <li>Class II: extra lines in model</li>
-            <li>Missing opacity source</li>
-            <li>Incorrect atomic constants</li>
-        </ul>
-        </div>
-        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
-        </section>
-
-        <section>
-        <h2>Too strong/weak</h2>
-        <div style="float:left;width:55%">
-        <img src="classIII.png" class="left" width=400 />
-        </div>
-        <div style="float:left;width:45%">
-        <ul>
-            <li>Class III: wrong strength</li>
-            <li>Incorrect atomic constants</li>
-            <li>Incorrect stellar structure</li>
-            <li>Likely contain <em>the most</em> information about stellar properties because they are the hardest to model correctly</li>
-        </ul>
-        </div>
-        </section>
-
     </section>
-
     <section>
-    <h2>Covariance kernels to the rescue</h2>
-    <p>Parameterize and understand the noise/residuals, so that our fits are not biased</p>
-
-    <ol class="fragment">
-        <li>Global covariance structure</li>
-        <li>Regional covariance structure (bad lines)</li>
-    </ol>
-    <div class="fragment">
-    <p class="pad">with correlations, likelihood is</p>
-    <p>$$p(\textbf{y}) = \frac{1}{\sqrt{(2 \pi)^N \det(C)}} \exp\left ( -\frac{1}{2} \textbf{r}^T C^{-1} \textbf{r} \right ) $$</p>
-    <p>$$ \ln[p(y)] = -\frac{1}{2} \textbf{r}^T C^{-1} \textbf{r} - \frac{1}{2} \ln \det C  - \frac{N}{2} \ln 2 \pi $$</p>
+        <h3>Globally covariant structure</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="matern_matrix.png" />
+      </div>
+      <div class="col-md-6">
+          <p>
+      </p>
+      <video controls data-autoplay loop class="img-responsive">
+          <source src="global_animation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      </div>
     </div>
-
     </section>
 
     <section>
-    <h2>Global covariance structure</h2>
-    <p class="eighty">
-    Matern kernel for global covariance structure
-    $$ k_{\nu = 3/2}(r, a, l) = a \left(1 + \frac{\sqrt{3} r}{l} \right ) \exp \left (- \frac{\sqrt{3} r}{l} \right ) $$
-    </p>
-    <img class="left" width=400 src="matern_matrix.png" />
-    <img class="right fragment" width=400 src="matern_draw.png" />
+        <h3>Downweight outlier lines</h3>
+    <div class="row">
+      <div class="col-md-6">
+          <img src="gauss_matrix.png" />
+      </div>
+      <div class="col-md-6">
+          <p>
+      </p>
+      <video controls data-autoplay loop class="img-responsive">
+          <source src="line_animation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      </div>
+    </div>
+    </section>
     </section>
     <section>
-
         <section>
-        <h2>Regional covariance</h2>
-        <p>Desire: downweight bad lines like we would outlier points</p>
-
-        <p class="fragment">$$k_{\rm G}(x, x^\prime | a, \mu, \sigma) = \frac{a^2}{2 \pi \sigma} \exp \left ( - \frac{[(x - \mu)^2 + (x^\prime - \mu)^2]}{2 \sigma^2}\right )$$</p>
-
-        <div style="margin-left:auto;margin-right:auto">
-        <img class="left" width=300 src="fake_line.png" />
-        <img class="left fragment" width=300 src="matrix_region_covariance.png" />
-        <img class="left fragment" width=300 src="random_draw.png" />
-        <div>
-        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
-        </p>
+            <h3>Stellar posteriors</h3>
+            <h3> </h3>
+            <div class="row">
+                <div class="col-xs-8">
+                    <img src="stellar_triangle.png" width=500px />
+                </div>
+                <div class="col-xs-4"> 
+                    <ul>
+                        <li>posteriors naturally inflate to capture uncertainty in model</li>
+                        <li>preserves parameter degeneracies </li>
+                        <li>extensive tests w/ WASP-14 check out</li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section>
-        <h3>Recover the line parameters</h3>
-        <img width=550 src="triangle.png" />
-        <p class="eighty">Courtesy <a href="https://github.com/dfm/emcee">dfm/emcee</a> &#38; <a href="https://github.com/dfm/triangle.py">dfm/triangle</a></p>
-        <p class="fragment" style="font-size:80%">(press <a href="#" class="navigate-down">down</a>)
+            <h3>Hyperparameters</h3>
+            <div class="row">
+                <div class="col-xs-4">
+                    <ul>
+                        <li>covariance hyperparameters are sampled self-consistently</li>
+                        <li>better models have lower "noise"</li>
+                    </ul>
+                </div>
+                <div class="col-xs-8"> 
+                    <img src="cov_triangle.png" width=500px />
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Covariance applications</h3>
+            <div class="row">
+                <div class="col-xs-4">
+                    <ul>
+                        <li>veiling continuum for T Tauri stars</li>
+                        <li>M dwarf molecular bands </li>
+                        <li>modular code can use any spectral library as a backend </li>
+                    </ul>
+                </div>
+                <div class="col-xs-8">
+                <div>
+                <img src="mann.png" />
+                <div class="caption">
+                    <small>Mann et al. 2013 </small>
+                </div>
+                </div>
+            </div>
+            </div>
         </section>
 
         <section>
-        <h2>More complicated residuals</h2>
+        <h2>Cycle of improvement</h2>
+        <ol>
+            <li>Fit many stellar spectra ($N > 50$)</li>    
+        <li>Learn the covariance structure including bad regions</li>    
+        <li>Use the covariance matrix to regress out what the model <em>should</em> be. <small>This is not unlike how the $UBVRI$ photometric passbands are determined (Bessell &amp; Simon 2012).</small></li>    
+        </ol>
         <div class="fragment">
-        <p> $$k(x, x^\prime | h, a, \mu, \sigma) = \exp \left ( \frac{-( x - x^\prime)^2 }{2 h^2} \right ) k_{\rm G}(x, x^\prime | a, \mu, \sigma)$$
-        $h$ is a "bandwidth." If $h$ is small, then there will be high-frequency structure. If $h$ is large, then only low-frequency structure will remain.</p>
-        </div>
-        <div style="margin-left:auto;margin-right:auto">
-        <div width=400 style="float:left">
-        <img src="mann.svg" width=400 style="background-color:white" /> 
-        <p class="eighty">Mann et al. 2013</p>
-        </div>
-        <img src="mdwarf_matrix.png" width=250 class="left fragment" width=450 />
-        <img src="mdwarf.png" width=250 class="left fragment" width=450 />
+        <p>These improvements to the models could be used to inform the modellers what might need improvement.</p>
+        <p>If you're impatient/a DIY-er, you can use your own self-calibrated synthetic spectra.</p>
         </div>
         </section>
-
-    </section>
-    <section>
-    <h2>Cycle of improvement</h2>
-    <ol>
-    <li>Fit many stellar spectra</li>    
-    <li>Learn the covariance structure, including bad regions</li>    
-    <li>Use the covariances to regress out what the model <em>should</em> be</li>    
-    </ol>
-    <p class="pad">These improvements to the models could be used to inform the modellers what might need improvement.</p>
-    <p class="pad">If you're impatient/a DIY-er, you can also correct the models yourself by "inferring" the correct synthetic spectrum in this region.</p>
     </section>
 
-    <section>
+    <section class="slide-full">
         <h3>Conclusions</h3>
         <ul>
-            <li>Covariance kernels are useful for modelling stellar spectra</li>
-            <li>Specific kernels can be used to account for bad lines</li>
-            <li>Learnt covariance structure can be used to improve the stellar models</li>
-            </li>For an interactive example of a fit to real data, click <a href="http://iancze.github.io/image.html">here</a>. 
+            <li>new framework for unbiased inference of stellar parameters</li>
+            <li>applications from FKG stars to M dwarfs</li>
+            <li>improving the stellar models</li>
+            <li>stellar parameter framework in place, expanding to model veiling</li>
         </ul>
+        <div class="footer">
+        <p class="pull-left">
+        <small>Slides at <a href="http://www.iancze.github.io/exostat">iancze.github.io/exostat</a></small>
+        </p>
+        <p class="pull-right">
+        <small>Email: iczekala@cfa.harvard.edu</small>
+        </p>
+        </div>
+    </section>
+    <section>
+        <h3>Outlier line hyperparameters</h3>
+        <div class="row">
+            <div class="col-xs-4">
+                <ul>
+                    <li>covariance hyperparameters are sampled self-consistently</li>
+                    <li>better models have fewer outliers </li>
+                </ul>
+            </div>
+            <div class="col-xs-8"> 
+                <img src="cov_region_triangle.png" width=500px />
+            </div>
+        </div>
     </section>
 
     </div>
@@ -213,8 +442,14 @@ p.eighty
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.min.js"></script>
 
-<script>
 
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<script>
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
@@ -246,6 +481,24 @@ dependencies: [
 { src: 'plugin/math/math.js', async: true}
 ]
 });
+
+//Reveal.addEventListener( 'fragmenthidden', function( event ) {
+    //This event is triggered going backwards.
+    // event.fragment = the fragment DOM element
+    //alert(event.fragment);
+    
+//} );
+
+//Reveal.addEventListener('fragmentshown', function(event) {
+        //Check to see if the fragment ID = specImg0
+  //      if (event.fragment.id == "specImg1") {
+    //        document.getElementById("specImg0").remove();
+      //  }
+
+   //document.getElementById("postfragment").style.color="red"; 
+   //document.getElementById("specImg0").remove(); 
+//   document.getElementById("specImgText").remove(); 
+//});
 
 </script>
 </body>
