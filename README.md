@@ -1,15 +1,7 @@
 iancze.github.io
 ================
 
-Website
+Website source code. Content is copyright Ian Czekala 2014.
 
-# Todo
+See this website live at https://www.cfa.harvard.edu/~iczekala/ 
 
-Welcome page Jumbotron background image.
-
-Navbar not keeping links correctly. Set "active" on the navbar using jquery?
-
-PAPER image
-
-CV page contact header.
-CV Headers for observing experience.

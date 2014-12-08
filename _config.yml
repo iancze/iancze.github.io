@@ -1,6 +1,6 @@
 name: Ian Czekala #website name
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 timezone: America/New_York
 encoding: utf-8
 work_website: https://www.cfa.harvard.edu/~iczekala/
