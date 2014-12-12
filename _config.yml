@@ -3,7 +3,7 @@ markdown: redcarpet
 highlighter: pygments
 timezone: America/New_York
 encoding: utf-8
-work_website: https://www.cfa.harvard.edu/~iczekala/
+work_website: http://iancze.github.io
 email: iczekala@cfa.harvard.edu
 github: iancze
 twitter: iczekala
