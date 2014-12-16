@@ -10,6 +10,18 @@
 
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<script>        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-5472810-5', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+</script>
 <style>
 /* Help from https://github.com/pkgw/htmltalk */
 
@@ -37,7 +49,7 @@
     background:none;
 }
 
-.reveal td 
+.reveal td
 {
     vertical-align: top;
     padding: 15px;
@@ -64,7 +76,7 @@
     <div class="slides">
     <section class="slide-full">
         <h2>Fitting stellar spectra with some help from Gaussian processes</h2>
-        
+
         <img src="title.svg" class="noborder"/>
 
         <p><em>ExoStat</em></p>
@@ -95,7 +107,7 @@
 
             <div class="row fragment">
                 <div class="col-xs-8">
-                    <h5>Stellar evolution</h5> 
+                    <h5>Stellar evolution</h5>
                     <p>
                     Models make predictions of stellar properties as a function of mass and age. This relationship is rather uncertain for young stars.
                     </p>
@@ -111,7 +123,7 @@
                 <div class="col-xs-8">
                     <h5>Exoplanet properties</h5>
                     <p>
-                    Determined relative to host star properties, and biases or uncertainties strongly affect habitable zone and $\eta_\bigoplus$ <small>(Kane11)</small> 
+                    Determined relative to host star properties, and biases or uncertainties strongly affect habitable zone and $\eta_\bigoplus$ <small>(Kane11)</small>
                     </p>
                 </div>
             </div>
@@ -222,7 +234,7 @@
                 <div class="col-xs-6">
                 <img src="class0_residuals.png" />
                         <div class="caption">
-                            a "good" fit 
+                            a "good" fit
                         </div>
                 </div>
                 <div class="col-xs-6">
@@ -291,7 +303,7 @@
               Mat&eacute;rn $\nu = 3/2$
               </p>
               <p>
-              $k(\lambda_i, \lambda_j | a, l) = a \left (1 + \frac{\sqrt{3} r_{ij}}{l} \right ) \exp \left ( - \frac{\sqrt{3} r_{ij}}{l} \right )$ 
+              $k(\lambda_i, \lambda_j | a, l) = a \left (1 + \frac{\sqrt{3} r_{ij}}{l} \right ) \exp \left ( - \frac{\sqrt{3} r_{ij}}{l} \right )$
               </p>
           </div>
               <div class="row">
@@ -338,7 +350,7 @@
                 </p>
                 <div class="fragment">
                 <p class="pad-top">
-                covariance kernel is 
+                covariance kernel is
                 </p>
                 <p>
                 $k(\lambda_i, \lambda_j) = \langle \textbf{R}_i \textbf{R}_j \rangle$
@@ -379,7 +391,7 @@
                     <small> (courtesy <a href="https://github.com/dfm/triangle.py">dfm/triangle.py</a> and <a href="https://github.com/dfm/emcee">dfm/emcee</a>)</small>
                     </p>
                 </div>
-                <div class="col-xs-5"> 
+                <div class="col-xs-5">
                     <ul>
                         <li>sample the stellar and covariance parameters with MH/Gibbs sampler</li>
                         <li class="fragment">posteriors naturally inflate to capture uncertainty in model</li>
@@ -399,7 +411,7 @@
                         <li class="fragment">each outlier line also has its own set of hyperparameters (hierarchical)</li>
                     </ul>
                 </div>
-                <div class="col-xs-7"> 
+                <div class="col-xs-7">
                     <img src="cov_triangle.png" width=500px />
                 </div>
             </div>
@@ -415,7 +427,7 @@
                         ...but, some bands tell you a lot about stellar properties
                         </p>
                         <p class="fragment">
-                        We want to include these areas but weight them appropriately 
+                        We want to include these areas but weight them appropriately
                         </p>
                         <p class="fragment">
                         <strong>Workshop topic</strong>: custom design of covariance kernels?
@@ -436,14 +448,14 @@
         <h2>The Holy Grail</h2>
         <h3>and the quest for it</h3>
         <ol>
-            <li class="fragment">fit many stellar spectra ($N > 50$)</li>    
-            <li class="fragment">learn the covariance structure; the locations of the outlier lines</li>    
+            <li class="fragment">fit many stellar spectra ($N > 50$)</li>
+            <li class="fragment">learn the covariance structure; the locations of the outlier lines</li>
             <li class="fragment">use the information in the covariance matrix and the ensemble of real stars to infer (<em>learn</em>) what the models <em>should</em> be <br />
             <p class="text-center" style="padding-top:10px">
             <small>This is not unlike how $UBVRI$ photometric passbands <br />
                 are regressed out (Bessell &amp; Simon 2012)</small>
             </p>
-            </li>    
+            </li>
         </ol>
         <div class="fragment">
         <p>Pass this along to the stellar modellers.</p>
@@ -481,7 +493,7 @@
                     <li>$h$ is a dummy parameter at this point </li>
                 </ul>
             </div>
-            <div class="col-xs-8"> 
+            <div class="col-xs-8">
                 <img src="cov_region_triangle.png" width=500px />
             </div>
         </div>
