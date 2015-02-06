@@ -1,0 +1,69 @@
+---
+layout: default
+title: Disk-based dynamical mass measurements
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Understanding disk-based dynamical mass measurements</h1>
+        <p>By modeling their rotation, circumstellar disks can be used to dynamically "weigh" their host stars. Resolved spectral imaging, obtained using interferometers like the Submillimeter Array and ALMA, reveals the kinematic fingerprint imparted by the rotation of the disk. The characteristics of this fingerprint are a strong function of the central stellar mass. By fitting a model of the disk structure to the interferometric data, we can derive precise constraints on disk size, inclination, and--most importantly--the stellar mass.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <h2>Disk geometry and rotation</h2>
+      <p>Astronomers typically model protoplanetary disks with an axisymmetric disk with radial and vertical structure defined by a power law surface density profile and hydrostatic equilibrium. As we will see, how the disk is oriented relative to us has a profound effect on the channel maps we observe. We define the inclination of the disk as the angle between the disk angular momentum axis and the observer. 0 degrees inclination means the disk is viewed face-on (appearing on the sky as a circle), while 90 degrees inclination means the disk is viewed edge-on (appearing on the sky as a thin line).</p>
+      <p>We can observe the disk in several ways. The first, is by resolving  the continuum emission from the dust grains. Another is by measuring the spatially-integrated spectral line emission, or spectrum. The third and most powerful way is to obtain a spatially and spectral resolved image of the disk at the same frequency of a strong spectral line, called channel maps. </p>
+    </div>
+    <div class="col-md-7">
+      <img class="img-responsive center-block" width=500px src="/assets/disk.svg" alt="protoplanetary disk">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <video width="400" controls>
+        <source src="/assets/dust.mp4" type="video/mp4">
+          Your browser does not support the video tag :(
+      </video>
+    </div>
+    <div class="col-md-7">
+      <h2>Dust emission</h2>
+      <p>To the left is a movie showing what the dust continuum emission looks like as we vary some of the key disk parameters: the radius of the disk, the inclination of the disk, and the stellar mass.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Spectral line emission</h2>
+        <p>However, when we look in narrow channels across a spectral line, we see the kinematic fingerprint of the disk. As observers we only measure the projected velocity  The velocity from the rotation of the disk is a projection towards the observer, and is a funciton of the inclination of the disk.</p>
+        <video width="1000" controls>
+          <source src="/assets/gas.mp4" type="video/mp4">
+            Your browser does not support the video tag :(
+        </video>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Interferometers measure complex visibilities</h2>
+        <video width="1000" controls>
+          <source src="/assets/vis.mp4" type="video/mp4">
+            Your browser does not support the video tag :(
+        </video>
+
+        <h3>SMA Visibility sampling</h3>
+        <img class="center-block" src="/assets/uv_spacings.png" alt="protoplanetary disk">
+        <p>Every dot represents a baseline sampling. But some of the samplings are spaced so close together in space that they smear together into a line.</p>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Estimating parameters</h2>
+      <p>Deriving a dynamical mass measurement is a multi-step process.
+      For more information, check out our <a href="https://github.com/iancze/JudithExcalibur">open-sounce dynamical mass code</a> on Github.
+      </p>
+    </div>
+  </div>
+  </div>
+
+</div><!-- /.container -->
