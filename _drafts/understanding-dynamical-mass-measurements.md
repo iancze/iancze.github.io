@@ -63,4 +63,6 @@ Every dot represents a sampling of the Fourier transform in the UV plane. Some o
 
 ## Estimating parameters
 
+DiskJockey and codebase.
+
 Deriving a dynamical mass measurement is a multi-step process. For more information, check out our <a href="https://github.com/iancze/DiskJockey">open-source dynamical mass code</a> on Github.
