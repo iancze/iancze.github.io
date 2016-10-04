@@ -1,7 +1,7 @@
 iancze.github.io
 ================
 
-Website source code. Content is copyright Ian Czekala 2014.
+Website source code. Content is copyright Ian Czekala 2014,15,16.
 
 See this website live at http://iancze.github.io/cv.html
 
@@ -11,3 +11,7 @@ https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-
 And then run:
 
     $> bundle exec jekyll serve
+
+or
+
+    $> jekyll serve
