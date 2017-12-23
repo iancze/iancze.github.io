@@ -12,6 +12,6 @@ And then run:
 
     $> bundle exec jekyll serve
 
-or
+To preview post drafts, use
 
-    $> jekyll serve
+    $> bundle exec jekyll serve --drafts
