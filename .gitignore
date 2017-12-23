@@ -1,3 +1,6 @@
 _site
 *~
 *.swp
+Gemfile
+Gemfile.lock
+.bundle

@@ -32,6 +32,10 @@
   line-height: 1.5em;
 }
 
+.container{
+  max-width: 900px;
+}
+
 .header a.extra {
   color: #aaa;
   margin-left: 1em;
@@ -114,6 +118,7 @@
 
 body {
   padding-top: 50px;
+  font-size: 16px;
 }
 .starter-template {
   padding: 40px 15px;
