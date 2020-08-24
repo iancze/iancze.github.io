@@ -7,29 +7,49 @@ title: Ian Czekala's home page
   <div class="starter-template">
     <div class="jumbotron">
       <div class="row">
-      <div class="col-md-5">
-        <img class="featurette-image img-responsive img-circle center-block" width=250px src="/assets/ian_czekala_small.jpg" alt="Ian Czekala">
-      </div>
-      <div class="col-md-7">
-        <h1>Ian Czekala</h1>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive img-circle center-block" width=250px
+            src="/assets/ian_czekala_small.jpg" alt="Ian Czekala">
+        </div>
+        <div class="col-md-7">
+          <h1>Ian Czekala</h1>
           <p class="lead">NASA Hubble Fellowship Program<br />
-             Sagan Postdoctoral Fellow<br />
-             Rm. 605B, Campbell Hall<br />
-             University of California at Berkeley<br />
-             iczekala@berkeley.edu
+            Sagan Postdoctoral Fellow<br />
+            Rm. 605B, Campbell Hall<br />
+            University of California at Berkeley<br />
+            iczekala@berkeley.edu
           </p>
-      </div>
+        </div>
       </div>
     </div>
   </div>
 </div><!-- /.container -->
 
 <div class="container">
+  <div class="alert alert-info" role="alert">
+    I have moved to Pennsylania State University! My new website is here: <a
+      href="https://sites.psu.edu/iczekala/">https://sites.psu.edu/iczekala/</a>
+  </div>
+</div>
+
+<div class="container">
   <div class="row">
     <div class="col-md-12">
-      <p>I am a NASA Hubble Fellowship Program (NHFP) Sagan Postdoctoral Fellow at UC Berkeley. I received my Ph.D. from Harvard University, where I worked with Sean Andrews and the CfA circumstellar disk group. My previous postdoc was at the Kavli Institute for Particle Astrophysics and Cosmology (KIPAC) at Stanford University, where I worked with the Gemini Planet Imager (GPI) group, led by Bruce Macintosh. I study a variety of topics related to young stars, protoplanetary disks, pre-main sequence evolution, and exoplanets.
+      <p>I am a NASA Hubble Fellowship Program (NHFP) Sagan Postdoctoral Fellow at UC Berkeley. I received my Ph.D. from
+        Harvard University, where I worked with Sean Andrews and the CfA circumstellar disk group. My previous postdoc
+        was at the Kavli Institute for Particle Astrophysics and Cosmology (KIPAC) at Stanford University, where I
+        worked with the Gemini Planet Imager (GPI) group, led by Bruce Macintosh. I study a variety of topics related to
+        young stars, protoplanetary disks, pre-main sequence evolution, and exoplanets.
       </p>
-      <p><strong>Mass</strong> is the fundamental property that determines the <strong>evolutionary path</strong> of a star. In particular, the masses of <strong>young stars</strong> are of great relevance to many astrophysical problems, including star and planet formation. We have developed a novel approach that combines spatially resolved sub-millimeter spectral line imaging and optical/near-infrared high resolution spectroscopy to derive the fundamental properties of a young star: mass, temperature, and radius. By applying our technique to a sample of pre-main sequence stars, we are mapping out a <strong>dynamically-calibrated Hertzsprung-Russell diagram</strong> for the express purpose of evaluating pre-main sequence evolutionary models. I use the <strong>Atacama Large Millimeter Array (ALMA)</strong> to gain a multi-wavelength understanding of young stellar systems and understand the planet formation process.
+      <p><strong>Mass</strong> is the fundamental property that determines the <strong>evolutionary path</strong> of a
+        star. In particular, the masses of <strong>young stars</strong> are of great relevance to many astrophysical
+        problems, including star and planet formation. We have developed a novel approach that combines spatially
+        resolved sub-millimeter spectral line imaging and optical/near-infrared high resolution spectroscopy to derive
+        the fundamental properties of a young star: mass, temperature, and radius. By applying our technique to a sample
+        of pre-main sequence stars, we are mapping out a <strong>dynamically-calibrated Hertzsprung-Russell
+          diagram</strong> for the express purpose of evaluating pre-main sequence evolutionary models. I use the
+        <strong>Atacama Large Millimeter Array (ALMA)</strong> to gain a multi-wavelength understanding of young stellar
+        systems and understand the planet formation process.
       </p>
       <p>View these posts for more detail about my projects</p>
       <hr />
@@ -38,14 +58,14 @@ title: Ian Czekala's home page
 
   <div class="row">
     <div class="col-md-12">
-    <ul>
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        {{ post.excerpt }}
-      </li>
-    {% endfor %}
-    </ul>
+      <ul>
+        {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          {{ post.excerpt }}
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div><!-- /.container -->
