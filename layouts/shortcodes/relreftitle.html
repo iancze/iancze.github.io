@@ -1,0 +1,4 @@
+{{ $fname := .Get 0 }}
+{{with $p := .Site.GetPage $fname}}
+<a href={{relref . $fname}}>{{$p.Param "title"}}</a>
+{{end}}

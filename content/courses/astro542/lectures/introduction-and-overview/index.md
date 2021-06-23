@@ -5,8 +5,6 @@ publishdate: 2021-06-21
 lecture_num: 1
 ---
 
-## Introduction and course overview
-
 The Interstellar medium course is at once a course about nothing and a course about everything. What I mean by that is we're talking about the *space between things*, some of the least dense parts of the galaxy. But we're also going to touch on nearly all aspects of astrophysics:
 
 * radiative transfer
@@ -27,6 +25,8 @@ That's because this course is fundamentally about the interactions between all o
 * number and types of problem sets?
 * Journal club talk (choose topics by XX date)
 * ALMA proposal
+
+[Link]({{<relref syllabus>}})
 
 ## Course Schedule
 

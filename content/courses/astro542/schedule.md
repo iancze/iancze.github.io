@@ -11,58 +11,47 @@ Please be aware that we will not be meeting on Labor Day (Sep 6) or over Thanksg
 
 | Date | Activity | Topic |
 | ---  | ----     |  ---- |
-| Mon Aug 23 | Lecture
-| Wed Aug 25 | Lecture
-| Fri Aug 27 | Lecture
-| Mon Aug 30 | Lecture
-| Wed Sep 1 | Lecture
-| Fri Sep 3 | 
-| Wed Sep 8 | 
-| Fri Sep 10 | 
-| Mon Sep 13 | 
-| Wed Sep 15 | 
-| Fri Sep 17 | Student Presentation slot #1
-| Mon Sep 20 | 
-| Wed Sep 22 | Exam 1
-| Fri Sep 24 | 
-| Mon Sep 27 | 
-| Wed Sep 29 | 
-| Fri Oct 1 | 
-| Mon Oct 4 | 
-| Wed Oct 6 | 
-| Fri Oct 8 | 
-| Mon Oct 11 | 
-| Wed Oct 13 | 
-| Fri Oct 15 | Student Presentation slot #2
-| Mon Oct 18 | 
-| Wed Oct 20 | Exam 2
-| Fri Oct 22 | 
-| Mon Oct 25 | 
-| Wed Oct 27 | 
-| Fri Oct 29 | 
-| Mon Nov 1 | 
-| Wed Nov 3 | Student Presentation slot #3
-| Fri Nov 5 | 
-| Mon Nov 8 | 
-| Wed Nov 10 | 
-| Fri Nov 12 |
-| Mon Nov 15 | 
-| Wed Nov 17 | Student Presentation slot #4 
-| Fri Nov 19 | 
-| Mon Nov 29 | ALMA Interferometer & proposal introduction
-| Wed Dec 1 | ALMA Proposal TAC introduction
-| Fri Dec 3 | Exam 3
-| Mon Dec 6 | 
-| Wed Dec 8 |
+| Mon Aug 23 | Lecture | {{<relreftitle introduction-and-overview>}}|
+| Wed Aug 25 | Lecture | {{<relreftitle radiative-transfer-review>}}|
+| Fri Aug 27 | Lecture | {{<relreftitle molecular-spectroscopy>}}|
+| Mon Aug 30 | Lecture | {{<relreftitle heating-and-cooling>}}|
+| Wed Sep 1 | Lecture | {{<relreftitle multiphase-ISM>}}|
+| Fri Sep 3 | Lecture | {{<relreftitle ionized-ISM-HI-regions>}}|
+| Wed Sep 8 | Lecture | {{<relreftitle HII-regions-recombination>}}|
+| Fri Sep 10 | Lecture | {{<relreftitle dust>}}|
+| Mon Sep 13 | Lecture | {{<relreftitle cold-warm-neutral-medium>}}|
+| Wed Sep 15 | Lecture | {{<relreftitle warm-hot-ionized-medium>}}|
+| Fri Sep 17 | Student Presentation slot #1 | TBD |
+| Mon Sep 20 | Lecture | {{<relreftitle molecular-ISM>}}|
+| Wed Sep 22 | Exam 1 | Lectures up to TBD |
+| Fri Sep 24 | Lecture | {{<relreftitle cosmic-rays-magnetic-fields>}}|
+| Mon Sep 27 | Lecture | {{<relreftitle interstellar-absorption-lines>}}|
+| Wed Sep 29 | Lecture | {{<relreftitle astrochemistry>}}|
+| Fri Oct 1 | Lecture | {{<relreftitle molecular-ions>}}|
+| Mon Oct 4 | Lecture | {{<relreftitle shocks-and-local-bubble>}}|
+| Wed Oct 6 | Lecture | {{<relreftitle photon-dominated-regions>}}|
+| Fri Oct 8 | Lecture | {{<relreftitle CO-surveys>}}|
+| Mon Oct 11 | Lecture | {{<relreftitle molecular-clouds>}}|
+| Wed Oct 13 | Lecture | {{<relreftitle cores-and-collapse>}}|
+| Fri Oct 15 | Student Presentation slot #2 | TBD |
+| Mon Oct 18 | Lecture | {{<relreftitle protostars>}} |
+| Wed Oct 20 | Exam 2 | Lectures up to TBD | 
+| Fri Oct 22 | Lecture | {{<relreftitle massive-star-formation>}} |
+| Mon Oct 25 | Lecture | {{<relreftitle IMF-feedback>}} |
+| Wed Oct 27 | Lecture | {{<relreftitle galactic-SF>}} |
+| Fri Oct 29 | Lecture | {{<relreftitle intro-to-radio-astronomy>}}|
+| Mon Nov 1 | Lecture | {{<relreftitle YSOs-BDs>}} |
+| Wed Nov 3 | Student Presentation slot #3 | TBD | 
+| Fri Nov 5 | Lecture | {{<relreftitle protostars-to-ppds>}} |
+| Mon Nov 8 | Lecture | {{<relreftitle circumstellar-disks>}} |
+| Wed Nov 10 | Lecture | {{<relreftitle planet-formation>}} |
+| Fri Nov 12 |Lecture | {{<relreftitle astrobio-solar-system>}} |
+| Mon Nov 15 | Lecture | {{<relreftitle exoplanets>}} |
+| Wed Nov 17 | Student Presentation slot #4 | TBD |
+| Fri Nov 19 | Lecture | {{<relreftitle introduction-to-ALMA>}} |
+| Mon Nov 29 | Lecture | {{<relreftitle telescope-proposal>}} |
+| Wed Dec 1 | TAC example discussion |  |
+| Fri Dec 3 | Exam 3 | Previous lectures |
+| Mon Dec 6 | TBD | |
+| Wed Dec 8 | TBD | |
 | Fri Dec 10 | ALMA proposals due
-
-43 classes total
-
-Should the midterms be take home, or in class?
-Kevin had them in-class.
-Also had 4 classes devoted to 7 student presentations.
-Had two classes related to discussion of JWST proposals. Can we have a "meta" discussion about what made a good/bad ALMA proposal?
-
-So that makes 43 - (3 + 4 + 2) to divide up the remaining topics.
-
-Can we do ALMA proposals? I think so. Kevin had this count for 15%. I can basically do an entire lecture or two which is like the ALMA ambassadors prep.
