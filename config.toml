@@ -1,8 +1,0 @@
-baseURL = "http://personal.psu.edu/ipc5094/"
-languageCode = "en-us"
-title = "Ian Czekala"
-
-theme = 'hugo-flex'
-
-[params]
-    hideMadeWithLine = true
