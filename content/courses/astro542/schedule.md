@@ -9,6 +9,8 @@ ASTRO 542 meets three times a week (9:05am to 9:55am) on Monday, Wednesday, and 
 
 Please be aware that we will not be meeting on Labor Day (Sep 6) or over Thanksgiving Holiday (Nov 22 - 26), following PSU's [Fall 2021 academic calendar](https://www.registrar.psu.edu/academic-calendars/2021-22.cfm).
 
+The following is the anticipated schedule for course lectures and activities. Lecture topics/dates may shift slightly depending on course progress. Exam and presentation dates will remain fixed.
+
 | Date | Activity | Topic |
 | ---  | ----     |  ---- |
 | Mon Aug 23 | Lecture | {{<relreftitle introduction-and-overview>}}|

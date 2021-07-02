@@ -1,11 +1,12 @@
 baseURL: "http://personal.psu.edu/ipc5094/"
 languageCode: en-us
-title: "Ian Czekala"
+title: "Czekala Group"
 
 theme: "hugo-flex"
 
 params:
   color: black
+  width: 48rem
   summaries: false
 
   # site-wide custom CSS and JS
@@ -18,15 +19,15 @@ params:
 
 menu:
   nav:
-    - name: About
-      url: about/
+    - name: People
+      url: people/
       weight: 1
-    - name: Courses
-      url: courses/
+    - name: Posts
+      url: posts/
       weight: 2
-    - name: Tags
-      url: tags/
+    - name: CV and publications
+      url: publications/
       weight: 3
-    - name: Categories
-      url: categories/
+    - name: Astro542
+      url: courses/astro542/
       weight: 4
