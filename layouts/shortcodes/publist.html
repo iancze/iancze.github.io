@@ -1,0 +1,27 @@
+{{/* This shortcode will format the JSON publications list attached to the site data into a reverse-ordered list. It
+takes a list of strings that
+are the authors that need to be matched exactly, and bolds those. For example, to match Ian's publications, you need to
+provide the various forms of his name as they appear in the record. Sometimes his first name is spelled out, othertimes
+it's abbreviated.
+
+{{ <publist "Czekala, Ian" "Czekala, I.">}}
+
+    */}}
+    <ol reversed>
+        <!-- Iterate through the list of publication rows -->
+        {{ range $pub := .Site.Data.pubs }}
+        <!-- grab the title for the publication, and hyperlink it -->
+        <li> <i><a href={{$pub.url}}>{{ $pub.title}}</i></a>,
+            <!-- Bold the names of our group members -->
+            {{ range $author := $pub.author }}
+            {{ if in $.Params $author }}
+            <b>{{ $author }}</b>;
+            {{ else }}
+            {{ $author }};
+            {{ end }}
+            {{ end }}
+            <!-- Finally, add the journal -->
+            <i>{{$pub.journal}}</i>
+        </li>
+        {{ end }}
+    </ol>
