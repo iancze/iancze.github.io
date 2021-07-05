@@ -1,0 +1,65 @@
+{{/* Add our CSS to the head of this page
+"load_page_assets" is defined in themes/hugo-flex/layouts/_default/baseof.html */}}
+
+{{ define "load_page_assets" }}
+<style>
+    .container {
+        display: inline-grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    img.person {
+        clip-path: circle(50% at 50% 50%);
+    }
+</style>
+{{ end }}
+
+{{ define "main" }}
+<!-- Be sure to set type: publications in frontmatter -->
+<!-- https://discourse.gohugo.io/t/single-template-lookup-revisited/16517 -->
+<main>
+    <article>
+        <header>
+            <h1>{{.Title}}</h1>
+        </header>
+        {{ range $stageKey := .Params.stageOrder}} {{/* Loop over all career stages */}}
+        {{ $stageName := (index $.Params.stageNames $stageKey) }}
+        <h2>{{ $stageName }}</h2> {{/* Create an entry for the stage name */}}
+        <div class="container">
+
+
+            {{/* Loop over all people */}}
+            {{ range $person := $.Params.people }}
+
+            {{/* if their career stage matches the current stage, add their entry */}}
+            {{ if eq (index $person "stage") $stageKey }}
+            <div class="item">
+                {{/* If a photo exists, link to it */}}
+                {{ with (index $person "src") }}
+
+                {{/* Get the file as a resource */}}
+                {{ $image := ($.Resources.GetMatch . )}}
+                {{/* Make sure that we actually found something before querying the resource */}}
+                {{ with $image }}
+                {{ $image := $image.Fit "300x300" }}
+                <img src={{ $image.RelPermalink }} class="person" />
+                {{ end }}
+                {{ end }}
+                <b>{{ index $person "name" }}</b>
+            </div>
+            <div class="item">
+                {{/* If a blurb exists, put it here */}}
+                {{ with (index $person "blurb") }}
+                {{ . }}
+                {{ end }}
+            </div>
+            {{ end }}
+
+            {{ end }}
+        </div>
+        {{ end }}
+        <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
+        {{.Content}}
+    </article>
+</main>
+{{ end }}
