@@ -11,6 +11,13 @@
     img.person {
         clip-path: circle(50% at 50% 50%);
     }
+
+    figcaption {
+        color: black;
+        font-weight: bold;
+        padding: 2px;
+        text-align: center;
+    }
 </style>
 {{ end }}
 
@@ -41,11 +48,18 @@
                 {{ $image := ($.Resources.GetMatch . )}}
                 {{/* Make sure that we actually found something before querying the resource */}}
                 {{ with $image }}
-                {{ $image := $image.Fit "300x300" }}
-                <img src={{ $image.RelPermalink }} class="person" />
+                {{ $image := $image.Fit "250x250" }}
+                {{ $name := (index $person "name")}}
+                <figure>
+                    {{/* Link to homepage if exists */}}
+                    {{ with (index $person "link") }}<a href={{.}}>{{end}}
+                        <img src={{ $image.RelPermalink }} class="person" alt=$name />
+                        {{/* Close link to homepage if exists */}}
+                        {{ with (index $person "link") }}</a>{{end}}
+                    <figcaption>{{ $name }}</figcaption>
+                </figure>
                 {{ end }}
                 {{ end }}
-                <b>{{ index $person "name" }}</b>
             </div>
             <div class="item">
                 {{/* If a blurb exists, put it here */}}

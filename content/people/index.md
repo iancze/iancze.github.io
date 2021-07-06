@@ -19,7 +19,7 @@ stageOrder:
 people: 
     - name: Ian Czekala
       stage: prof 
-      src: Ian_Czekala.png
+      src: Ian_Czekala.jpg
       blurb: Ian is an assistant Professor at Pennsylvania State University.
     - name : Brianna Zawadzki
       stage: grad 
