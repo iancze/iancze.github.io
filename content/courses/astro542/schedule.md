@@ -25,7 +25,7 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Wed Sep 15 | Lecture | {{<relreftitle warm-hot-ionized-medium>}}|
 | Fri Sep 17 | Student Presentation slot #1 | TBD |
 | Mon Sep 20 | Lecture | {{<relreftitle molecular-ISM>}}|
-| Wed Sep 22 | Exam 1 | Lectures up to TBD |
+| Wed Sep 22 | **Exam 1** | Lectures up to TBD |
 | Fri Sep 24 | Lecture | {{<relreftitle cosmic-rays-magnetic-fields>}}|
 | Mon Sep 27 | Lecture | {{<relreftitle interstellar-absorption-lines>}}|
 | Wed Sep 29 | Lecture | {{<relreftitle astrochemistry>}}|
@@ -37,7 +37,7 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Wed Oct 13 | Lecture | {{<relreftitle cores-and-collapse>}}|
 | Fri Oct 15 | Student Presentation slot #2 | TBD |
 | Mon Oct 18 | Lecture | {{<relreftitle protostars>}} |
-| Wed Oct 20 | Exam 2 | Lectures up to TBD | 
+| Wed Oct 20 | **Exam 2** | Lectures up to TBD | 
 | Fri Oct 22 | Lecture | {{<relreftitle massive-star-formation>}} |
 | Mon Oct 25 | Lecture | {{<relreftitle IMF-feedback>}} |
 | Wed Oct 27 | Lecture | {{<relreftitle galactic-SF>}} |
@@ -53,7 +53,7 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Fri Nov 19 | Lecture | {{<relreftitle introduction-to-ALMA>}} |
 | Mon Nov 29 | Lecture | {{<relreftitle telescope-proposal>}} |
 | Wed Dec 1 | TAC example discussion |  |
-| Fri Dec 3 | Exam 3 | Previous lectures |
+| Fri Dec 3 | **Exam 3** | Previous lectures |
 | Mon Dec 6 | TBD | |
 | Wed Dec 8 | TBD | |
 | Fri Dec 10 | ALMA proposals due

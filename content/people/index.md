@@ -20,7 +20,7 @@ people:
     - name: Ian Czekala
       stage: prof 
       src: Ian_Czekala.jpg
-      blurb: Ian is an assistant Professor at Pennsylvania State University.
+      blurb: Ian is an assistant professor at Pennsylvania State University.
     - name : Brianna Zawadzki
       stage: grad 
       src: Brianna_Zawadzki.png
@@ -44,7 +44,7 @@ people:
     - name: Tyler Quinn
       stage: ugrad 
       blurb: Tyler is an undergraduate student at Pennsylvania State University.
-    - name: Joseph Murphy
+    - name: Joseph M. Akana Murphy
       stage: former
       src: Joseph_Murphy.jpg
       blurb: Joey is a graduate student at University of California, Santa Cruz.

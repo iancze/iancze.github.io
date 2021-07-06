@@ -14,7 +14,7 @@ The Interstellar medium course is at once a course about nothing and a course ab
 * galactic stellar populations 
 * and even cosmology (slightly)
 
-That's because this course is fundamentally about the interactions between all of these concepts. So it's important to take a systems-engineering approach to this. We'll be talking about all of these areas in some detail (warning: not as much detail as courses designed to cover these subjects, but enough detail so that you'll be able to follow along if you haven't taken these courses already, or if you forgot)!
+That's because this course is fundamentally about the interactions between all of these better-defined "units" of astrophysics. So it's important to take a systems-engineering approach to this. We'll be talking about all of these areas in some detail (warning: not as much detail as courses designed to cover these subjects, but enough detail so that you'll be able to follow along if you haven't taken these courses already, or if you forgot)!
 
 
 ## Course Syllabus 
