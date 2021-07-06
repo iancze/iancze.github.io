@@ -26,13 +26,17 @@ people:
       src: Brianna_Zawadzki.png
       link: https://science.psu.edu/astro/people/bjz16
       blurb: Brianna is a graduate student at Pennsylvania State University.
-    - name: Kadri Nizam
+    - name: Kadri M. Nizam
       stage: grad 
       blurb: Kadri is a graduate student at Pennsylvania State University.
     - name: Zoe Ko
       stage: ugrad 
       src: Zoe_Ko.png
       blurb: Zoe is an undergraduate student at University of California, Berkeley.
+    - name: Tyler Quinn
+      stage: ugrad 
+      src: Tyler_Quinn.png
+      blurb: Tyler is an undergraduate student at Pennsylvania State University.
     - name: Hanna Gryzbowski
       stage: ugrad 
       src: Hannah_Gryzbowski.jpg
@@ -41,9 +45,6 @@ people:
       stage: ugrad 
       src: Robert_Frazier.jpeg
       blurb: Robert is an undergraduate student at Pennsylvania State University.
-    - name: Tyler Quinn
-      stage: ugrad 
-      blurb: Tyler is an undergraduate student at Pennsylvania State University.
     - name: Joseph M. Akana Murphy
       stage: former
       src: Joseph_Murphy.jpg
