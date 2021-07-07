@@ -28,6 +28,7 @@ people:
       blurb: Brianna is a graduate student at Pennsylvania State University.
     - name: Kadri M. Nizam
       stage: grad 
+      src: Kadri_Nizam.png
       blurb: Kadri is a graduate student at Pennsylvania State University.
     - name: Zoe Ko
       stage: ugrad 
