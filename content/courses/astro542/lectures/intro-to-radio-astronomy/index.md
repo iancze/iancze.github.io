@@ -1,8 +1,8 @@
 ---
 title: "Intro to Radio Astronomy and ALMA"
-date: 2021-06-22T17:23:05-04:00
+date: 2021-10-29
+publishdate: 2021-10-29
 draft: true
-lecture_num: 2
 ---
 
-Part I: How the ALMA Interferometer + radio astronomy works (ALMA ambassadors slides), fourier transform basics
+Part I: How the ALMA Interferometer + radio astronomy works (ALMA ambassadors slides), fourier transform basics.

@@ -1,10 +1,9 @@
 ---
 title: "Radiative Transfer"
-date: 2021-06-22T17:23:05-04:00
+date: 2021-08-25
+publishdate: 2021-08-25
 draft: true
-lecture_num: 2
 ---
-
 
 
 This is lecture 2.

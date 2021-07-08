@@ -1,8 +1,8 @@
 ---
 title: "Interstellar Dust"
-date: 2021-06-22T17:23:05-04:00
+date: 2021-09-10
+publishdate: 2021-09-10
 draft: true
-lecture_num: 2
 ---
 
 Interstellar Dust (The Dusty ISM) / Dust, Ice and PAHs, Extinction

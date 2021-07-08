@@ -1,6 +1,6 @@
 ---
 title: "Molecular Cloud Cores and Cloud Collapse"
-date: 2021-06-22T17:23:05-04:00
+date: 2021-10-13
+publishdate: 2021-10-13
 draft: true
-lecture_num: 2
 ---

@@ -10,8 +10,8 @@ params:
   summaries: false
 
   # site-wide custom CSS and JS
-  # css:
-  #   - css/foo.css
+  css:
+    - css/table.css
   #   - bar.css
   # js:
   #   - js/foo.js

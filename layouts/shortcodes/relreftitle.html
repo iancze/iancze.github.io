@@ -1,4 +1,21 @@
-{{ $fname := .Get 0 }}
-{{with $p := .Site.GetPage $fname}}
-<a href={{relref . $fname}}>{{$p.Param "title"}}</a>
-{{end}}
+{{/* Call this shortcode as
+
+{{< relreftitle href="introduction-and-overview" alt="Intro">}}
+    where href is the internal name designed to be looked up with relref. In the case that relref finds a link, it will
+    return the title of that page hyperlinked to the page. If it doesn't find it, then it will return the "alt" text,
+    which can be blank. */}}
+
+    {{ $h_arg := .Get "href" }}
+    {{ $a_arg := .Get "alt" }}
+
+    {{/* This is a very confusing hack... something is fishy with the way that named parameters are parsed in
+    shortcodes,
+    such that if we don't include the next two printf lines, we get annoying errors when we call .Site.GetPage */}}
+    {{ $href := printf "%s" $h_arg }}
+    {{ $alt := printf "%s" $a_arg }}
+
+    {{with $p := .Site.GetPage $href}}
+    <a href={{relref . $href}}>{{$p.Param "title"}}</a>
+    {{ else }}
+    {{ $alt }}
+    {{ end }}
