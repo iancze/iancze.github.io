@@ -64,7 +64,7 @@
             <div class="item">
                 {{/* If a blurb exists, put it here */}}
                 {{ with (index $person "blurb") }}
-                {{ . }}
+                {{ . | markdownify }}
                 {{ end }}
             </div>
             {{ end }}
