@@ -31,7 +31,7 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Wed Sep 29 | Lecture | {{< relreftitle href="astrochemistry" alt="Astrochemistry">}}|
 | Fri Oct 1 | Lecture | {{< relreftitle href="molecular-ions" alt="Molecular Ions">}}|
 | Mon Oct 4 | Lecture | {{< relreftitle href="shocks-and-local-bubble" alt="Shocks and the Local Bubble">}}|
-| Wed Oct 6 | Lecture | {{< relreftitle href="photon-dominated-regions" alt="Photon Dominated Reginos">}}|
+| Wed Oct 6 | Lecture | {{< relreftitle href="photon-dominated-regions" alt="Photon Dominated Regions">}}|
 | Fri Oct 8 | Lecture | {{< relreftitle href="CO-surveys" alt="CO Surveys of Molecular Clouds">}}|
 | Mon Oct 11 | Lecture | {{< relreftitle href="molecular-clouds" alt="Molecular Clouds">}}|
 | Wed Oct 13 | Lecture | {{< relreftitle href="cores-and-collapse" alt="Molecular Cloud Cores and Cloud Collapse">}}|
@@ -47,13 +47,13 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Fri Nov 5 | Lecture | {{< relreftitle href="protostars-to-ppds" alt="From Protostars to Protoplanetary Disks">}} |
 | Mon Nov 8 | Lecture | {{< relreftitle href="circumstellar-disks" alt="Circumstellar Disks">}} |
 | Wed Nov 10 | Lecture | {{< relreftitle href="planet-formation" alt="Planet Formation">}} |
-| Fri Nov 12 |Lecture | {{< relreftitle href="astrobio-solar-system" alt="Astrobiology and the Solar System">}} |
+| Fri Nov 12 | Lecture | {{< relreftitle href="astrobio-solar-system" alt="Astrobiology and the Solar System">}} |
 | Mon Nov 15 | Lecture | {{< relreftitle href="exoplanets" alt="Exoplanets">}} |
-| Wed Nov 17 | Student Presentations #4 | TBD |
-| Fri Nov 19 | Lecture | {{< relreftitle href="introduction-to-ALMA" alt="Introduction to ALMA">}} |
-| Mon Nov 29 | Lecture | {{< relreftitle href="telescope-proposal" alt="Telescope Proposals and Time Allocation Committees">}} |
-| Wed Dec 1 | TAC example discussion |  |
-| Fri Dec 3 | **Exam 3** | Previous lectures |
-| Mon Dec 6 | TBD | |
-| Wed Dec 8 | TBD | |
-| Fri Dec 10 | ALMA proposals due
+| Wed Nov 17 | Lecture | {{< relreftitle href="introduction-to-ALMA" alt="Introduction to ALMA">}} |
+| Fri Nov 19 | Lecture | {{< relreftitle href="telescope-proposal" alt="Telescope Proposals and Time Allocation Committees">}} 
+| Mon Nov 29 | Mock TAC discussion |  | 
+| Wed Dec 1 | TBD | |
+| Fri Dec 3 | Student Presentations #4 | TBD |
+| Mon Dec 6 | TBD | *ALMA proposals due* |
+| Wed Dec 8 | **Exam 3** | Previous lectures |
+| Fri Dec 10 | TBD | *ALMA TAC reviews due* |

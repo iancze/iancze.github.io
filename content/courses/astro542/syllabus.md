@@ -40,7 +40,7 @@ There are many additional resources that will be helpful during this course (and
 ### Course materials and lecture notes 
 
 * [Notes on Star Formation](https://arxiv.org/abs/1511.03457) by Mark Krumholz
-* [Radiative Transfer in Astrophysics](https://www.ita.uni-heidelberg.de/~dullemond/lectures/radtrans_2012/index.shtml) by C.P. Dullemond. Lecture notes available.
+* Lecture note on [Radiative Transfer in Astrophysics](https://www.ita.uni-heidelberg.de/~dullemond/lectures/radtrans_2012/index.shtml) by C.P. Dullemond.
 
 ### Review Articles
 
@@ -60,25 +60,30 @@ There are many additional resources that will be helpful during this course (and
 
 ## Problem sets, ALMA Proposal, Exams, and Grading
 
+### Course Grade 
+
+The course grade will be based on problem sets (20%), a presentation in class (15%), an ALMA proposal (20%), and three mid-term exams (45%).
+
 ### Problem sets
 
 Problem sets will be assigned approximately every 3-4 weeks.
 
-Please turn in homeworks in electronic format (i.e. `.pdf`) to Ian by email at ipc5094@psu.edu with the subject line `ASTRO 542 problem set`. Handwritten solutions are fine, but please digitize your submission using a department scanner or a smartphone scanner app (e.g., [Adobe Scan](https://acrobat.adobe.com/us/en/acrobat/mobile/scanner-app.html)).
+Please turn in homeworks in `.PDF` format to Ian by email at ipc5094@psu.edu with the subject line `ASTRO 542 problem set`. Handwritten solutions are fine, but please digitize your submission using a department scanner or a smartphone scanner app (e.g., [Adobe Scan](https://acrobat.adobe.com/us/en/acrobat/mobile/scanner-app.html)).
 
 Due dates will be set to correspond to the beginning of a class period (i.e., 9:05am).
 
 #### Problem set late policy
+The following percentages will be deducted from your score
 * one day late: 5%
 * two days late: 10%
 * three days late: 25%
 * more than 72 hours late: no credit
  
-If extenuating circumstances arise and you will be unable to complete the homework on time, contact me *before* the homework deadline and we can arrange an extension. 
+If extenuating circumstances arise such that you will be unable to complete the homework on time, please contact Ian *before* the homework deadline and we can most likely arrange an extension. 
 
 #### Problem set collaboration policy
 
-You are welcome to collaborate and work through the problem sets. However, each student must complete the final write up on their own, i.e., a completed problem set should not be duplicated verbatim between students.
+You are welcome to collaborate and work through the problem sets. However, each student must complete the final write up on their own, i.e., no problem set should be duplicated verbatim between students.
 
 It should go without saying that students may not collaborate on exams.
 
@@ -87,29 +92,38 @@ It should go without saying that students may not collaborate on exams.
 
 Each student will give one 15 minute presentation with 5 minutes of questions (equivalent to journal club talk) on an article from the last 1-2 years. Please select an article submitted to the Astrophysical Journal, Astronomical Journal, MNRAS, or A&A that has *completed the referee process* (i.e., is available from the journal itself, or is labeled "accepted" on the arXiv). Chosen articles should fall under the subjects that have been covered by the intervening topics since the previous student talk. To select a paper, you can search for papers in [ADS](https://ui.adsabs.harvard.edu/#) based in terms (or combinations of them) appearing in titles or abstracts (e.g., extinction, molecular cloud). 
 
-Each student should provide the instructor with the two dates that they prefer by Monday, August 30th. The instructor will then assign one date to each student. By one week out from your presentation date, you should have selected your paper and emailed Ian with a link to it.
+Each student should provide the instructor with the two dates that they prefer by Monday, August 30th. The instructor will then assign one date to each student. You should notify the instructor of your paper selection at least one week prior to your presentation date to confirm that it is an acceptable choice.
 
 Good talks will 
 * Provide a cogent introduction to the subfield of the paper 
 * Introduce the key supporting background material, including any relevant equations or seminal figures from related works
-* Explain the key observational or theoretical (as applicable) instruments/methodologies 
-* Discuss the scientific findings of the paper
-* Finish within the allotted time (+/- 2 minutes)
+* Explain the key observational or theoretical instruments/methodologies (as applicable)
+* Discuss the scientific findings of the paper, and their implications for the broader astrophysical subfield
+* Finish the presentation within the allotted time (15 +/- 2 minutes)
 * Adequately answer questions raised by the instructor and students
 
-It is a wise idea to practice your presentation from start to finish "live" to make sure the timing is correct, as talks that are wildly under/over time will have a difficult time receiving full credit.
+It is a wise idea to practice your presentation from start to finish "live" to make sure your timing is correct. Talks that are wildly under/over time will find it difficult to achieve full credit.
 
 ### ALMA proposal 
 
-Distributed review.
+In the later third of the course, students will learn general telescope and grant proposal writing strategies, as well as strategies specific to the ALMA observatory. We will spend a few class periods describing the capabilities of the ALMA observatory, exploring how to write an ALMA proposal, and engaging in a mock TAC panel discussion using previously submitted (successful and unsuccessful) ALMA proposals (tentatively scheduled for Nov 29th).
 
-Dual anonymous review. 
+As a final course project, students will then be responsible for preparing their own ALMA observing proposal using ALMA Cycle 8 capabilities and materials as a baseline. Proposals will be due December 6th. 
 
+After each student has submitted their ALMA proposal, our class will simulate the dual-anonymous peer review process in a distributed fashion. The review process will work as follows:
+* In the actual ALMA review, for every proposal that the P.I. submits, they are sent (electronically) 10 proposals to review. For our mock panel, the number of proposals you will receive to review will depend on course enrollment.
+* The reviewer is responsible for providing a written report describing the strengths and weaknesses of the proposal. The ALMA review criteria are not publicly available, but the [JWST cycle 1](https://jwst-docs.stsci.edu/jwst-opportunities-and-policies/james-webb-space-telescope-science-policies-group-and-review-information/panel-reports) review criteria are similar and provide an excellent set of guidelines. It is expected that each review be at least two paragraphs in length.
+* The reviewer is responsible for evaluating the scientific merit of the proposal with a numerical score between 1 and 5 (1 being excellent, 5 being unsatisfactory).
 
+Reviews for all proposals will be due December 10th.
+
+The course project will be graded on *both* the quality of original ALMA proposal (15% course grade) and the quality of the written reviews of the other proposals (5% course grade). This graded mock review process is *in addition* to the mock TAC panel that we will carry out in class.
+
+The instructor will assign the final grade to each ALMA proposal (reserving the right of the TAC chair). The set of distributed peer reviews will be provided back to each P.I. for reference.
 
 ### Exams
 
-Exam makeup: If you are unable to attend class on the date of an exam, please contact Ian to schedule a makeup exam. 
+Exam makeup: If you are unable to attend class on the date of an exam, please contact the instructor *before the exam date* to schedule a makeup exam. 
 
 ## Course Calendar
 
