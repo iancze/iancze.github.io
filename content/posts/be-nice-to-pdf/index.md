@@ -2,7 +2,6 @@
 title: Be nice to your PDF reader
 date: 2020-10-12
 publishdate: 2020-10-12
-draft: true
 ---
 
 With the rise of "big data," it's become common for figures in journal articles to show several hundred or more points on a single graph. This, and the statistical insights that originate from such figures, are great. But what is not so great is when you try to read a paper containing one of these plots and your PDF reader hangs as it struggles to render every facet of your beautiful, vectorized plot.

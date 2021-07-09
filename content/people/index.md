@@ -38,9 +38,9 @@ people:
       stage: ugrad 
       src: Tyler_Quinn.png
       blurb: Tyler is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University working on regularized maximum likelihood imaging algorithms.
-    - name: Hanna Gryzbowski
+    - name: Hannah Grzybowski
       stage: ugrad 
-      src: Hannah_Gryzbowski.jpg
+      src: Hannah_Grzybowski.jpg
       blurb: Hannah is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University working on regularized maximum likelihood imaging algorithms.
     - name: Robert Frazier
       stage: ugrad 

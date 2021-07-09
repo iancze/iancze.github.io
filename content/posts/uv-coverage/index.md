@@ -2,7 +2,6 @@
 title: Explanation of UV Coverage
 date: 2020-08-21
 publishdate: 2020-08-21
-draft: true
 ---
 
 Here are some figures demonstrating the effects of UV coverage that made for various talks. I have made them available for download in the hope that they may be useful for your presentations as well, but I kindly ask that you properly attribute them (to Ian Czekala). 
