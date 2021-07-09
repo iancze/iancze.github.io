@@ -8,6 +8,14 @@
         grid-template-columns: 30% 70%;
     }
 
+    .item-photo {
+        align-self: stretch;
+    }
+
+    .item-blurb {
+        align-self: center;
+    }
+
     img.person {
         clip-path: circle(50% at 50% 50%);
     }
@@ -40,7 +48,7 @@
 
             {{/* if their career stage matches the current stage, add their entry */}}
             {{ if eq (index $person "stage") $stageKey }}
-            <div class="item">
+            <div class="item-photo">
                 {{/* If a photo exists, link to it */}}
                 {{ with (index $person "src") }}
 
@@ -61,7 +69,7 @@
                 {{ end }}
                 {{ end }}
             </div>
-            <div class="item">
+            <div class="item-blurb">
                 {{/* If a blurb exists, put it here */}}
                 {{ with (index $person "blurb") }}
                 {{ . | markdownify }}

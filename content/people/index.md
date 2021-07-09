@@ -33,23 +33,24 @@ people:
     - name: Zoe Ko
       stage: ugrad 
       src: Zoe_Ko.png
-      blurb: Zoe is an undergraduate student at the University of California, Berkeley working on spectroscopic searches for circumbinary protoplanetary disks.
+      blurb: Zoe is an undergraduate student and physics major at the University of California, Berkeley working on high resolution stellar spectroscopy and radial velocity analysis for circumbinary protoplanetary disks.
     - name: Tyler Quinn
       stage: ugrad 
       src: Tyler_Quinn.png
-      blurb: Tyler is an undergraduate student at Pennsylvania State University working with 
+      blurb: Tyler is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University working on regularized maximum likelihood imaging algorithms.
     - name: Hanna Gryzbowski
       stage: ugrad 
       src: Hannah_Gryzbowski.jpg
-      blurb: Hannah is an undergraduate student at Pennsylvania State University.
+      blurb: Hannah is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University working on regularized maximum likelihood imaging algorithms.
     - name: Robert Frazier
       stage: ugrad 
       src: Robert_Frazier.jpeg
-      blurb: Robert is an undergraduate student at Pennsylvania State University.
+      blurb: Robert is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University working on regularized maximum likelihood imaging algorithms.
     - name: Joseph M. Akana Murphy
       stage: former
       src: Joseph_Murphy.jpg
-      blurb: Joey is a graduate student at University of California, Santa Cruz.
+      link: https://murphyjm.github.io/
+      blurb: Joey is a graduate student in the astronomy and astrophysics department at University of California, Santa Cruz, working on exoplanet detection and characterization. While Joey was a co-terminal masters student at Stanford University, Joey and Ian worked on flexible spectroscopic models for accretion signatures of pre-main sequence stars.
 ---
 
 {{< figure src="RSN.jpg" link="https://science.psu.edu/diversity-initiatives/rainbow-science-network/about-us">}}
