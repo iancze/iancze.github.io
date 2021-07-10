@@ -15,8 +15,8 @@ params:
   css:
     - css/table.css
   #   - bar.css
-  # js:
-  #   - js/foo.js
+  js:
+  # - js/ganalytics.js
   #   - bar.js
 
 menu:
