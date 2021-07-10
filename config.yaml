@@ -4,6 +4,8 @@ title: "Czekala Group"
 
 theme: "hugo-flex"
 
+googleAnalytics: G-W5586VESJK
+
 params:
   color: black
   width: 48rem
