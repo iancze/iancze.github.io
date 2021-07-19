@@ -66,6 +66,10 @@ Kevin's Lecture 1
 * Molecular clouds
 * Tielens 2005, Table 1.1
 
+ISM is mostly hydrogen. Following Draine. Hydrogen states by mass.
+
+{{<vega id="vis" spec="bar-chart.vg.json">}}
+
 ## Sources of Energy in ISM
 
 * Photons
