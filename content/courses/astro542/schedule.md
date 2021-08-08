@@ -21,6 +21,7 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Fri Sep 3 | Lecture | {{< relreftitle href="ionized-ISM-HI-regions" alt="Ionized ISM and HI regions">}} |
 | Wed Sep 8 | Lecture | {{< relreftitle href="HII-regions-recombination" alt="HII Regions and Recombination" >}} |
 | Fri Sep 10 | Lecture | {{< relreftitle href="dust" alt="Interstellar Dust">}} |
+| Mon Sep 13 | Lecture | {{< relreftitle href="intro-to-radio-astronomy" alt="Introduction to Radio Astronomy">}}| 
 | Mon Sep 13 | Lecture | {{< relreftitle href="cold-warm-neutral-medium" alt="Cold and Warm Neutral Medium">}} |
 | Wed Sep 15 | Lecture | {{< relreftitle href="warm-hot-ionized-medium" alt="Warm and Hot Ionized Medium">}} |
 | Fri Sep 17 | Student Presentations #1 | TBD |
@@ -41,19 +42,19 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Fri Oct 22 | Lecture | {{< relreftitle href="massive-star-formation" alt="Massive and Early Star Formation">}} |
 | Mon Oct 25 | Lecture | {{< relreftitle href="IMF-feedback" alt="The IMF and Feedback">}} |
 | Wed Oct 27 | Lecture | {{< relreftitle href="galactic-SF" alt="Galactic Star Formation">}} |
-| Fri Oct 29 | Lecture | {{< relreftitle href="intro-to-radio-astronomy" alt="Introduction to Radio Astronomy">}}|
-| Mon Nov 1 | Lecture | {{< relreftitle href="YSOs-BDs" alt="Young Stellar Objects and Brown Dwarfs">}} |
+| Fri Oct 29 | Lecture | |
+| Mon Nov 1 | Lecture | {{< relreftitle href="protostars-to-ppds" alt="From Protostars to Protoplanetary Disks">}} |
 | Wed Nov 3 | Student Presentations #3 | TBD | 
-| Fri Nov 5 | Lecture | {{< relreftitle href="protostars-to-ppds" alt="From Protostars to Protoplanetary Disks">}} |
-| Mon Nov 8 | Lecture | {{< relreftitle href="circumstellar-disks" alt="Circumstellar Disks">}} |
-| Wed Nov 10 | Lecture | {{< relreftitle href="planet-formation" alt="Planet Formation">}} |
+| Fri Nov 5 | Lecture | {{< relreftitle href="circumstellar-disks" alt="Circumstellar Disks">}}  |
+| Mon Nov 8 | Lecture | {{< relreftitle href="planet-formation" alt="Planet Formation">}} |
+| Wed Nov 10 | Lecture | {{< relreftitle href="exoplanets" alt="Exoplanets">}}  |
 | Fri Nov 12 | Lecture | {{< relreftitle href="astrobio-solar-system" alt="Astrobiology and the Solar System">}} |
-| Mon Nov 15 | Lecture | {{< relreftitle href="exoplanets" alt="Exoplanets">}} |
-| Wed Nov 17 | Lecture | {{< relreftitle href="introduction-to-ALMA" alt="Introduction to ALMA">}} |
-| Fri Nov 19 | Lecture | {{< relreftitle href="telescope-proposal" alt="Telescope Proposals and Time Allocation Committees">}} 
-| Mon Nov 29 | Mock TAC discussion |  | 
-| Wed Dec 1 | TBD | |
+| Mon Nov 15 | Lecture | {{< relreftitle href="YSOs-BDs" alt="Young Stellar Objects and Brown Dwarfs">}} |
+| Wed Nov 17 | **Exam 3** | Previous lectures |
+| Fri Nov 19 | Lecture | {{< relreftitle href="introduction-to-ALMA" alt="Introduction to ALMA">}} |
+| Mon Nov 29 | Lecture | {{< relreftitle href="telescope-proposal" alt="Telescope Proposals and Time Allocation Committees">}} 
+| Wed Dec 1 | Mock TAC discussion |  | 
 | Fri Dec 3 | Student Presentations #4 | TBD |
 | Mon Dec 6 | TBD | *ALMA proposals due* |
-| Wed Dec 8 | **Exam 3** | Previous lectures |
+| Wed Dec 8 | TBD |  |
 | Fri Dec 10 | TBD | *ALMA TAC reviews due* |

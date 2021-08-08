@@ -13,15 +13,14 @@ weight: 1
 
 Office hours by appointment.
 
-Teaching assistant: TBN
-
 ## Objectives
 
-The interstellar medium (ISM) is the space between the stars. This space is far from empty, however, and consists of large reservoirs of atomic and molecular gas and solids in the form of "dust" that mediate or contribute to many important astrophysical processes such as star formation, planet formation, stellar feedback, and stellar death/supernovae. Considered in aggregate, these processes are important on galactic- (and even intergalactic-) scales, influencing the distribution of giant molecular clouds and stellar populations. As such, Astro 542 is at once a course about *nothing* and a course about *everything*. We will cover the astrophysical processes that govern the interactions between the ISM and its many astrophysical interfaces. Students will also learn telescope proposal writing strategies, prepare a mock ALMA proposal, and simulate the dual-anonymous distributed peer review process.
+The interstellar medium (ISM) is the space between the stars. This space is far from empty, however, and consists of large reservoirs of atomic and molecular gas and solids in the form of "dust" that mediate or contribute to many important astrophysical processes such as star formation, planet formation, stellar feedback, and stellar death/supernovae. Considered in aggregate, these processes are important on galactic- (and even intergalactic-) scales, influencing the distribution of giant molecular clouds and stellar populations. As such, Astro 542 is at once a course about *nothing* and a course about *everything*. We will learn the astrophysical processes that govern the interactions between the ISM and its many astrophysical interfaces. Students will also learn telescope proposal writing strategies, prepare a mock ALMA proposal, and simulate the dual-anonymous distributed peer review process.
 
 ## Format 
-ASTRO 542 meets three times a week on Monday, Wednesday, and Friday in [Davey Laboratory, Rm. 541](https://map.psu.edu/?id=1134#!m/274769?s/davey%20lab?ct/33177,25403,26748,26749,26750,27255) from 9:05am to 9:55am ET (prompt). Following university guidelines, the course is currently scheduled to meet in person. Specific guidance regarding masking policies for vaccinated/unvaccinated individuals will be forthcoming closer to the beginning of the semester. Remote formats of the course may at times be necessary depending on the status of the COVID-19 pandemic.
+ASTRO 542 meets three times a week on Monday, Wednesday, and Friday in [Davey Laboratory, Rm. 541](https://map.psu.edu/?id=1134#!m/274769?s/davey%20lab?ct/33177,25403,26748,26749,26750,27255) from 9:05am to 9:55am ET (prompt). Following current university guidelines (8/5/2021), the course is scheduled to meet in person, and all individuals (regardless of vaccination status) are required to wear masks. For up to date policies, please consult [this site](https://virusinfo.psu.edu/). 
 
+Remote formats of the course may at times be necessary depending on the status of the COVID-19 pandemic. We plan on recording and posting all lectures. **If you are in any way feeling ill or suspect you might have been contact with an individual infected with COVID, *please* stay home.** We will work with you to provide you with the course materials you need.
 
 ## Textbook 
 
@@ -31,9 +30,9 @@ This course has one required textbook:
 * **Author**: Bruce Draine
 * **ISBN-13** `978-0-691-12213-7`
 
-It is available through through textbook sellers online and will be available in the PSU bookstore. We recommended that you secure access to this textbook for readings and reference during the course.
+It is available through through textbook sellers online and will be available in the PSU bookstore. We recommended that you secure access to this textbook for readings and reference during the course. The PAMS library (201 Davey Lab) also has a copy on course reserve.
 
-## Reference Materials
+## Additional Reference Materials
 
 There are many additional resources that will be helpful during this course (and beyond) and will be called out in the course at the appropriate juncture. Many of these resources are freely available online or through the [University library](https://libraries.psu.edu/).
 
@@ -51,18 +50,23 @@ There are many additional resources that will be helpful during this course (and
 
 ### Textbooks 
 
-* [Essential Radio Astronomy](https://www.cv.nrao.edu/~sransom/web/xxx.html) textbook by James Condon and Scott Ransom
+* [Essential Radio Astronomy](https://www.cv.nrao.edu/~sransom/web/xxx.html) by James Condon and Scott Ransom
 * *Physics and Chemistry of the Interstellar Medium* by Sun Kwok, University Science Books, 2007
 * *The Origin of Stars* by Michael D. Smith, Imperial College Press, 2004
 * *The Physics and Chemistry of the Interstellar Medium* by A.G.G.M Tielens, Cambridge University Press, 2005
 * *The Formation of Stars* by Steven W. Stahler and Francesco Palla, Wiley-VCH, 2004
 * *Protostars and Planets* V, B. Reipurth, D. Jewitt, and K. Keil (eds.), University of Arizona Press, 2007 [Chapters available here](http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?bibcode=2007prpl.conf&db_key=ALL&sort=BIBCODE&nr_to_return=500&data_and=YES&toc_link=YES).
 
-## Problem sets, ALMA Proposal, Exams, and Grading
+## Assignments and Exams
 
 ### Course Grade 
 
-The course grade will be based on problem sets (20%), a presentation in class (15%), an ALMA proposal (20%), and three mid-term exams (45%).
+The course grade will be based on 
+* problem sets (20%) 
+* a paper presentation (15%)
+* three mid-term exams (40%)
+* reviews from our mock ALMA TAC (5%)
+* an ALMA proposal (20%)
 
 ### Problem sets
 
@@ -102,32 +106,66 @@ Good talks will
 * Finish the presentation within the allotted time (15 +/- 2 minutes)
 * Adequately answer questions raised by the instructor and students
 
-It is a wise idea to practice your presentation from start to finish "live" to make sure your timing is correct. Talks that are wildly under/over time will find it difficult to achieve full credit.
+It is a wise idea to practice your presentation from start to finish "live" to make sure your timing is correct. Students whose talks are wildly under/over time will find it difficult to achieve full credit.
 
-### ALMA proposal 
+### Midterm Exams
 
-In the later third of the course, students will learn general telescope and grant proposal writing strategies, as well as strategies specific to the ALMA observatory. We will spend a few class periods describing the capabilities of the ALMA observatory, exploring how to write an ALMA proposal, and engaging in a mock TAC panel discussion using previously submitted (successful and unsuccessful) ALMA proposals (tentatively scheduled for Nov 29th).
-
-As a final course project, students will then be responsible for preparing their own ALMA observing proposal using ALMA Cycle 8 capabilities and materials as a baseline. Proposals will be due December 6th. 
-
-After each student has submitted their ALMA proposal, our class will simulate the dual-anonymous peer review process in a distributed fashion. The review process will work as follows:
-* In the actual ALMA review, for every proposal that the P.I. submits, they are sent (electronically) 10 proposals to review. For our mock panel, the number of proposals you will receive to review will depend on course enrollment.
-* The reviewer is responsible for providing a written report describing the strengths and weaknesses of the proposal. The ALMA guidelines for reviewiers are available [here](https://almascience.eso.org/proposing/alma-proposal-review/guidelines-for-reviewers). We also recommend reviwing the [JWST cycle 1](https://jwst-docs.stsci.edu/jwst-opportunities-and-policies/james-webb-space-telescope-science-policies-group-and-review-information/panel-reports) review criteria, which are similar and provide another reference point. It is expected that each review be at least two paragraphs in length.
-* The reviewer is responsible for evaluating the scientific merit of the proposal with a numerical score between 1 and 5 (1 being excellent, 5 being unsatisfactory).
-
-Reviews for all proposals will be due December 10th.
-
-The course project will be graded on *both* the quality of original ALMA proposal (15% course grade) and the quality of the written reviews of the other proposals (5% course grade). This graded mock review process is *in addition* to the mock TAC panel that we will carry out in class.
-
-The instructor will assign the final grade to each ALMA proposal (reserving the right of the TAC chair). The set of distributed peer reviews will be provided back to each P.I. for reference.
-
-### Exams
+There will be three midterm exams throughout the semester. Each exam is designed to assess your understanding of the topics covered in the previous ~4 weeks of lectures. Each exam will be scheduled during a class period (see the [Course Schedule]({{<relref "schedule" >}}) for the precise date).
 
 Exam makeup: If you are unable to attend class on the date of an exam, please contact the instructor *before the exam date* to schedule a makeup exam. 
 
-## Course Calendar
+There will be no final exam (the ALMA proposal + review plays this role).
 
-For full information, see the [Course Schedule]({{<relref "schedule" >}}). Important dates to keep in mind are the three mid-term exams, scheduled during class periods.
+### ALMA mock TAC and proposal 
+
+Throughout the course, students will learn general telescope and grant proposal writing strategies, as well as strategies specific to the ALMA observatory. We will spend a few class periods describing the capabilities of the ALMA observatory, exploring how to write an ALMA proposal, and engaging in a mock TAC panel discussion using previously submitted (successful and unsuccessful) ALMA proposals.
+
+#### TAC reviews
+
+Our class will simulate the dual-anonymous peer review process in a distributed fashion. In the actual ALMA review, for every proposal that the P.I. submits, they are sent (electronically) 10 proposals to review. Our review process will work as follows:
+
+* You will receive approximately 5 proposals related to course topics we have covered.
+* You are responsible for providing a written report describing (at minimum) the strengths and weaknesses of each proposal, at least two paragraphs in length. The ALMA guidelines for reviewers are available [here](https://almascience.eso.org/proposing/alma-proposal-review/guidelines-for-reviewers). We also recommend reviewing the [JWST cycle 1](https://jwst-docs.stsci.edu/jwst-opportunities-and-policies/james-webb-space-telescope-science-policies-group-and-review-information/panel-reports) review criteria, which are similar and provide another data point for "what makes a good review."
+* You are responsible for evaluating the scientific merit of the proposal with a numerical score between 1 and 5 (1 being excellent, 5 being unsatisfactory).
+
+The TAC reviews will be worth 5% of your final grade.
+
+#### ALMA proposal
+
+As a final course project, students will be responsible for preparing their own ALMA observing proposal using ALMA Cycle 8 capabilities and materials as a baseline (worth 20% of your final grade). Proposals will be due during the final examination period.
+
+An overview of the ALMA proposal process is described in the [ALMA Cycle 8 Proposer's Guide](https://almascience.nrao.edu/proposing/proposers-guide). If you have any questions about preparing an ALMA proposal, answers can most likely be found in this document.
+
+The following are some sections of the Proposer's Guide that we recommend reading to understand this course project
+* [1.2.1 Dual anonymous review](https://almascience.nrao.edu/proposing/proposers-guide#section-4)
+* [1.2.2 Distributed peer review](https://almascience.nrao.edu/proposing/proposers-guide#section-5)
+* [4. Proposal Planning](https://almascience.nrao.edu/proposing/proposers-guide#section-22)
+* [5. Proposal Preparation and submission](https://almascience.nrao.edu/proposing/proposers-guide#section-40)
+
+The assignment will consist of preparing a Scientific Justification ([Section 5.3](https://almascience.nrao.edu/proposing/proposers-guide#section-43)) PDF *only*. You may need to install the observing tool (OT) for help with your resolution/sensitivity calculations, but your submitted assignment does not need a cover sheet, technical justification, or abstract.
+
+We will grade your proposal following the spirit of the actual ALMA review critera. Specifically, your Scientific Justification should explicitly include:
+* a title
+* a discussion of the overall scientific merit of the proposed investigations and their potential contribution to the advancement of scientific knowledge
+* a clear description of the proposed observations. I.e., 
+    * what targets will be observed 
+    * at what angular resolution
+    * at what frequency (including continuum/spectral line)
+    * to what sensitivity (Jy for point sources, and Jy/beam or Jy/arcsec² for resolved sources)
+* a robust data analysis plan
+* a discussion of why the capabilities of ALMA are required to carry out this science
+* figures and tables supporting the proposal, as necessary
+* references 
+
+Your Scientific Justification should follow all rules for page limits and fonts, especially the requirements for 4 single-spaced pages (A4 or US letter size) in 12pt font. We suggest that you allow two pages for the science case and two pages for figures, tables, and references; however, you may allocate space as best you see fit.
+
+Your Scientific Justification should follow all guidelines for [dual-anonymous peer review](https://almascience.nrao.edu/proposing/alma-proposal-review/dual-anonymous) such that your PDF *does not contain* any information that could be easily used to identify the proposer.
+
+## Course Calendar and Closure Policies
+
+For full information, see the [Course Schedule]({{<relref "schedule" >}}). 
+
+If campus should be closed (e.g. for a weather-related event or COVID precautions), the instructor will provide instructions via email on course lecture format (possibly remote, keeping the same schedule) and examinations/assignments (due dates to be rescheduled *no earlier than 48 hours* after closure announcement).
 
 ## Academic Integrity
 Academic integrity is the pursuit of scholarly activity in an open, honest and responsible manner. Academic integrity is a basic guiding principle for all academic activity at The Pennsylvania State University, and all members of the University community are expected to act in accordance with this principle. Consistent with this expectation, the University’s Code of Conduct states that all students should act with personal integrity, respect other students’ dignity, rights and property, and help create and maintain an environment in which all can succeed through the fruits of their efforts.
@@ -160,3 +198,8 @@ I encourage you to be in contact with your academic adviser for specific needs y
 * Penn State Crisis Line 1-877-229-6400
 * Student Care and Advocacy: Email: StudentCare@psu.edu
 * Share a Concern: [Share a Concern Form](https://cm.maxient.com/reportingform.php?PennState&layout_id=14) Phone: 814-863-2020 (voicemail)
+
+## Code of Mutual Respect and Cooperation
+
+The Eberly College of Science (ECoS) [Code of Mutual Respect and Cooperation](https://science.psu.edu/climate-and-diversity/code-mutual-respect-and-cooperation) embodies the values that we hope
+faculty, staff, and students possess and will endorse to make ECoS a place where every individual feels respected and valued, as well as challenged and rewarded. Please review these principles, linked [here](https://science.psu.edu/climate-and-diversity/code-mutual-respect-and-cooperation).

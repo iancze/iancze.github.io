@@ -1,11 +1,9 @@
 ---
 title: "Telescope Proposals and Time Allocation Committees"
-date: 2021-11-19
-publishdate: 2021-11-19
+date: 2021-08-05
+publishdate: 2021-08-05
 draft: true
 ---
-
-
 
 From Kevin re: JWST proposals:
 
