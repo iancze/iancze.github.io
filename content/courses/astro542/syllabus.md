@@ -11,7 +11,7 @@ weight: 1
 * Professor (Dr.) Ian Czekala (he/him/his)
 * *Email*: ipc5094@psu.edu or iczekala@psu.edu (alias). 
 
-Office hours by appointment.
+Office hours by appointment (remote only).
 
 ## Objectives
 
@@ -21,6 +21,10 @@ The interstellar medium (ISM) is the space between the stars. This space is far 
 ASTRO 542 meets three times a week on Monday, Wednesday, and Friday in [Davey Laboratory, Rm. 541](https://map.psu.edu/?id=1134#!m/274769?s/davey%20lab?ct/33177,25403,26748,26749,26750,27255) from 9:05am to 9:55am ET (prompt). Following current university guidelines (8/5/2021), the course is scheduled to meet in person, and all individuals (regardless of vaccination status) are required to wear masks. For up to date policies, please consult [this site](https://virusinfo.psu.edu/). 
 
 Remote formats of the course may at times be necessary depending on the status of the COVID-19 pandemic. We plan on recording and posting all lectures. **If you are in any way feeling ill or suspect you might have been contact with an individual infected with COVID, *please* stay home.** We will work with you to provide you with the course materials you need.
+
+### Masking Policy
+
+*University policy*: Penn State University requires everyone to wear a face mask in all university buildings, including classrooms, regardless of vaccination status. ALL STUDENTS MUST wear a mask appropriately (i.e., covering both your mouth and nose) while you are indoors on campus.  This is to protect your health and safety as well as the health and safety of your classmates, instructor, and the university community.   Anyone attending class without a mask will be asked to put one on or leave.  Instructors may end class if anyone present refuses to appropriately wear a mask for the duration of class. Students who refuse to wear masks appropriately may face disciplinary action for Code of Conduct violations.  If you feel you cannot wear a mask during class, please speak with your adviser immediately about your options for altering your schedule.
 
 ## Textbook 
 
