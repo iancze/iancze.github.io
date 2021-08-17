@@ -54,6 +54,7 @@ There are many additional resources that will be helpful during this course (and
 
 ### Textbooks 
 
+* *Interstellar and Intergalactic Medium* by Barbara Ryden and Richard W. Pogge, The Ohio State Astrophysics Series, 2021
 * [Essential Radio Astronomy](https://www.cv.nrao.edu/~sransom/web/xxx.html) by James Condon and Scott Ransom
 * *Physics and Chemistry of the Interstellar Medium* by Sun Kwok, University Science Books, 2007
 * *The Origin of Stars* by Michael D. Smith, Imperial College Press, 2004
