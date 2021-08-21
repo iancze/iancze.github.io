@@ -1,7 +1,7 @@
 ---
 title: Introduction and Course Overview
 date: 2021-08-23
-draft: true
+publishdate: 2021-08-21
 ---
 
 The Interstellar medium course is at once a course about nothing and a course about everything. What I mean by that is we're talking about the *space between things*, some of the least dense parts of the galaxy. But we're also going to touch on nearly all aspects of astrophysics:

@@ -5,7 +5,7 @@ publishdate: 2021-06-21
 weight: 2
 ---
 
-ASTRO 542 meets three times a week (9:05am to 9:55am) on Monday, Wednesday, and Friday in person in [Davey Laboratory, Rm. 541](https://map.psu.edu/?id=1134#!m/274769?s/davey%20lab?ct/33177,25403,26748,26749,26750,27255).
+ASTRO 542 meets three times a week (9:05am to 9:55am) on Monday, Wednesday, and Friday in a *remote synchronous* format over Zoom. The Zoom link is provided to enrolled students via email for security purposes. If you would like to audit a course, please email the instructor.
 
 Please be aware that we will not be meeting on Labor Day (Sep 6) or over Thanksgiving Holiday (Nov 22 - 26), following PSU's [Fall 2021 academic calendar](https://www.registrar.psu.edu/academic-calendars/2021-22.cfm).
 
