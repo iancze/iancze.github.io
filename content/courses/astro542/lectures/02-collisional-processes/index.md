@@ -1,7 +1,7 @@
 ---
 title: "Collisional Processes"
 date: 2021-08-25
-draft: true
+publishdate: 2021-08-22
 ---
 
 ## References for this lecture
@@ -19,11 +19,11 @@ Collisions are one of the main ways in which energy is transferred about the ISM
 * chemical reactions
 
 
-Goal: understand a basic physical framework for understanding different types of collisions, and how their rates depend on density and temperature.
+**Goal**: set up a basic physical framework for understanding different types of collisions, and how their rates depend on density and temperature.
 
 Types of collisional interactions and how we'll understand them
-* long range Coulomb (charges, ions, etc...) \\(\propto 1/r\\): impact approximation
-* intermediate range \\(\propto r^{-4}\\) induced dipole between ions and neutral atoms or molecules: scattering by \\(\propto r^{-4}\\) potential
+* long range Coulomb (charges, ions, etc...) \\(\propto 1/r\\) potential: impact approximation
+* intermediate range \\(\propto r^{-4}\\) potential induced dipole between ions and neutral atoms or molecules: scattering by \\(\propto r^{-4}\\) potential
 * interactions between electrons and neutrals: experimental data 
 * short-range interactions between neutrals: "hard-sphere" estimates
 
@@ -91,9 +91,144 @@ where \\(k_{ABC}\\) is the three-body collisional rate coefficient.
 
 ## Inverse-Square Law Forces
 
-Let's consider the scattering by two particles interacting through an inverse square law \\(1/r^2\\), called Rutherford or Coulomb Scattering. A proper treatment involves some tedious integrals (see the [Wikipedia article](https://en.wikipedia.org/wiki/Cross_section_(physics)#Differential_cross_section) for reference), but we can get to an order-of-magnitude estimate using the "impact approximation." 
+Let's consider the scattering by two particles interacting through an inverse square law \\(1/r^2\\), called Rutherford or Coulomb Scattering. 
+
+### Question time
+* How can we quickly get an estimate of the *momentum* transferred between two particles when they interact? 
+* What are some quick ways we could estimate this? If we needed to be very accurate, what would we need to do?
+
+### Impact approximation
+
+A proper treatment involves some tedious integrals (see the [Wikipedia article](https://en.wikipedia.org/wiki/Cross_section_(physics)#Differential_cross_section) for reference), but we can get to an order-of-magnitude estimate using the "impact approximation." 
 
 {{< figure src="fig_2_1.jpg" caption="Coordinates for the Impact Approximation. Attribution: Draine Figure 2.1">}}
+
+Coulomb force
+
+$$
+F_{12} = \frac{Z_1 Z_2 e^2}{r^2}
+$$
+
+### Super simple way
+Change in momentum is an *impulse*, 
+$$
+\Delta p = F \Delta t = m \Delta v.
+$$
+And we'll calculate the impulse given by the product of the perpendicular force at closest approach times the characteristic interaction time. This is likely to be the "most wrong" calculation, but it should at least get us in the ball park in terms of order of magnitude.
+
+The instantaneous force perpendicular to the trajectory is 
+$$
+F_\bot = \frac{Z_1 Z_2 e^2}{(b \cos \theta)^2} \cos \theta = \frac{Z_1 Z_2 e^2}{b^2} \cos^3 \theta
+$$
+
+What is "characteristic time" for the interaction? A decent guess is \\(b/v_1\\). Then the change in momentum is just
+
+$$
+\Delta p = \frac{Z_1 Z_2 e^2}{b v_1}.
+$$
+
+A (slightly) more thorough treatment in the textbook (Draine 2.2.1) yields a more accurate
+$$
+\Delta p = 2 \frac{Z_1 Z_2 e^2}{b v_1}.
+$$
+
+Great, how can we use this to estimate things relevant to the ISM, such as the ionization rate of an atom with a single bound electron?
+
+### Collisional Ionization 
+
+Let \\(I\\) be the energy required to ionize the atom, i.e., completely unbind the electron.
+
+We will consider the ionizer to be (another) fast-moving electron. The speed is fast enough that the kinetic energy of the electron is \\(\gg I\\). If we could *directly* translate this energy to unbinding the electron, it would. But, we're considering glancing interactions. 
+
+If \\(b\\) is small, more energy will transferred. If \\(b\\) is large, less energy will be transferred. There will be some \\(b\\) so large that an insufficient amount of energy will be transferred to unbind the electron and ionize the atom. Let's use our impact approximation to calculate this.
+
+The criterion is
+$$
+I = \frac{(\Delta p)^2}{2 m_e}.
+$$
+Meaning we need transfers of momentum *larger* than this value to exceed the ionization energy.
+
+We use this and the \\(\Delta p\\) equation above to solve for a maximum impact parameter
+
+$$
+b_\mathrm{max} = \left [ \frac{2 Z_p^2 e^4}{m_e v^2 I} \right ]^{1/2}
+$$
+
+We can use the impact parameter as the "radius" of the cross-section, therefore the cross-section area for an ionizing interaction is 
+$$
+\sigma(v) \approx \pi b_\mathrm{max}^2(v).
+$$
+
+Now we calculate the thermal rate coefficient 
+$$
+\langle \sigma v \rangle = \int_{v_\mathrm{min}}^\infty \sigma(v) v f_v \\, \mathrm{d}v.
+$$
+\\(f_v\\) is still given by the Maxwellian distribution, so we have 
+$$
+\langle \sigma v \rangle = Z_p^2 \left (\frac{8 \pi}{m_e kT} \right)^{1/2} \frac{e^4}{I}e^{-I/kT}.
+$$
+
+For a hydrogen atom, the ionization energy is 
+$$
+I = \frac{13.602}{n^2} \\, [\mathrm{eV}]
+$$
+where $n$ is the principal quantum number. For highly excited energy (\\(n \approx 100\\)), the ionization energy becomes small and the collisional ionization rate becomes very large.
+
+### Electron-ion inelastic scattering: Collisional strength \\(\Omega_{ul}\\)
+
+We just discussed elastic scattering of electrons by ions, whereby momentum transfer between the two is dominated by "distant" encounters with impact parameters much larger than the relevant scales of the atom. 
+
+When the fast-moving electron *does* pass very close to the atom with bound electron, however, quantum mechanics plays a role (as it always does...) and the bound electron may transition to another energetically allowed state.
+
+It's common to write the cross-section for these interactions using a dimensionless quantity \\(\Omega_{ul}\\) called the collision strength. You can see S 2.3 of Draine for the full details, but the important part is that 
+$$
+\langle \sigma v \rangle_{u \rightarrow l} \propto \frac{\Omega_{ul}}{g_u \sqrt{T}}.
+$$
+The good news is that 
+* \\(\Omega_{ul}\\) is approximately indepedent of \\(T\\) for temperatures below 10,000 K
+* typical values of \\(\Omega_{ul}\\) are 1 - 10
+* this means collisional rate coefficient \\(\langle \sigma v \rangle_{u \rightarrow l}\\) is \\(\propto T^{-1/2}\\)
+
+Inelastic collisions play a role in line radiation from hot gas, since they leave the atom in an excited state, from which it decays by emitting a photon.
+
+## Ion-Neutral Collision Rates 
+
+A charged ion particle (more than just an electron) interacting with neutral particles (atoms or molecules). If the two are separated by more than a few Å, the charged particle creates an electric field \\(\vec{E}\\) which *polarizes* the neutral.
+
+In the case of a simple hydrogen atom, you can think of this as the proton and electron moving to separate sides. The neutral acquires a dipole moment \\(\vec{P} = \alpha_N \vec{E}\\), where \\(\alpha_N\\) is the polarizability.
+
+This creates an interaction potential which looks like 
+$$
+U(r) = -\frac{1}{2}\frac{\alpha_N Z^2 e^2}{r^4}.
+$$
+
+Interactions in this potential are interesting.
+
+{{< figure src="fig_2_2.jpg" caption="Three trajectories in a \\(1/r^4\\) potential. Attribution: Draine Figure 2.2">}}
+
+When \\(b < b_0\\), the charged particle can undergo an "orbiting" trajectory, which has cross section for interaction \\(\pi b_0^2\\). If you do the math, this unique cross section leads to a rate coefficient \\(\langle \sigma v \rangle\\) that is independent of temperature.
+
+See Draine Table 2.1 for a list of Ion-Neutral scattering parameters. We're talking about neutrals like H, He, \\(\mathrm{H}_2\\), and O, and ions like \\(H^+, C^+, \mathrm{H}_2^+\\).
+
+Orbiting trajectories bring ion and neutral into close contact, and if there is an energetically allowed outcome 
+* collisional dexcitation
+* exothermic charge exchange
+* chemical exchange reaction
+and the reaction rate coefficients for these reactions become comparable to the orbiting rate coefficient.
+
+Because the rate coefficients are independent of temperature (all others we've examined *are* dependent on temperature), exothermic ion-neutral reactions play a major role in chemistry of *cool* interstellar gas.
+
+## Electron-Neutral Collision Rates
+Elastic scattering of electrons by neutrals. Can be important in *very low ionization* environments (e.g., protoplanetary disks). Primary collision partner is \\(H_2\\). Rates are determined experimentally.
+
+## Neutral-Neutral Collision Rates
+
+Interactions between two neutral species
+* at small separations is repulsive
+* at larger separations is attractive (van der Waals) \\(U(r) \propto r^{-6}\\)
+
+The fact that attractive interaction is very weak and the onset of repulsive interaction sufficiently rapid that we can treat the two partners as "hard spheres," i.e., the cross-sectional area is really just the characteristic size of the atom or molecule (~1 Å). Think of throwing two basketballs at each other. They will only interact if \\(b < R_1 + R_2\\), i.e., if the balls would hit each other. No need to consider effective cross sectional area for charges. For temperatures less than 100 K, the rate coefficient for neutral-neutral scattering is more than 10x smaller than the rate coefficient for ion-neutral scattering.
+
 
 ## Review
 
