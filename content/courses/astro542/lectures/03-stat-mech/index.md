@@ -6,3 +6,4 @@ draft: true
 
 Draine Ch. 3
 
+**The ISM and IGM are generally far from thermodynamic equilibrium**.
