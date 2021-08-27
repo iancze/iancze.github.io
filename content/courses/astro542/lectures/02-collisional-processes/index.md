@@ -4,6 +4,8 @@ date: 2021-08-25
 publishdate: 2021-08-22
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+2+Aug+25/1_gp4w3at4)
+
 ## References for this lecture
 
 * Draine Ch. 2 (primary)
@@ -138,15 +140,15 @@ Great, how can we use this to estimate things relevant to the ISM, such as the i
 
 Let \\(I\\) be the energy required to ionize the atom, i.e., completely unbind the electron.
 
-We will consider the ionizer to be (another) fast-moving electron. The speed is fast enough that the kinetic energy of the electron is \\(\gg I\\). If we could *directly* translate this energy to unbinding the electron, it would. But, we're considering glancing interactions. 
+We will consider the ionizer to be (another) electron that is moving fast enough such that its kinetic energy is \\(\gg I\\). If we could *directly* translate this energy to unbinding the electron, it would. But, we're considering glancing (and more distant) interactions, so it's not immediately clear how much we'd transfer.
 
 If \\(b\\) is small, more energy will transferred. If \\(b\\) is large, less energy will be transferred. There will be some \\(b\\) so large that an insufficient amount of energy will be transferred to unbind the electron and ionize the atom. Let's use our impact approximation to calculate this.
 
 The criterion is
 $$
-I = \frac{(\Delta p)^2}{2 m_e}.
+\frac{(\Delta p)^2}{2 m_e} > I
 $$
-Meaning we need transfers of momentum *larger* than this value to exceed the ionization energy.
+i.e., transfers of momentum exceedingFy the ionization energy.
 
 We use this and the \\(\Delta p\\) equation above to solve for a maximum impact parameter
 
@@ -172,7 +174,7 @@ For a hydrogen atom, the ionization energy is
 $$
 I = \frac{13.602}{n^2} \\, [\mathrm{eV}]
 $$
-where $n$ is the principal quantum number. For highly excited energy (\\(n \approx 100\\)), the ionization energy becomes small and the collisional ionization rate becomes very large.
+where \\(n\\) is the principal quantum number. For highly excited energy (\\(n \approx 100\\)), the ionization energy becomes small and the collisional ionization rate becomes very large.
 
 ### Electron-ion inelastic scattering: Collisional strength \\(\Omega_{ul}\\)
 
