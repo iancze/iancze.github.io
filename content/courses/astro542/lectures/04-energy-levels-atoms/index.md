@@ -1,14 +1,17 @@
 ---
 title: "Energy Levels of Atoms, Ions, and Molecules"
 date: 2021-08-30
-draft: true
+publishdate: 2021-08-29
 ---
+
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+4A+Aug+30/1_7cregjt3)
 
 * Draine Ch. 4 + 5
 * Ryden and Pogge "Guide to Spectroscopic Notation" available as PDF from [here](https://www.cambridge.org/highereducation/books/interstellar-and-intergalactic-medium/A647BECF975E19E86F7F88F7BB103AA7/resources/general-resources/EE39FB29FEC5B2061B17B5D036647F0A/guide-to-spectroscopic-notation/6B0467B962DB4E3D8986F4893569207F).
 * *Radiative Processes* by Rybicki and Lightman, Ch. 11: Molecular Structure
+* *Physics of Atoms and Molecules* by Bransden and Joachain
 
-Some of this lecture will likely be review from your quantum mechanics (and/or chemistry) courses. The goal is to revisit and organize our understanding of the energy levels of atoms, ions, and molecules.
+Some of this lecture will likely be review from your quantum mechanics (and/or chemistry) courses. The goal is to revisit and organize our understanding of the energy levels of atoms, ions, and molecules to form a foundation for later astrophysical processes that use these emission/absorption lines.
 
 ## Ionization
 
@@ -18,7 +21,7 @@ As we covered in the first lecture (with hydrogen), ionization state is denoted 
 * O II = singly ionized oxygen
 * Ne III = doubly ionized neon
 
-You may see the more conventional "chemical" notation when we're just referring to the ion, i.e., \\(\mathrm{Ne}^{4+}\\).
+Sometimes, you may see the more conventional "chemical" notation when we're just referring to the ion, i.e., \\(\mathrm{Ne}^{4+}\\).
 
 ## Single-Electron orbitals 
 
@@ -86,14 +89,14 @@ But see also the hyperfine lines of HCN and \\(\mathrm{C}_2 \mathrm{H}\\) in pro
 
 ## Molecular Spectroscopy
 
-*Molecular spectroscopy is hard*. But worthwhile. Why is molecular spectroscopy hard? Having two (or more) atoms destroys the nice symmetry that we had with atomic spectra. This means that there are *many more* ways for a molecule to move, which means many more degrees of freedom, which means many more quantum states.
+*Molecular spectroscopy is hard*. But worthwhile. Why is molecular spectroscopy hard? Having two (or more) atoms destroys the nice symmetry that we had with atomic spectra. This means that there are *many more* ways for a molecule to move, which means many more degrees of freedom, which means many more quantum states to transition between and thus many more discrete photon energies to emit.
+
+Most abundant, astrophysically-interesting molecules are diatomic molecules (having two atoms). Thankfully, this means we at least have a line of rotational symmetry along the *internuclear axis*, the line from one nucleus to another.
 
 * homonuclear: having the same nucleus (e.g., \\(H_2\\), \\(O_2\\))
 * heteronuclear: having different nuclei (e.g., \\(HD\\), \\(CO\\) )
 
-Most abundant, astrophysically-interesting molecules are diatomic molecules (having two atoms). Thankfully, this means we at least have a line of rotational symmetry along the *internuclear axis*, the line from one nucleus to another.
-
-The main types of transitions that you will encounter are either vibrational or rotational.
+The main types of molecular transitions that you will encounter in astrophysical contexts are either vibrational or rotational.
 
 ## Vibrational Transitions 
 
@@ -103,31 +106,40 @@ Due to the quantization of the vibrational energy as atoms stretch on the intern
 
 Ground state is very near the bottom (but not completely so).
 
-The zero point energy of a molecule is 
-$$
-\frac{1}{2} \hbar \omega_0
-$$
-
 Can be approximated as a *harmonic oscillator* with quantum number \\(v\\), and vibrational energy levels
 $$
 E_\mathrm{vib}(v) = \hbar \omega_0 (v + 1/2).
 $$
-Typical vibrational energies \\(\hbar \omega_0\\) range from 0.2 - 0.5 eV, corresponding to spectral lines in the infrared.
-
+where
 $$
 \omega_0 = \sqrt{k/m_r}
 $$
-where in this case only, \\(k\\) is the spring constant for the harmonic oscillator. \\(m_r\\) is still the reduced mass.
+where in this case only, \\(k\\) is the spring constant for the harmonic oscillator. \\(m_r\\) is the reduced mass
+$$
+m_r = \frac{m_1 m_2}{m_1 + m_2}.
+$$
+
+Typical vibrational energies \\(\hbar \omega_0\\) range from 0.2 - 0.5 eV, corresponding to spectral lines in the infrared.
+
+Even at the ground vibrational state (\\(v =0\\), a molecule still has a zero point energy
+$$
+\frac{1}{2} \hbar \omega_0
+$$
+
+
 
 ## Rotational Transitions
 
-Due to quantization of rotational angular momentum as the molecule rotates about the axis *perpendicular* to the internuclear axis. Has rotation quantum number \\(J\\) and rotational energy levels
+Due to quantization of rotational angular momentum as the molecule rotates about the axis *perpendicular* to the internuclear axis. 
+
+{{< figure src="rotation.png" link="http://hyperphysics.phy-astr.gsu.edu/hbase/molecule/rotrig.html" caption="Moment of inertia for a diatomic molecule. Credit: Hyperphysics">}}
+
+Has rotation quantum number \\(J\\) and rotational energy levels
 $$
 E_\mathrm{rot}(J) = \frac{\hbar}{2I}J(J +1)
 $$
 where \\(I\\) is the molecule's moment of inertia. Typical rotational levels have energy differences approximately 100x smaller than vibrational levels, so each vibrational level is usually split into many rotational sub-levels. 
 
-{{< figure src="rotation.png" link="http://hyperphysics.phy-astr.gsu.edu/hbase/molecule/rotrig.html" caption="Moment of inertia for a diatomic molecule. Credit: Hyperphysics">}}
 
 Moment of inertia given by 
 $$
