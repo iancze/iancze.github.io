@@ -261,7 +261,7 @@ Then solve for \\(\sigma_{lu}(\nu)\\)
 $$
 \sigma_{lu}(\nu) = \frac{g_u}{g_l} \frac{c^2}{8 \pi \nu^2_{lu}}A_{ul} \phi_\nu
 $$
-where \\(\phi_nu\\) is a normalized line profile 
+where \\(\phi_\nu\\) is a normalized line profile 
 $$
 \int \phi_\nu d \nu = 1.
 $$
