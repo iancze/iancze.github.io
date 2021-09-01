@@ -4,7 +4,12 @@ date: 2021-09-01
 publishdate: 2021-08-30
 ---
 
-Draine Ch. 6
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+5A+Sep+1/1_o7bbam0v)
+
+* Draine Ch. 6
+* Lecture notes on [Radiative Transfer in Astrophysics](https://www.ita.uni-heidelberg.de/~dullemond/lectures/radtrans_2012/index.shtml) by C.P. Dullemond.
+* *Radiative Processes* by Rybicki and Lightman
+
 
 General rules for absorption and emission of radiation by absorbers with *quantized* energy levels. Can be atoms, ions, molecules, dust grains, or anything that has (quantized) energy levels.
 
@@ -148,6 +153,20 @@ $$
 \mathrm{ergs}\\;\mathrm{s}^{-1}\\;\mathrm{cm}^{-2}
 $$
 
+You'll sometimes also see a spectral energy distribution plotted
+$$
+F_\nu \nu = F_\lambda \lambda
+$$
+this comes about because 
+$$
+\nu = \frac{c}{\lambda}
+$$
+$$
+\frac{d \lambda}{d \nu} = -\frac{c}{\nu^2} = -\frac{\lambda}{\nu}
+$$
+and the minus sign goes away because fluxes are defined per *positive* unit of frequency or wavelength.
+
+
 I find the question of whether we're referring to 
 * \\(I_\nu\\): specific intensity (Jy/ster) 
 * \\(F_\nu\\): spectral flux density (Jy)
@@ -266,4 +285,4 @@ The intrinsic width of the absorption line reflects the uncertainty in the energ
 
 Intrinsic widths of lines \\(\propto h \nu\\), which means x-ray transitions can have considerably larger line widths than radio transitions (assuming the medium is stationary).
 
-
+We'll talk more about absorption line profiles, Doppler broadening, Voigt profiles, etc... in a few lectures.

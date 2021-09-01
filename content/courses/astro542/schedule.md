@@ -23,9 +23,9 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Fri Sep 10 | Lecture | {{< relreftitle href="08-absorption-lines" alt="Absorption Lines">}} |
 | Mon Sep 13 | Lecture | {{< relreftitle href="09-emission-absorption-plasma" alt="Emission and Absorption (Plasma)">}}| 
 | Wed Sep 15 | Lecture | {{< relreftitle href="10-radiation-fields" alt="Radiation Fields">}} |
-| Fri Sep 17 | Student Presentations #1 | TBD |
+| Fri Sep 17 | Presentation by Laura Duffy (#1) | TBD |
 | Mon Sep 20 | Lecture | {{< relreftitle href="11-intro-radio-astronomy" alt="Radio Astronomy and ALMA">}}|
-| Wed Sep 22 | **Exam 1** | Lectures up to TBD |
+| Wed Sep 22 | **Exam 1** | Lectures up to Sep 13 (incl)|
 | Fri Sep 24 | Lecture | {{< relreftitle href="12-ionization-processes" alt="Ionization Processes">}}|
 | Mon Sep 27 | Lecture | {{< relreftitle href="13-photoionized-gas-HII" alt="Photoionized Gas HII">}}|
 | Wed Sep 29 | Lecture | {{< relreftitle href="14-ionization-neutral-regions" alt="Ionization in Neutral Regions">}}|
@@ -34,7 +34,7 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Wed Oct 6 | Lecture | {{< relreftitle href="17-radiative-trapping" alt="Radiative Trapping">}}|
 | Fri Oct 8 | Lecture | {{< relreftitle href="18-dust" alt="Interstellar Dust">}}|
 | Mon Oct 11 | Lecture | {{< relreftitle href="19-scattering-absorption" alt="Scattering and Absorption">}}|
-| Wed Oct 13 | Student Presentations #2 | TBD |
+| Wed Oct 13 | Presentation by Malinda Baer (#2) | TBD |
 | Fri Oct 15 | Lecture | {{< relreftitle href="20-telescope-proposal-TAC" alt="Telescope Proposals and TACs">}}|
 | Mon Oct 18 | Lecture | {{< relreftitle href="21-dust-composition" alt="Dust Composition">}} |
 | Wed Oct 20 | **Exam 2** | Lectures up to TBD | 
@@ -46,7 +46,7 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Wed Nov 3 | Mock TAC discussion | | 
 | Fri Nov 5 | Lecture | {{< relreftitle href="27-fluid-dynamics" alt="Fluid Dynamics">}}  |
 | Mon Nov 8 | Lecture | {{< relreftitle href="28-winds-SNe-GRB" alt="Winds, SNe, and GRBs">}} |
-| Wed Nov 10 | Student Presentations #3 |  |
+| Wed Nov 10 | Presentation by Kadri Nizam (#3) | TBD |
 | Fri Nov 12 | Lecture | {{< relreftitle href="29-star-formation-theory" alt="Star Formation Theory">}} |
 | Mon Nov 15 | Lecture | {{< relreftitle href="30-star-formation-observations" alt="Star Formation Observations">}} |
 | Wed Nov 17 | Lecture | {{< relreftitle href="31-protostars-to-ppds" alt="Protostars to PPDs">}} |
@@ -54,6 +54,6 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Mon Nov 29 | Lecture | {{< relreftitle href="33-exoplanets-planet-formation" alt="Exoplanets and Planet Formation">}} 
 | Wed Dec 1 | **Exam 3** | Lectures up to TBD | 
 | Fri Dec 3 | Lecture | {{< relreftitle href="34-astrobio-solar-system" alt="Exoplanets and Planet Formation">}} |
-| Mon Dec 6 | Student Presentations #4 | |
+| Mon Dec 6 | Presentation by Megan Delamer (#4) | TBD |
 | Wed Dec 8 | Lecture | {{< relreftitle href="35-astrochemistry" alt="Astrochemistry">}} |  |
 | Fri Dec 10 | TBD | |

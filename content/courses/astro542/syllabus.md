@@ -43,7 +43,7 @@ There are many additional resources that will be helpful during this course (and
 ### Course materials and lecture notes 
 
 * [Notes on Star Formation](https://arxiv.org/abs/1511.03457) by Mark Krumholz
-* Lecture note on [Radiative Transfer in Astrophysics](https://www.ita.uni-heidelberg.de/~dullemond/lectures/radtrans_2012/index.shtml) by C.P. Dullemond.
+* Lecture notes on [Radiative Transfer in Astrophysics](https://www.ita.uni-heidelberg.de/~dullemond/lectures/radtrans_2012/index.shtml) by C.P. Dullemond.
 
 ### Review Articles
 
