@@ -4,6 +4,8 @@ date: 2021-09-03
 publishdate: 2021-09-01
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+6+Sep+3/1_seg7c0y0)
+
 * Draine Ch. 7
 * Lecture notes on [Radiative Transfer in Astrophysics](https://www.ita.uni-heidelberg.de/~dullemond/lectures/radtrans_2012/index.shtml) by C.P. Dullemond.
 * *Radiative Processes* by Rybicki and Lightman
