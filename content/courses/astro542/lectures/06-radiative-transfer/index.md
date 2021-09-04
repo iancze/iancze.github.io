@@ -7,12 +7,14 @@ publishdate: 2021-09-01
 [Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+6+Sep+3/1_seg7c0y0)
 
 * Draine Ch. 7
+* Ryden and Pogge: Ch 2.1: The Equation of Radiative Transfer
+* Ryden and Pogge: Ch 3.2: Radiative Transfer of Line Emission
 * Lecture notes on [Radiative Transfer in Astrophysics](https://www.ita.uni-heidelberg.de/~dullemond/lectures/radtrans_2012/index.shtml) by C.P. Dullemond.
-* *Radiative Processes* by Rybicki and Lightman
+* *Radiative Processes* by Rybicki and Lightman, particularly Ch. 1
 
 Radiative transfer describes the propagation of radiation through absorbing and emitting media.
 
-In Wednesday's lecture, we introducted specific intensity \\(I_\nu\\) and photon occupation number \\(n_\gamma(\nu)\\).
+In Wednesday's lecture, we introduced specific intensity \\(I_\nu\\) and photon occupation number \\(n_\gamma(\nu)\\).
 
 Photon occupation number 
 $$

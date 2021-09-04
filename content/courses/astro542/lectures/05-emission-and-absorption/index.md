@@ -6,7 +6,9 @@ publishdate: 2021-08-30
 
 [Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+5A+Sep+1/1_o7bbam0v)
 
-* Draine Ch. 6
+* Draine Ch. 6: Spontaneous Emission, Stimulated Emission, and Absorption
+* Ryden and Pogge Ch. 2.1: Radiative Transfer
+* Ryden and Pogge Ch. 2.2: Absorbers and Emitters
 * Lecture notes on [Radiative Transfer in Astrophysics](https://www.ita.uni-heidelberg.de/~dullemond/lectures/radtrans_2012/index.shtml) by C.P. Dullemond.
 * *Radiative Processes* by Rybicki and Lightman
 
