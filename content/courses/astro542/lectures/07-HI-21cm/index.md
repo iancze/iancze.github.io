@@ -117,7 +117,11 @@ If the spin temperature gets very high, we aren't going to have much *net* absor
 
 ### Example calculation
 
-Assume a Gaussian internal velocity distribution for the H I cloud with dispersion \\(\sigma_V\\). Assume we are looking at a frequency \\(\nu\\), which corresponds to a Doppler shift of \\(u\\), and yields a normalized line profile of 
+Assume a Gaussian internal velocity distribution for the H I cloud with dispersion \\(\sigma_V\\). Assume we are looking at a frequency \\(\nu\\), which corresponds to a Doppler shift of \\(u\\), where 
+$$
+\nu = \nu_{ul}(1 - u/c)
+$$
+and yields a normalized line profile of 
 $$
 \phi_\nu = \frac{1}{\sqrt{2 \pi}} \frac{c}{\nu_{ul}} \frac{1}{\sigma_V}e^{-u^2/2 \sigma_V^2}
 $$
@@ -138,3 +142,90 @@ $$
 \tau_\nu = 2.190 \frac{N(\mathrm{H\\;I})}{10^{21}\\;\mathrm{cm}^{-2}} \frac{100\\;\mathrm{K}}{T_\mathrm{spin}} \frac{\mathrm{km\\;s}^{-1}}{\sigma_V} e^{-u^2/2 \sigma_V^2}.
 $$
 What column density do we need for the line of sight to be marginally optically thick (\\( \tau_\nu \gtrsim 1\\))?
+
+Many sightlines have \\(N(\mathrm{H\\;I}) \gtrsim 10^{21}\\;\mathrm{cm}^{-2}\\), spin temperatures of \\(T_\mathrm{spin} \approx 10^2\\;\mathrm{K}\\), and velocity dispersions of a few km/s, which means self-absorption of the 21-cm line can be important. 
+
+[Self-absorption](https://www.naic.edu/~gibson/hisa/hisa_expl.html). A foreground cloud will appear darker than a background cloud. Think of this in the line profiles, where you can have small dips on top of a larger line [plots](https://www.atnf.csiro.au/pasa/18_1/mccluregriffiths/paper/node3.html).
+
+{{< figure src="li_and_goldsmith_1.png" link="https://iopscience-iop-org.ezaccess.libraries.psu.edu/article/10.1086/346227/meta#" caption="Figure 1. Credit: Li and Goldsmith 2003" >}}
+
+{{< figure src="li_and_goldsmith_2.png" link="https://iopscience-iop-org.ezaccess.libraries.psu.edu/article/10.1086/346227/meta#" caption="Figure 2. Credit: Li and Goldsmith 2003" >}}
+
+The [Li and Goldsmith](https://iopscience-iop-org.ezaccess.libraries.psu.edu/article/10.1086/346227/meta#) paper.
+
+
+## Optically Thin Cloud
+Assume a cloud with 
+$$
+N(\mathrm{H\\;I}) \lesssim 10^{20}\\,\mathrm{cm}^{-2}\frac{T_\mathrm{spin}}{100\\,\mathrm{K}} \frac{\sigma_V}{\mathrm{km\\;s}^{-1}}
+$$
+such that \\(\tau_\nu \lesssim 0.2\\) even at line center (i.e., it's optically thin).
+
+* Assume that we can neglect absorption. How would we calculate the emergent intensity \\(I_\nu\\) from this cloud, using the equation of radiative transfer?
+
+Using the path length formulation,
+$$
+I_\nu = I_\nu(0) + \int j_\nu ds.
+$$
+Let's take our equation for \\(j_\nu\\) from before, assume constant properties along the ray, and use the idea that 
+$$
+N(\mathrm{H\\;I}) = \int n(\mathrm{H\\;I}) ds
+$$
+we have
+$$
+I_\nu = I_\nu(0) + \frac{3}{16\pi}A_{ul} h \nu_{ul} \phi_\nu N(\mathrm{H\\;I}).
+$$
+Assume we know \\(I_\nu(0)\\) from somewhere else. Rearrange and calculate the intensity contribution from the cloud, over all frequencies
+$$
+\int \left [ I_\nu - I_\nu(0) \right] d \nu = \frac{3}{16\pi}A_{ul} h \nu_{ul} N(\mathrm{H\\;I})
+$$
+because we know \\(\int \phi_\nu d\nu = 1\\).
+
+Let's rewrite this using antenna temperature and relative velocity \\(u\\)
+$$
+\int \left [ T_A - T_A(0) \right] du = \int \frac{c^2}{2 k \nu^2} \left [I_\nu - I_\nu(0) \right] \frac{c}{\nu} d\nu
+$$
+$$
+\int \left [ T_A - T_A(0) \right] du =  54.89\\;\mathrm{K\\;km\\;s}^{-1} \frac{N(\mathrm{H\\;I})}{10^{20}\\;\mathrm{cm}^{-2}}
+$$
+This relationship allows us to 
+* make an integrated line intensity measurement of 21-cm emission
+* calculate the total H I column density \\(N(\mathrm{H\\;I})\\)
+* without needing to know \\(T_\mathrm{spin}\\)! (as long as self-absorption not important)
+
+If we can assume optically thin emission, we can even estimate the total H I mass in another galaxy.
+
+## Spin temperature determination using background radio sources
+
+{{< figure src="fig_8_2.png" caption="Credit: Draine" >}}
+
+Assumptions
+
+* we have a bright background radio source with a "known" continuum spectrum \\(T_\mathrm{RS}\\), or at least known that it should be intrinsically flat within some frequency range
+* cloud (ISM) properties are uniform across the two sightlines: \\(N(\mathrm{H\\;I})\\) and \\(T_\mathrm{spin}\\)
+* nothing behind the "off" sightline, just blank sky whose antenna temperature \\(T_\mathrm{sky}\\) we can measure/approximate from nearby measurements in space and frequency.
+
+Using the fact that specific intensity and antenna temperature have a linear relationship, take the RTE in integral form and write down the relationships between all of the temperatures in the Figure, assuming a radial velocity \\(v\\).
+$$
+T_A^\mathrm{off}(v) = T_\mathrm{sky}e^{-\tau_\nu} + T_\mathrm{spin}(1 - e^{-\tau_\nu})
+$$
+and
+$$
+T_A^\mathrm{on}(v) = T_\mathrm{RS} e^{-\tau_\nu} + T_\mathrm{spin}(1 - e^{-\tau_\nu}).
+$$
+Then, solve for \\(\tau_\nu\\) and \\(T_\mathrm{spin}\\)
+$$
+\tau(v) = \ln \left [  \frac{T_\mathrm{RS} - T_\mathrm{sky}}{T_A^\mathrm{on}(v) - T_A^\mathrm{off}} \right]
+$$
+and 
+$$
+T_\mathrm{spin} = \frac{T_A^\mathrm{off}(v) T_\mathrm{RS} - T_A^\mathrm{on}(v) T_\mathrm{sky}}{(T_\mathrm{RS} - T_\mathrm{sky}) - [T_A^\mathrm{on}(v) - T_A^\mathrm{off}(v)]}.
+$$
+When absorption is strong,
+* \\(T_\mathrm{RS} - T_\mathrm{sky}\\) is measurably larger than \\(T_A^\mathrm{on}(v) - T_A^\mathrm{off}\\)
+* can calculate \\(\tau_\nu\\) and \\(T_\mathrm{spin}\\)
+
+If absorption is weak,
+* can't tell the difference between \\(T_\mathrm{RS} - T_\mathrm{sky}\\) vs. \\(T_A^\mathrm{on}(v) - T_A^\mathrm{off}\\)
+* upper limit on \\(\tau (v)\\) and lower limit on \\(T_\mathrm{spin}(v)\\).
+
