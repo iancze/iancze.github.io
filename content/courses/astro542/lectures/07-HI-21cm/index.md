@@ -1,7 +1,7 @@
 ---
 title: H I 21-cm Emission and Absorption
 date: 2021-09-08
-draft: true
+publishdate: 2021-09-06
 ---
 
 * Draine Ch. 8
