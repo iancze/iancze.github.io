@@ -127,9 +127,12 @@ to be approximately constant across the spectrum, and this is captured by the di
 
 Much of the historical literature focuses on equivalent width measurements, and comparing these. 
 
-**My recommendation**: If you are lucky to have a high resolution spectrum of an object, realize that *you have a lot of information* in how \\(F_\nu\\) varies with \\(\nu\\). Why go destroy some of it just to represent it as a single number? If you have a detailed physical model, you can fit \\(F_\nu\\) directly. Don't bother with equivalent widths.
+**My recommendation**: If you are lucky to have a high resolution spectrum of an object, realize that *you have a lot of information* in how \\(F_\nu\\) varies with \\(\nu\\). Why go destroy some of it just to represent it as a single number? If you have a detailed physical model, you can fit \\(F_\nu\\) directly. Don't bother thinking too hard about equivalent widths.
 
-What is the goal here, then? 
+For example, lets look at some real absorption lines and see why we'd actually want to take a look at the spectra themselves rather than just reporting a single number, \\(W\\). 
+{{< figure src="fig_2_2.jpg" caption="UV interstellar absorption lines. Figure 2.2 Ryden and Pogge" >}}
+
+That said, it's worthwhile thinking about how a line saturates with increasing optical depth, and the measure of equivalent width is useful for this exercise. Our goal is to
 * Measure some line profile 
 * Make some assessment of the optical depth
 * Use the line depth/shape and our understanding of radiative transfer to arrive at some conclusion about the column density of absorbers \\(N_l\\).

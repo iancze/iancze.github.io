@@ -4,4 +4,5 @@ date: 2021-09-13
 draft: true
 ---
 
-Draine Ch. 10
+* Draine Ch. 10
+* Rybicki and Lightman Chs. ? 

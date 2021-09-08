@@ -4,6 +4,8 @@ date: 2021-09-08
 publishdate: 2021-09-06
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+7+Sep+8/1_evjnpdt2)
+
 * Draine Ch. 8
 * Ryden and Pogge Ch. 3.1: 21cm Emission and Absorption
 * Ryden and Pogge Ch. 3.3: Exciting Hyperfine Energy Levels 
@@ -23,11 +25,9 @@ So, in talking about H I emission and absorption, we're primarily talking about 
 
 *ISM phases are ionization state, density, and temperature.*
 
-Cold neutral medium: absorption lines (from previous lectures, will also be covered in Friday's lecture). T approx 100 K, \\(n_H = 30 \\;\mathrm{cm}^{-3}\\) and neutral. Volume fraction of 1%.
+**Cold neutral medium**: absorption lines (from previous lectures, will also be covered in Friday's lecture). T approx 100 K, \\(n_H = 30 \\;\mathrm{cm}^{-3}\\) and neutral. Volume fraction of 1%.
 
-**Question**: What physical conditions must be present for 21 cm emission? Can this come from the cold neutral medium, in addition to the warm neutral medium? I think the answer is yes.
-
-Also "Warm Neutral Medium": T approx 5000 K, \\(n_H = 0.6\\;\mathrm{cm}^{-3}\\) and neutral. Volume fraction of 40%.
+**Warm Neutral Medium**: T approx 5000 K, \\(n_H = 0.6\\;\mathrm{cm}^{-3}\\) and neutral. Volume fraction of 40%.
 
 Taken together, cold neutral medium and warm neutral medium contain over half of the mass of the Milky Way Galaxy's ISM. Observationally, we can study this neutral atomic hydrogen directly via the hyperfine transition.
 * mapping distribution of H I in MW and other galaxies
