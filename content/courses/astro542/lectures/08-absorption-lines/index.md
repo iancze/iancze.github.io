@@ -4,6 +4,8 @@ date: 2021-09-10
 publishdate: 2021-09-06
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+8+Sep+10/1_zz3zpyg4)
+
 * Ryden and Pogge Ch. 2.3: Building Absorption Lines
 * Ryden and Pogge Ch. 2.4: Curve of Growth
 * Draine Ch. 9: Absorption Lines: The Curve of Growth

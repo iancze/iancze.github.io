@@ -16,3 +16,4 @@ In the technical section, describe all details of the observations: instrument, 
 Justify the telescope; why can’t observations be performed with smaller/ground-based telescopes? 
 
 
+[ALMA Cycle 8 proposal review](https://almascience.nrao.edu/news/alma-cycle-8-2021-proposal-review-process)
