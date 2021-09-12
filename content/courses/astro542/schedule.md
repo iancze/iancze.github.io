@@ -22,7 +22,7 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Wed Sep 8 | Lecture | {{< relreftitle href="07-HI-21cm" alt="HI 21cm" >}} |
 | Fri Sep 10 | Lecture | {{< relreftitle href="08-absorption-lines" alt="Absorption Lines">}} |
 | Mon Sep 13 | Lecture | {{< relreftitle href="09-emission-absorption-plasma" alt="Emission and Absorption (Plasma)">}}| 
-| Wed Sep 15 | Lecture | {{< relreftitle href="10-radiation-fields" alt="Radiation Fields">}} |
+| Wed Sep 15 | Lecture | {{< relreftitle href="10-wave-propagation" alt="Wave Propagation through ISM">}} |
 | Fri Sep 17 | Presentation by Laura Duffy (#1) | TBD |
 | Mon Sep 20 | Lecture | {{< relreftitle href="11-intro-radio-astronomy" alt="Radio Astronomy and ALMA">}}|
 | Wed Sep 22 | **Exam 1** | Lectures up to Sep 13 (incl)|

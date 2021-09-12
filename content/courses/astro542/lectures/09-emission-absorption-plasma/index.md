@@ -1,7 +1,7 @@
 ---
 title: "Emission and Absorption by a Thermal Plasma"
 date: 2021-09-13
-draft: true
+publishdate: 2021-09-11
 ---
 
 * Draine Ch. 10
