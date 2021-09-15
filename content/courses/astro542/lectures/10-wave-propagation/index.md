@@ -3,6 +3,7 @@ title: "Propagation of Radio Waves through the ISM"
 date: 2021-09-15
 publishdate: 2021-09-11
 ---
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+15/1_4xb4s6ls)
 
 * Draine Ch 11
 
@@ -66,11 +67,11 @@ t_\mathrm{arrival} = \int_0^L \frac{dL}{v_g(\omega)}
 $$
 We can plug in \\(v_g(\omega)\\), but then we get a tricky term denominator. Let's do a Taylor expansion of \\(f(\omega) = 1/v_g(\omega)\\) around \\(\omega\\), and see if we can arrive at an expression that is friendlier to integrate.
 
-To first order, the [Taylor series](https://en.wikipedia.org/wiki/Taylor_series) will look like
+To first order, the [Taylor series](https://en.wikipedia.org/wiki/Taylor_series) expanded around \\(x=a\\) will look like
 $$
-f(x) \approx f(a) + f^\prime(a)(x - a)
+f(x) \approx f(a) + f^\prime(a)(x - a).
 $$
-where \\(a = \omega\\). One of the assumptions behind an accurate Taylor expansion is that the perturbation away from the reference point \\(a\\) is small. To ensure this, we can rewrite \\(f(\omega)\\) as 
+This is just a constant plus a linear term (draw a graph). One of the assumptions behind an accurate Taylor expansion is that the perturbation away from the reference point \\(a\\) is small. To ensure this, we can rewrite \\(f(\omega)\\) as 
 $$
 f(x) = \frac{1}{c}(1 - x^2)^{-1/2}
 $$
@@ -102,7 +103,7 @@ $$
 
 A typical DM for a pulsar 3 kpc away might be \\(DM \approx 10^2\\;\mathrm{cm}^{-3}\\;\mathrm{pc} \\), which, at an observing frequency of 1 GHz, would yield a delay of 0.4 s after traveling \\(10^4\\) years.
 
-On it's own, this isn't very useful to us, because we don't know when \\(t=0\\) was. But what we can exploit is the *frequency dependence* of the arrival time, \\(t_\mathrm{arrival} \propto \nu^{-2}\\). This means that *lower frequencies arrive later*, such that the pulse is "dispersed." We can compare the relative arrival times and compare this to 
+On it's own, this isn't very useful to us, because we don't know when \\(t=0\\) was. But what we can exploit is the *frequency dependence* of the arrival time, \\(t_\mathrm{arrival} \propto \mathrm{const} + \nu^{-2}\\). This means that *lower frequencies arrive later*, such that the pulse is "dispersed." We can compare the relative arrival times and compare this to 
 $$
 \frac{d t_\mathrm{arrival}}{d \nu} = - \frac{e^2}{\pi m_e c\nu^3} DM
 $$

@@ -4,6 +4,8 @@ date: 2021-09-13
 publishdate: 2021-09-11
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+13/1_392jaruc)
+
 * Draine Ch. 10
 * Rybicki and Lightman Ch 5. 
 * Ryden and Pogge, Chs. 4.1, 4.3
