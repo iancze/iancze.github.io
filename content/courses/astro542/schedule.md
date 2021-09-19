@@ -23,7 +23,7 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Fri Sep 10 | Lecture | {{< relreftitle href="08-absorption-lines" alt="Absorption Lines">}} |
 | Mon Sep 13 | Lecture | {{< relreftitle href="09-emission-absorption-plasma" alt="Emission and Absorption (Plasma)">}}| 
 | Wed Sep 15 | Lecture | {{< relreftitle href="10-wave-propagation" alt="Wave Propagation through ISM">}} |
-| Fri Sep 17 | Presentation by Laura Duffy (#1) | TBD |
+| Fri Sep 17 | Presentation by Laura Duffy (#1) | [H I 21 cm mapping of the host galaxy of AT2018cow: a fast-evolving luminous transient within a ring of high column density gas](https://ui.adsabs.harvard.edu/abs/2019MNRAS.485L..93R/abstract) |
 | Mon Sep 20 | Lecture | {{< relreftitle href="11-intro-radio-astronomy" alt="Radio Astronomy and ALMA">}}|
 | Wed Sep 22 | **Exam 1** | Lectures up to Sep 13 (incl)|
 | Fri Sep 24 | Lecture | {{< relreftitle href="12-ionization-processes" alt="Ionization Processes">}}|
