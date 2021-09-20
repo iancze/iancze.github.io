@@ -1,8 +1,10 @@
 ---
 title: Introduction to Radio Astronomy and ALMA
 date: 2021-09-20
-draft: true
+publishdate: 2021-09-20
 ---
+
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+20/1_fjzi6u2t)
 
 **Suggested reading**: [ALMA Primer](https://almascience.eso.org/documents-and-tools/cycle8/alma-science-primer)
 
