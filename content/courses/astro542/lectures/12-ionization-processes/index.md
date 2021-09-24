@@ -4,7 +4,10 @@ date: 2021-09-24
 publishdate: 2021-09-20
 ---
 
-Draine Ch. 12, 13, & 14
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+24/1_v7exn76l)
+
+* Draine Ch. 12, 13, & 14
+* Ryden and Pogge Ch 4
 
 ## Interstellar Radiation Fields
 
