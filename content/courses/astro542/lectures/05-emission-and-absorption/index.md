@@ -204,7 +204,7 @@ $$
 
 **The following doesn't depend on thermal equilibrium**
 
-We can also write down the photon occupation number \\(n_\gamma\\), i.e., a dimensionless quantity tracking how many photons exist "per given solid angle and frequency bin"
+We can also write down the photon occupation number \\(n_\gamma\\), i.e., a dimensionless quantity tracking how many photons exist "per given solid angle"
 
 $$
 n_\gamma = \frac{c^2}{2 h \nu^3} I_\nu
@@ -214,7 +214,7 @@ which we can average over all directions to get
 $$
 n_{\mathrm{bar},\gamma} = \frac{c^3}{8 \pi h \nu^3} u_\nu
 $$ 
-(units per frequency bin).
+(a truly dimensionless quantity).
 
 These photon occupation numbers make it easy to rewrite the transition rates.
 

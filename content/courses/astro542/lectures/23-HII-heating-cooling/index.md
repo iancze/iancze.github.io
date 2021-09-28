@@ -5,3 +5,4 @@ draft: true
 ---
 
 Draine Ch. 27
+Ryden and Pogge Ch. 4.3
