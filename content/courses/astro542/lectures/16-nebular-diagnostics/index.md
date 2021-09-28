@@ -137,5 +137,4 @@ To get something that does depend on the free electron density, we need to be in
 And, of course, in a modern analysis, usually multiple temperature and density diagnostics are combined into a single estimate of temperature and density.
 
 
-
 More details are in Ryden and Pogge, Ch 4.4.
