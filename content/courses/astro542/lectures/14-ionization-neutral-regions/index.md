@@ -4,6 +4,8 @@ date: 2021-09-29
 publishdate: 2021-09-25
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+29/1_z72pm38a)
+
 * Draine Ch. 16
 
 What is the degree of ionization expected in predominately neutral interstellar clouds? 

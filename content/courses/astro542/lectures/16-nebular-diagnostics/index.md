@@ -4,6 +4,8 @@ date: 2021-10-04
 publishdate: 2021-09-28
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+4/1_y8cn2wz4)
+
 References
 * Ryden and Pogge Ch. 4.4
 * Draine Ch. 18

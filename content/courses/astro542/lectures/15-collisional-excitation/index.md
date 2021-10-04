@@ -4,6 +4,8 @@ date: 2021-10-01
 publishdate: 2021-09-25
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+October+1/1_n7gksgev)
+
 * Draine Ch. 17. also Ch. 3
 
 Why is collisional excitation important?

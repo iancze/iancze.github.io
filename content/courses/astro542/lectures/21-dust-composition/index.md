@@ -4,4 +4,7 @@ date: 2021-10-18
 draft: true
 ---
 
-Draine Ch 23.
+* Ryden and Pogge Ch. 6.3
+* Draine Ch 23.
+
+
