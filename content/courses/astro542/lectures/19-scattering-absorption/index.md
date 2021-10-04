@@ -90,15 +90,23 @@ and all of the \\(Q\\) terms are dimensionless.
 
 ## Index of refraction
 
-The index of refraction will indicate whether a dust grain is better at absorbing or scattering. The index of refraction is a complex number with real and imaginary parts
+The index of refraction will indicate whether a dust grain is better at absorbing or scattering. 
+
+This can be done with the complex dielectric function 
 $$
-\tilde{n} = n_r + i n_i.
+\epsilon(\omega) = \epsilon_r + i \epsilon_r
+$$
+or the refractive index \\(m(\omega)\\) where \\(m = \sqrt{\epsilon}\\).
+
+The index of refraction is a complex number with real and imaginary parts
+$$
+m = m_r + i m_i.
 $$
 
-* The real part \\(n_r\\) is called the refractive index and determines how much a beam of light is bent (or refracted)
-* The imaginary part \\(n_i\\) is called the absorption index, since it determines how strongly the substance absorbs light.
+* The real part \\(m_r\\) is called the refractive index and determines how much a beam of light is bent (or refracted)
+* The imaginary part \\(m_i\\) is called the absorption index, since it determines how strongly the substance absorbs light.
 
-Both \\(n_r\\) and \\(n_i\\) are real and non-negative.
+Both \\(m_r\\) and \\(m_i\\) are real and non-negative.
 
 Consider an electromagnetic wave with field strength 
 $$
@@ -106,15 +114,62 @@ E \propto e^{i(kx - \omega t)}
 $$
 traveling through a material. The dispersion relationship between wavenumber and frequency will be 
 $$
-k = \tilde{n} \frac{\omega}{c}.
+k = m \frac{\omega}{c}.
 $$
 
-If the imaginary part of \\(\tilde{n}\\) is greater than zero, then the power of the electromagnetic wave will decrease as it propagates through the material
+If the imaginary part of \\(m\\) is greater than zero, then the power of the electromagnetic wave will decrease as it propagates through the material
 $$
-|E|^2 \propto e^{-2 n_i \omega x/c}
+|E|^2 \propto e^{-2 \mathrm{Im}(m) \omega x/c}
 $$
 and thus the attenuation coefficient for that light will be 
 $$
-\kappa = 2 n_i \frac{\omega}{c} = \frac{4 \pi n_i}{\lambda_\mathrm{vac}}.
+\kappa(\omega) = 2 m_i \frac{\omega}{c} = \frac{4 \pi m_i}{\lambda_\mathrm{vac}}.
 $$
+
+## Limit that grain much smaller than wavelength of light
+
+Now we will consider the situation where the grain is much smaller than the wavelength of incident radiation. In such a situation, it's as if the grain is subject to an incident applied electric field that is uniform in space
+
+The efficiency factors have the form
+
+* absorption 
+
+$$
+Q_\mathrm{abs} = 4 \left ( \frac{2 \pi a }{\lambda} \right) \mathrm{Im} \left [ \frac{m^2 - 1}{m^2 + 2} \right].
+$$
+
+which yields an absorption coefficient 
+$$
+\kappa_\mathrm{abs} \propto n_\mathrm{gr} a^3.
+$$
+So, you can think of the absorption coefficient as being proportional to the fraction of the volume of space that is occupied by dust.
+
+For scattering, the efficiency factor is
+$$
+Q_\mathrm{sca} = \frac{8}{3} \left ( \frac{2 \pi a}{\lambda} \right)^4 \left | \frac{m^2 - 1}{m^2 + 2} \right |^2.
+$$
+or the relationship that 
+$$
+\sigma_\mathrm{sca} \propto a^6 \lambda^{-4}
+$$
+which is characteristic of Rayleigh scattering.
+
+As long as there is any absorption at all, absorption will dominate over scattering in the limit that the grain radius goes to zero. E.g., you can see this by the fact that the optical/UV extinction curve has a shape much closer to \\(\lambda^{-1}\\) than \\(\lambda^{-4}\\).
+
+## Regime where sizes are comparable
+
+Use Mie theory to calculate the absorption and scattering coefficients. Basically, the electric field inside and outside the sphere can be decomposed into spherical harmonics with appropriate radial functions, and then determine the coefficients by the boundary conditions that you have a plane wave at infinity and that you have continuity at the surface of the sphere. In modern applications, you would write/use a computer program to calculate these coefficients.
+
+## Regime where \\(2 \pi a \gg \lambda\\)
+
+Might want to use Mie theory, but there are some useful approximations. As you take the limit of larger grains relative to the wavelength you get the strange result that 
+$$
+Q_\mathrm{ext} \rightarrow 2.
+$$
+Now, if you remember the definition of \\(Q_\mathrm{ext} \\), this means that the extinction cross-section is *twice* that of its geometric cross section. It's as if you had a large opaque bowling ball, but with twice the cross-sectional area. This result is called the "extinction paradox." 
+
+It comes about because of diffraction effects. According to **Babinet's principle** the scattering produced by an opaque object is the same as that produced by an aperture of the same size cut into an opaque screen. So the diffraction pattern of an opaque sphere of radius \\(a\\) is the same as the Airy pattern produced by a hole of radius \\(a\\) cut into a screen, and in the short-wavelength limit you get \\(Q_\mathrm{abs} = 1\\) and \\(Q_\mathrm{sca} = 1\\) so \\(Q_\mathrm{ext} = 2\\).
+
+
+{{< figure src="fig_22_6.jpg" caption="Values of the dimensionless extinction coefficient \\(Q_\mathrm{ext}\\) for amorphous silicate spheres with particle sizes \\(a\\) of 0.01, 0.1, 1, and 10 microns, for observational wavelengths ranging from 1 angstrom to 1 mm. At short wavelengths, the smallest grains show discontinuities at the x-ray absorption edges. In the IR, the medium sized grains show prominent silicate absorption features at 9.7 microns and 18 microns (not seen for the largest grains). Credit: Draine Fig 22.6" >}}
 
