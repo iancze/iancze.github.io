@@ -4,6 +4,8 @@ date: 2021-10-06
 draft: true
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+6/1_zra8cex4)
+
 References: 
 
 Draine Ch. 19
