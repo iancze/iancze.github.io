@@ -43,10 +43,10 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Wed Oct 27 | Lecture | {{< relreftitle href="24-HI-heating-cooling" alt="HI Heating and Cooling">}} |
 | Fri Oct 29 | Lecture |{{< relreftitle href="25-molecular-hydrogen" alt="Molecular Hydrogen">}} |
 | Mon Nov 1 | Lecture | {{< relreftitle href="26-molecular-clouds" alt="Molecular Clouds">}} |
-| Wed Nov 3 | Mock TAC discussion | | 
-| Fri Nov 5 | Lecture | {{< relreftitle href="27-fluid-dynamics" alt="Fluid Dynamics">}}  |
-| Mon Nov 8 | Lecture | {{< relreftitle href="28-winds-SNe-GRB" alt="Winds, SNe, and GRBs">}} |
-| Wed Nov 10 | Presentation by Kadri Nizam (#3) | TBD |
+| Wed Nov 3 | Mock TAC discussion pt 1 | | 
+| Fri Nov 5 | Mock TAC discussion pt 2 | |
+| Mon Nov 8 | Lecture | {{< relreftitle href="27-fluid-dynamics" alt="Fluid Dynamics">}}  |
+| Wed Nov 10 | Lecture | {{< relreftitle href="28-winds-SNe-GRB" alt="Winds, SNe, and GRBs">}} |
 | Fri Nov 12 | Lecture | {{< relreftitle href="29-star-formation-theory" alt="Star Formation Theory">}} |
 | Mon Nov 15 | Lecture | {{< relreftitle href="30-star-formation-observations" alt="Star Formation Observations">}} |
 | Wed Nov 17 | Lecture | {{< relreftitle href="31-protostars-to-ppds" alt="Protostars to PPDs">}} |

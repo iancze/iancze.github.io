@@ -170,12 +170,12 @@ First, please read the [ALMA Guidelines for reviewers document](https://almascie
 
 These reviews are due Monday, November 1st, and are worth 5% of your final grade. In addition, you will be asked to grade each proposal on a numerical scale of 1 to 5 (1 being the best, 5 the worst.)
 
-I will also designate each student as the "primary" and "secondary" reviewer for a proposal. On Wednesday, November 3rd (and possibly an additional class), our class period will be devoted to a mock TAC discussion. The idea is that, as primary reviewer, you will lead the discussion about the proposal. As secondary reviewer, you will be asked to provide any additional thoughts that the primary reviewer may not have covered. The other TAC members are welcome to comment on any proposal, even if they are not primary or secondary reviewers.
+I will also designate each student as the "primary" and "secondary" reviewer for a proposal. On Wednesday, November 3rd and Friday, November 5th, class will be devoted to a mock TAC discussion. The idea is that, as primary reviewer, you will lead the discussion about the proposal. As secondary reviewer, you will be asked to provide any additional thoughts that the primary reviewer may not have covered. The other TAC members are welcome to comment on any proposal, even if they are not primary or secondary reviewers.
 
 Then, as a TAC, we will decide on a collective ranking of the proposals. Once this is complete, we will examine how the proposals were actually ranked by the real ALMA TAC, and discuss.
 
 ## ALMA Proposal Final Project 
 
-After we complete the review process on Nov 3rd, it might be a good time to start thinking about your final project, which will be the scientific justification component of an ALMA proposal (modeled on the Cycle 8 call for proposals). Information on this can be found in the [course syllabus]({{<relref "syllabus" >}}).
+After we complete the review process on Nov 5th, it might be a good time to start thinking about your final project, which will be the scientific justification component of an ALMA proposal (modeled on the Cycle 8 call for proposals). Information on this can be found in the [course syllabus]({{<relref "syllabus" >}}).
 
 
