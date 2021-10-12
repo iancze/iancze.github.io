@@ -1,8 +1,10 @@
 ---
 title: Interstellar Dust
 date: 2021-10-08
-draft: true
+publishdate: 2021-10-08
 ---
+
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Oct+8/1_m09odw6b)
 
 References
 * Ryden and Pogge Ch 6.1
