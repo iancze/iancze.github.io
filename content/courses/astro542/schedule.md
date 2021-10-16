@@ -34,10 +34,10 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Wed Oct 6 | Lecture | {{< relreftitle href="17-radiative-trapping" alt="Radiative Trapping">}}|
 | Fri Oct 8 | Lecture | {{< relreftitle href="18-dust" alt="Interstellar Dust">}}|
 | Mon Oct 11 | Lecture | {{< relreftitle href="19-scattering-absorption" alt="Scattering and Absorption">}}|
-| Wed Oct 13 | Presentation by Malinda Baer (#2) | TBD |
+| Wed Oct 13 | Presentation by Malinda Baer (#2) | [Tracing PAH Size in Prominent Nearby Mid-Infrared Environments](https://psu.mediaspace.kaltura.com/media/Astro+542A+Malinda+Baer+Presentation/1_jlz3to67) |
 | Fri Oct 15 | Lecture | {{< relreftitle href="20-telescope-proposal-TAC" alt="Telescope Proposals and TACs">}}|
 | Mon Oct 18 | Lecture | {{< relreftitle href="21-dust-composition" alt="Dust Composition">}} |
-| Wed Oct 20 | **Exam 2** | Lectures up to TBD | 
+| Wed Oct 20 | **Exam 2** | Lectures up to Oct 11 (inclusive) | 
 | Fri Oct 22 | Lecture | {{< relreftitle href="22-grain-temp-dynamics" alt="Grain Temperatures and Dynamics">}} |
 | Mon Oct 25 | Lecture | {{< relreftitle href="23-HII-heating-cooling" alt="HII Heating and Cooling">}} |
 | Wed Oct 27 | Lecture | {{< relreftitle href="24-HI-heating-cooling" alt="HI Heating and Cooling">}} |
@@ -54,6 +54,6 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Mon Nov 29 | Lecture | {{< relreftitle href="33-exoplanets-planet-formation" alt="Exoplanets and Planet Formation">}} 
 | Wed Dec 1 | **Exam 3** | Lectures up to TBD | 
 | Fri Dec 3 | Lecture | {{< relreftitle href="34-astrobio-solar-system" alt="Exoplanets and Planet Formation">}} |
-| Mon Dec 6 | Presentation by Megan Delamer (#4) | TBD |
+| Mon Dec 6 | Presentation by Megan Delamer (#3) | TBD |
 | Wed Dec 8 | Lecture | {{< relreftitle href="35-astrochemistry" alt="Astrochemistry">}} |  |
 | Fri Dec 10 | TBD | |
