@@ -4,6 +4,8 @@ date: 2021-10-15
 publishdate: 2021-10-07
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+15/1_l3tinekc)
+
 **Goal**: Discuss how the telescope proposal process works, using ALMA as a guide.
 
 This includes

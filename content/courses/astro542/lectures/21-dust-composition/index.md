@@ -4,6 +4,8 @@ date: 2021-10-18
 draft: true
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+18/1_81k4q2r6)
+
 * Ryden and Pogge Ch. 6.3
 * Draine Ch 23.
 

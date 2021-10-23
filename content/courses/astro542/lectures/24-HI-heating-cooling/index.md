@@ -6,6 +6,8 @@ draft: true
 
 References
 * Draine Ch. 29, 30
+* Ryden and Pogge Ch 1.3 and 1.4
+
 
 # H I Clouds: Observations
 
@@ -95,6 +97,8 @@ Fixing the pressure is saying that things are in *dynamic equilibrium*, because 
 * We see that at *low pressures* the heating balances cooling at 6000 K (which correspond to WNM conditions).
 * We see that at *high pressure* the heating balances cooling at 100 K (corresponding to CNM conditions).
 
+When you combine a heating gain \\(\Gamma\\) that is independent of gas temperature with a cooling function \\(\Lambda(T)\\) that is not a simple power law, you get multiple phases of the ISM in pressure equilibrium with each other.
+
 {{< figure src="fig_30_2b.jpg" caption="The steady state temperature as a function of thermal pressure \\(p\\). For pressures in the range between the two dotted lines, there are three possible equilibria temperatures: a high temperature WNM solution, a low temperature CNM solution, and an intermediate temperature equilibrium that is unstable. Credit: Draine Fig 30.2b">}}
 
 At intermediate pressures, for a given pressure, there are three possible solutions for equilibrium temperature. The upper and lower solutions are stable (if perturbed away from equilibrium temperature, it will return to it). But the intermediate solution is unstable:
@@ -103,7 +107,7 @@ At intermediate pressures, for a given pressure, there are three possible soluti
 
 So, given our best estimates of cosmic ray ionization, photoelectric heating, and cooling processes in the diffuse ISM, we conclude that an ISM in thermal equilibrium and dynamic equilibrium (equal pressure) would have two distinct phases, provided the pressure is in between the two vertical lines (otherwise would just have one phase).
 
-This is called the "two-phase" ISM model, and was first developed by George Field in 1969. Later revisited a number of times with differing assumptions about grain photoelectric heating, grain-assisted recombination, inelastic collisional cross-sections for cooling processes, and coolant abundances. So, the "two-phase" model has a long and storied history in ISM study.
+This is called the "two-phase" ISM model, and was first developed by George Field in 1969. Later revisited a number of times with differing assumptions about grain photoelectric heating, grain-assisted recombination, inelastic collisional cross-sections for cooling processes, and coolant abundances. So, the "two-phase" model has a long and storied history in ISM study. McKee and Ostriker 1977 expanded this to the "three-phase" ISM, with the hot ionized medium, where bremsstrahlung is the chief cooling process.
 
 Observationally, the different phases will have different emission spectra.
 
