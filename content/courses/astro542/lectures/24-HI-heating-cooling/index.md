@@ -1,8 +1,10 @@
 ---
 title: "HI Clouds: Observations, Heating and Cooling"
-date: 2021-10-27
-draft: true
+date: 2021-10-29
+publishdate: 2021-10-25
 ---
+
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+29/1_vfna4zcb)
 
 References
 * Draine Ch. 29, 30

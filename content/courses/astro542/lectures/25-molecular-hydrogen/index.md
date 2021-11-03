@@ -1,8 +1,10 @@
 ---
 title: "Molecular Hydrogen"
 date: 2021-10-29
-draft: true
+publishdate: 2021-10-23
 ---
+
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+1/1_7tqdibo1)
 
 References
 * Ryden and Pogge Ch. 7.4
@@ -22,7 +24,7 @@ has such a small rate coefficient that the reaction can be ignored completely in
 $$
 3H \rightarrow H_2 + H + KE
 $$
-can occur, but the rate is also negligible at interstellar or intergalactic densities.
+can occur, but the rate is also negligible at interstellar or intergalactic densities. (This is possible at the densities of a protostar or protoplanetary disk, however).
 
 The process by which two hydrogen atoms bond in the ISM is called **direct radiative association**
 $$
@@ -73,6 +75,8 @@ $$
 n_\mathrm{H\\,I} > \frac{\zeta_\mathrm{det}}{k_\mathrm{ad}} \approx 70\\,\mathrm{cm}^3
 $$
 That's pretty dense, so in most of the ISM, an \\(H^-\\) ion will undergo photodetachment before it has the opportunity to make an \\(H_2\\) molecule.
+
+Without any dust, though, this is dominant channel of molecular hydrogen formation (such as in the early universe).
 
 ### Grain assisted (grain catalysis)
 

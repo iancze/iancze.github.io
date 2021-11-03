@@ -1,8 +1,10 @@
 ---
 title: Grain Temperatures, Physics, and Dynamics
-date: 2021-10-22
+date: 2021-10-25
 publishdate: 2021-10-11
 ---
+
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+25/1_8herzg4g)
 
 * Draine Ch. 24, 25, 26
 
@@ -32,7 +34,7 @@ After an optical or UV photon is absorbed by a grain, an electron is raised into
 But, more likely, the electronically excited state will deexcite nonradiatively, such that the energy goes into many vibrational modes as heat. We can calculate the rate of grain heating from absorption of radiation as
 
 $$
-\left ( \frac{d E}{d t} \right)_\mathrm{abs} = \int \frac{u_\nu d \nu}{h \nu} \times c \times h \nu \times Q_\mathrm{abs}(\nu) \pi a^2
+ \frac{d E}{d t} = \int \frac{u_\nu d \nu}{h \nu} \times c \times h \nu \times Q_\mathrm{abs}(\nu) \pi a^2
 $$
 
 i.e., the number density of photons in that frequency bin, photons moving at the speed of light with energy \\(h \nu\\), and the grain's absorption cross section.
@@ -43,7 +45,7 @@ i.e., the number density of photons in that frequency bin, photons moving at the
 ## Radiative cooling
 Grains loose energy by infrared cooling, at a rate
 $$
-\left ( \frac{d E}{d t} \right)_\mathrm{emiss} = \int d \nu 4 \pi B_\nu(T_d) C_\mathrm{abs}(\nu) = 4 \pi a^2 \langle Q_\mathrm{abs} \rangle_{T_d} \sigma T_d^4
+\frac{d E}{d t}  = \int d \nu 4 \pi B_\nu(T_d) C_\mathrm{abs}(\nu) = 4 \pi a^2 \langle Q_\mathrm{abs} \rangle_{T_d} \sigma T_d^4
 $$
 where \\(\sigma\\) is the Stefan-Boltzmann constant and \\(\langle Q_\mathrm{abs} \rangle\\) is the emission efficiency averaged over some spectrum. We'll use \\(T_d\\) for the Plank function of the dust temperature, and \\(\star\\) for the spectrum of radiation heating the grain.
 

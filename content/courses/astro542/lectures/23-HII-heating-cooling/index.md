@@ -1,8 +1,10 @@
 ---
 title: Heating and Cooling of HII regions
-date: 2021-10-25
-draft: true
+date: 2021-10-27
+publishdate: 2021-10-25
 ---
+
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+27/1_rgnhel5n)
 
 References:
 * Draine Ch. 27
