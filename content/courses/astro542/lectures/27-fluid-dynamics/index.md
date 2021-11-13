@@ -4,6 +4,8 @@ date: 2021-11-10
 publishdate: 2021-11-04
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Nov+10/1_v4bhqjbe)
+
 References:
 * Ryden and Pogge Ch 5.1
 * Draine Ch 34, 35, 36

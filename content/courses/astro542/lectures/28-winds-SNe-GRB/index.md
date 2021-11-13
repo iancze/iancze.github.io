@@ -4,6 +4,8 @@ date: 2021-11-12
 publishdate: 2021-11-07
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+12/1_zci0znd8)
+
 References:
 * Ryden and Pogge Ch. 5.2
 * Draine Ch. 39 and 40
@@ -14,7 +16,7 @@ Explosions are a great way to deposit a lot of energy into a tiny volume of gas 
 
 What does self-similar mean? Basically, *scale-invariance*, like a power law or fractal nature.
 
-The **Sedov-Taylor** solution can be applied to the explosion of fisson bombs \\(10^{20}\\,\mathrm{ergs}\\) or supernovae \\(10^{51}\\,\mathrm{erg}\\).
+The **Sedov-Taylor** solution can be applied to the explosion of fission bombs \\(10^{20}\\,\mathrm{ergs}\\) or supernovae \\(10^{51}\\,\mathrm{erg}\\).
 
 There are two types of supernovae
 * **core-collapse**: powered by gravitational collapse of the dense core of an evolved massive star
