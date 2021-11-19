@@ -4,6 +4,8 @@ date: 2021-11-17
 draft: true
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+17/1_3ezwwaxf)
+
 References:
 * Draine Ch 42
 * Stahler and Palla (2005) (comprehensive textbook)
