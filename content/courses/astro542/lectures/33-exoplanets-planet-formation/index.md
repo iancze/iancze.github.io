@@ -1,7 +1,7 @@
 ---
 title: "Exoplanets and Planet Formation"
 date: 2021-12-03
-draft: true
+publishdate: 2021-12-04
 ---
 
-Own material.
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Dec+3rd/1_bpz5707q)

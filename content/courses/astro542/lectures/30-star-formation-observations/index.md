@@ -1,7 +1,7 @@
 ---
 title: "Star Formation: Observations"
 date: 2021-11-17
-draft: true
+publishdate: 2021-11-17
 ---
 
 [Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+17/1_3ezwwaxf)

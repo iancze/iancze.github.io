@@ -1,7 +1,7 @@
 ---
 title: "Astrochemistry"
 date: 2021-12-08
-draft: true
+publishdate: 2021-12-08
 ---
 
-Own material.
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+December+8/1_oluy4593)

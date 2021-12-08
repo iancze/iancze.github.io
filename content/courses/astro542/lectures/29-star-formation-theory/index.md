@@ -1,7 +1,7 @@
 ---
 title: "Gravitational Collapse and Star Formation: Theory"
 date: 2021-11-15
-draft: true
+publishdate: 2021-11-15
 ---
 
 [Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+15/1_4xd4rf28)
