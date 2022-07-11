@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "States of Hydrogen in ISM by mass",
+    "data": {
+        "values": [
+            {
+                "category": "H II",
+                "value": 23
+            },
+            {
+                "category": "H I",
+                "value": 60
+            },
+            {
+                "category": "H_2",
+                "value": 17
+            }
+        ]
+    },
+    "encoding": {
+        "theta": {
+            "field": "value",
+            "type": "quantitative",
+            "stack": true
+        },
+        "color": {
+            "field": "category",
+            "type": "nominal",
+            "legend": null
+        }
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "arc",
+                "outerRadius": 100
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "radius": 120
+            },
+            "encoding": {
+                "text": {
+                    "field": "category",
+                    "type": "nominal"
+                }
+            }
+        }
+    ],
+    "view": {
+        "stroke": null
+    }
+}

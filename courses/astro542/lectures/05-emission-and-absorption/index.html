@@ -1,0 +1,132 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Zoom link
+Draine Ch. 6: Spontaneous Emission, Stimulated Emission, and Absorption Ryden and Pogge Ch. 2.1: Radiative Transfer Ryden and Pogge Ch. 2.2: Absorbers and Emitters Lecture notes on Radiative Transfer in Astrophysics by C.P. Dullemond. Radiative Processes by Rybicki and Lightman General rules for absorption and emission of radiation by absorbers with quantized energy levels. Can be atoms, ions, molecules, dust grains, or anything that has (quantized) energy levels."><meta name=generator content="Hugo 0.101.0"><title>Spontaneous Emission, Stimulated Emission, and Absorption | Czekala Group</title><link rel=canonical href=/hugo-website/courses/astro542/lectures/05-emission-and-absorption/><script async src="https://www.googletagmanager.com/gtag/js?id=G-W5586VESJK"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-W5586VESJK",{anonymize_ip:!1})}</script><script src=https://cdn.jsdelivr.net/npm/vega@5.20.2></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@5.1.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.17.0></script>
+<link rel=stylesheet href=/hugo-website/css/base.min.e9a98f863db62272e3c41bb8784b2588cd338ebba264b169f66d736c05d1b47f.css integrity="sha256-6amPhj22InLjxBu4eEsliM0zjruiZLFp9m1zbAXRtH8=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=/hugo-website>Czekala Group</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/hugo-website/people/>People</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/hugo-website/posts/>Posts</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/hugo-website/publications/>CV and publications</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/hugo-website/courses/astro542/>Astro542</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><main><article><header><h1>Spontaneous Emission, Stimulated Emission, and Absorption</h1></header><p><a href=https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+5A+Sep+1/1_o7bbam0v>Zoom link</a></p><ul><li>Draine Ch. 6: Spontaneous Emission, Stimulated Emission, and Absorption</li><li>Ryden and Pogge Ch. 2.1: Radiative Transfer</li><li>Ryden and Pogge Ch. 2.2: Absorbers and Emitters</li><li>Lecture notes on <a href=https://www.ita.uni-heidelberg.de/~dullemond/lectures/radtrans_2012/index.shtml>Radiative Transfer in Astrophysics</a> by C.P. Dullemond.</li><li><em>Radiative Processes</em> by Rybicki and Lightman</li></ul><p>General rules for absorption and emission of radiation by absorbers with <em>quantized</em> energy levels. Can be atoms, ions, molecules, dust grains, or anything that has (quantized) energy levels.</p><h2 id=absorption-of-photons>Absorption of photons</h2><p>Some absorber is in a lower level, there is radiation present that has
+$$
+h \nu = E_u - E_l
+$$
+the absorber can absorb a photon and undergo an upward transition
+$$
+X_l + h \nu \rightarrow X_u.
+$$</p><h3 id=rate-of-this-reaction>Rate of this reaction</h3><p>There is some \(n(X_l)\). The rate per volume at which absorbers absorb photons (\(l \rightarrow u\)) is proportional to the density of photons of the appropriate energy and the number density of absorbers</p><p>$$
+\underset{\mathrm{populate\;level}\;u}{\left ( \frac{\mathrm{d}n_u}{\mathrm{d}t} \right )_{l \rightarrow u}} = \underset{\mathrm{depopulate\;level}\;l}{- \left ( \frac{\mathrm{d}n_l}{\mathrm{d}t} \right)}
+$$</p><p>$$
+= n_l B_{lu} u_\nu
+$$</p><p>\(u_\nu\) is the radiation energy density per unit frequency.</p><p>\(B_{lu}\) is a proportionality constant called the Einstein B coefficient for the transition \(l \rightarrow u\).</p><h2 id=emission-of-photons>Emission of photons</h2><h3 id=spontaneous-emission>Spontaneous emission</h3><p>$$
+X_u \rightarrow X_l + h \nu
+$$</p><p>Random process (independent of radiation field), and occurs with a probability per unit time \(A_{ul}\) called the Einstein A coefficient.</p><h3 id=stimulated-emission>Stimulated emission</h3><p>$$
+X_u + h \nu \rightarrow X_l + 2 h \nu
+$$</p><p>Occurs if photons of <em>identical</em></p><ul><li>frequency</li><li>polarization</li><li>direction
+are present in a radiation field.</li></ul><h3 id=rate-of-emission>Rate of emission</h3><p>From state \(u \rightarrow l\)</p><p>$$
+\left ( \frac{\mathrm{d}n_l}{\mathrm{d}t} \right) = - \left ( \frac{\mathrm{d}n_u}{\mathrm{d}t}\right) = n_u (A_{ul} + B_{ul} u_\nu)
+$$</p><p>\(B_{ul}\) is the Einstein B coefficient for the downward transition.</p><h2 id=einstein-coefficients-are-not-independent>Einstein coefficients are not independent</h2><p>$$
+B_{ul} = \frac{c^3}{8 \pi h \nu^3} A_{ul}
+$$</p><p>$$
+B_{lu} = \frac{g_u}{g_l} B_{ul} = \frac{g_u}{g_l} \frac{c^3}{8 \pi h \nu^3} A_{ul}
+$$</p><p>Strength of stimulated emission (\(B_{ul}\)) and absorption (\(B_{lu}\)) are both determined by \(A_{ul}\) (spontaneous emission) and the ratio of the degeneracies \(\frac{g_u}{g_l}\).</p><h2 id=radiation-fields>Radiation fields</h2><p>(Review from Rybicki and Lightman, Ch 1)</p><p>\(I_\nu \) is the <em>specific intensity</em> of radiation, you can think of it as the energy carried along by an infinitesimal &ldquo;bundle&rdquo; of rays.</p><p>It has dimensions
+$$
+\mathrm{ergs}\;\mathrm{s}^{-1}\;\mathrm{cm}^{-2}\;\mathrm{ster}^{-1}\;\mathrm{Hz}^{-1}
+$$
+I like calling \(I_\nu\) the &ldquo;specific intensity,&rdquo; and that seems to be common usage in astronomy. In non-astronomy settings, this is called &ldquo;spectral intensity.&rdquo; If it is integrated over all frequency, it&rsquo;s sometimes called the radiant intensity \(I\).</p><p>\(I_\nu \) can be a little mind-bending to think about&mldr; it can be a function of</p><ul><li>3D space</li><li>direction</li><li>frequency</li></ul><p>Intensity itself is <em>not</em> a vector quantity but it is a scalar field that <em>is</em> function of direction. Draine and Rybicki and Lightman write the angular direction vector as \(\Omega\) and the solid angle surrounding that vector as \(\mathrm{d}\Omega\).</p><p>If we have a defined reference frame, we would probably write \(\Omega\) as a vector in spherical coordinates and define the components along \(\hat{\phi}\) and \(\hat{\theta}\) and let \(\mathrm{d}\Omega = d\phi \sin \theta d\theta\).</p><p>\(B_\nu\) is exactly the same type of variable, we just use it instead of \(I_\nu\) when we&rsquo;re referring to blackbody radiation, specifically of the form
+$$
+B_\nu = \frac{2 h \nu^3}{c^2}\frac{1}{e^{h \nu / kT} - 1}
+$$
+it also has units of
+$$
+\mathrm{ergs}\;\mathrm{s}^{-1}\;\mathrm{cm}^{-2}\;\mathrm{ster}^{-1}\;\mathrm{Hz}^{-1}
+$$</p><h3 id=flux>Flux</h3><p>Once you&rsquo;ve defined \(I_\nu\), then it&rsquo;s relatively easy to calculate quantities like energy density, flux, momentum, etc, as integrals of the specific intensity field.</p><figure><img src=flux.png alt="How to calculate flux from specific intensity. Credit: Rybicki and Lightman Ch. 1"><figcaption><p>How to calculate flux from specific intensity. Credit: Rybicki and Lightman Ch. 1</p></figcaption></figure><p>$$
+F_\nu = \int I_\nu \cos \theta d \Omega
+$$
+(intensity passing through some differential area \(dA\), lowered by the effective angle).</p><p>\(F_\nu\) has units of
+$$
+\mathrm{ergs}\;\mathrm{s}^{-1}\;\mathrm{cm}^{-2}\;\mathrm{Hz}^{-1}
+$$
+(i.e., angular dependence has been integrated out). I like using the unit of Jansky, which is
+$$
+1\,\mathrm{Jy} = 10^{-23} \mathrm{ergs}\;\mathrm{s}^{-1}\;\mathrm{cm}^{-2}\;\mathrm{Hz}^{-1}
+$$</p><p>In astronomy settings, \(F_\nu\) is called the <em>spectral flux density</em>. In non-astronomy settings, this is called spectral irradiance. Sometimes you will see \(F_\lambda\), which has units
+$$
+\mathrm{ergs}\;\mathrm{s}^{-1}\;\mathrm{cm}^{-2}\;\mathrm{cm}^{-1}
+$$
+(or per Å, depending on your wavelength range).</p><p>Note that \(F_\nu\) and \(F_\lambda\) are flux <em>densities</em> or distribution function, which means that
+$$
+F_\nu \ne F_\lambda
+$$
+(their units are different)!</p><p>What is true is
+$$
+F_\nu \mathrm{d}\nu = F_\lambda \mathrm{d}\lambda
+$$
+because we&rsquo;re comparing two quantities with units
+$$
+\mathrm{ergs}\;\mathrm{s}^{-1}\;\mathrm{cm}^{-2}
+$$</p><p>You&rsquo;ll sometimes also see a spectral energy distribution plotted
+$$
+F_\nu \nu = F_\lambda \lambda
+$$
+this comes about because
+$$
+\nu = \frac{c}{\lambda}
+$$
+$$
+\frac{d \lambda}{d \nu} = -\frac{c}{\nu^2} = -\frac{\lambda}{\nu}
+$$
+and the minus sign goes away because fluxes are defined per <em>positive</em> unit of frequency or wavelength.</p><p>I find the question of whether we&rsquo;re referring to</p><ul><li>\(I_\nu\): specific intensity (Jy/ster)</li><li>\(F_\nu\): spectral flux density (Jy)</li><li>\(F\): Bolometric flux \(\mathrm{ergs}\;\mathrm{s}^{-1}\;\mathrm{cm}^{-2}\).</li></ul><p>to be endlessly confusing in conversation, because it&rsquo;s very common to colloquially use &ldquo;flux&rdquo; or &ldquo;brightness&rdquo; to mean a range of quantities, even though they have specific definitions in many settings. I find the clearest thing is to state the variable \(I_\nu\) or \(F_\nu\) (or \(F_\lambda\)) <em>and</em> the units.</p><h2 id=energy-density-and-photon-occupation-number>Energy density and photon occupation number</h2><p>The &ldquo;mean&rdquo; (directionally averaged) intensity is
+$$
+J_\nu = \frac{1}{4 \pi} \int I_\nu d \Omega = \frac{1}{4\pi} \int I_\nu \sin \theta d \theta d\phi.
+$$
+it has a different meaning than flux. In an isotropic radiation field, the net flux will be 0, whereas the mean intensity will have some positive value.</p><p>and the mean radiation density is
+$$
+u_\nu = \frac{4 \pi}{c} J_\nu.
+$$
+these quantities <em>are not</em> a function of direction, since we&rsquo;ve averaged over it.</p><p>For a thermal, blackbody spectrum, we have
+$$
+u_\nu = \frac{4 \pi}{c} B_\nu(T)
+$$</p><p>In equilibrium, the absorbers must have levels populated according to
+$$
+\frac{n_u}{n_l} = \frac{g_u}{g_l}e^{(E_l - E_u)/kT}
+$$</p><p><strong>The following doesn&rsquo;t depend on thermal equilibrium</strong></p><p>We can also write down the photon occupation number \(n_\gamma\), i.e., a dimensionless quantity tracking how many photons exist &ldquo;per given solid angle&rdquo;</p><p>$$
+n_\gamma = \frac{c^2}{2 h \nu^3} I_\nu
+$$</p><p>which we can average over all directions to get
+$$
+n_{\mathrm{bar},\gamma} = \frac{c^3}{8 \pi h \nu^3} u_\nu
+$$
+(a truly dimensionless quantity).</p><p>These photon occupation numbers make it easy to rewrite the transition rates.</p><p>From \( u \rightarrow l\)
+$$
+\left ( \frac{dn_l}{dt}\right)= n_u A_{ul} (1 + n_{\mathrm{bar},\gamma})
+$$</p><p>Stimulated emission is not important when \( n_{\mathrm{bar},\gamma} \ll 1 \).</p><p>From \( l \rightarrow u\)
+$$
+\left ( \frac{d n_u}{dt} \right ) = n_l \frac{g_u}{g_l} A_{ul} n_{\mathrm{bar},\gamma}
+$$</p><h2 id=absorption-cross-section>Absorption cross section</h2><p>Because we&rsquo;re talking about photons, instead of a velocity-dependent cross section, we will write a frequency-dependent cross section, \(\sigma(\nu)\). The velocity will be the speed of light \(c\).</p><p>Photon density [1/cm^3] per unit frequency
+$$
+\frac{u_\nu}{h \nu}
+$$</p><p>Like in Ch 2, we would rate a rate as
+$$
+n_A n_B \langle \sigma v \rangle
+$$
+we&rsquo;ll do the same thing with \(n_l\), \(\frac{u_\nu}{h \nu}\), and \(\sigma(\nu)\).</p><p>For the \(l \rightarrow u\) transition,
+$$
+\left ( \frac{d n_u}{d t} \right ) = n_l \int d \nu \sigma_{lu}(\nu) c \frac{u_\nu}{h \nu}.
+$$</p><p>We can relate this back to the Einstein B coefficient for absorption to find
+$$
+B_{lu} = \frac{c}{h \nu} \int d\nu \sigma_{lu}(\nu)
+$$
+relate this back to the \(A_{ul}\) coefficient,
+$$
+\int d_\nu \sigma_{lu}(\nu) = \frac{g_u}{g_l} \frac{c^2}{8 \pi \nu^2_{lu}} A_{ul}.
+$$
+Then solve for \(\sigma_{lu}(\nu)\)
+$$
+\sigma_{lu}(\nu) = \frac{g_u}{g_l} \frac{c^2}{8 \pi \nu^2_{lu}}A_{ul} \phi_\nu
+$$
+where \(\phi_\nu\) is a normalized line profile
+$$
+\int \phi_\nu d \nu = 1.
+$$</p><h2 id=oscillator-strength>Oscillator strength</h2><p>You can also write these relationships with something called the oscillator strength, \(f_{lu}\).
+$$
+A_{ul} = \frac{8 \pi^2 e^2 \nu_{lu}^2}{m_e c^3} \frac{g_l}{g_u} f_{lu}
+$$</p><h2 id=intrinsic-line-profile>Intrinsic line profile</h2><p>A Lorentzian is a good description of the intrinsic line profile (need quantum mechanical calculation to get it exact).</p><p>$$
+\phi(\nu) = \frac{4 \gamma_{ul}}{16 \pi^2(\nu - \nu_{ul})^2 + \gamma_{ul}^2}
+$$</p><p>The intrinsic width of the absorption line reflects the uncertainty in the energies of levels \(l,u\) due to the finite lifetimes against transitions to other levels.</p><p>Intrinsic widths of lines \(\propto h \nu\), which means x-ray transitions can have considerably larger line widths than radio transitions (assuming the medium is stationary).</p><p>We&rsquo;ll talk more about absorption line profiles, Doppler broadening, Voigt profiles, etc&mldr; in a few lectures.</p></article></main></div></div></main><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script></body></html>

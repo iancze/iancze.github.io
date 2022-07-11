@@ -1,0 +1,45 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Zoom link
+Draine Ch. 17. also Ch. 3 Why is collisional excitation important?
+puts atoms, ions, and molecules into excited states from which they can decay radiatively, leading to cooling of the gas puts species into excited states that are used as diagnostics of physical conditions in the gas, such as density, temperature, or radiation field Collisional rate coefficients between initial and final state $$ k_{if} \equiv \langle \sigma v \rangle_{i \rightarrow f} $$ having units \(\mathrm{cm}^3\,\mathrm{s}^{-1}\)."><meta name=generator content="Hugo 0.101.0"><title>Collisional Excitation | Czekala Group</title><link rel=canonical href=/hugo-website/courses/astro542/lectures/15-collisional-excitation/><script async src="https://www.googletagmanager.com/gtag/js?id=G-W5586VESJK"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-W5586VESJK",{anonymize_ip:!1})}</script><script src=https://cdn.jsdelivr.net/npm/vega@5.20.2></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@5.1.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.17.0></script>
+<link rel=stylesheet href=/hugo-website/css/base.min.e9a98f863db62272e3c41bb8784b2588cd338ebba264b169f66d736c05d1b47f.css integrity="sha256-6amPhj22InLjxBu4eEsliM0zjruiZLFp9m1zbAXRtH8=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=/hugo-website>Czekala Group</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/hugo-website/people/>People</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/hugo-website/posts/>Posts</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/hugo-website/publications/>CV and publications</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/hugo-website/courses/astro542/>Astro542</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><main><article><header><h1>Collisional Excitation</h1></header><p><a href=https://psu.mediaspace.kaltura.com/media/Astro+542A+October+1/1_n7gksgev>Zoom link</a></p><ul><li>Draine Ch. 17. also Ch. 3</li></ul><p>Why is collisional excitation important?</p><ul><li>puts atoms, ions, and molecules into excited states from which they can decay radiatively, leading to cooling of the gas</li><li>puts species into excited states that are used as diagnostics of physical conditions in the gas, such as density, temperature, or radiation field</li></ul><p>Collisional rate coefficients between initial and final state
+$$
+k_{if} \equiv \langle \sigma v \rangle_{i \rightarrow f}
+$$
+having units \(\mathrm{cm}^3\,\mathrm{s}^{-1}\).</p><p>And radiative transition probability
+$$
+A_{if} \equiv A_{i \rightarrow f}
+$$
+having units \(\mathrm{s}^{-1}\).</p><h2 id=two-level-atom>Two-Level atom</h2><p>Consider only the ground state and the first excited state of an atom. Usually not a bad assumption, especially for getting down the basics.</p><p>Only processes acting are</p><ul><li>collisional excitation</li><li>collisional de-excitation</li><li>radiative decay</li></ul><h3 id=assume-no-background-radiation-present>Assume no background radiation present</h3><p>Let the number densities of the two levels of the atom be given by \(n_0\) and \(n_1\), and the number density of the collisional partner (e.g., electrons) be given by \(n_c\). Then,</p><p>The rate of change of the excited state is
+$$
+\frac{d n_1}{d t} = n_c n_0 k_{01} - n_c n_1 k_{10} - n_1 A_{10}.
+$$
+i.e., it&rsquo;s equal to how quickly level 1 is populated via collisions, minus how quickly level 1 is depopulated via collisions, minus how quickly level 1 is depopulated via spontaneous emission. Steady-state solution is \(dn_1/dt = 0\).</p><p>The law of mass action and the principle of detailed balance allow us to relate the collisional rate coefficients by
+$$
+\frac{k_{01}}{k_{10}} = \frac{g_1}{g_0} e^{-E_{10}/k T_\mathrm{gas}}.
+$$
+In the limit that \(n_c \rightarrow \infty\) (i.e., collisions thermalize the gas), the steady state solution has us bring about the relationship
+$$
+\frac{n_1}{n_0} = \frac{g_1}{g_0} e^{-E_{10}/k T_\mathrm{gas}}.
+$$</p><h3 id=allow-background-radiation-to-be-present>Allow background radiation to be present</h3><p>Consider background radiation with dimensionless photon occupation number
+$$
+n_\gamma = \frac{c^3}{8 \pi h \nu^3} u_\nu.
+$$</p><p>The rate of change of the excited state is
+$$
+\frac{d n_1}{d t} = n_0 \left [ n_c k_{01} + n_\gamma \frac{g_1}{g_0} A_{10} \right] - n_1 \left [ n_c k_{10} + (1 + n_\gamma) A_{10} \right]
+$$
+where we&rsquo;ve written the absorption coefficient \(B_{01}\) in terms of \(A_{10}\) and canceled out some prefactors. We&rsquo;ve also included stimulated emission in the rightmost term.</p><p>Let&rsquo;s rearrange for the steady-state solution
+$$
+\frac{n_1}{n_0} = \frac{n_c k_{01} + n_\gamma(g_1/g_0) A_{10}}{n_c k_{10} + (1 + n_\gamma) A_{10}}
+$$
+and examine for a few cases.</p><ul><li>in the limit that \(n_\gamma \rightarrow 0\), we have the previous result</li><li>in the limit \(n_c \rightarrow 0\), and the radiation field is described by a blackbody field with \(T_\mathrm{rad}\), then the level populations are given by Boltzmann w/ that temperature (gas temperature could be different, though, it&rsquo;s just that the number density of the collisional partners isn&rsquo;t high enough to thermalize anything to the gas temperature).</li><li>if the temperature of the radiation field happens to match that of the gas \(T_\mathrm{gas}\), then the system will be brought into equilibrium independent of the collisional density</li></ul><h2 id=critical-density>Critical density</h2><p><strong>the density at which collisional deexcitation equals radiative deexcitation, including stimulated emission</strong></p><p>For a collisional partner \(c\), and the excited state, we define this as
+$$
+n_{\mathrm{crit}, u}(c) \equiv \frac{\sum_{l&lt;u} [1 + (n_\gamma)<em>{ul}] A</em>{ul}}{\sum_{u &lt;l} k_{ul}(c)}
+$$
+i.e., we&rsquo;re considering multi-level atoms and summing over all states \(l\) lower than the state under consideration (\(u\)).</p><p>For a two-level atom, this is
+$$
+n_\mathrm{crit} = \frac{(1 + n_\gamma) A_{ul}}{k_{ul}}
+$$</p><p>This definition is appropriate only when the gas is optically thin such that the radiated photons escape. If it&rsquo;s not, then we get &ldquo;radiative trapping,&rdquo; which we&rsquo;ll discuss in a future lecture.</p><ul><li><p>In the <strong>high density regime</strong>, \(n \gg n_\mathrm{crit}\), the rate of collisional deexcitation is greater than radiative deexcitation, and the excitation temperature is driven towards the kinetic temperature.</p></li><li><p>In the <strong>low density regime</strong> \(n &lt; n_\mathrm{crit}\), the rate of collisional deexcitation is less than radiative deexcitation, and the excitation temperature is driven to the radiation temperature.</p></li></ul><p>We can expand this discussion a bit by following the example from <a href=http://www.astronomy.ohio-state.edu/~pogge/Ast871/Notes/Molecules.pdf>Richard Pogge</a> and discuss the specific example of a medium with two-level atoms (ratio of states given by \(T_\mathrm{exc}\), kinetic temperature given by \(T\)) with some <em>blackbody</em> radiation field with radiation temperature \(T_\mathrm{rad}\).</p><p>In the high density regime, we&rsquo;ll have the excitation temperature driven towards the kinetic temperature \(T_\mathrm{exc} \rightarrow T\). If \(T > T_\mathrm{rad}\) (common in ISM), we&rsquo;ll see an emission line.</p><p>In the low density regime, we&rsquo;ll have the excitation temperature driven towards the radiation temperature \(T_\mathrm{exc} \rightarrow T_\mathrm{rad}\), in which case we won&rsquo;t see a line.</p><p>This is why it is sometimes said that a medium needs to be above the critical density for a line to &ldquo;turn on.&rdquo; Different species have different critical densities, and so line strengths can be used as density diagnostics.</p></article></main></div></div></main><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script></body></html>
