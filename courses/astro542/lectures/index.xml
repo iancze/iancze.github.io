@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://iancze.github.io/website-transfer-redux/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lectures on Czekala Group</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/</link><description>Recent content in Lectures on Czekala Group</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 21 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/index.xml" rel="self" type="application/rss+xml"/><item><title>Syllabus</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/syllabus/</link><pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/syllabus/</guid><description>&lt;h2 id="instructor">Instructor&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://iancze.github.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lectures on Czekala Group</title><link>https://iancze.github.io/courses/astro542/lectures/</link><description>Recent content in Lectures on Czekala Group</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 21 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://iancze.github.io/courses/astro542/lectures/index.xml" rel="self" type="application/rss+xml"/><item><title>Syllabus</title><link>https://iancze.github.io/courses/astro542/syllabus/</link><pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/syllabus/</guid><description>&lt;h2 id="instructor">Instructor&lt;/h2>
 &lt;ul>
 &lt;li>Professor (Dr.) Ian Czekala (he/him/his)&lt;/li>
 &lt;li>&lt;em>Email&lt;/em>: &lt;a href="mailto:ipc5094@psu.edu">ipc5094@psu.edu&lt;/a> or &lt;a href="mailto:iczekala@psu.edu">iczekala@psu.edu&lt;/a> (alias).&lt;/li>
@@ -83,7 +83,7 @@
 &lt;/ul>
 &lt;p>It is a wise idea to practice your presentation from start to finish &amp;ldquo;live&amp;rdquo; to make sure your timing is correct. Students whose talks are wildly under/over time will find it difficult to achieve full credit.&lt;/p>
 &lt;h3 id="midterm-exams">Midterm Exams&lt;/h3>
-&lt;p>There will be three midterm exams throughout the semester. Each exam is designed to assess your understanding of the topics covered in the previous ~4 weeks of lectures. Each exam will be scheduled during a class period (see the &lt;a href="https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/schedule/">Course Schedule&lt;/a> for the precise date).&lt;/p>
+&lt;p>There will be three midterm exams throughout the semester. Each exam is designed to assess your understanding of the topics covered in the previous ~4 weeks of lectures. Each exam will be scheduled during a class period (see the &lt;a href="https://iancze.github.io/courses/astro542/schedule/">Course Schedule&lt;/a> for the precise date).&lt;/p>
 &lt;p>Exam makeup: If you are unable to attend class on the date of an exam, please contact the instructor &lt;em>before the exam date&lt;/em> to schedule a makeup exam.&lt;/p>
 &lt;p>There will be no final exam (the ALMA proposal + review plays this role).&lt;/p>
 &lt;h3 id="alma-mock-tac-and-proposal">ALMA mock TAC and proposal&lt;/h3>
@@ -127,7 +127,7 @@
 &lt;p>Your Scientific Justification should follow all rules for page limits and fonts, especially the requirements for 4 single-spaced pages (A4 or US letter size) in 12pt font. We suggest that you allow two pages for the science case and two pages for figures, tables, and references; however, you may allocate space as best you see fit.&lt;/p>
 &lt;p>Your Scientific Justification should follow all guidelines for &lt;a href="https://almascience.nrao.edu/proposing/alma-proposal-review/dual-anonymous">dual-anonymous peer review&lt;/a> such that your PDF &lt;em>does not contain&lt;/em> any information that could be easily used to identify the proposer.&lt;/p>
 &lt;h2 id="course-calendar-and-closure-policies">Course Calendar and Closure Policies&lt;/h2>
-&lt;p>For full information, see the &lt;a href="https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/schedule/">Course Schedule&lt;/a>.&lt;/p>
+&lt;p>For full information, see the &lt;a href="https://iancze.github.io/courses/astro542/schedule/">Course Schedule&lt;/a>.&lt;/p>
 &lt;p>If campus should be closed (e.g. for a weather-related event or COVID precautions), the instructor will provide instructions via email on course lecture format (possibly remote, keeping the same schedule) and examinations/assignments (due dates to be rescheduled &lt;em>no earlier than 48 hours&lt;/em> after closure announcement).&lt;/p>
 &lt;h2 id="academic-integrity">Academic Integrity&lt;/h2>
 &lt;p>Academic integrity is the pursuit of scholarly activity in an open, honest and responsible manner. Academic integrity is a basic guiding principle for all academic activity at The Pennsylvania State University, and all members of the University community are expected to act in accordance with this principle. Consistent with this expectation, the University’s Code of Conduct states that all students should act with personal integrity, respect other students’ dignity, rights and property, and help create and maintain an environment in which all can succeed through the fruits of their efforts.&lt;/p>
@@ -157,7 +157,7 @@ I encourage you to be in contact with your academic adviser for specific needs y
 &lt;/ul>
 &lt;h2 id="code-of-mutual-respect-and-cooperation">Code of Mutual Respect and Cooperation&lt;/h2>
 &lt;p>The Eberly College of Science (ECoS) &lt;a href="https://science.psu.edu/climate-and-diversity/code-mutual-respect-and-cooperation">Code of Mutual Respect and Cooperation&lt;/a> embodies the values that we hope
-faculty, staff, and students possess and will endorse to make ECoS a place where every individual feels respected and valued, as well as challenged and rewarded. Please review these principles, linked &lt;a href="https://science.psu.edu/climate-and-diversity/code-mutual-respect-and-cooperation">here&lt;/a>.&lt;/p></description></item><item><title>Fall 2021 Class Schedule</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/schedule/</link><pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/schedule/</guid><description>&lt;p>ASTRO 542 meets three times a week (9:05am to 9:55am) on Monday, Wednesday, and Friday in a &lt;em>remote synchronous&lt;/em> format over Zoom. The Zoom link is provided to enrolled students via email for security purposes. If you would like to audit a course, please email the instructor.&lt;/p>
+faculty, staff, and students possess and will endorse to make ECoS a place where every individual feels respected and valued, as well as challenged and rewarded. Please review these principles, linked &lt;a href="https://science.psu.edu/climate-and-diversity/code-mutual-respect-and-cooperation">here&lt;/a>.&lt;/p></description></item><item><title>Fall 2021 Class Schedule</title><link>https://iancze.github.io/courses/astro542/schedule/</link><pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/schedule/</guid><description>&lt;p>ASTRO 542 meets three times a week (9:05am to 9:55am) on Monday, Wednesday, and Friday in a &lt;em>remote synchronous&lt;/em> format over Zoom. The Zoom link is provided to enrolled students via email for security purposes. If you would like to audit a course, please email the instructor.&lt;/p>
 &lt;p>Please be aware that we will not be meeting on Labor Day (Sep 6) or over Thanksgiving Holiday (Nov 22 - 26), following PSU&amp;rsquo;s &lt;a href="https://www.registrar.psu.edu/academic-calendars/2021-22.cfm">Fall 2021 academic calendar&lt;/a>.&lt;/p>
 &lt;p>The following is the anticipated schedule for course lectures and activities. Lecture topics/dates may shift slightly depending on course progress. Exam and presentation dates will remain fixed.&lt;/p>
 &lt;table>
@@ -173,70 +173,70 @@ faculty, staff, and students possess and will endorse to make ECoS a place where
 &lt;td>Mon Aug 23&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/01-introduction-and-overview/>Introduction and Course Overview&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/01-introduction-and-overview/>Introduction and Course Overview&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Wed Aug 25&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/02-collisional-processes/>Collisional Processes&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/02-collisional-processes/>Collisional Processes&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Fri Aug 27&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/03-stat-mech/>Statistical Mechanics and Thermodynamic Equilibrium&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/03-stat-mech/>Statistical Mechanics and Thermodynamic Equilibrium&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Mon Aug 30&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/04-energy-levels-atoms/>Energy Levels of Atoms, Ions, and Molecules&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/04-energy-levels-atoms/>Energy Levels of Atoms, Ions, and Molecules&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Wed Sep 1&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/05-emission-and-absorption/>Spontaneous Emission, Stimulated Emission, and Absorption&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/05-emission-and-absorption/>Spontaneous Emission, Stimulated Emission, and Absorption&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Fri Sep 3&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/06-radiative-transfer/>Radiative Transfer&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/06-radiative-transfer/>Radiative Transfer&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Wed Sep 8&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/07-hi-21cm/>H I 21-cm Emission and Absorption&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/07-hi-21cm/>H I 21-cm Emission and Absorption&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Fri Sep 10&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/08-absorption-lines/>Absorption Lines and Curve of Growth&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/08-absorption-lines/>Absorption Lines and Curve of Growth&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Mon Sep 13&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/09-emission-absorption-plasma/>Emission and Absorption by a Thermal Plasma&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/09-emission-absorption-plasma/>Emission and Absorption by a Thermal Plasma&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Wed Sep 15&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/10-wave-propagation/>Propagation of Radio Waves through the ISM&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/10-wave-propagation/>Propagation of Radio Waves through the ISM&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -248,7 +248,7 @@ faculty, staff, and students possess and will endorse to make ECoS a place where
 &lt;td>Mon Sep 20&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/11-intro-radio-astronomy/>Introduction to Radio Astronomy and ALMA&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/11-intro-radio-astronomy/>Introduction to Radio Astronomy and ALMA&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -260,56 +260,56 @@ faculty, staff, and students possess and will endorse to make ECoS a place where
 &lt;td>Fri Sep 24&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/12-ionization-processes/>Interstellar Radiation Fields, Ionization Processes, and Recombination of Ions with Electrons&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/12-ionization-processes/>Interstellar Radiation Fields, Ionization Processes, and Recombination of Ions with Electrons&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Mon Sep 27&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/13-photoionized-gas-hii/>Photoionized Gas (HII regions)&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/13-photoionized-gas-hii/>Photoionized Gas (HII regions)&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Wed Sep 29&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/14-ionization-neutral-regions/>Ionization in Predominantly Neutral Regions (cool &amp;#43; warm HI regions)&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/14-ionization-neutral-regions/>Ionization in Predominantly Neutral Regions (cool &amp;#43; warm HI regions)&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Fri Oct 1&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/15-collisional-excitation/>Collisional Excitation&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/15-collisional-excitation/>Collisional Excitation&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Mon Oct 4&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/16-nebular-diagnostics/>Nebular Diagnostics&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/16-nebular-diagnostics/>Nebular Diagnostics&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Wed Oct 6&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/17-radiative-trapping/>Radiative Trapping&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/17-radiative-trapping/>Radiative Trapping&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Fri Oct 8&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/18-dust/>Interstellar Dust&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/18-dust/>Interstellar Dust&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Mon Oct 11&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/19-scattering-absorption/>Scattering and Absorption by Small Particles&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/19-scattering-absorption/>Scattering and Absorption by Small Particles&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -321,7 +321,7 @@ faculty, staff, and students possess and will endorse to make ECoS a place where
 &lt;td>Fri Oct 15&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/20-telescope-proposal-tac/>Telescope Proposals and Time Allocation Committees&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/20-telescope-proposal-tac/>Telescope Proposals and Time Allocation Committees&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -340,28 +340,28 @@ Dust Composition
 &lt;td>Mon Oct 25&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/22-grain-temp-dynamics/>Grain Temperatures, Physics, and Dynamics&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/22-grain-temp-dynamics/>Grain Temperatures, Physics, and Dynamics&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Wed Oct 27&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/23-hii-heating-cooling/>Heating and Cooling of HII regions&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/23-hii-heating-cooling/>Heating and Cooling of HII regions&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Fri Oct 29&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/24-hi-heating-cooling/>HI Clouds: Observations, Heating and Cooling&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/24-hi-heating-cooling/>HI Clouds: Observations, Heating and Cooling&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Mon Nov 1&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/25-molecular-hydrogen/>Molecular Hydrogen&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/25-molecular-hydrogen/>Molecular Hydrogen&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -378,35 +378,35 @@ Dust Composition
 &lt;td>Mon Nov 8&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/26-molecular-clouds/>Molecular Clouds, Observations, Chemistry, and Ionization&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/26-molecular-clouds/>Molecular Clouds, Observations, Chemistry, and Ionization&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Wed Nov 10&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/27-fluid-dynamics/>Fluids and Shocks&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/27-fluid-dynamics/>Fluids and Shocks&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Fri Nov 12&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/28-winds-sne-grb/>Supernovae Remnants and the Hot Ionized Medium&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/28-winds-sne-grb/>Supernovae Remnants and the Hot Ionized Medium&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Mon Nov 15&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/29-star-formation-theory/>Gravitational Collapse and Star Formation: Theory&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/29-star-formation-theory/>Gravitational Collapse and Star Formation: Theory&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Wed Nov 17&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/30-star-formation-observations/>Star Formation: Observations&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/>Star Formation: Observations&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -420,7 +420,7 @@ Protostars to PPDs
 &lt;td>Mon Nov 29&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/32-circumstellar-disks/>Circumstellar Disks&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/>Circumstellar Disks&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -432,7 +432,7 @@ Protostars to PPDs
 &lt;td>Fri Dec 3&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/33-exoplanets-planet-formation/>Exoplanets and Planet Formation&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/>Exoplanets and Planet Formation&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -444,7 +444,7 @@ Protostars to PPDs
 &lt;td>Wed Dec 8&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/35-astrochemistry/>Astrochemistry&lt;/a>
+&lt;a href=https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/>Astrochemistry&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -453,7 +453,7 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Astrochemistry</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/35-astrochemistry/</link><pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/35-astrochemistry/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+December+8/1_oluy4593">Zoom link&lt;/a>&lt;/p></description></item><item><title>Exoplanets and Planet Formation</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/33-exoplanets-planet-formation/</link><pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/33-exoplanets-planet-formation/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Dec+3rd/1_bpz5707q">Zoom link&lt;/a>&lt;/p></description></item><item><title>Circumstellar Disks</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/32-circumstellar-disks/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/32-circumstellar-disks/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+November+29/1_klingyqs">Zoom link&lt;/a>&lt;/p></description></item><item><title>Star Formation: Observations</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/30-star-formation-observations/</link><pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/30-star-formation-observations/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+17/1_3ezwwaxf">Zoom link&lt;/a>&lt;/p>
+&lt;/table></description></item><item><title>Astrochemistry</title><link>https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/</link><pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+December+8/1_oluy4593">Zoom link&lt;/a>&lt;/p></description></item><item><title>Exoplanets and Planet Formation</title><link>https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/</link><pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Dec+3rd/1_bpz5707q">Zoom link&lt;/a>&lt;/p></description></item><item><title>Circumstellar Disks</title><link>https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+November+29/1_klingyqs">Zoom link&lt;/a>&lt;/p></description></item><item><title>Star Formation: Observations</title><link>https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/</link><pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+17/1_3ezwwaxf">Zoom link&lt;/a>&lt;/p>
 &lt;p>References:&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch 42&lt;/li>
@@ -556,7 +556,7 @@ $$
 \Sigma_\mathrm{SFR, disk} = (2.5 \pm 0.7) \times 10^{-4} \left ( \frac{\Sigma_\mathrm{gas, disk}}{M_\odot\,\mathrm{pc}^{-2}} \right)\,M_\odot\,\mathrm{kpc}^{-2}\,\mathrm{yr}^{-1}
 $$&lt;/p>
 &lt;p>This is referred to as the &lt;strong>Schmidt-Kennicut&lt;/strong> Law, and describes the &lt;em>global star formation rate&lt;/em> of a galaxy. It works remarkably well from the low gas surface densities of gas-poor spiral disks to the very high surface densities in the cores of luminous starburst galaxies.&lt;/p>
-&lt;p>You can create an even tighter relationship if you consider the surface density of &lt;em>molecular gas&lt;/em> and average over smaller volumes (for nearby, well-resolved galaxies).&lt;/p></description></item><item><title>Gravitational Collapse and Star Formation: Theory</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/29-star-formation-theory/</link><pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/29-star-formation-theory/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+15/1_4xd4rf28">Zoom link&lt;/a>&lt;/p>
+&lt;p>You can create an even tighter relationship if you consider the surface density of &lt;em>molecular gas&lt;/em> and average over smaller volumes (for nearby, well-resolved galaxies).&lt;/p></description></item><item><title>Gravitational Collapse and Star Formation: Theory</title><link>https://iancze.github.io/courses/astro542/lectures/29-star-formation-theory/</link><pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/29-star-formation-theory/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+15/1_4xd4rf28">Zoom link&lt;/a>&lt;/p>
 &lt;p>References:&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch 41&lt;/li>
@@ -684,7 +684,7 @@ where \(M_\mathrm{BE}\) is the &lt;strong>Bonner-Ebert&lt;/strong> mass, i.e., p
 &lt;ul>
 &lt;li>gravitational torques: non-axisymmetric density patters in the gas (e.g., spiral arms), then gravitational torques could remove angular momentum from the clump on a time scale of order the dynamical time. But, it&amp;rsquo;s unclear how non-axisymmetric a collapsing clump might be.&lt;/li>
 &lt;li>magnetic torques: if the magnetic field is contributing to the support of the system against its self-gravity, then the magnetic braking time can be of order the dynamical time.&lt;/li>
-&lt;/ul></description></item><item><title>Supernovae Remnants and the Hot Ionized Medium</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/28-winds-sne-grb/</link><pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/28-winds-sne-grb/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+12/1_zci0znd8">Zoom link&lt;/a>&lt;/p>
+&lt;/ul></description></item><item><title>Supernovae Remnants and the Hot Ionized Medium</title><link>https://iancze.github.io/courses/astro542/lectures/28-winds-sne-grb/</link><pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/28-winds-sne-grb/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+12/1_zci0znd8">Zoom link&lt;/a>&lt;/p>
 &lt;p>References:&lt;/p>
 &lt;ul>
 &lt;li>Ryden and Pogge Ch. 5.2&lt;/li>
@@ -811,7 +811,7 @@ u_\mathrm{sh} = \frac{2}{7} \frac{r_\mathrm{cool}}{t_\mathrm{cool}} \left ( \fra
 $$
 of order 16 km/s at 1 Myr.&lt;/p>
 &lt;p>Eventually, the expansion speed drops to the sound speed of the surrounding medium, and the shell degenerates into an expanding sound wave, of order 35 Myr after the SNe, and shell radius 160 pc.&lt;/p>
-&lt;p>So, hopefully this combination of the free-expansion phase, the Sedov-Taylor phase, and the snowplow phase has provided a schematic for understanding how the hot SNe blow hot, low-density bubbles surrounded by dense shells. Which, over timescales of 35 Myr, grow to be 300 pc in diameter. These bubbles from SNe remnants are the origin of the hot ionized medium.&lt;/p></description></item><item><title>Fluids and Shocks</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/27-fluid-dynamics/</link><pubDate>Thu, 04 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/27-fluid-dynamics/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Nov+10/1_v4bhqjbe">Zoom link&lt;/a>&lt;/p>
+&lt;p>So, hopefully this combination of the free-expansion phase, the Sedov-Taylor phase, and the snowplow phase has provided a schematic for understanding how the hot SNe blow hot, low-density bubbles surrounded by dense shells. Which, over timescales of 35 Myr, grow to be 300 pc in diameter. These bubbles from SNe remnants are the origin of the hot ionized medium.&lt;/p></description></item><item><title>Fluids and Shocks</title><link>https://iancze.github.io/courses/astro542/lectures/27-fluid-dynamics/</link><pubDate>Thu, 04 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/27-fluid-dynamics/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Nov+10/1_v4bhqjbe">Zoom link&lt;/a>&lt;/p>
 &lt;p>References:&lt;/p>
 &lt;ul>
 &lt;li>Ryden and Pogge Ch 5.1&lt;/li>
@@ -953,7 +953,7 @@ These shorter time and length scales mean that radiative cooling is more effecti
 $$
 \frac{\rho_3}{\rho_1} = \left ( \frac{u_1}{c_1} \right)^2 = \mathcal{M}_T^2
 $$
-where \(\mathcal{M}_T\) is the isothermal Mach number of the shock. So, radiative shocks can reach arbitrarily high compression as their Mach number approaches infinity.&lt;/p></description></item><item><title>Molecular Clouds, Observations, Chemistry, and Ionization</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/26-molecular-clouds/</link><pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/26-molecular-clouds/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Nov+8/1_s6az9bt5">Zoom link&lt;/a>&lt;/p>
+where \(\mathcal{M}_T\) is the isothermal Mach number of the shock. So, radiative shocks can reach arbitrarily high compression as their Mach number approaches infinity.&lt;/p></description></item><item><title>Molecular Clouds, Observations, Chemistry, and Ionization</title><link>https://iancze.github.io/courses/astro542/lectures/26-molecular-clouds/</link><pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/26-molecular-clouds/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Nov+8/1_s6az9bt5">Zoom link&lt;/a>&lt;/p>
 &lt;p>References:&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 32, 33&lt;/li>
@@ -1056,7 +1056,7 @@ AB^+ + C \rightarrow AC^+ + B
 $$
 Exothermic reactions of this type generally lack energy barriers, so the reaction can proceed even at low temperatures. And, the induced dipole interaction boosts the rate somewhat.&lt;/li>
 &lt;li>Radiative association reactions (as we discussed in the context of molecular hydrogen). Basically, the excited complex needs to emit a photon before the complex flies apart on the timescale of a single vibrational period.&lt;/li>
-&lt;/ol></description></item><item><title>Molecular Hydrogen</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/25-molecular-hydrogen/</link><pubDate>Sat, 23 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/25-molecular-hydrogen/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+1/1_7tqdibo1">Zoom link&lt;/a>&lt;/p>
+&lt;/ol></description></item><item><title>Molecular Hydrogen</title><link>https://iancze.github.io/courses/astro542/lectures/25-molecular-hydrogen/</link><pubDate>Sat, 23 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/25-molecular-hydrogen/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+1/1_7tqdibo1">Zoom link&lt;/a>&lt;/p>
 &lt;p>References&lt;/p>
 &lt;ul>
 &lt;li>Ryden and Pogge Ch. 7.4&lt;/li>
@@ -1192,7 +1192,7 @@ alt="Schematic diagram of a photodissociation region. The shielded molecular gas
 alt="This graphic depicts the stratified nature of a photodissociation region (PDR) such as the Orion Bar. Once thought to be homogenous areas of warm gas and dust, PDRs are now known to contain complex structure and four distinct zones. The box at the left shows a portion of the Orion Bar within the Orion Nebula. The box at the top right illustrates a massive star-forming region whose blasts of ultraviolet radiation are affecting a PDR. The box at the bottom right zooms in on a PDR to depict its four, distinct zones: 1) the molecular zone, a cold and dense region where the gas is in the form of molecules and where stars could form; 2) the dissociation front, where the molecules break apart into atoms as the temperature rises; 3) the ionization front, where the gas is stripped of electrons, becoming ionized, as the temperature increases dramatically; and 4) the fully ionized flow of gas into a region of atomic, ionized hydrogen. For the first time, Webb will be able to separate and study these different zones&amp;amp;rsquo; physical conditions. Credits: ILLUSTRATION: NASA, ESA, CSA, Jason Champion (CNRS), Pam Jeffries (STScI), PDRs4ALL ERS Team"/>&lt;/a>&lt;figcaption>
 &lt;p>This graphic depicts the stratified nature of a photodissociation region (PDR) such as the Orion Bar. Once thought to be homogenous areas of warm gas and dust, PDRs are now known to contain complex structure and four distinct zones. The box at the left shows a portion of the Orion Bar within the Orion Nebula. The box at the top right illustrates a massive star-forming region whose blasts of ultraviolet radiation are affecting a PDR. The box at the bottom right zooms in on a PDR to depict its four, distinct zones: 1) the molecular zone, a cold and dense region where the gas is in the form of molecules and where stars could form; 2) the dissociation front, where the molecules break apart into atoms as the temperature rises; 3) the ionization front, where the gas is stripped of electrons, becoming ionized, as the temperature increases dramatically; and 4) the fully ionized flow of gas into a region of atomic, ionized hydrogen. For the first time, Webb will be able to separate and study these different zones&amp;rsquo; physical conditions. Credits: ILLUSTRATION: NASA, ESA, CSA, Jason Champion (CNRS), Pam Jeffries (STScI), PDRs4ALL ERS Team&lt;/p>
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>HI Clouds: Observations, Heating and Cooling</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/24-hi-heating-cooling/</link><pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/24-hi-heating-cooling/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+29/1_vfna4zcb">Zoom link&lt;/a>&lt;/p>
+&lt;/figure></description></item><item><title>HI Clouds: Observations, Heating and Cooling</title><link>https://iancze.github.io/courses/astro542/lectures/24-hi-heating-cooling/</link><pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/24-hi-heating-cooling/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+29/1_vfna4zcb">Zoom link&lt;/a>&lt;/p>
 &lt;p>References&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 29, 30&lt;/li>
@@ -1284,7 +1284,7 @@ alt="The steady state temperature as a function of thermal pressure \(p\). For p
 &lt;p>So, given our best estimates of cosmic ray ionization, photoelectric heating, and cooling processes in the diffuse ISM, we conclude that an ISM in thermal equilibrium and dynamic equilibrium (equal pressure) would have two distinct phases, provided the pressure is in between the two vertical lines (otherwise would just have one phase).&lt;/p>
 &lt;p>This is called the &amp;ldquo;two-phase&amp;rdquo; ISM model, and was first developed by George Field in 1969. Later revisited a number of times with differing assumptions about grain photoelectric heating, grain-assisted recombination, inelastic collisional cross-sections for cooling processes, and coolant abundances. So, the &amp;ldquo;two-phase&amp;rdquo; model has a long and storied history in ISM study. McKee and Ostriker 1977 expanded this to the &amp;ldquo;three-phase&amp;rdquo; ISM, with the hot ionized medium, where bremsstrahlung is the chief cooling process.&lt;/p>
 &lt;p>Observationally, the different phases will have different emission spectra.&lt;/p>
-&lt;p>First, the dust emission at 100 microns will be the same for both phases, since the dust is heated by the same radiation field. But, the line emission will vary considerably. For the CNM, the strongest coolant is [C II] 150 microns. For the WMN, the strongest coolant is [O I] 63.2 microns.&lt;/p></description></item><item><title>Heating and Cooling of HII regions</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/23-hii-heating-cooling/</link><pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/23-hii-heating-cooling/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+27/1_rgnhel5n">Zoom link&lt;/a>&lt;/p>
+&lt;p>First, the dust emission at 100 microns will be the same for both phases, since the dust is heated by the same radiation field. But, the line emission will vary considerably. For the CNM, the strongest coolant is [C II] 150 microns. For the WMN, the strongest coolant is [O I] 63.2 microns.&lt;/p></description></item><item><title>Heating and Cooling of HII regions</title><link>https://iancze.github.io/courses/astro542/lectures/23-hii-heating-cooling/</link><pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/23-hii-heating-cooling/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+27/1_rgnhel5n">Zoom link&lt;/a>&lt;/p>
 &lt;p>References:&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 27&lt;/li>
@@ -1391,7 +1391,7 @@ alt="Cooling function \(\Lambda(T)\) for different densities. The gas is assumed
 &lt;p>Cooling function \(\Lambda(T)\) for different densities. The gas is assumed to have Orion-like abundances and ionization conditions. As the gas density is varied from low to high, the equilibrium temperature also varies from low to high because of collisional deexcitation of excited states. Credit: Draine Fig 27.3&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
-&lt;/p></description></item><item><title>Grain Temperatures, Physics, and Dynamics</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/22-grain-temp-dynamics/</link><pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/22-grain-temp-dynamics/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+25/1_8herzg4g">Zoom link&lt;/a>&lt;/p>
+&lt;/p></description></item><item><title>Grain Temperatures, Physics, and Dynamics</title><link>https://iancze.github.io/courses/astro542/lectures/22-grain-temp-dynamics/</link><pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/22-grain-temp-dynamics/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+25/1_8herzg4g">Zoom link&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 24, 25, 26&lt;/li>
 &lt;/ul>
@@ -1504,7 +1504,7 @@ Radiation pressure can drive grains through the gas with appreciable velocities.
 &lt;ul>
 &lt;li>align grain angular momentum with the magnetic field&lt;/li>
 &lt;li>align nonspherical body of the grain with the grain angular momentum&lt;/li>
-&lt;/ul></description></item><item><title>Telescope Proposals and Time Allocation Committees</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/20-telescope-proposal-tac/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/20-telescope-proposal-tac/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+15/1_l3tinekc">Zoom link&lt;/a>&lt;/p>
+&lt;/ul></description></item><item><title>Telescope Proposals and Time Allocation Committees</title><link>https://iancze.github.io/courses/astro542/lectures/20-telescope-proposal-tac/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/20-telescope-proposal-tac/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+15/1_l3tinekc">Zoom link&lt;/a>&lt;/p>
 &lt;p>&lt;strong>Goal&lt;/strong>: Discuss how the telescope proposal process works, using ALMA as a guide.&lt;/p>
 &lt;p>This includes&lt;/p>
 &lt;ul>
@@ -1646,7 +1646,7 @@ alt="An example of a decent (albeit short) review. From the ALMA Cycle 8 Reviewe
 &lt;p>I will also designate each student as the &amp;ldquo;primary&amp;rdquo; and &amp;ldquo;secondary&amp;rdquo; reviewer for a proposal. On Wednesday, November 3rd and Friday, November 5th, class will be devoted to a mock TAC discussion. The idea is that, as primary reviewer, you will lead the discussion about the proposal. As secondary reviewer, you will be asked to provide any additional thoughts that the primary reviewer may not have covered. The other TAC members are welcome to comment on any proposal, even if they are not primary or secondary reviewers.&lt;/p>
 &lt;p>Then, as a TAC, we will decide on a collective ranking of the proposals. Once this is complete, we will examine how the proposals were actually ranked by the real ALMA TAC, and discuss.&lt;/p>
 &lt;h2 id="alma-proposal-final-project">ALMA Proposal Final Project&lt;/h2>
-&lt;p>After we complete the review process on Nov 5th, it might be a good time to start thinking about your final project, which will be the scientific justification component of an ALMA proposal (modeled on the Cycle 8 call for proposals). Information on this can be found in the &lt;a href="https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/syllabus/">course syllabus&lt;/a>.&lt;/p></description></item><item><title>Scattering and Absorption by Small Particles</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/19-scattering-absorption/</link><pubDate>Mon, 04 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/19-scattering-absorption/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+11/1_omcf7pzy">Zoom link&lt;/a>&lt;/p>
+&lt;p>After we complete the review process on Nov 5th, it might be a good time to start thinking about your final project, which will be the scientific justification component of an ALMA proposal (modeled on the Cycle 8 call for proposals). Information on this can be found in the &lt;a href="https://iancze.github.io/courses/astro542/syllabus/">course syllabus&lt;/a>.&lt;/p></description></item><item><title>Scattering and Absorption by Small Particles</title><link>https://iancze.github.io/courses/astro542/lectures/19-scattering-absorption/</link><pubDate>Mon, 04 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/19-scattering-absorption/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+11/1_omcf7pzy">Zoom link&lt;/a>&lt;/p>
 &lt;p>References&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 22&lt;/li>
@@ -1794,7 +1794,7 @@ Now, if you remember the definition of \(Q_\mathrm{ext} \), this means that the 
 alt="Values of the dimensionless extinction coefficient \(Q_\mathrm{ext}\) for amorphous silicate spheres with particle sizes \(a\) of 0.01, 0.1, 1, and 10 microns, for observational wavelengths ranging from 1 angstrom to 1 mm. At short wavelengths, the smallest grains show discontinuities at the x-ray absorption edges. In the IR, the medium sized grains show prominent silicate absorption features at 9.7 microns and 18 microns (not seen for the largest grains). Credit: Draine Fig 22.6"/>&lt;figcaption>
 &lt;p>Values of the dimensionless extinction coefficient \(Q_\mathrm{ext}\) for amorphous silicate spheres with particle sizes \(a\) of 0.01, 0.1, 1, and 10 microns, for observational wavelengths ranging from 1 angstrom to 1 mm. At short wavelengths, the smallest grains show discontinuities at the x-ray absorption edges. In the IR, the medium sized grains show prominent silicate absorption features at 9.7 microns and 18 microns (not seen for the largest grains). Credit: Draine Fig 22.6&lt;/p>
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>Interstellar Dust</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/18-dust/</link><pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/18-dust/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Oct+8/1_m09odw6b">Zoom link&lt;/a>&lt;/p>
+&lt;/figure></description></item><item><title>Interstellar Dust</title><link>https://iancze.github.io/courses/astro542/lectures/18-dust/</link><pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/18-dust/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Oct+8/1_m09odw6b">Zoom link&lt;/a>&lt;/p>
 &lt;p>References&lt;/p>
 &lt;ul>
 &lt;li>Ryden and Pogge Ch 6.1&lt;/li>
@@ -1909,7 +1909,7 @@ $$
 \sim L_\odot m_H / M_\odot \approx 3 \times 10^{-24}\,\mathrm{erg\,s}^{-1}.
 $$&lt;/p>
 &lt;p>So we took a lot of liberty here in the approximations, but the ISM is &lt;em>about as efficient as converting sunlight into infrared light as the Sun is at creating sunlight to begin with&lt;/em>. This has important implications for the observations of external galaxies&amp;mdash;for some with large dust content, the amount of energy in IR radiation is comparable to that contained in optical starlight.&lt;/p>
-&lt;p>Basically, the dust in a galaxy is efficient at absorbing optical starlight and re-radiating it as infrared emission.&lt;/p></description></item><item><title>Radiative Trapping</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/17-radiative-trapping/</link><pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/17-radiative-trapping/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+6/1_zra8cex4">Zoom link&lt;/a>&lt;/p>
+&lt;p>Basically, the dust in a galaxy is efficient at absorbing optical starlight and re-radiating it as infrared emission.&lt;/p></description></item><item><title>Radiative Trapping</title><link>https://iancze.github.io/courses/astro542/lectures/17-radiative-trapping/</link><pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/17-radiative-trapping/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+6/1_zra8cex4">Zoom link&lt;/a>&lt;/p>
 &lt;p>References:&lt;/p>
 &lt;p>Draine Ch. 19&lt;/p>
 &lt;p>In many situations, like dense molecular clouds or stellar outflows, we have sufficient gas densities that a photon emitted by
@@ -1995,7 +1995,7 @@ which is called the &lt;strong>escape probability approximation&lt;/strong>.&lt;
 &lt;h2 id="escape-probability-for-turbulent-clouds-and-the-x-factor-between-mathrmh_2-mass-and-co">Escape probability for turbulent clouds and the &amp;ldquo;X-Factor&amp;rdquo; between \(\mathrm{H}_2\) mass and CO&lt;/h2>
 &lt;p>Observers of the cold ISM face a perennial problem in that most of the hydrogen mass in these regions is in molecular form \(\mathrm{H}_2\), but that molecule doesn&amp;rsquo;t have a dipole moment, and therefore does not readily emit, so it&amp;rsquo;s &amp;ldquo;invisible.&amp;rdquo;&lt;/p>
 &lt;p>It&amp;rsquo;s commonly assumed that CO 1-0 transition can be used as a tracer of molecular cloud mass.&lt;/p>
-&lt;p>Assumptions underpinning this include virialized clouds (setting turbulent velocity dispersions). Depends on the density and temperature of the cloud.&lt;/p></description></item><item><title>Nebular Diagnostics</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/16-nebular-diagnostics/</link><pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/16-nebular-diagnostics/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+4/1_y8cn2wz4">Zoom link&lt;/a>&lt;/p>
+&lt;p>Assumptions underpinning this include virialized clouds (setting turbulent velocity dispersions). Depends on the density and temperature of the cloud.&lt;/p></description></item><item><title>Nebular Diagnostics</title><link>https://iancze.github.io/courses/astro542/lectures/16-nebular-diagnostics/</link><pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/16-nebular-diagnostics/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+4/1_y8cn2wz4">Zoom link&lt;/a>&lt;/p>
 &lt;p>References&lt;/p>
 &lt;ul>
 &lt;li>Ryden and Pogge Ch. 4.4&lt;/li>
@@ -2108,7 +2108,7 @@ $$
 which is again independent of the free electron density \(n_e\) (but does depend on the critical densities of each transition).&lt;/p>
 &lt;p>To get something that does depend on the free electron density, we need to be in the regime where \(n_e\) is larger than one critical density but smaller than the other. For the O II transition we&amp;rsquo;ve been talking about, you can get line ratios that range from 0.4 to 1.4, which is a decent dynamic range.&lt;/p>
 &lt;p>And, of course, in a modern analysis, usually multiple temperature and density diagnostics are combined into a single estimate of temperature and density.&lt;/p>
-&lt;p>More details are in Ryden and Pogge, Ch 4.4.&lt;/p></description></item><item><title>Collisional Excitation</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/15-collisional-excitation/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/15-collisional-excitation/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+October+1/1_n7gksgev">Zoom link&lt;/a>&lt;/p>
+&lt;p>More details are in Ryden and Pogge, Ch 4.4.&lt;/p></description></item><item><title>Collisional Excitation</title><link>https://iancze.github.io/courses/astro542/lectures/15-collisional-excitation/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/15-collisional-excitation/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+October+1/1_n7gksgev">Zoom link&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 17. also Ch. 3&lt;/li>
 &lt;/ul>
@@ -2193,7 +2193,7 @@ $$&lt;/p>
 &lt;p>We can expand this discussion a bit by following the example from &lt;a href="http://www.astronomy.ohio-state.edu/~pogge/Ast871/Notes/Molecules.pdf">Richard Pogge&lt;/a> and discuss the specific example of a medium with two-level atoms (ratio of states given by \(T_\mathrm{exc}\), kinetic temperature given by \(T\)) with some &lt;em>blackbody&lt;/em> radiation field with radiation temperature \(T_\mathrm{rad}\).&lt;/p>
 &lt;p>In the high density regime, we&amp;rsquo;ll have the excitation temperature driven towards the kinetic temperature \(T_\mathrm{exc} \rightarrow T\). If \(T &amp;gt; T_\mathrm{rad}\) (common in ISM), we&amp;rsquo;ll see an emission line.&lt;/p>
 &lt;p>In the low density regime, we&amp;rsquo;ll have the excitation temperature driven towards the radiation temperature \(T_\mathrm{exc} \rightarrow T_\mathrm{rad}\), in which case we won&amp;rsquo;t see a line.&lt;/p>
-&lt;p>This is why it is sometimes said that a medium needs to be above the critical density for a line to &amp;ldquo;turn on.&amp;rdquo; Different species have different critical densities, and so line strengths can be used as density diagnostics.&lt;/p></description></item><item><title>Ionization in Predominantly Neutral Regions (cool + warm HI regions)</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/14-ionization-neutral-regions/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/14-ionization-neutral-regions/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+29/1_z72pm38a">Zoom link&lt;/a>&lt;/p>
+&lt;p>This is why it is sometimes said that a medium needs to be above the critical density for a line to &amp;ldquo;turn on.&amp;rdquo; Different species have different critical densities, and so line strengths can be used as density diagnostics.&lt;/p></description></item><item><title>Ionization in Predominantly Neutral Regions (cool + warm HI regions)</title><link>https://iancze.github.io/courses/astro542/lectures/14-ionization-neutral-regions/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/14-ionization-neutral-regions/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+29/1_z72pm38a">Zoom link&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 16&lt;/li>
 &lt;/ul>
@@ -2250,7 +2250,7 @@ to estimate the cosmic ray ionization rate in molecular clouds.&lt;/p>
 &lt;h2 id="dense-molecular-clouds-dark-clouds">Dense Molecular Clouds (dark clouds)&lt;/h2>
 &lt;p>When \(A_V \gtrsim 3\,\mathrm{mag}\), even carbon and sulfur remain predominately neutral. Most of the free electrons come from cosmic ray ionization.&lt;/p>
 &lt;p>As before, CR ionization produces \(\mathrm{H}_2^+\), which leads to \(\mathrm{H}_3^+\). However, in dense molecular clouds the ionization fraction is so low that most of these \(\mathrm{H}_3^+\) ions react with atoms or molecules (like CO) to form a generic molecule (like \(HCO^+\)), which will then recombine dissociatively, capture an electron from a grain, or charge exchange with a neutral atom like sulfur.&lt;/p>
-&lt;p>The end result of these reactions, though, is that deep within a molecular cloud cosmic ray ionization is the only source of free electrons, and even then, the gas has a very low ionization fraction. This has bearing on the magnetohydrodynamics of the gas, because ionized gas interacts with a magnetic field, while neutral gas doesn&amp;rsquo;t.&lt;/p></description></item><item><title>Photoionized Gas (HII regions)</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/13-photoionized-gas-hii/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/13-photoionized-gas-hii/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+27/1_7qvclhvh">Zoom link&lt;/a>&lt;/p>
+&lt;p>The end result of these reactions, though, is that deep within a molecular cloud cosmic ray ionization is the only source of free electrons, and even then, the gas has a very low ionization fraction. This has bearing on the magnetohydrodynamics of the gas, because ionized gas interacts with a magnetic field, while neutral gas doesn&amp;rsquo;t.&lt;/p></description></item><item><title>Photoionized Gas (HII regions)</title><link>https://iancze.github.io/courses/astro542/lectures/13-photoionized-gas-hii/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/13-photoionized-gas-hii/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+27/1_7qvclhvh">Zoom link&lt;/a>&lt;/p>
 &lt;p>References&lt;/p>
 &lt;ul>
 &lt;li>Ryden and Pogge Ch 4&lt;/li>
@@ -2379,7 +2379,7 @@ $$&lt;/p>
 &lt;p>So it takes about 3000 years to create a Stromgren sphere.&lt;/p>
 &lt;p>At times \(t \gg t_\mathrm{rec}\), the Stromgren sphere will consist of a sphere of almost fully ionized gas with radius \(R \rightarrow R_S \sim 6\,\mathrm{pc}\). Outside of this, there will be a partially ionized boundary of thickness \(\lambda_\mathrm{mfp} \sim 0.001\,\mathrm{pc} \ll R_S\), and outside of this, neutral hydrogen.&lt;/p>
 &lt;p>Because radiative recombination is the reversal of photoionization, \(t_\mathrm{rec}\) is also the time it takes for the sphere to go back to neutral H after the central UV source has been turned off.&lt;/p>
-&lt;p>The Stromgren sphere approaches ionization temperature, but it&amp;rsquo;s still far from pressure equilibrium, and as it&amp;rsquo;s heated, it will begin to expand.&lt;/p></description></item><item><title>Interstellar Radiation Fields, Ionization Processes, and Recombination of Ions with Electrons</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/12-ionization-processes/</link><pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/12-ionization-processes/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+24/1_v7exn76l">Zoom link&lt;/a>&lt;/p>
+&lt;p>The Stromgren sphere approaches ionization temperature, but it&amp;rsquo;s still far from pressure equilibrium, and as it&amp;rsquo;s heated, it will begin to expand.&lt;/p></description></item><item><title>Interstellar Radiation Fields, Ionization Processes, and Recombination of Ions with Electrons</title><link>https://iancze.github.io/courses/astro542/lectures/12-ionization-processes/</link><pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/12-ionization-processes/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+24/1_v7exn76l">Zoom link&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 12, 13, &amp;amp; 14&lt;/li>
 &lt;li>Ryden and Pogge Ch 4&lt;/li>
@@ -2538,7 +2538,7 @@ $$
 X^+ + \mathrm{grain} \rightarrow X + \mathrm{grain}^+
 $$
 Collision with a grain transfers charge, if the ionization potential exceeds the &amp;ldquo;work function&amp;rdquo; of the grain.&lt;/li>
-&lt;/ul></description></item><item><title>Introduction to Radio Astronomy and ALMA</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/11-intro-radio-astronomy/</link><pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/11-intro-radio-astronomy/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+20/1_fjzi6u2t">Zoom link&lt;/a>&lt;/p>
+&lt;/ul></description></item><item><title>Introduction to Radio Astronomy and ALMA</title><link>https://iancze.github.io/courses/astro542/lectures/11-intro-radio-astronomy/</link><pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/11-intro-radio-astronomy/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+20/1_fjzi6u2t">Zoom link&lt;/a>&lt;/p>
 &lt;p>&lt;strong>Suggested reading&lt;/strong>: &lt;a href="https://almascience.eso.org/documents-and-tools/cycle8/alma-science-primer">ALMA Primer&lt;/a>&lt;/p>
 &lt;p>Resources:&lt;/p>
 &lt;ul>
@@ -2773,7 +2773,7 @@ alt="A demonstration of how an interferometer with an insufficient number of sho
 &lt;h3 id="aperture-synthesis">Aperture synthesis&lt;/h3>
 &lt;p>Because the earth rotates, the projected baseline to a source also changes throughout an observation. This can be used to great advantage to sample different spatial frequencies than were otherwise possible in a &amp;ldquo;snapshot&amp;rdquo; observation. The following is a video showing how UV coverage for the MAPS large program is built up over a series of eight 1-hour long observations, spaced out over a single year, and the corresponding &amp;ldquo;dirty beam&amp;rdquo; that results.&lt;/p>
 &lt;video controls preload="auto" width="100%" playsinline class="html-video">
-&lt;source src="https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/11-intro-radio-astronomy/baselines-beams.mp4" type="video/mp4">
+&lt;source src="https://iancze.github.io/courses/astro542/lectures/11-intro-radio-astronomy/baselines-beams.mp4" type="video/mp4">
 &lt;p>&lt;/p>
 &lt;/video>
 &lt;h3 id="making-images-from-visibilities">Making images from visibilities&lt;/h3>
@@ -2789,7 +2789,7 @@ at a bunch of \(u,v\) points corresponding to the projected baselines of the arr
 &lt;li>Another is to fearlessly charge on and just take the direct inverse Fourier transform of the samples. This generates an image called the &amp;ldquo;dirty image,&amp;rdquo; because it retains the features of the dirty beam. The assumption here is that the unsampled spatial frequencies carry zero power (not a great assumption, in general), and their visibility values are set to zero. This means that the dirty image is highly sensitive to the array configuration, not something we want! The following movie shows the dirty image that results from choosing a different 75% of the dataset in a round robin fashion for each frame. There is no noise&amp;mdash;each visibility is sampled perfectly.&lt;/li>
 &lt;/ul>
 &lt;video controls preload="auto" width="100%" playsinline class="html-video">
-&lt;source src="https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/lectures/11-intro-radio-astronomy/alma_noiseless.mp4" type="video/mp4">
+&lt;source src="https://iancze.github.io/courses/astro542/lectures/11-intro-radio-astronomy/alma_noiseless.mp4" type="video/mp4">
 &lt;p>&lt;/p>
 &lt;/video>
 &lt;p>There are several algorithms one can employ to try to recover the &amp;ldquo;true&amp;rdquo; sky brightness from the dirty image.&lt;/p>
@@ -2799,7 +2799,7 @@ at a bunch of \(u,v\) points corresponding to the projected baselines of the arr
 &lt;/ul>
 &lt;h2 id="science-capacities-of-alma">Science capacities of ALMA&lt;/h2>
 &lt;p>In the remaining time, we&amp;rsquo;ll discuss the science capabilities of ALMA. A great resource for these materials is the&lt;/p>
-&lt;p>&lt;a href="https://almascience.eso.org/documents-and-tools/cycle8/alma-science-primer">ALMA Primer&lt;/a>&lt;/p></description></item><item><title>Propagation of Radio Waves through the ISM</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/10-wave-propagation/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/10-wave-propagation/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+15/1_4xb4s6ls">Zoom link&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://almascience.eso.org/documents-and-tools/cycle8/alma-science-primer">ALMA Primer&lt;/a>&lt;/p></description></item><item><title>Propagation of Radio Waves through the ISM</title><link>https://iancze.github.io/courses/astro542/lectures/10-wave-propagation/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/10-wave-propagation/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+15/1_4xb4s6ls">Zoom link&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch 11&lt;/li>
 &lt;/ul>
@@ -2985,7 +2985,7 @@ Background sources like AGNs and pulsars are good for this type of calculation b
 &lt;li>scintillation: &amp;ldquo;twinkling&amp;rdquo; helps track turbulence in the ISM&lt;/li>
 &lt;li>extreme brightening events: chance refraction through blobs in ISM, possibly from shells of SNe&lt;/li>
 &lt;/ul>
-&lt;p>More information provided in Draine Chs. 11.4 - 11.7&lt;/p></description></item><item><title>Emission and Absorption by a Thermal Plasma</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/09-emission-absorption-plasma/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/09-emission-absorption-plasma/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+13/1_392jaruc">Zoom link&lt;/a>&lt;/p>
+&lt;p>More information provided in Draine Chs. 11.4 - 11.7&lt;/p></description></item><item><title>Emission and Absorption by a Thermal Plasma</title><link>https://iancze.github.io/courses/astro542/lectures/09-emission-absorption-plasma/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/09-emission-absorption-plasma/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Sep+13/1_392jaruc">Zoom link&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 10&lt;/li>
 &lt;li>Rybicki and Lightman Ch 5.&lt;/li>
@@ -3127,7 +3127,7 @@ alt="Solid line is the continuous emission spectrum of a \(T=8000)) K hydrogen p
 $$
 n + 1 \rightarrow n
 $$
-transitions we called the \(n\alpha\) transitions.&lt;/p></description></item><item><title>Absorption Lines and Curve of Growth</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/08-absorption-lines/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/08-absorption-lines/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+8+Sep+10/1_zz3zpyg4">Zoom link&lt;/a>&lt;/p>
+transitions we called the \(n\alpha\) transitions.&lt;/p></description></item><item><title>Absorption Lines and Curve of Growth</title><link>https://iancze.github.io/courses/astro542/lectures/08-absorption-lines/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/08-absorption-lines/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+8+Sep+10/1_zz3zpyg4">Zoom link&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>Ryden and Pogge Ch. 2.3: Building Absorption Lines&lt;/li>
 &lt;li>Ryden and Pogge Ch. 2.4: Curve of Growth&lt;/li>
@@ -3327,7 +3327,7 @@ alt="Curve of growth for the same Lyman \(\alpha\) line. Figure 2.7 from Ryden a
 &lt;li>Cold neutral medium: has lower abundances&lt;/li>
 &lt;li>Warm ionized medium: very high abundances&lt;/li>
 &lt;li>Diffuse molecular clouds: very low abundances&lt;/li>
-&lt;/ul></description></item><item><title>H I 21-cm Emission and Absorption</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/07-hi-21cm/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/07-hi-21cm/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+7+Sep+8/1_evjnpdt2">Zoom link&lt;/a>&lt;/p>
+&lt;/ul></description></item><item><title>H I 21-cm Emission and Absorption</title><link>https://iancze.github.io/courses/astro542/lectures/07-hi-21cm/</link><pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/07-hi-21cm/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+7+Sep+8/1_evjnpdt2">Zoom link&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 8&lt;/li>
 &lt;li>Ryden and Pogge Ch. 3.1: 21cm Emission and Absorption&lt;/li>
@@ -3542,7 +3542,7 @@ When absorption is strong,&lt;/p>
 &lt;ul>
 &lt;li>can&amp;rsquo;t tell the difference between \(T_\mathrm{RS} - T_\mathrm{sky}\) vs. \(T_A^\mathrm{on}(v) - T_A^\mathrm{off}\)&lt;/li>
 &lt;li>upper limit on \(\tau (v)\) and lower limit on \(T_\mathrm{spin}(v)\).&lt;/li>
-&lt;/ul></description></item><item><title>Radiative Transfer</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/06-radiative-transfer/</link><pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/06-radiative-transfer/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+6+Sep+3/1_seg7c0y0">Zoom link&lt;/a>&lt;/p>
+&lt;/ul></description></item><item><title>Radiative Transfer</title><link>https://iancze.github.io/courses/astro542/lectures/06-radiative-transfer/</link><pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/06-radiative-transfer/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+6+Sep+3/1_seg7c0y0">Zoom link&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 7&lt;/li>
 &lt;li>Ryden and Pogge: Ch 2.1: The Equation of Radiative Transfer&lt;/li>
@@ -3700,7 +3700,7 @@ $$&lt;/p>
 &lt;/ul>
 &lt;p>Masing happens for microwave transitions of H I, OH, H2O, and SiO.
 Some masers have brightness/antenna temperatures of \(T_A &amp;gt; 10^{11}\)K.&lt;/p>
-&lt;p>This means they would have a HUGE flux &lt;em>if&lt;/em> they were as spatially extended as other astronomical sources. But the \(d\Omega\) is typically small.&lt;/p></description></item><item><title>Spontaneous Emission, Stimulated Emission, and Absorption</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/05-emission-and-absorption/</link><pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/05-emission-and-absorption/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+5A+Sep+1/1_o7bbam0v">Zoom link&lt;/a>&lt;/p>
+&lt;p>This means they would have a HUGE flux &lt;em>if&lt;/em> they were as spatially extended as other astronomical sources. But the \(d\Omega\) is typically small.&lt;/p></description></item><item><title>Spontaneous Emission, Stimulated Emission, and Absorption</title><link>https://iancze.github.io/courses/astro542/lectures/05-emission-and-absorption/</link><pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/05-emission-and-absorption/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+5A+Sep+1/1_o7bbam0v">Zoom link&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 6: Spontaneous Emission, Stimulated Emission, and Absorption&lt;/li>
 &lt;li>Ryden and Pogge Ch. 2.1: Radiative Transfer&lt;/li>
@@ -3921,7 +3921,7 @@ $$&lt;/p>
 $$&lt;/p>
 &lt;p>The intrinsic width of the absorption line reflects the uncertainty in the energies of levels \(l,u\) due to the finite lifetimes against transitions to other levels.&lt;/p>
 &lt;p>Intrinsic widths of lines \(\propto h \nu\), which means x-ray transitions can have considerably larger line widths than radio transitions (assuming the medium is stationary).&lt;/p>
-&lt;p>We&amp;rsquo;ll talk more about absorption line profiles, Doppler broadening, Voigt profiles, etc&amp;hellip; in a few lectures.&lt;/p></description></item><item><title>Energy Levels of Atoms, Ions, and Molecules</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/04-energy-levels-atoms/</link><pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/04-energy-levels-atoms/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+4A+Aug+30/1_7cregjt3">Zoom link&lt;/a>&lt;/p>
+&lt;p>We&amp;rsquo;ll talk more about absorption line profiles, Doppler broadening, Voigt profiles, etc&amp;hellip; in a few lectures.&lt;/p></description></item><item><title>Energy Levels of Atoms, Ions, and Molecules</title><link>https://iancze.github.io/courses/astro542/lectures/04-energy-levels-atoms/</link><pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/04-energy-levels-atoms/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+4A+Aug+30/1_7cregjt3">Zoom link&lt;/a>&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch. 4 + 5&lt;/li>
 &lt;li>Ryden and Pogge &amp;ldquo;Guide to Spectroscopic Notation&amp;rdquo; available as PDF from &lt;a href="https://www.cambridge.org/highereducation/books/interstellar-and-intergalactic-medium/A647BECF975E19E86F7F88F7BB103AA7/resources/general-resources/EE39FB29FEC5B2061B17B5D036647F0A/guide-to-spectroscopic-notation/6B0467B962DB4E3D8986F4893569207F">here&lt;/a>.&lt;/li>
@@ -4046,7 +4046,7 @@ $$
 $$
 a purely rotational transition.&lt;/p>
 &lt;h2 id="electronic-transitions">Electronic transitions&lt;/h2>
-&lt;p>Molecules can also have electronic transitions (i.e., w/ electrons), just like in atoms. And these typically have energies of a few eV and produce spectral lines in UV, optical and near-IR. Generally, though, when we&amp;rsquo;re talking about observations of (diatomic) molecular spectra, we&amp;rsquo;re usually dealing with rotational (radio) and sometimes vibrational (IR) transitions.&lt;/p></description></item><item><title>Statistical Mechanics and Thermodynamic Equilibrium</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/03-stat-mech/</link><pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/03-stat-mech/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+3+Aug+27/1_jxunbxmk">Zoom link&lt;/a>&lt;/p>
+&lt;p>Molecules can also have electronic transitions (i.e., w/ electrons), just like in atoms. And these typically have energies of a few eV and produce spectral lines in UV, optical and near-IR. Generally, though, when we&amp;rsquo;re talking about observations of (diatomic) molecular spectra, we&amp;rsquo;re usually dealing with rotational (radio) and sometimes vibrational (IR) transitions.&lt;/p></description></item><item><title>Statistical Mechanics and Thermodynamic Equilibrium</title><link>https://iancze.github.io/courses/astro542/lectures/03-stat-mech/</link><pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/03-stat-mech/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+3+Aug+27/1_jxunbxmk">Zoom link&lt;/a>&lt;/p>
 &lt;p>Draine Ch. 3&lt;/p>
 &lt;p>Also good review is &amp;ldquo;An Introduction to Thermal Physics&amp;rdquo; by Daniel V. Schroeder, esp. Ch 6 &amp;ldquo;Boltzmann Statistics.&amp;rdquo;&lt;/p>
 &lt;p>&lt;strong>The ISM and IGM are generally far from thermodynamic equilibrium&lt;/strong>.&lt;/p>
@@ -4186,7 +4186,7 @@ n + 1 \rightarrow 1
 $$
 principal states are called \(n\alpha\) transitions. E.g., Lyman \(\alpha\) is the \(1\alpha\) transition.&lt;/p>
 &lt;p>When \(n\) becomes very large, the photon is in the radio band of the spectrum, and these are called &amp;ldquo;radio recombination lines.&amp;rdquo; E.g., we might talk about the \(166\alpha\) or \(159\alpha\) transitions.&lt;/p>
-&lt;p>The curve of \(b_n(n)\) also sets up conditions so that &lt;em>maser amplification&lt;/em> can occur.&lt;/p></description></item><item><title>Collisional Processes</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/02-collisional-processes/</link><pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/02-collisional-processes/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+2+Aug+25/1_gp4w3at4">Zoom link&lt;/a>&lt;/p>
+&lt;p>The curve of \(b_n(n)\) also sets up conditions so that &lt;em>maser amplification&lt;/em> can occur.&lt;/p></description></item><item><title>Collisional Processes</title><link>https://iancze.github.io/courses/astro542/lectures/02-collisional-processes/</link><pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/02-collisional-processes/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+2+Aug+25/1_gp4w3at4">Zoom link&lt;/a>&lt;/p>
 &lt;h2 id="references-for-this-lecture">References for this lecture&lt;/h2>
 &lt;ul>
 &lt;li>Draine Ch. 2 (primary)&lt;/li>
@@ -4372,7 +4372,7 @@ and the reaction rate coefficients for these reactions become comparable to the 
 &lt;ul>
 &lt;li>Collisions are fundamental to ISM physics&lt;/li>
 &lt;li>We&amp;rsquo;ve introduced a simple framework for understanding collisional rate coefficients for different types of interactions&lt;/li>
-&lt;/ul></description></item><item><title>Introduction and Course Overview</title><link>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/01-introduction-and-overview/</link><pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/website-transfer-redux/courses/astro542/lectures/01-introduction-and-overview/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+1+Aug+23/1_vl7lkx54">Zoom Recording&lt;/a>&lt;/p>
+&lt;/ul></description></item><item><title>Introduction and Course Overview</title><link>https://iancze.github.io/courses/astro542/lectures/01-introduction-and-overview/</link><pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/01-introduction-and-overview/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+1+Aug+23/1_vl7lkx54">Zoom Recording&lt;/a>&lt;/p>
 &lt;p>The Interstellar medium course is at once a course about nothing and a course about everything. What I mean by that is we&amp;rsquo;re talking about the &lt;em>space between things&lt;/em>, some of the least dense parts of the galaxy. But we&amp;rsquo;re also going to touch on nearly all aspects of astrophysics:&lt;/p>
 &lt;ul>
 &lt;li>quantum mechanics of atoms and molecules&lt;/li>
@@ -4406,7 +4406,7 @@ and the reaction rate coefficients for these reactions become comparable to the 
 &lt;li>ALMA proposal (20%)&lt;/li>
 &lt;li>no final&lt;/li>
 &lt;/ul>
-&lt;p>&lt;a href="https://iancze.github.io/website-transfer-redux/website-transfer-redux/courses/astro542/syllabus/">Link&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://iancze.github.io/courses/astro542/syllabus/">Link&lt;/a>&lt;/p>
 &lt;h2 id="what-is-the-ism">What is the ISM?&lt;/h2>
 &lt;ul>
 &lt;li>primarily, the disks of galaxies&lt;/li>
