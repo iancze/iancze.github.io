@@ -19,7 +19,7 @@ stageOrder:
 people: 
     - name: Ian Czekala
       stage: prof 
-      src: Ian_Czekala.jpg
+      src: Ian_Czekala.jpeg
       blurb: Ian is an assistant professor in the [Astronomy and Astrophysics department](https://science.psu.edu/astro) at Pennsylvania State University and leader of the Czekala research group. Ian is also a Co-Hire of PSU's [Institute for Computational and Data Sciences](https://www.icds.psu.edu/). He is broadly interested in star and planet formation, machine learning, and Bayesian inference for astrophysics.
     - name : Brianna Zawadzki
       stage: grad 
@@ -35,15 +35,15 @@ people:
       src: Zoe_Ko.png
       blurb: Zoe is an undergraduate student and physics major at the University of California, Berkeley working on high resolution stellar spectroscopy and radial velocity analysis for circumbinary protoplanetary disks.
     - name: Tyler Quinn
-      stage: ugrad 
+      stage: former 
       src: Tyler_Quinn.png
       blurb: Tyler is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University working on regularized maximum likelihood imaging algorithms.
     - name: Hannah Grzybowski
-      stage: ugrad 
+      stage: former 
       src: Hannah_Grzybowski.jpg
       blurb: Hannah is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University working on regularized maximum likelihood imaging algorithms.
     - name: Robert Frazier
-      stage: ugrad 
+      stage: former 
       src: Robert_Frazier.jpeg
       blurb: Robert is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University working on regularized maximum likelihood imaging algorithms.
     - name: Joseph M. Akana Murphy
