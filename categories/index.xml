@@ -1,4 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://iancze.github.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Czekala Group</title><link>https://iancze.github.io/categories/</link><description>Recent content in Categories on Czekala Group</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://iancze.github.io/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Syllabus</title><link>https://iancze.github.io/courses/astro542/syllabus/</link><pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/syllabus/</guid><description>&lt;h2 id="instructor">Instructor&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://iancze.github.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Czekala Group</title><link>https://iancze.github.io/categories/</link><description>Recent content in Categories on Czekala Group</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://iancze.github.io/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Syllabus</title><link>https://iancze.github.io/courses/astro589/syllabus/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/syllabus/</guid><description>&lt;h2 id="objective">Objective&lt;/h2>
+&lt;p>Interferometric astrophysical observations are a vast and deep topic. The goal of this course is to help students develop a &lt;strong>practical understanding&lt;/strong> of how interferometers (in particular arrays like the VLA or ALMA) &lt;strong>observe an astrophysical source&lt;/strong>, build a &lt;strong>mathematical foundation&lt;/strong> for working with &lt;strong>complex-valued, Fourier-plane data&lt;/strong>, and survey some of the many approaches that are used to &lt;strong>investigate astrophysical phenomena&lt;/strong>, focusing on &lt;strong>forward-modeling&lt;/strong> and &lt;strong>regularized maximum likelihood&lt;/strong> techniques.&lt;/p>
+&lt;h2 id="instructor">Instructor&lt;/h2>
+&lt;ul>
+&lt;li>Professor (Dr.) Ian Czekala (he/him/his)&lt;/li>
+&lt;li>&lt;em>Email&lt;/em>: &lt;a href="mailto:ipc5094@psu.edu">ipc5094@psu.edu&lt;/a> or &lt;a href="mailto:iczekala@psu.edu">iczekala@psu.edu&lt;/a> (alias).&lt;/li>
+&lt;/ul>
+&lt;p>Office hours by appointment.&lt;/p>
+&lt;p>&lt;strong>If you are in any way feeling ill or suspect you might have been contact with an individual infected with COVID, &lt;em>please&lt;/em> stay home and seek medical care if necessary.&lt;/strong> We plan on posting all lecture notes, and we will work with you to provide you with the course materials you need.&lt;/p>
+&lt;h2 id="course-calendar-and-closure-policies">Course Calendar and Closure Policies&lt;/h2>
+&lt;p>ASTRO 589 meets &lt;strong>once a week on Wednesdays from 10:10am to 11:00am ET (prompt) in Davey Lab Room 538&lt;/strong>.&lt;/p>
+&lt;p>For full information on lecture dates and topics, see the &lt;a href="https://iancze.github.io/courses/astro589/schedule/">Course Schedule&lt;/a>.&lt;/p>
+&lt;p>If campus should be closed (e.g. for a weather-related event or COVID precautions), the instructor will provide instructions via email on course lecture format (possibly remote, keeping the same schedule) and examinations/assignments (due dates to be rescheduled &lt;em>no earlier than 48 hours&lt;/em> after closure announcement).&lt;/p>
+&lt;h2 id="assignments-and-project">Assignments and Project&lt;/h2>
+&lt;h3 id="course-grade">Course Grade&lt;/h3>
+&lt;p>The course grade will be based on&lt;/p>
+&lt;ul>
+&lt;li>problem sets (55%)&lt;/li>
+&lt;li>group project and presentation (45%)&lt;/li>
+&lt;/ul>
+&lt;h3 id="problem-sets">Problem sets&lt;/h3>
+&lt;p>Problem sets will be assigned approximately every 2-3 weeks.&lt;/p>
+&lt;p>Please turn in homeworks in &lt;code>.PDF&lt;/code> format to Ian by email at &lt;a href="mailto:ipc5094@psu.edu">ipc5094@psu.edu&lt;/a> with the subject line &lt;code>ASTRO 589 problem set&lt;/code>. Handwritten solutions are fine, but please digitize your submission using a department scanner or a smartphone scanner app (e.g., &lt;a href="https://acrobat.adobe.com/us/en/acrobat/mobile/scanner-app.html">Adobe Scan&lt;/a>).&lt;/p>
+&lt;p>Due dates will be set to correspond to the beginning of a class period (i.e., 10:10am).&lt;/p>
+&lt;h4 id="programming">Programming&lt;/h4>
+&lt;p>For problem sets, students are encouraged to use whatever programming language they are most comfortable with.&lt;/p>
+&lt;p>Some project choices, especially those involving CASA, may require basic familiarity with the Python programming language.&lt;/p>
+&lt;h4 id="problem-set-late-policy">Problem set late policy&lt;/h4>
+&lt;p>The following percentages will be deducted from your score&lt;/p>
+&lt;ul>
+&lt;li>one day late: 5%&lt;/li>
+&lt;li>two days late: 10%&lt;/li>
+&lt;li>three days late: 25%&lt;/li>
+&lt;li>more than 72 hours late: no credit&lt;/li>
+&lt;/ul>
+&lt;p>If extenuating circumstances arise such that you will be unable to complete the homework on time, please contact Ian &lt;em>before&lt;/em> the homework deadline and we can most likely arrange an extension.&lt;/p>
+&lt;h4 id="problem-set-collaboration-policy">Problem set collaboration policy&lt;/h4>
+&lt;p>You are encouraged to collaborate and work through the problem sets together. However, each student must complete the final write up on their own, i.e., no problem set should be duplicated verbatim between students.&lt;/p>
+&lt;h3 id="group-project-and-presentation">Group project and presentation&lt;/h3>
+&lt;p>Students will form groups of 2-3 for their course projects. Groups will propose a project concept around some aspect of interferometry and discuss in detail at least one major astrophysical application. The project idea may be based of the list of example projects (below) or may be an original idea proposed by the group.&lt;/p>
+&lt;p>The project will culminate in a presentation to the class. This presentation will be a comprehensive lecture on your topic, which should take 35 minutes of our class period, followed by 15 minutes of detailed questions and answers. Students may submit any additional materials beyond their presentation for review, if so desired; however, no final report is required.&lt;/p>
+&lt;p>Good presentations will:&lt;/p>
+&lt;ul>
+&lt;li>Provide a cogent astrophysical and technical introduction&lt;/li>
+&lt;li>Connect to course material covered (if applicable)&lt;/li>
+&lt;li>Introduce the key supporting background material, including any relevant equations or seminal figures from related works&lt;/li>
+&lt;li>Copious citations to and explanations of relevant literature&lt;/li>
+&lt;li>Explain the key observational or theoretical instruments/methodologies (as applicable)&lt;/li>
+&lt;li>Identify at least one major astrophysical application and discuss in detail&lt;/li>
+&lt;li>Contain some new aspect of technical development or investigation by the group&lt;/li>
+&lt;li>Finish the presentation within the allotted time (35 +/- 5 minutes)&lt;/li>
+&lt;li>Adequately answer questions raised by the instructor and students&lt;/li>
+&lt;/ul>
+&lt;p>Each group should provide the instructor with the two dates that they prefer by &lt;strong>Wednesday, September 21st&lt;/strong>. The instructor will then assign one presentation date to each group. You should notify the instructor of your project topic at least two weeks prior to your presentation date to confirm that it is an acceptable choice.&lt;/p>
+&lt;p>It is a wise idea to practice your presentation from start to finish &amp;ldquo;live&amp;rdquo; to make sure your timing is correct. Groups whose talks are wildly under/over time will find it difficult to achieve full credit.&lt;/p>
+&lt;h4 id="example-project-ideas">Example Project Ideas&lt;/h4>
+&lt;ul>
+&lt;li>Cross-validation strategies for imaging (including for RML)&lt;/li>
+&lt;li>How do MRI imagers work, and what are their fundamental relationships to radio interferometers?&lt;/li>
+&lt;li>Optical interferometers and science results&lt;/li>
+&lt;li>Download a dataset from the ALMA archive, image with CLEAN or RML techniques&lt;/li>
+&lt;li>Self-calibration theory and application with CASA&lt;/li>
+&lt;li>Spectral line capabilities of ALMA, image a molecular line from ALMA archive&lt;/li>
+&lt;li>Wavelets: what are they, how have they been used in radio astronomy applications&lt;/li>
+&lt;li>Design new ALMA observations using CASA/simobserve&lt;/li>
+&lt;li>Expanding MPoL to do model fitting with Pyro&lt;/li>
+&lt;li>Expanding MPoL to use nufft for gridding&lt;/li>
+&lt;li>Expanding MPoL to do self-calibration&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference-materials">Reference Materials&lt;/h2>
+&lt;p>There are many additional resources that will be helpful during this course (and beyond) and will be called out in the course at the appropriate juncture. Many of these resources are freely available online or through the &lt;a href="https://libraries.psu.edu/">University library&lt;/a>.&lt;/p>
+&lt;h3 id="textbooks">Textbooks&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://www.cv.nrao.edu/~sransom/web/xxx.html">Essential Radio Astronomy&lt;/a> by James Condon and Scott Ransom&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/2625688">Tools of Radio Astronomy&lt;/a> by Rohlfs and Wilson&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/34517505">Fourier Analysis and Imaging&lt;/a> by R. Bracewell&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/2010095">The Fourier Transform and its Applications&lt;/a> by R. Bracewell&lt;/li>
+&lt;/ul>
+&lt;h3 id="courses">Courses&lt;/h3>
+&lt;ul>
+&lt;li>18 NRAO Synthesis Imaging School &lt;a href="https://web.cvent.com/event/b7f82cf3-7126-4a71-a88b-7a93c66a4dc7/websitePage:6bbf1462-9f9f-4204-bd93-36032f793bc4">slides and lectures&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="videos">Videos&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://web.cvent.com/event/1ecded89-273f-4f8a-80e8-f5eb2d40d8c5/websitePage:4967d7b9-05fe-4b32-820d-1f1587665ee3">Cells to Galaxies Speaker Series Archive&lt;/a>, in particular talks by &lt;a href="https://vimeo.com/639606652/a927105526">Urvashi Rao&lt;/a> and &lt;a href="https://vimeo.com/612017530/9fc70df0ef">Sanjay Bhatnagar&lt;/a> (opening ~15 minutes)&lt;/li>
+&lt;li>Lectures by David Wilner &lt;a href="https://www.youtube.com/watch?v=0TwnZhiEc3A&amp;amp;ab_channel=AnitaChapter">Part I&lt;/a> and &lt;a href="https://www.youtube.com/watch?v=mRUZ9eckHZg&amp;amp;ab_channel=AnitaChapter">Part II&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="masking-policy">Masking Policy&lt;/h2>
+&lt;p>We encourage you to get COVID-19 vaccinated and follow University policies on masking, especially in indoor spaces. In consultation with background rates in Centre County, masks may be required part or all of the fall semester (see policy below).&lt;/p>
+&lt;p>&lt;em>University policy&lt;/em>: Penn State University requires everyone to wear a face mask in all university buildings, including classrooms, regardless of vaccination status. ALL STUDENTS MUST wear a mask appropriately (i.e., covering both your mouth and nose) while you are indoors on campus. This is to protect your health and safety as well as the health and safety of your classmates, instructor, and the university community. Anyone attending class without a mask will be asked to put one on or leave. Instructors may end class if anyone present refuses to appropriately wear a mask for the duration of class. Students who refuse to wear masks appropriately may face disciplinary action for Code of Conduct violations. If you feel you cannot wear a mask during class, please speak with your adviser immediately about your options for altering your schedule.&lt;/p>
+&lt;h2 id="academic-integrity">Academic Integrity&lt;/h2>
+&lt;p>Academic integrity is the pursuit of scholarly activity in an open, honest and responsible manner. Academic integrity is a basic guiding principle for all academic activity at The Pennsylvania State University, and all members of the University community are expected to act in accordance with this principle. Consistent with this expectation, the University’s Code of Conduct states that all students should act with personal integrity, respect other students’ dignity, rights and property, and help create and maintain an environment in which all can succeed through the fruits of their efforts.&lt;/p>
+&lt;p>Academic integrity includes a commitment by all members of the University community not to engage in or tolerate acts of falsification, misrepresentation or deception. Such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.&lt;/p>
+&lt;h2 id="disability-accommodation">Disability Accommodation&lt;/h2>
+&lt;p>Penn State welcomes students with disabilities into the University’s educational programs. Student Disability Resources (SDR) website provides contact information for every Penn State campus (Links to an external site.). For further information, please visit &lt;a href="http://equity.psu.edu/student-disability-resources/">Student Disability Resources website&lt;/a>.&lt;/p>
+&lt;p>In order to receive consideration for reasonable accommodations, you must contact the appropriate disability services office at the campus where you are officially enrolled, participate in an intake interview, and provide documentation: See &lt;a href="http://equity.psu.edu/student-disability-resources/applying-for-services/documentation-guidelines">documentation guidelines&lt;/a>. If the documentation supports your request for reasonable accommodations, your campus disability services office will provide you with an accommodation letter. Please share this letter with your instructors and discuss the accommodations with them as early as possible. You must follow this process for every semester that you request accommodations.&lt;/p>
+&lt;h2 id="counseling-and-psychological-services">Counseling and Psychological Services&lt;/h2>
+&lt;p>Many students at Penn State face personal challenges or have psychological needs that may interfere with their academic progress, social development, or emotional wellbeing. The university offers a variety of confidential services to help you through difficult times, including individual and group counseling, crisis intervention, consultations, online chats, and mental health screenings. These services are provided by staff who welcome all students and embrace a philosophy respectful of clients’ cultural and religious backgrounds, and sensitive to differences in race, ability, gender identity and sexual orientation.&lt;/p>
+&lt;ul>
+&lt;li>Counseling and Psychological Services at University Park &lt;a href="http://studentaffairs.psu.edu/counseling/">CAPS&lt;/a>: 814-863-0395&lt;/li>
+&lt;li>&lt;a href="https://senate.psu.edu/faculty/counseling-services-at-commonwealth-campuses/">Counseling and Psychological Services at Commonwealth Campuses&lt;/a>&lt;/li>
+&lt;li>Penn State Crisis Line (24 hours/7 days/week): 877-229-6400&lt;/li>
+&lt;li>Crisis Text Line (24 hours/7 days/week): Text LIONS to 741741&lt;/li>
+&lt;/ul>
+&lt;h2 id="educational-equity-and-reporting-bias">Educational Equity and Reporting Bias&lt;/h2>
+&lt;p>Penn State takes great pride to foster a diverse and inclusive environment for students, faculty, and staff. Acts of intolerance, discrimination, or harassment due to age, ancestry, color, disability, gender, gender identity, national origin, race, religious belief, sexual orientation, or veteran status are not tolerated and can be reported through Educational Equity via the &lt;a href="http://equity.psu.edu/reportbias/">Report Bias webpage&lt;/a>.&lt;/p>
+&lt;p>&lt;em>Whom should I contact if I need additional assistance?&lt;/em>
+I encourage you to be in contact with your academic adviser for specific needs you might have outside this course. Academic adviser information and scheduling can be found at &lt;a href="https://sites.psu.edu/starfishinfo/">https://sites.psu.edu/starfishinfo/&lt;/a>. There are also additional resources available at &lt;a href="https://keeplearning.psu.edu/student-support/">https://keeplearning.psu.edu/student-support/&lt;/a>&lt;/p>
+&lt;h3 id="counseling--psychological-services-caps">Counseling &amp;amp; Psychological Services (CAPS)&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://studentaffairs.psu.edu/caps-contact-form">https://studentaffairs.psu.edu/caps-contact-form&lt;/a>&lt;/li>
+&lt;li>CAPS Phone: (814) 863-0395&lt;/li>
+&lt;li>Penn State Crisis Line 1-877-229-6400&lt;/li>
+&lt;li>Student Care and Advocacy: Email: &lt;a href="mailto:StudentCare@psu.edu">StudentCare@psu.edu&lt;/a>&lt;/li>
+&lt;li>Share a Concern: &lt;a href="https://cm.maxient.com/reportingform.php?PennState&amp;amp;layout_id=14">Share a Concern Form&lt;/a> Phone: 814-863-2020 (voicemail)&lt;/li>
+&lt;/ul>
+&lt;h2 id="code-of-mutual-respect-and-cooperation">Code of Mutual Respect and Cooperation&lt;/h2>
+&lt;p>The Eberly College of Science (ECoS) &lt;a href="https://science.psu.edu/climate-and-diversity/code-mutual-respect-and-cooperation">Code of Mutual Respect and Cooperation&lt;/a> embodies the values that we hope
+faculty, staff, and students possess and will endorse to make ECoS a place where every individual feels respected and valued, as well as challenged and rewarded. Please review these principles, linked &lt;a href="https://science.psu.edu/climate-and-diversity/code-mutual-respect-and-cooperation">here&lt;/a>.&lt;/p></description></item><item><title>Syllabus</title><link>https://iancze.github.io/courses/astro542/syllabus/</link><pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/syllabus/</guid><description>&lt;h2 id="instructor">Instructor&lt;/h2>
 &lt;ul>
 &lt;li>Professor (Dr.) Ian Czekala (he/him/his)&lt;/li>
 &lt;li>&lt;em>Email&lt;/em>: &lt;a href="mailto:ipc5094@psu.edu">ipc5094@psu.edu&lt;/a> or &lt;a href="mailto:iczekala@psu.edu">iczekala@psu.edu&lt;/a> (alias).&lt;/li>
@@ -157,7 +276,115 @@ I encourage you to be in contact with your academic adviser for specific needs y
 &lt;/ul>
 &lt;h2 id="code-of-mutual-respect-and-cooperation">Code of Mutual Respect and Cooperation&lt;/h2>
 &lt;p>The Eberly College of Science (ECoS) &lt;a href="https://science.psu.edu/climate-and-diversity/code-mutual-respect-and-cooperation">Code of Mutual Respect and Cooperation&lt;/a> embodies the values that we hope
-faculty, staff, and students possess and will endorse to make ECoS a place where every individual feels respected and valued, as well as challenged and rewarded. Please review these principles, linked &lt;a href="https://science.psu.edu/climate-and-diversity/code-mutual-respect-and-cooperation">here&lt;/a>.&lt;/p></description></item><item><title>Fall 2021 Class Schedule</title><link>https://iancze.github.io/courses/astro542/schedule/</link><pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/schedule/</guid><description>&lt;p>ASTRO 542 meets three times a week (9:05am to 9:55am) on Monday, Wednesday, and Friday in a &lt;em>remote synchronous&lt;/em> format over Zoom. The Zoom link is provided to enrolled students via email for security purposes. If you would like to audit a course, please email the instructor.&lt;/p>
+faculty, staff, and students possess and will endorse to make ECoS a place where every individual feels respected and valued, as well as challenged and rewarded. Please review these principles, linked &lt;a href="https://science.psu.edu/climate-and-diversity/code-mutual-respect-and-cooperation">here&lt;/a>.&lt;/p></description></item><item><title>Fall 2022 Class Schedule</title><link>https://iancze.github.io/courses/astro589/schedule/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/schedule/</guid><description>&lt;p>ASTRO 589 meets &lt;strong>once a week on Wednesdays from 10:10am to 11:00am ET (prompt) in Davey Lab Room 538&lt;/strong>.&lt;/p>
+&lt;p>Please be aware that we will not be meeting the week of the Thanksgiving Holiday (Nov 21 - 25), following PSU&amp;rsquo;s &lt;a href="https://www.registrar.psu.edu/academic-calendars/2022-23.cfm">Fall 2022 academic calendar&lt;/a>.&lt;/p>
+&lt;p>The following is the anticipated schedule for course lectures and activities. Lecture topics/dates may shift slightly depending on course progress.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Date&lt;/th>
+&lt;th>Activity&lt;/th>
+&lt;th>Topic&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Aug 24&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/01-introduction/>Introduction and Course Overview&lt;/a>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Aug 31&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
+The Fourier Transform I
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Sep 7&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
+The Fourier Transform II
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Sep 14&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
+The Fast Fourier Transform and Numerical Implementation
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Sep 21&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
+Interferometry in Practice
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Sep 28&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
+PSFs, Gridding, and Dirty Images
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Oct 5&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
+Bayesian Inference and Model Fitting
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Oct 12&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
+Image Plane Deconvolution (CLEAN)
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Oct 19&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
+Regularized Maximum Likelihood (RML) I
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Oct 26&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
+Regularized Maximum Likelihood (RML) II
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Nov 2&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>Topic Overflow and Summary&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Nov 9&lt;/td>
+&lt;td>Project presentation&lt;/td>
+&lt;td>TBD&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Nov 16&lt;/td>
+&lt;td>Project presentation&lt;/td>
+&lt;td>TBD&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Nov 30&lt;/td>
+&lt;td>Project presentation&lt;/td>
+&lt;td>TBD&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Dec 7&lt;/td>
+&lt;td>Project presentation&lt;/td>
+&lt;td>TBD&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Fall 2021 Class Schedule</title><link>https://iancze.github.io/courses/astro542/schedule/</link><pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/schedule/</guid><description>&lt;p>ASTRO 542 meets three times a week (9:05am to 9:55am) on Monday, Wednesday, and Friday in a &lt;em>remote synchronous&lt;/em> format over Zoom. The Zoom link is provided to enrolled students via email for security purposes. If you would like to audit a course, please email the instructor.&lt;/p>
 &lt;p>Please be aware that we will not be meeting on Labor Day (Sep 6) or over Thanksgiving Holiday (Nov 22 - 26), following PSU&amp;rsquo;s &lt;a href="https://www.registrar.psu.edu/academic-calendars/2021-22.cfm">Fall 2021 academic calendar&lt;/a>.&lt;/p>
 &lt;p>The following is the anticipated schedule for course lectures and activities. Lecture topics/dates may shift slightly depending on course progress. Exam and presentation dates will remain fixed.&lt;/p>
 &lt;table>
@@ -453,7 +680,7 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Astrochemistry</title><link>https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/</link><pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+December+8/1_oluy4593">Zoom link&lt;/a>&lt;/p></description></item><item><title>Exoplanets and Planet Formation</title><link>https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/</link><pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Dec+3rd/1_bpz5707q">Zoom link&lt;/a>&lt;/p></description></item><item><title>Circumstellar Disks</title><link>https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+November+29/1_klingyqs">Zoom link&lt;/a>&lt;/p></description></item><item><title>Star Formation: Observations</title><link>https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/</link><pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+17/1_3ezwwaxf">Zoom link&lt;/a>&lt;/p>
+&lt;/table></description></item><item><title>Introduction and Course Overview</title><link>https://iancze.github.io/courses/astro589/lectures/01-introduction/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/01-introduction/</guid><description/></item><item><title>Astrochemistry</title><link>https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/</link><pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+December+8/1_oluy4593">Zoom link&lt;/a>&lt;/p></description></item><item><title>Exoplanets and Planet Formation</title><link>https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/</link><pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Dec+3rd/1_bpz5707q">Zoom link&lt;/a>&lt;/p></description></item><item><title>Circumstellar Disks</title><link>https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+November+29/1_klingyqs">Zoom link&lt;/a>&lt;/p></description></item><item><title>Star Formation: Observations</title><link>https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/</link><pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+17/1_3ezwwaxf">Zoom link&lt;/a>&lt;/p>
 &lt;p>References:&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch 42&lt;/li>
