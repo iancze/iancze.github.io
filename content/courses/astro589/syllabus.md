@@ -8,7 +8,7 @@ weight: 1
 
 ## Objective
 
-Interferometric astrophysical observations are a vast and deep topic. The goal of this course is to help students develop a **practical understanding** of how radio interferometers **observe an astrophysical source**, build a **mathematical foundation** for working with **complex-valued, Fourier-plane data**, and survey some of the many approaches that are used to **investigate astrophysical phenomena**, focusing on **forward-modeling** and **regularized maximum likelihood** techniques.
+Interferometric astrophysical observations are a vast and deep topic. The goal of this course is to help students develop a **practical understanding** of how interferometers (in particular arrays like the VLA or ALMA) **observe an astrophysical source**, build a **mathematical foundation** for working with **complex-valued, Fourier-plane data**, and survey some of the many approaches that are used to **investigate astrophysical phenomena**, focusing on **forward-modeling** and **regularized maximum likelihood** techniques.
 
 ## Instructor
 
@@ -17,7 +17,7 @@ Interferometric astrophysical observations are a vast and deep topic. The goal o
 
 Office hours by appointment.
 
-**If you are in any way feeling ill or suspect you might have been contact with an individual infected with COVID, *please* stay home and seek medical care.** We plan on posting all lecture notes, and we will work with you to provide you with the course materials you need.
+**If you are in any way feeling ill or suspect you might have been contact with an individual infected with COVID, *please* stay home and seek medical care if necessary.** We plan on posting all lecture notes, and we will work with you to provide you with the course materials you need.
 
 ## Course Calendar and Closure Policies
 
@@ -44,9 +44,11 @@ Please turn in homeworks in `.PDF` format to Ian by email at ipc5094@psu.edu wit
 
 Due dates will be set to correspond to the beginning of a class period (i.e., 10:10am).
 
-### Programming
+#### Programming
 
-Some problem sets, especially those dealing with the CASA radio astronomy software, will require basic familiarity with the Python programming language. Outside of the CASA problem sets, students are encouraged to use whatever programming language they are most comfortable with.
+For problem sets, students are encouraged to use whatever programming language they are most comfortable with.
+
+Some project choices, especially those involving CASA, may require basic familiarity with the Python programming language.
 
 #### Problem set late policy
 
@@ -61,30 +63,43 @@ If extenuating circumstances arise such that you will be unable to complete the 
 
 #### Problem set collaboration policy
 
-You are welcome to collaborate and work through the problem sets. However, each student must complete the final write up on their own, i.e., no problem set should be duplicated verbatim between students.
+You are encouraged to collaborate and work through the problem sets together. However, each student must complete the final write up on their own, i.e., no problem set should be duplicated verbatim between students.
 
-It should go without saying that students may not collaborate on exams.
+### Group project and presentation
 
-### Paper presentation
+Students will form groups of 2-3 for their course projects. Groups will propose a project concept around some aspect of interferometry and discuss in detail at least one major astrophysical application. The project idea may be based of the list of example projects (below) or may be an original idea proposed by the group.
 
-Students will form groups of 2-3 individuals, depending on course enrollment, for their course projects.
+The project will culminate in a presentation to the class. This presentation will be a comprehensive lecture on your topic, which should take 35 minutes of our class period, followed by 15 minutes of detailed questions and answers. Students may submit any additional materials beyond their presentation for review, if so desired; however, no final report is required.
 
-Each group should provide the instructor with the two dates that they prefer by Wednesday, September 21st. The instructor will then assign one presentation date to each group.
+Good presentations will:
 
-You should notify the instructor of your project topic at least two weeks prior to your presentation date to confirm that it is an acceptable choice.
-
-You will need to give a comprehensive lecture on your topic, which should take a full 35 minutes of our class period, leaving 15 minutes for detalied questions and answers. Should consist of introductory background, connection to course material covered (if applicable) and a substantially new bit of analysis or theoretical advancement.
-
-Good talks will
-
-* Provide a cogent introduction to the subfield of the paper
+* Provide a cogent astrophysical and technical introduction
+* Connect to course material covered (if applicable)
 * Introduce the key supporting background material, including any relevant equations or seminal figures from related works
+* Copious citations to and explanations of relevant literature
 * Explain the key observational or theoretical instruments/methodologies (as applicable)
-* Discuss the scientific findings of the paper, and their implications for the broader astrophysical subfield
-* Finish the presentation within the allotted time (50 +/- 2 minutes)
+* Identify at least one major astrophysical application and discuss in detail
+* Contain some new aspect of technical development or investigation by the group
+* Finish the presentation within the allotted time (35 +/- 5 minutes)
 * Adequately answer questions raised by the instructor and students
 
+Each group should provide the instructor with the two dates that they prefer by **Wednesday, September 21st**. The instructor will then assign one presentation date to each group. You should notify the instructor of your project topic at least two weeks prior to your presentation date to confirm that it is an acceptable choice.
+
 It is a wise idea to practice your presentation from start to finish "live" to make sure your timing is correct. Groups whose talks are wildly under/over time will find it difficult to achieve full credit.
+
+#### Example Project Ideas
+
+* Cross-validation strategies for imaging (including for RML)
+* How do MRI imagers work, and what are their fundamental relationships to radio interferometers?
+* Optical interferometers and science results
+* Download a dataset from the ALMA archive, image with CLEAN or RML techniques
+* Self-calibration theory and application with CASA
+* Spectral line capabilities of ALMA, image a molecular line from ALMA archive
+* Wavelets: what are they, how have they been used in radio astronomy applications
+* Design new ALMA observations using CASA/simobserve
+* Expanding MPoL to do model fitting with Pyro
+* Expanding MPoL to use nufft for gridding
+* Expanding MPoL to do self-calibration
 
 ## Reference Materials
 
@@ -93,19 +108,19 @@ There are many additional resources that will be helpful during this course (and
 ### Textbooks
 
 * [Essential Radio Astronomy](https://www.cv.nrao.edu/~sransom/web/xxx.html) by James Condon and Scott Ransom
-* *Tools of Radio Astronomy*
-* *Synthesis Imaging in Radio Astronomy* by Thompson, Moran, and Swenson
-* Fourier Analysis and Imaging by R. Bracewell
+* [Tools of Radio Astronomy](https://catalog.libraries.psu.edu/catalog/2625688) by Rohlfs and Wilson
+* [Interferometry and Synthesis in Radio Astronomy](https://catalog.libraries.psu.edu/catalog/20789467) by Thompson, Moran, and Swenson
+* [Fourier Analysis and Imaging](https://catalog.libraries.psu.edu/catalog/34517505) by R. Bracewell
+* [The Fourier Transform and its Applications](https://catalog.libraries.psu.edu/catalog/2010095) by R. Bracewell
 
 ### Courses
 
-* NRAO Synthesis Imaging School
+* 18 NRAO Synthesis Imaging School [slides and lectures](https://web.cvent.com/event/b7f82cf3-7126-4a71-a88b-7a93c66a4dc7/websitePage:6bbf1462-9f9f-4204-bd93-36032f793bc4)
 
 ### Videos
 
-* Urvashi Rao conference talk
-* Bhatnagar conference talk
-* Wilner intro to radio astronomy
+* [Cells to Galaxies Speaker Series Archive](https://web.cvent.com/event/1ecded89-273f-4f8a-80e8-f5eb2d40d8c5/websitePage:4967d7b9-05fe-4b32-820d-1f1587665ee3), in particular talks by [Urvashi Rao](https://vimeo.com/639606652/a927105526) and [Sanjay Bhatnagar](https://vimeo.com/612017530/9fc70df0ef) (opening ~15 minutes)
+* Lectures by David Wilner [Part I](https://www.youtube.com/watch?v=0TwnZhiEc3A&ab_channel=AnitaChapter) and [Part II](https://www.youtube.com/watch?v=mRUZ9eckHZg&ab_channel=AnitaChapter)
 
 ## Masking Policy
 
