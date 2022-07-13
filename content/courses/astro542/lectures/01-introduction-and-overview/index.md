@@ -10,12 +10,12 @@ The Interstellar medium course is at once a course about nothing and a course ab
 
 * quantum mechanics of atoms and molecules
 * radiative transfer
-* star formation 
+* star formation
 * planet formation
-* galactic stellar populations 
+* galactic stellar populations
 * and even cosmology (slightly)
 
-That's because this course is fundamentally about the interactions between all of these more easily-defined "units" of astrophysics. The science lectures in this course will basically fall into one or two categories: 
+That's because this course is fundamentally about the interactions between all of these more easily-defined "units" of astrophysics. The science lectures in this course will basically fall into one or two categories:
 
 * coverage/review of fundamental concepts/theories (e.g., quantum mechanics, radiative transfer, etc...)
 * applying/integrating those concepts to understanding the interstellar medium (e.g., dust emission, star formation, etc...)
@@ -32,9 +32,10 @@ Compared to undergraduate courses, graduate courses are one step closer to opera
 * **Second third**: star formation, generally: clouds, astrochemistry, shocks, CO surveys, protostars. *References*: Draine textbook Chs 14 - 42 (not all covered)
 * **Final third**: protoplanetary disks, planet formation, exoplanets, radio astronomy, ALMA proposals. *References*: additional resources.
 
-## Course Syllabus 
+## Course Syllabus
 
 ### Format
+
 * 3 midterm exams (total 40%)
 * three problem sets (total 20%)
 * paper presentation (choose two dates Monday, August 30th) (15%)
@@ -42,14 +43,15 @@ Compared to undergraduate courses, graduate courses are one step closer to opera
 * ALMA proposal (20%)
 * no final
 
-[Link]({{<relref syllabus>}})
+[Link]({{<relref "/courses/astro542/syllabus">}})
 
 ## What is the ISM?
+
 * primarily, the disks of galaxies
 * Gigantic range of \\(T\\) (\\(10 - 10^6\\)) and number density \\(n\\) (\\(10^{-3} - 10^{-6} \mathrm{cm}^{-3}\\))
 * wide range of ionization states
 * spatially inhomogeneous
-* roughly solar abundances 
+* roughly solar abundances
 * multi-phase
 * far from equilibrium/steady-state
 
@@ -65,7 +67,6 @@ Take Calcium, for example. Neutral Calcium is Ca I, singly ionized Calcium is Ca
 * Singly-ionized Hydrogen (i.e., a proton): H II
 * Molecular Hydrogen: \\(H_2\\)
 
-
 When we say "H two," which do we mean? In this course, at least, we'll strive to maintain the convention that H II `==` "H two," and when we are referring to \\(H_2\\), we will say "molecular hydrogen."
 
 ISM is mostly hydrogen. Hydrogen states by mass (following Draine Table 1.2).
@@ -80,7 +81,7 @@ What do we mean by phases of the ISM? Broadly speaking, these are characteristic
 
 Don't worry too much about the exact boundaries of each phase, but instead focus on the huge, *orders of magnitude* range in densities, temperatures, and volume fractions. If you wanted to chose a most-important phase based on *volume*, you're going to get a different answer than if you chose one based on *mass*.
 
-For now, let's just reflect on Draine Table 1.3 / Ryden and Pogge Table 1.1. 
+For now, let's just reflect on Draine Table 1.3 / Ryden and Pogge Table 1.1.
 
 We see combinations of *temperature*, *density*, and *ionization state*. The point of this course is basically understanding the interaction between these phases. Following Draine,
 
@@ -140,7 +141,8 @@ Modern image:
 
 {{< figure src="barnard_68.jpg" link="https://www.eso.org/public/images/eso9934b/" caption="The dark cloud B68 at different wavelegths. Credit: ESO">}}
 
-What's going on here? 
+What's going on here?
+
 * extinction diminishes with wavelength
 * centers of clouds are denser than peripheries
 
