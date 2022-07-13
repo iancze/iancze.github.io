@@ -30,6 +30,6 @@ menu:
     - name: CV and publications
       url: publications/
       weight: 3
-    - name: Astro542
-      url: courses/astro542/
+    - name: Courses
+      url: courses/
       weight: 4
