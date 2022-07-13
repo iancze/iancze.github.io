@@ -6,7 +6,7 @@ toc: true
 weight: 1
 ---
 
-## Objective
+## Objective: radio astronomy and interferometric imaging
 
 Interferometric astrophysical observations are a vast and deep topic. The goal of this course is to help students develop a **practical understanding** of how interferometers (in particular arrays like the VLA or ALMA) **observe an astrophysical source**, build a **mathematical foundation** for working with **complex-valued, Fourier-plane data**, and survey some of the many approaches that are used to **investigate astrophysical phenomena**, focusing on **forward-modeling** and **regularized maximum likelihood** techniques.
 
@@ -93,6 +93,7 @@ It is a wise idea to practice your presentation from start to finish "live" to m
 * How do MRI imagers work, and what are their fundamental relationships to radio interferometers?
 * Optical interferometers and science results
 * Download a dataset from the ALMA archive, image with CLEAN or RML techniques
+* Calibration techniques for ALMA and EHT
 * Self-calibration theory and application with CASA
 * Spectral line capabilities of ALMA, image a molecular line from ALMA archive
 * Wavelets: what are they, how have they been used in radio astronomy applications
