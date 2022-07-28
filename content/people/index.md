@@ -6,12 +6,14 @@ type: people
 
 stageNames: 
     prof : ""
+    postdoc: Postdocs
     grad: Graduate Students
     ugrad: Undergraduate Students
     former: Former Group Members
 
 stageOrder: 
     - prof
+    - postdoc
     - grad
     - ugrad
     - former
@@ -21,6 +23,10 @@ people:
       stage: prof 
       src: Ian_Czekala.jpeg
       blurb: Ian is an assistant professor in the [Astronomy and Astrophysics department](https://science.psu.edu/astro) at Pennsylvania State University and leader of the Czekala research group. Ian is also a Co-Hire of PSU's [Institute for Computational and Data Sciences](https://www.icds.psu.edu/). He is broadly interested in star and planet formation, machine learning, and Bayesian inference for astrophysics.
+    - name: Jeff Jennings
+      stage: postdoc
+      src: Jeff_Jennings.jpeg
+      blurb: Jeff is an Eberly Research Fellow postdoc in the Astronomy and Astrophysics department at Pennsylvania State University. He focuses on protoplanetary disk science and statistical techniques for data analysis, including applications to image synthesis for astronomical interferometry. 
     - name : Brianna Zawadzki
       stage: grad 
       src: Brianna_Zawadzki.png
@@ -37,15 +43,15 @@ people:
     - name: Tyler Quinn
       stage: former 
       src: Tyler_Quinn.png
-      blurb: Tyler is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University working on regularized maximum likelihood imaging algorithms.
+      blurb: Tyler is a former bachelors student in the astronomy and astrophysics major at Pennsylvania State University. During 2021 - 22 he worked on regularized maximum likelihood imaging algorithms.
     - name: Hannah Grzybowski
       stage: former 
       src: Hannah_Grzybowski.jpg
-      blurb: Hannah is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University working on regularized maximum likelihood imaging algorithms.
+      blurb: Hannah is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University. During 2021, she worked on regularized maximum likelihood imaging algorithms.
     - name: Robert Frazier
       stage: former 
       src: Robert_Frazier.jpeg
-      blurb: Robert is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University working on regularized maximum likelihood imaging algorithms.
+      blurb: Robert is an undergraduate student and astronomy and astrophysics major at Pennsylvania State University. During 2021, he worked on regularized maximum likelihood imaging algorithms.
     - name: Joseph M. Akana Murphy
       stage: former
       src: Joseph_Murphy.jpg
