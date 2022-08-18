@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://iancze.github.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ian Czekala's homepage on Czekala Group</title><link>https://iancze.github.io/</link><description>Recent content in Ian Czekala's homepage on Czekala Group</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 21 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://iancze.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Syllabus</title><link>https://iancze.github.io/courses/astro589/syllabus/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/syllabus/</guid><description>&lt;h2 id="objective-radio-astronomy-and-interferometric-imaging">Objective: radio astronomy and interferometric imaging&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://iancze.github.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ian Czekala's homepage on Czekala Group</title><link>https://iancze.github.io/</link><description>Recent content in Ian Czekala's homepage on Czekala Group</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 24 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://iancze.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Syllabus</title><link>https://iancze.github.io/courses/astro589/syllabus/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/syllabus/</guid><description>&lt;h2 id="objective-radio-astronomy-and-interferometric-imaging">Objective: radio astronomy and interferometric imaging&lt;/h2>
 &lt;p>Interferometric astrophysical observations are a vast and deep topic. The goal of this course is to help students develop a &lt;strong>practical understanding&lt;/strong> of how interferometers (in particular arrays like the VLA or ALMA) &lt;strong>observe an astrophysical source&lt;/strong>, build a &lt;strong>mathematical foundation&lt;/strong> for working with &lt;strong>complex-valued, Fourier-plane data&lt;/strong>, and survey some of the many approaches that are used to &lt;strong>investigate astrophysical phenomena&lt;/strong>, focusing on &lt;strong>forward-modeling&lt;/strong> and &lt;strong>regularized maximum likelihood&lt;/strong> techniques.&lt;/p>
 &lt;h2 id="instructor">Instructor&lt;/h2>
 &lt;ul>
@@ -293,7 +293,7 @@ faculty, staff, and students possess and will endorse to make ECoS a place where
 &lt;td>Aug 24&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-Intro and Overview
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/01-introduction/>Introduction and Course Overview&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -328,7 +328,7 @@ Interferometry in Practice
 &lt;td>Sep 28&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-PSFs, Gridding, and Dirty Images
+Making Images: PSFs, Gridding, and Dirty Images
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -361,8 +361,8 @@ Regularized Maximum Likelihood (RML) II
 &lt;/tr>
 &lt;tr>
 &lt;td>Nov 2&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>Topic Overflow and Summary&lt;/td>
+&lt;td>Project presentation&lt;/td>
+&lt;td>TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Nov 9&lt;/td>
@@ -381,8 +381,8 @@ Regularized Maximum Likelihood (RML) II
 &lt;/tr>
 &lt;tr>
 &lt;td>Dec 7&lt;/td>
-&lt;td>Project presentation&lt;/td>
-&lt;td>TBD&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>Summary and Future Directions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Fall 2021 Class Schedule</title><link>https://iancze.github.io/courses/astro542/schedule/</link><pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/schedule/</guid><description>&lt;p>ASTRO 542 meets three times a week (9:05am to 9:55am) on Monday, Wednesday, and Friday in a &lt;em>remote synchronous&lt;/em> format over Zoom. The Zoom link is provided to enrolled students via email for security purposes. If you would like to audit a course, please email the instructor.&lt;/p>
@@ -681,7 +681,280 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Astrochemistry</title><link>https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/</link><pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+December+8/1_oluy4593">Zoom link&lt;/a>&lt;/p></description></item><item><title>Exoplanets and Planet Formation</title><link>https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/</link><pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Dec+3rd/1_bpz5707q">Zoom link&lt;/a>&lt;/p></description></item><item><title>Circumstellar Disks</title><link>https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+November+29/1_klingyqs">Zoom link&lt;/a>&lt;/p></description></item><item><title>Star Formation: Observations</title><link>https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/</link><pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+17/1_3ezwwaxf">Zoom link&lt;/a>&lt;/p>
+&lt;/table></description></item><item><title>Introduction and Course Overview</title><link>https://iancze.github.io/courses/astro589/lectures/01-introduction/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/01-introduction/</guid><description>&lt;h1 id="references-and-resources-for-this-lecture">References and Resources for this lecture&lt;/h1>
+&lt;p>Full reference information can always be found in the &lt;a href="https://iancze.github.io/courses/astro589/syllabus/">syllabus&lt;/a>, under &amp;ldquo;References Materials.&amp;rdquo;&lt;/p>
+&lt;ul>
+&lt;li>&lt;em>Essential Radio Astronomy&lt;/em> &lt;a href="https://www.cv.nrao.edu/~sransom/web/Ch1.html#S3">Ch 1&lt;/a>: emission mechanisms, relevant astrophysical objects&lt;/li>
+&lt;li>&lt;em>Tools of Radio Astronomy&lt;/em>: radio windows, units, flux densities&lt;/li>
+&lt;li>&lt;em>Interferometry and Synthesis in Radio Astronomy&lt;/em>: single-dish observations, units, flux densities&lt;/li>
+&lt;/ul>
+&lt;h1 id="course-overview">Course Overview&lt;/h1>
+&lt;p>Welcome to Astro 589, a graduate seminar on radio astronomy and interferometric imaging!&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://iancze.github.io/courses/astro589/syllabus/">Syllabus&lt;/a> overview regarding format, HW assignments, group project including proposal dates and presentation dates&lt;/li>
+&lt;/ul>
+&lt;h1 id="astrophysics-at-radio-wavelengths">Astrophysics at radio wavelengths&lt;/h1>
+&lt;h2 id="emission-mechanisms">Emission mechanisms&lt;/h2>
+&lt;ul>
+&lt;li>Radio synchrotron (continuum), non-thermal emission from relativistic electrons in magnetic fields&lt;/li>
+&lt;li>Bremsstrahlung (a.k.a. free-free) emission (continuum), thermal emission from ionized gas (H II regions)&lt;/li>
+&lt;li>Thermal emission from cold (&amp;lt; 100 K) media, like dust (continuum)&lt;/li>
+&lt;li>Atomic hyperfine splitting (&amp;ldquo;21-cm&amp;rdquo; line corresponding to neutral hydrogen)&lt;/li>
+&lt;li>Molecular emission lines, primarily from rotational transitions (e.g., CO \(J=2-1\))&lt;/li>
+&lt;/ul>
+&lt;figure>&lt;a href="https://www.cv.nrao.edu/~sransom/web/Ch1.html#S1">&lt;img src="atmospheric_windows.jpg"
+alt="Atmospheric windows for astronomy. Credit: ESA/Hubble (F. Granato) and Essential Radio Astronomy."/>&lt;/a>&lt;figcaption>
+&lt;p>Atmospheric windows for astronomy. Credit: ESA/Hubble (F. Granato) and Essential Radio Astronomy.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>The earth&amp;rsquo;s atmosphere is very transparent in the radio region of the electromagnetic spectrum, especially compared to optical windows. Only towards the microwave region (wavelengths around 1 mm), does the atmospheric transmission start to decline.&lt;/p>
+&lt;h2 id="astrophysical-objects">Astrophysical objects&lt;/h2>
+&lt;p>In truth, almost everything these days!&lt;/p>
+&lt;ul>
+&lt;li>quasars&lt;/li>
+&lt;li>gamma ray burst (GRB) afterglows&lt;/li>
+&lt;li>fast radio bursts (FRBs)&lt;/li>
+&lt;li>pulsars&lt;/li>
+&lt;li>supernovae remnants&lt;/li>
+&lt;li>cosmic microwave background (CMB)&lt;/li>
+&lt;li>galaxies, including molecules at high redshift sources&lt;/li>
+&lt;li>dust/interstellar medium&lt;/li>
+&lt;li>the Sun&lt;/li>
+&lt;li>planets (e.g., Jupiter, Uranus)&lt;/li>
+&lt;li>protoplanetary disks&lt;/li>
+&lt;li>molecular clouds (molecular emission)&lt;/li>
+&lt;li>black hole accretion disks (EHT)&lt;/li>
+&lt;/ul>
+&lt;figure>&lt;a href="https://www.nasa.gov/mission_pages/hubble/science/hercules-a.html">&lt;img src="hercules.jpg"
+alt="Radio jets from the elliptical galaxy Hercules A (overlaid with an optical image from Hubble). Karl Jansky VLA. Credit: NASA, ESA, S. Baum and C. O&amp;amp;rsquo;Dea (RIT), R. Perley and W. Cotton (NRAO/AUI/NSF), and the Hubble Heritage Team (STScI/AURA)."/>&lt;/a>&lt;figcaption>
+&lt;p>Radio jets from the elliptical galaxy Hercules A (overlaid with an optical image from Hubble). Karl Jansky VLA. Credit: NASA, ESA, S. Baum and C. O&amp;rsquo;Dea (RIT), R. Perley and W. Cotton (NRAO/AUI/NSF), and the Hubble Heritage Team (STScI/AURA).&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://public.nrao.edu/gallery/hl-tau-birth-of-planets-revealed-in-astonishing-detail-2/">&lt;img src="HLTau_ALMA.jpg"
+alt="The protoplanetary disk around HL Tau, imaged using the Atacama Large Millimeter Array. Credit: ALMA(ESO/NAOJ/NRAO); C. Brogan, B. Saxton (NRAO/AUI/NSF)"/>&lt;/a>&lt;figcaption>
+&lt;p>The protoplanetary disk around HL Tau, imaged using the Atacama Large Millimeter Array. Credit: ALMA(ESO/NAOJ/NRAO); C. Brogan, B. Saxton (NRAO/AUI/NSF)&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.almaobservatory.org/en/press-releases/planetary-rings-of-uranus-glow-in-cold-light/">&lt;img src="uranus-rings.png"
+alt="The rings of Uranus seen by ALMA (thermal emission from 77 K material). Credit: ALMA (ESO/NAOJ/NRAO); E. Molter and I. de Pater."/>&lt;/a>&lt;figcaption>
+&lt;p>The rings of Uranus seen by ALMA (thermal emission from 77 K material). Credit: ALMA (ESO/NAOJ/NRAO); E. Molter and I. de Pater.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h1 id="single-dish-radio-telescopes">Single-dish radio telescopes&lt;/h1>
+&lt;p>In this section, we&amp;rsquo;ll cover existing single-dish radio telescopes and refresh our memory of basic telescope performance.&lt;/p>
+&lt;p>The same
+$$
+\theta \approx \frac{\lambda}{D}
+$$
+applies for radio antennas. Take a \(\lambda = 1\;\mathrm{cm}\) observation, for example. Compared to an optical \(\lambda = 500\;\mathrm{nm}\) telescope the same size, the resolution will be a factor of
+$$
+\frac{1\;\mathrm{cm}}{500\;\mathrm{nm}} = 20,000
+$$
+worse. Yikes!&lt;/p>
+&lt;p>Radio astronomers are constantly trying to find ways to increase angular (spatial) resolution.&lt;/p>
+&lt;ul>
+&lt;li>One way is to build bigger telescopes, such as the Green Bank Telescope (100m diameter)&lt;/li>
+&lt;/ul>
+&lt;figure>&lt;a href="https://public.nrao.edu/gallery/green-bank-telescope/">&lt;img src="gbt.jpg"
+alt="The Green Bank Telescope (100m diameter) operates at radio wavelegths. Credit: NRAO/AUI/NSF"/>&lt;/a>&lt;figcaption>
+&lt;p>The Green Bank Telescope (100m diameter) operates at radio wavelegths. Credit: NRAO/AUI/NSF&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;ul>
+&lt;li>Another way is to work at higher frequencies (shorter wavelengths), e.g. sub-mm radio astronomy (IRAM 30m telescope)&lt;/li>
+&lt;/ul>
+&lt;figure>&lt;a href="https://www.iram-institute.org/EN/30-meter-telescope.php">&lt;img src="iram.jpg"
+alt="The IRAM 30m diameter telescope, which operates at sub-mm wavelengths. Credit: Wikipedia/IRAM-gre"/>&lt;/a>&lt;figcaption>
+&lt;p>The IRAM 30m diameter telescope, which operates at sub-mm wavelengths. Credit: Wikipedia/IRAM-gre&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;ul>
+&lt;li>A final way is to use &lt;em>interferometry&lt;/em>, sometimes also at sub-mm wavelengths (ALMA), which will be the main focus of this course&lt;/li>
+&lt;/ul>
+&lt;p>It&amp;rsquo;s easier to build larger telescopes at longer wavelengths because the tolerances required for the reflecting surface are less strict than at optical wavelengths. Though typically one must keep surface tolerances to within
+$$
+\sigma = \frac{\lambda_\mathrm{min}}{16},
+$$
+otherwise the efficiency of the antenna starts to decline substantially. For the 100 m diameter GBT operating at it&amp;rsquo;s highest frequency (100 GHz) or 3 mm, this translates to \(200\;\mu\mathrm{m}\), which is the thickness of two sheets of paper! That&amp;rsquo;s quite an engineering challenge, and is the reason why large, steerable dishes are difficult to build.&lt;/p>
+&lt;p>Keeping telescopes fixed is one way to build a little bit bigger, such as &lt;a href="https://en.wikipedia.org/wiki/Five-hundred-meter_Aperture_Spherical_Telescope">FAST&lt;/a>, which is a five hundred meter diameter fixed telescope in China. See also Arecibo, which unfortunately collapsed in December 2020. Eventually, though, the materials/engineering cost to building large single dish telescopes becomes prohibitive.&lt;/p>
+&lt;h2 id="single-dish-observations">Single dish observations&lt;/h2>
+&lt;p>The &amp;ldquo;beam&amp;rdquo; of a receiving antenna, or power pattern as a function of direction, can be calculated using the reciprocity theorems for transmitting and receiving antennas. These state that the far field electric field pattern \(f(l)\) is the Fourier transform (much more in lectures 2 and 3!) of the electric field illuminating the aperture of the telescope \(g(u)\).&lt;/p>
+&lt;figure>&lt;a href="https://www.cv.nrao.edu/~sransom/web/Ch3.html#S1">&lt;img src="uniform-dish.png"
+alt="A schematic illustration of (top): Uniformly illuminated aperture (middle): The electric field pattern of the antenna, as a function of direction (bottom): The power pattern of the antenna, as a function of direction. Credit: Essential Radio Astronomy"/>&lt;/a>&lt;figcaption>
+&lt;p>A schematic illustration of (top): Uniformly illuminated aperture (middle): The electric field pattern of the antenna, as a function of direction (bottom): The power pattern of the antenna, as a function of direction. Credit: Essential Radio Astronomy&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>For large apertures, the nulls at \( l = \pm 1, 2, \ldots\) appear at the angles \(\theta \approx \lambda/D, 2 \lambda/D, \ldots\). In two dimensions, for a circular aperture, this is an Airy pattern.&lt;/p>
+&lt;figure>&lt;img src="beam-pattern.png"
+alt="A beam power pattern plotten in polar coordinates, demonstrating that the antenna can pick up power from sidelobes at range of angles. Credit: Tools of Radio Astronomy."/>&lt;figcaption>
+&lt;p>A beam power pattern plotten in polar coordinates, demonstrating that the antenna can pick up power from sidelobes at range of angles. Credit: Tools of Radio Astronomy.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>This is an idealized representation, but is still helpful. The beam can pick up power through sidelobes at a range of angles. Directional antennas help concentrate power in the main beam, but antennas with secondary stages (and thus supports, like most telescopes) create opportunities for ground radiation to reflect into the receiver.&lt;/p>
+&lt;p>You can think of single-dish telescopes (unless they have a sophisticated, multi-pixel receiver) essentially as single-pixel devices. So to make a map of the sky, you would need to raster scan the telescope across the region of interest, reading out antenna temperature as a function of RA, Dec. To make a good (i.e., scientifically accurate) map, you should focus on Nyquist sampling the sky to a uniform sensitivity, usually through a hexagonal pattern of dithering. More advanced instruments may have an array of &amp;ldquo;feeds&amp;rdquo; in a focal plane (mirroring a set of &amp;ldquo;pixels&amp;rdquo;), but this is still a small number of pixels compared to a typical CCD (e.g., 25 or 36 compared to \(2046^2\)).&lt;/p>
+&lt;h2 id="image-units">Image Units&lt;/h2>
+&lt;h3 id="radiative-transfer-recap">Radiative transfer recap&lt;/h3>
+&lt;p>What are the units of the sky, and the images we make as representations of it?&lt;/p>
+&lt;p>One of the most useful quantities from radiative transfer is \(I_\nu\).&lt;/p>
+&lt;p>\(I_\nu \) is the &lt;em>specific intensity&lt;/em> of radiation, you can think of it as the energy carried along by an infinitesimal &amp;ldquo;bundle&amp;rdquo; of rays.&lt;/p>
+&lt;p>It has dimensions of:
+$$
+\mathrm{energy}\; (\mathrm{time})^{-1} \;(\mathrm{area})^{-1} \;(\mathrm{solid\,angle})^{-1} \; (\mathrm{frequency})^{-1}
+$$
+in CGS units, we would write
+$$
+\mathrm{ergs}\;\mathrm{s}^{-1}\;\mathrm{cm}^{-2}\;\mathrm{ster}^{-1}\;\mathrm{Hz}^{-1}
+$$
+In astronomical settings, I&amp;rsquo;ve always seen \(I_\nu\) referred to as the &amp;ldquo;specific intensity.&amp;rdquo; In non-astronomy settings, I&amp;rsquo;ve seen &amp;ldquo;spectral intensity.&amp;rdquo; If \(I_\nu\) is integrated over all frequencies, it&amp;rsquo;s called the radiant intensity \(I\).&lt;/p>
+&lt;p>\(I_\nu \) can be a little mind-bending to think about&amp;hellip; it can be a function of&lt;/p>
+&lt;ul>
+&lt;li>3D space \(\vec{x}\)&lt;/li>
+&lt;li>direction \(\vec{\Omega}\)&lt;/li>
+&lt;li>frequency&lt;/li>
+&lt;/ul>
+&lt;p>Intensity itself is &lt;em>not&lt;/em> a vector quantity; rather it is a scalar field that &lt;em>is&lt;/em> function of position and direction \(I_\nu(\vec{x}, \vec{\Omega})\). Rybicki and Lightman write the angular direction vector as \(\vec{\Omega}\) and the solid angle surrounding that vector as \(\mathrm{d}\Omega\).&lt;/p>
+&lt;figure>&lt;img src="rybicky_lightman_1.2.png"
+alt="The geometry surrounding the concept of specific intensity. The normal vector is \(\vec{\Omega}\), the position \(\vec{x}\) in 3D space corresponds to the location of the \(dA\) patch. The Credit: Radiative Processes, Figure 1.2"/>&lt;figcaption>
+&lt;p>The geometry surrounding the concept of specific intensity. The normal vector is \(\vec{\Omega}\), the position \(\vec{x}\) in 3D space corresponds to the location of the \(dA\) patch. The Credit: Radiative Processes, Figure 1.2&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>If we have a defined reference frame, we would probably write \(\vec{\Omega}\) as a vector in spherical coordinates and define the components along \(\hat{\phi}\) and \(\hat{\theta}\) and let \(\mathrm{d}\Omega = d\phi \sin \theta d\theta\).&lt;/p>
+&lt;p>When we are making astrophysical &lt;em>observations&lt;/em> from the earth, though,
+we are making or acquiring images of regions of the celestial sky. So we generally talk of \(I_\nu(\alpha, \delta)\), where \(\alpha\) and \(\delta\) are R.A. and declination offsets from some direction, respectively. We&amp;rsquo;re always looking from the same place (at least compared to the size of the universe), so we don&amp;rsquo;t worry about specifying position within 3D space. But if we went to the Andromeda Galaxy and started mapping the celestial sky, we would need to, then. In the end though, images are have the same units because they represent specific intensity. It&amp;rsquo;s very common to refer to \(I_\nu(\alpha, \delta)\) as the &lt;em>surface brightness&lt;/em>.&lt;/p>
+&lt;figure>&lt;img src="solid-angle.png"
+alt="When we&amp;amp;rsquo;re discussing images of astronomical sources, we&amp;amp;rsquo;re usually using RA \(\alpha\) and Dec \(\delta\). A solid angle simply describes the area on a unit sphere (e.g., the sky), the area itself need not be circular. The Very Large Array, located in Socorro, NM. Credit: NRAO"/>&lt;figcaption>
+&lt;p>When we&amp;rsquo;re discussing images of astronomical sources, we&amp;rsquo;re usually using RA \(\alpha\) and Dec \(\delta\). A solid angle simply describes the area on a unit sphere (e.g., the sky), the area itself need not be circular. The Very Large Array, located in Socorro, NM. Credit: NRAO&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="flux">Flux&lt;/h3>
+&lt;p>Once you&amp;rsquo;ve defined \(I_\nu\), then it&amp;rsquo;s relatively easy to calculate quantities like energy density, flux, momentum, etc, as integrals of the specific intensity field.&lt;/p>
+&lt;p>&lt;strong>Flux&lt;/strong> is where you integrate out the angular dependence:&lt;/p>
+&lt;p>$$
+F_\nu = \int I_\nu \cos \theta d \Omega
+$$
+(intensity passing through some differential area \(dA\), lowered by the effective angle).&lt;/p>
+&lt;p>\(F_\nu\) has units of
+$$
+\mathrm{ergs}\;\mathrm{s}^{-1}\;\mathrm{cm}^{-2}\;\mathrm{Hz}^{-1}
+$$
+(i.e., angular dependence has been integrated out).&lt;/p>
+&lt;p>Most astrophysical sources produce significantly less energy in radio waves compared to higher frequency bands, and so the raw CGS unit can be quite cumbersome. To make this easier, astronomers use a unit called the &amp;ldquo;Jansky,&amp;rdquo; which is defined as&lt;/p>
+&lt;p>$$
+1\,\mathrm{Jy} = 10^{-23}~\mathrm{ergs}\;\mathrm{s}^{-1}\;\mathrm{cm}^{-2}\;\mathrm{Hz}^{-1}
+$$&lt;/p>
+&lt;p>The Jansky is a unit of flux.&lt;/p>
+&lt;p>&lt;strong>How do we report specific intensities/surface brightnesses for radio sources, then?&lt;/strong> We can, reintroduce the &amp;ldquo;per solid angle&amp;rdquo; to the Jansky, for example
+$$
+\mathrm{Jy}\;\mathrm{arcsec}^{-2}.
+$$&lt;/p>
+&lt;p>Later on the course, we&amp;rsquo;ll talk about \(\mathrm{Jy}\;\mathrm{beam}^{-1}\), which another unit of surface brightness/specific intensity.&lt;/p>
+&lt;p>Other units of surface brightness that you might encounter at other wavelengths include \(\mathrm{mag}\;\mathrm{arcsec}^{-2}\) (optical) and \(\mathrm{MJy}\;\mathrm{sr}^{-1}\) (infrared).&lt;/p>
+&lt;p>&lt;strong>Questions for review&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>What is the name of \(I_\nu\), and what are its units?&lt;/li>
+&lt;li>What is the name of \(F_\nu\), and what are its units?&lt;/li>
+&lt;li>If we made an astronomical observation of a &amp;ldquo;point source,&amp;rdquo; would we report \(I_\nu\) or \(F_\nu\)?&lt;/li>
+&lt;li>What about for a spatially resolved source?&lt;/li>
+&lt;li>Is a Jansky a unit for \(I_\nu\) or \(F_\nu\)?&lt;/li>
+&lt;/ul>
+&lt;figure>&lt;img src="point-source-resolved-source.png"
+alt="Using \(F_\nu\) and \(I_\nu\) to represent point sources and spatially resolved sources, respectively. Credit: Ian Czekala"/>&lt;figcaption>
+&lt;p>Using \(F_\nu\) and \(I_\nu\) to represent point sources and spatially resolved sources, respectively. Credit: Ian Czekala&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="the-many-temperatures-of-radio-astronomy">The many temperatures of radio astronomy&lt;/h2>
+&lt;h3 id="from-cosmic-sources-only">From Cosmic Sources only&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>brightness temperature&lt;/strong>: \(T_b\), the temperature corresponding to the specific intensity if we used the full form of the Planck formula
+$$
+I_\nu = \frac{2 h \nu^3}{c^2} \frac{1}{\exp{(h \nu / k T_b)} - 1}
+$$&lt;/li>
+&lt;li>&lt;strong>antenna temperature&lt;/strong>: the temperature corresponding to the specific intensity if we were in the Rayleigh-Jeans domain. Added benefit that specific intensity is &lt;em>linearly related&lt;/em> to antenna temperature and makes it easy to substitute one for the other.
+$$
+T_A(\nu) = \frac{c^2}{2 k \nu^2} I_\nu
+$$&lt;/li>
+&lt;/ul>
+&lt;p>In the field of radio astronomy, be aware that one frequently combines temperatures in other interesting ways. One can express random noise power in terms of an effective temperature
+$$
+P = k T \Delta \nu
+$$
+where \(\Delta \nu\) is the bandwidth of the observation. Here the power is equal to the noise power delivered to a &lt;strong>matched load&lt;/strong> by a resistor at physical temperature \(T\). By matched load, we mean we connect a resistor to the input terminals of a linear amplifier. The fact that this resistor has some temperature (i.e., we haven&amp;rsquo;t cooled it to absolute zero&amp;hellip;) means that the thermal motion of the electrons will produce a random, variable current \(i(t)\) input to the amplifier. The mean value of this current is zero, but the root mean squared value is non-zero, and this represents a non-zero power. I.e., you can draw (some) power from a resistor at room temperature, purely from thermal motions. The situation is not dissimilar to the random walk of a particle in Brownian motion. For more details, see &lt;em>Tools of Radio Astronomy&lt;/em>, Chapter 1.8.&lt;/p>
+&lt;h3 id="including-noise-sources">Including noise sources&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Antenna temperature&lt;/strong> \(T_A\) the component of the power received by the antenna from &lt;em>cosmic sources&lt;/em>. It has the same interpretation as before (though we&amp;rsquo;ll talk about beam dilution in a second).&lt;/li>
+&lt;li>&lt;strong>Receiver temperature&lt;/strong> \(T_R\) the component of the power from internal noise of the receiver components themselves, ground radiation, atmospheric emission, etc&amp;hellip;&lt;/li>
+&lt;li>&lt;strong>System temperature&lt;/strong> \(T_S = T_A + T_R\) is the sum of receiver temperature and antenna temperature. It&amp;rsquo;s the one power number coming out of the backend of your telescope. It&amp;rsquo;s up to you to calibrate \(T_R\) accurately enough to measure \(T_A\).&lt;/li>
+&lt;/ul>
+&lt;p>In any observation, you will have your cosmic signal of interest and several contributions of noise (see &lt;em>Essential Radio Astronomy&lt;/em>, Ch. 3.6.1)
+$$
+T_S=T_\mathrm{cmb}+T_\mathrm{rsb}+T_A + [1−\exp(−\tau_A)] T_\mathrm{atm}+T_\mathrm{spill}+T_r+ \ldots
+$$
+such as the CMB, other galactic background sources, the atmosphere, spillover radiation from the ground, the temperature of the radiometer itself (hopefully cryogenically cooled), etc.&lt;/p>
+&lt;p>In the limit that \(T_A \ll T_S\) (most astronomy situations, unfortunately!), we have
+$$
+S/N \approx C \frac{T_A}{T_S} \sqrt{\Delta \nu \Delta t}
+$$
+where \(C\) is a constant of proportionality greater than or equal to 1, and \(\Delta t\) is the integration time. If we let \(\Delta \nu \approx 1\;\mathrm{GHz}\) and \(\Delta t \approx 1\;\mathrm{h}\), then we can get \(\sqrt{\Delta \nu \Delta t} \approx 10^6\), allowing us to detect a signal which is less than \(10^{-6}\) the system noise. A great illustration of this capability is the COBE satellite that studied CMB anisotropies with brightness temperatures \(&amp;lt; 10^{-7}\) that of the system temperature. To achieve these contrasts, however, it&amp;rsquo;s important to keep systematics under control, otherwise the S/N scaling won&amp;rsquo;t hold!&lt;/p>
+&lt;h2 id="beam-dilution">Beam dilution&lt;/h2>
+&lt;p>In previous lectures, we&amp;rsquo;ve been talking about specific intensity \(I_\nu(\Omega)\) as a &amp;ldquo;known&amp;rdquo; quantity of direction (e.g., R.A., Dec.) and used antenna temperature \(T_A\) as a linear proxy for its specification. For the following discussion, we&amp;rsquo;re going to move into the realm of observations, and discuss the ways \(T_A\) can be an unfaithful proxy for the &amp;ldquo;true&amp;rdquo; specific intensity distribution or brightness temperature. we&amp;rsquo;ll use the symbol \(T_b(\Omega)\) to denote the &amp;ldquo;true&amp;rdquo; brightness/antenna temperature, assuming we&amp;rsquo;re in the Rayleigh-Jeans limit, and redefine \(T_A\) to mean the response of the telescope to the cosmic radiation.&lt;/p>
+&lt;p>When we&amp;rsquo;re doing observations, we don&amp;rsquo;t always have access to the highest resolution version of \(T_b(\Omega)\), but rather we have access to a quantity which is the true \(T_b(\Omega)\) convolved with the beam of the telescope, which is the implication of \(T_A\) for this discussion.&lt;/p>
+&lt;figure>&lt;img src="beam-dilution.png"
+alt="When astrophysical sources are insufficiently resolved, our measurements of \(I_\nu\) do not trace the true sky distribution, specifically features are smeared out over a spatial extent and peak intensities are reduced. This means that using these insufficiently resolved measurements of \(T_A\) will not accurately trace the true underlying temperatures of the astrophysical source (even if the emission from the source is actually thermal in origin). Of course, we never have infinite spatial resolution, so there will always be structure on scales beyond that of our observations. Credit: Ian Czekala"/>&lt;figcaption>
+&lt;p>When astrophysical sources are insufficiently resolved, our measurements of \(I_\nu\) do not trace the true sky distribution, specifically features are smeared out over a spatial extent and peak intensities are reduced. This means that using these insufficiently resolved measurements of \(T_A\) will not accurately trace the true underlying temperatures of the astrophysical source (even if the emission from the source is actually thermal in origin). Of course, we never have infinite spatial resolution, so there will always be structure on scales beyond that of our observations. Credit: Ian Czekala&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h4 id="large-fully-resolved-source">large (fully resolved) source&lt;/h4>
+&lt;p>[Draw a smooth cloud with the beam overlaid as a small circle].&lt;/p>
+&lt;p>In the limit that we are observing a source that subtends a solid angle much larger than the beam of the antenna,
+$$
+\Omega_S &amp;gt; \Omega_A
+$$
+the convolution of the beam doesn&amp;rsquo;t matter, we&amp;rsquo;re still sensing approximately the same \(T_b(\Omega)\) such that
+$$
+T_A(\Omega) \approx T_b(\Omega).
+$$
+If the source is in LTE, then we also have that \(T_A \approx T\).&lt;/p>
+&lt;h3 id="small-unresolved-source">small (unresolved) source&lt;/h3>
+&lt;p>If the source is more compact than the antenna beam,
+$$
+\Omega_S &amp;lt; \Omega_A,
+$$
+then the measured antenna temperature is basically the &amp;ldquo;true&amp;rdquo; intensity averaged over the area of the main beam. This lowers the measured antenna temperature by a factor
+$$
+\frac{T_A}{T_b} = \frac{\Omega_S}{\Omega_A}
+$$
+where the ratio \(\frac{\Omega_S}{\Omega_A}\) is called the &lt;strong>beam filling factor&lt;/strong>.&lt;/p>
+&lt;p>For example, you could have a compact source with \(T_b = 10^4\) K, but if it only fills 1% of the beam solid angle then you would measure an antenna temperature of 100 K. If you took your observations at face-value (and assumed LTE), then you would incorrectly conclude that the source is 100x cooler than it actually is.&lt;/p>
+&lt;p>Beam dilution also applies to observations of sources that have &lt;em>structure&lt;/em> on spatial scales below the observable limit, which, to be honest, is going to be most astrophysical sources of interest. For example, consider a gas filament in a star-forming region.&lt;/p>
+&lt;p>Radio-bright, spatially concentrated regions will be &amp;ldquo;smeared out&amp;rdquo; by the beam. If you wanted to use antenna temperature (and assume LTE) to estimate the physical conditions of the gas filament, you do so at the peril of measuring incorrect temperatures. The unfortunate reality here is that, without higher resolution images to guide you (which sometimes exist at optical or infrared wavelengths), it&amp;rsquo;s quite difficult to estimate how badly your measurements are affected by beam dilution.&lt;/p>
+&lt;p>For more useful single-dish guidance, see &lt;a href="https://www.atnf.csiro.au/research/radio-school/2011/talks/Parkes-school-Fundamental-II.pdf">these notes&lt;/a> by James Jackson, or &lt;a href="https://www.cv.nrao.edu/~sransom/web/Ch3.html#S1.SS6">Ch 3.1.6&lt;/a> of &lt;em>Essential Radio Astronomy&lt;/em>.&lt;/p>
+&lt;h1 id="introduction-to-interferometric-arrays-alma-vla-sma-vlba">Introduction to interferometric arrays, ALMA, VLA, SMA, VLBA&lt;/h1>
+&lt;p>Now that we&amp;rsquo;ve covered some of the fundamentals around radio telescopes and single-dish antennas, we&amp;rsquo;ll move on to discussing how we combine the signals from multiple antennas to do interferometry. Here are some of he interferometers operating today:&lt;/p>
+&lt;figure>&lt;img src="alma.jpg"
+alt="The Atacama Large (Sub)millimeter Array, an interferometric array of 66 antennas operating at sub-millimeter wavelengths. The largest antennas in the array are only 12m in diameter, yet through interferometry, the array is able to obtain far higher spatial resolution than the largest single-dish antennas. Credit: NRAO/ESO/NAOJ/JAO"/>&lt;figcaption>
+&lt;p>The Atacama Large (Sub)millimeter Array, an interferometric array of 66 antennas operating at sub-millimeter wavelengths. The largest antennas in the array are only 12m in diameter, yet through interferometry, the array is able to obtain far higher spatial resolution than the largest single-dish antennas. Credit: NRAO/ESO/NAOJ/JAO&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://public.nrao.edu/telescopes/vla/">&lt;img src="VLA.jpg"
+alt="The Very Large Array, located in Socorro, NM. Credit: NRAO"/>&lt;/a>&lt;figcaption>
+&lt;p>The Very Large Array, located in Socorro, NM. Credit: NRAO&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://en.wikipedia.org/wiki/Very_Long_Baseline_Array">&lt;img src="VLBA_St_Croix.jpg"
+alt="One antenna at the Eastern end of the Very Long Baseline Array (VLBA), St. Croix, U.S. Virgin Islands. Credit: Cumulus Clouds"/>&lt;/a>&lt;figcaption>
+&lt;p>One antenna at the Eastern end of the Very Long Baseline Array (VLBA), St. Croix, U.S. Virgin Islands. Credit: Cumulus Clouds&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.iram-institute.org/EN/noema-project.php?ContentID=9&amp;amp;rub=9&amp;amp;srub=0&amp;amp;ssrub=0&amp;amp;sssrub=0">&lt;img src="NOEMA.jpg"
+alt="The NOEMA, located in the French Alps on the Plateau du Bure. Credit: IRAM/Rebus"/>&lt;/a>&lt;figcaption>
+&lt;p>The NOEMA, located in the French Alps on the Plateau du Bure. Credit: IRAM/Rebus&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://lweb.cfa.harvard.edu/sma/">&lt;img src="SMA.jpg"
+alt="The Submillimeter Array (SMA), located on Mauna Kea, Hawaii. Credit: I. Czekala"/>&lt;/a>&lt;figcaption>
+&lt;p>The Submillimeter Array (SMA), located on Mauna Kea, Hawaii. Credit: I. Czekala&lt;/p>
+&lt;/figcaption>
+&lt;/figure></description></item><item><title>Astrochemistry</title><link>https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/</link><pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+December+8/1_oluy4593">Zoom link&lt;/a>&lt;/p></description></item><item><title>Exoplanets and Planet Formation</title><link>https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/</link><pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Dec+3rd/1_bpz5707q">Zoom link&lt;/a>&lt;/p></description></item><item><title>Circumstellar Disks</title><link>https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+November+29/1_klingyqs">Zoom link&lt;/a>&lt;/p></description></item><item><title>Star Formation: Observations</title><link>https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/</link><pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Nov+17/1_3ezwwaxf">Zoom link&lt;/a>&lt;/p>
 &lt;p>References:&lt;/p>
 &lt;ul>
 &lt;li>Draine Ch 42&lt;/li>
