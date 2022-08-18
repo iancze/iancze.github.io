@@ -18,13 +18,13 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Sep 7 | Lecture | {{< relreftitle href=03-fourier-transform alt="The Fourier Transform II">}} |
 | Sep 14 | Lecture | {{< relreftitle href=04-FFT alt="The Fast Fourier Transform and Numerical Implementation">}} |
 | Sep 21 | Lecture | {{< relreftitle href=05-interferometry alt="Interferometry in Practice">}} |
-| Sep 28 | Lecture | {{< relreftitle href=06-PSFs-and-gridding alt="PSFs, Gridding, and Dirty Images">}} |
+| Sep 28 | Lecture | {{< relreftitle href=06-PSFs-and-gridding alt="Making Images: PSFs, Gridding, and Dirty Images">}} |
 | Oct 5 | Lecture | {{< relreftitle href=07-bayesian-inference alt="Bayesian Inference and Model Fitting">}} |
 | Oct 12 | Lecture | {{< relreftitle href=08-image-plane-deconvolution alt="Image Plane Deconvolution (CLEAN)">}} |
 | Oct 19 | Lecture | {{< relreftitle href=09-RML-part-I alt="Regularized Maximum Likelihood (RML) I">}} |
 | Oct 26 | Lecture | {{< relreftitle href=10-RML-part-II alt="Regularized Maximum Likelihood (RML) II">}} |
-| Nov 2 | Lecture | Topic Overflow and Summary |
+| Nov 2 | Project presentation | TBD |
 | Nov 9 | Project presentation | TBD |
 | Nov 16 | Project presentation | TBD |
 | Nov 30 | Project presentation | TBD |
-| Dec 7 | Project presentation | TBD |
+| Dec 7 | Lecture | Summary and Future Directions |
