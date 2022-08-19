@@ -260,14 +260,7 @@ $$
 
 It is a [linear operator](https://undergroundmathematics.org/glossary/linear-operator#:~:text=A%20function%20f%20is%20called,x%20and%20all%20constants%20c.), just like the Fourier transform.
 
-## Fourier transform theories: similarity, convolution, multiplication
-
-* Linearity
-* Note how FFTconvolve using python speeds up. Depends on the scaling, and size of convolutional kernel.
-
-## Common FT transform pairs
-
-## Sampling and Nyquist sampling theorem
+## The impulse symbol and Shah function
 
 * The impluse symbol \\(\delta\\).
 * Sifting property TMS A2.11
@@ -275,6 +268,12 @@ $$
 f(x) = \int_{-\infty}^{\infty} f(x^\prime) \delta(x^\prime - x)\\,\mathrm{d}x^\prime.
 $$
 
-## Discrete Fourier Transform
+## Fourier transform theorems properties: similarity, convolution, multiplication
 
-* Windowing + sidelobes (filters)
+There are several useful properties of the Fourier transform that you'll want to familiarize yourself with. See Bracewell Ch. 6 or TMS A2.1.2.
+
+* Note how FFTconvolve using python speeds up. Depends on the scaling, and size of convolutional kernel.
+
+## Common FT transform pairs
+
+## Sampling and Nyquist sampling theorem
