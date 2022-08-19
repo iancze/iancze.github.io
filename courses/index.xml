@@ -904,7 +904,6 @@ alt="When astrophysical sources are insufficiently resolved, our measurements of
 &lt;/figcaption>
 &lt;/figure>
 &lt;h4 id="large-fully-resolved-source">large (fully resolved) source&lt;/h4>
-&lt;p>[Draw a smooth cloud with the beam overlaid as a small circle].&lt;/p>
 &lt;p>In the limit that we are observing a source that subtends a solid angle much larger than the beam of the antenna,
 $$
 \Omega_S &amp;gt; \Omega_A
