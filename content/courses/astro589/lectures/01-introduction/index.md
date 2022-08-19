@@ -232,8 +232,6 @@ When we're doing observations, we don't always have access to the highest resolu
 
 #### large (fully resolved) source
 
-[Draw a smooth cloud with the beam overlaid as a small circle].
-
 In the limit that we are observing a source that subtends a solid angle much larger than the beam of the antenna,
 $$
 \Omega_S > \Omega_A
