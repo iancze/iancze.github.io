@@ -266,6 +266,8 @@ $$
 $$
 The unit rectangle (or boxcar) function has the Fourier transform pair of a normalized sinc function.
 
+This is also the same relationship that we introduced in the first lecture: the far field electric field pattern (sinc) is the Fourier transform of the electric field illuminating the aperture of the telescope (boxcar).
+
 ### Gaussian
 
 How about the Fourier transform of a Gaussian function?
@@ -363,21 +365,82 @@ $$
 
 It is a [linear operator](https://undergroundmathematics.org/glossary/linear-operator#:~:text=A%20function%20f%20is%20called,x%20and%20all%20constants%20c.), just like the Fourier transform.
 
-## The impulse symbol and Shah function
+## The impulse symbol
 
-* The impluse symbol \\(\delta\\).
-* Sifting property TMS A2.11
+We'll develop a notation for an intense (unit-area) pulse so brief that the measuring equipment is unable to distinguish it from pulses yet briefer still. You may be quite familiar with this concept as a "delta-function," especially in the context of quantum physics. Physically speaking, things like "point masses", "point charges," and (astrophysically speaking) "point sources" do not physically exist, but they are very useful concepts. The only important attribute of an impulse is *how it reacts under integration*
+
+* \\(\delta(x) = 0\\) for \\(x \ne 0\\)
+* \\(\int_{-\infty}^\infty \delta(x)\\,\\mathrm{d}x = 1\\)
+
+And, there is a close relationship between the impulse symbol and the unit step function \\(H(x)\\) such that
 $$
-f(x) = \int_{-\infty}^{\infty} f(x^\prime) \delta(x^\prime - x)\\,\mathrm{d}x^\prime.
+\int_{-\infty}^x \delta(x^\prime)\\,\mathrm{d}x^\prime = H(x).
 $$
-* Do the FT of a delta function, and show that it's a constant
+
+Another very important property of the impulse function is its "sifting property" (TMS A2.11), such that
+$$
+f(a) = \int_{-\infty}^{\infty} f(x) \delta(x - a)\\,\mathrm{d}x^\prime.
+$$
+i.e., the integral of function \\(f(x)\\) times a delta-function located at \\(a\\) will give the value of the function evaluated at \\(a\\), \\(f(a)\\).
+
+The Fourier transform of a delta function (centered on 0) is
+
+$$
+F(s) = \int_{-\infty}^{\infty} \delta(0) \exp (-i 2 \pi x s)\\,\mathrm{d}x = 1.
+$$
+This is yet another important Fourier pair
+$$
+\delta(x) \leftrightharpoons \mathrm{constant\\;amplitude\\,\forall\\, s}.
+$$
+
+## The Sampling or Replicating Symbol "Shah function"
+
+This is an infinite sequence of unit impulses, given by
+$$
+\mathrm{shah}(x) = \sum_{n=-\infty}^\infty \delta(x - n)
+$$
+
+{{< figure src="shah.png" caption="The replicating function. Credit: Bracewell Fig 5.4" >}}
+
+Also sometimes called a "Dirac Comb." There is a generalization of the sifting property, such that if you multiply a function by a shah, you are effectively sampling it at unit intervals.
+
+You can use it to sample \\(f(x)\\) (by multiplication)
+
+{{< figure src="sampling.png" caption="Sampling property of the shah function by multiplication. Credit: Bracewell Fig 5.5" >}}
+
+And you can use it to replicate \\(f(x)\\) (by convolution)
+
+{{< figure src="replicating.png" caption="Replicating property of the shah function by convolution. Credit: Bracewell Fig 5.6" >}}
+
+The unit shah function is also its own Fourier transform
+$$
+\mathrm{shah}(x) \leftrightharpoons \mathrm{shah}(s)
+$$
 
 ## Fourier transform theorems properties: similarity, convolution, multiplication
 
 There are several useful properties of the Fourier transform that you'll want to familiarize yourself with. See Bracewell Ch. 6 or TMS A2.1.2.
 
+### Similarity
+
+### Shift
+
+### Convolution/multiplication
+
+### Rayleigh's theorem (Parseval's theorem for Fourier Series)
+
+### Autocorrelation theorem
+
+And it's relation to Gaussian processes.
+
+See how similarity stretches things out (w/ shah function spacing)
+
 * Note how FFTconvolve using python speeds up. Depends on the scaling, and size of convolutional kernel.
 
-## Common FT transform pairs
+### Similarity
+
+#### Fourier transforms and the Heisenberg uncertainty principle
+
+Probability distributions (i.e., wavefunctions) governing position and momentum are related by the Fourier transform. It's impossible to know both position and momentum precisely. As you begin to constrain
 
 ## Sampling and Nyquist sampling theorem
