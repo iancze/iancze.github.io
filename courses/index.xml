@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://iancze.github.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Courses on Czekala Group</title><link>https://iancze.github.io/courses/</link><description>Recent content in Courses on Czekala Group</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 24 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://iancze.github.io/courses/index.xml" rel="self" type="application/rss+xml"/><item><title>Syllabus</title><link>https://iancze.github.io/courses/astro589/syllabus/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/syllabus/</guid><description>&lt;h2 id="objective-radio-astronomy-and-interferometric-imaging">Objective: radio astronomy and interferometric imaging&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://iancze.github.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Courses on Czekala Group</title><link>https://iancze.github.io/courses/</link><description>Recent content in Courses on Czekala Group</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://iancze.github.io/courses/index.xml" rel="self" type="application/rss+xml"/><item><title>Syllabus</title><link>https://iancze.github.io/courses/astro589/syllabus/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/syllabus/</guid><description>&lt;h2 id="objective-radio-astronomy-and-interferometric-imaging">Objective: radio astronomy and interferometric imaging&lt;/h2>
 &lt;p>Interferometric astrophysical observations are a vast and deep topic. The goal of this course is to help students develop a &lt;strong>practical understanding&lt;/strong> of how interferometers (in particular arrays like the VLA or ALMA) &lt;strong>observe an astrophysical source&lt;/strong>, build a &lt;strong>mathematical foundation&lt;/strong> for working with &lt;strong>complex-valued, Fourier-plane data&lt;/strong>, and survey some of the many approaches that are used to &lt;strong>investigate astrophysical phenomena&lt;/strong>, focusing on &lt;strong>forward-modeling&lt;/strong> and &lt;strong>regularized maximum likelihood&lt;/strong> techniques.&lt;/p>
 &lt;h2 id="instructor">Instructor&lt;/h2>
 &lt;ul>
@@ -314,49 +314,49 @@ The Fourier Transform II
 &lt;td>Sep 14&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-The Fast Fourier Transform and Numerical Implementation
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/04-fft/>The Fast Fourier Transform and Numerical Implementation&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Sep 21&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-Interferometry in Practice
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/05-interferometry/>Interferometry in Practice&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Sep 28&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-Making Images: PSFs, Gridding, and Dirty Images
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/06-psfs-and-gridding/>PSFs, Gridding, and Dirty Images&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Oct 5&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-Bayesian Inference and Model Fitting
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/>Bayesian Inference and Model Fitting&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Oct 12&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-Image Plane Deconvolution (CLEAN)
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/>Image Plane Deconvolution (CLEAN)&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Oct 19&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-Regularized Maximum Likelihood (RML) I
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/>Regularized Maximum Likelihood (RML) I&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Oct 26&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-Regularized Maximum Likelihood (RML) II
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/>Regularized Maximum Likelihood (RML) II&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -681,7 +681,7 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Introduction and Course Overview</title><link>https://iancze.github.io/courses/astro589/lectures/01-introduction/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/01-introduction/</guid><description>&lt;h1 id="references-and-resources-for-this-lecture">References and Resources for this lecture&lt;/h1>
+&lt;/table></description></item><item><title>Regularized Maximum Likelihood (RML) II</title><link>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</guid><description/></item><item><title>Regularized Maximum Likelihood (RML) I</title><link>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</guid><description/></item><item><title>Image Plane Deconvolution (CLEAN)</title><link>https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/</guid><description/></item><item><title>Bayesian Inference and Model Fitting</title><link>https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/</guid><description/></item><item><title>PSFs, Gridding, and Dirty Images</title><link>https://iancze.github.io/courses/astro589/lectures/06-psfs-and-gridding/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/06-psfs-and-gridding/</guid><description/></item><item><title>Interferometry in Practice</title><link>https://iancze.github.io/courses/astro589/lectures/05-interferometry/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/05-interferometry/</guid><description/></item><item><title>The Fast Fourier Transform and Numerical Implementation</title><link>https://iancze.github.io/courses/astro589/lectures/04-fft/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/04-fft/</guid><description/></item><item><title>The Fourier Transform II</title><link>https://iancze.github.io/courses/astro589/lectures/03-fourier-transform-ii/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/03-fourier-transform-ii/</guid><description/></item><item><title>Introduction and Course Overview</title><link>https://iancze.github.io/courses/astro589/lectures/01-introduction/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/01-introduction/</guid><description>&lt;h1 id="references-and-resources-for-this-lecture">References and Resources for this lecture&lt;/h1>
 &lt;p>Full reference information can always be found in the &lt;a href="https://iancze.github.io/courses/astro589/syllabus/">syllabus&lt;/a>, under &amp;ldquo;References Materials.&amp;rdquo;&lt;/p>
 &lt;ul>
 &lt;li>&lt;em>Essential Radio Astronomy&lt;/em> &lt;a href="https://www.cv.nrao.edu/~sransom/web/Ch1.html#S3">Ch 1&lt;/a>: emission mechanisms, relevant astrophysical objects&lt;/li>
