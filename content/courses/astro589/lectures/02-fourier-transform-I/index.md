@@ -127,13 +127,13 @@ Sometimes, though, we consider waveforms like
 * \\(H(t)\\): Heaviside step
 * \\(\delta(t)\\): impulse
 
-Strictly speaking, none of these functions has a Fourier transform. None of them is actually physically possible, either, because a waveform \\(\sin(t)\\) would have need to been switched on an infinite time ago, a step function would need to be maintained for an infinite time, and an impulse would need to be infinitely large for an infinitely short time.
-
-What do we mean that they do not have Fourier transforms?
+Strictly speaking, none of these functions has a Fourier transform. What do we mean that they do not have Fourier transforms?
 $$
 F(s) = \int_{-\infty}^{\infty} f(x) e^{-i 2 \pi x s}\\,\mathrm{d}x
 $$
-does not converge for all values of \\(s\\).
+does not converge for all values of \\(s\\). Consider \\(\sin(t)\\) integrated from \\((-\infty, \infty)\\)... it'll just keep oscillating about 0.
+
+None of these waveforms are actually physically possible, though, because a waveform \\(\sin(t)\\) would have need to been switched on an infinite time ago, a step function would need to be maintained for an infinite time, and an impulse would need to be infinitely large for an infinitely short time.
 
 So, what are the conditions for the existence of Fourier transforms.
 
@@ -144,18 +144,20 @@ In a physical circumstance, these conditions would be violated when there is inf
 
 ### Transforms in the limit
 
+Though we just outlined functional forms whose Fourier transforms do not *strictly* exist, we can find a way to think such that the transforms of these functions do exist in a practical sense. This is by considering them *in the limit*.
+
 Consider a periodic function whose transform would strictly not exist, such as \\(P(x) = \sin(x) \\), since
 $$
 \int_{-\infty}^\infty |P(x)|\\,\mathrm{d}x
 $$
 would not converge.
 
-If we modified this slightly, though, by multiplication with a very broad Gaussian envelope \\(\exp(-\alpha x^2)\\), where \\(\alpha\\) is a small positive number, then this modified version may have a transform. As we let \\(\alpha \rightarrow 0\\), then we approach \\(P\\) in the limit.
+We could modify this function ever so slightly by multiplication with a *very* broad Gaussian envelope \\(\exp(-\alpha x^2)\\), where \\(\alpha\\) is a small positive number, then this modified version may have a transform. As we let \\(\alpha \rightarrow 0\\), then we approach \\(P\\) in the limit.
 $$
 \int_{-\infty}^\infty |e^{-\alpha x^2} P(x)|\\,\mathrm{d}x
 $$
 
-The transform may not exist for all \\(s\\), though, but we can still be quite productive with the sequence of transforms that do exist as we approach this limit. Therefore, we can practically use the Fourier transform for all physical systems that we might consider. We'll revisit this in more detail with the sampling theorem, line spectra, and a Fourier series.
+As \\(\alpha \rightarrow 0\\) the transform may still not exist for all \\(s\\), however, we can still be quite productive with the sequence of transforms that do exist as we approach this limit. Therefore, we can practically use the Fourier transform for all physical systems that we might consider. We'll revisit this in more detail when we talk about Fourier series, line spectra, and the sampling theorem.
 
 ### Oddness, Evenness, and Complex Conjugates
 
@@ -203,7 +205,7 @@ and other results summarized by Bracewell in Chapter 2:
 
 {{< figure src="ft-relationships.png" caption="If a function has the characteristics in the left column, then its Fourier transform has the characteristics in the right column. Credit: Bracewell Ch. 2" >}}
 
-These relationships are extremely useful for quickly ascertaining the basic nature of the Fourier transform of any function you may encounter.
+These relationships are extremely useful for quickly ascertaining the basic nature of the Fourier transform of any function you may encounter, as well as planning how to numerically compute transforms using `fft` or `rfft` packages.
 
 **Complex conjugates**
 
@@ -217,9 +219,110 @@ $$
 
 Let's practice by taking the Fourier transforms of some functions.
 
-**TODO**: Write out derivation of boxcar function and sinc.
+### Boxcar
 
-**TODO**: Cover the Gaussian and completing the square.
+The rectangle or "boxcar" function is
+{{< figure src="rectangle.png" caption="The rectangle, or boxcar function. Credit: Bracewell Ch. 3" >}}
+
+Let's calculate the Fourier transform. The function itself is simple, so this is mainly an exercise in choosing the right limits
+$$
+F(s) = \int_{-\infty}^{\infty} f(x) e^{-i 2 \pi x s}\\,\mathrm{d}x
+$$
+
+$$
+F(s) = \int_{-1/2}^{1/2} e^{-i 2 \pi x s}\\,\mathrm{d}x
+$$
+
+We can use Euler's formula to write
+$$
+F(s) = \int_{-1/2}^{1/2} \cos(2 \pi x s) + i \sin(2 \pi x s) \\,\mathrm{d}x
+$$
+and visually seen that the \\(\sin\\) term would eventually cancel itself out, or we could have relied upon the fact that we know \\(\Pi(x)\\) is an even function (\\(O(x) = 0\\)) and used
+$$
+F(s) = 2 \int_0^\infty E(x) \cos(2 \pi x s)\\,\mathrm{d}x - 2 i \int_0^\infty O(x) \sin (2 \pi x s)\\,\mathrm{d}x.
+$$
+to yield
+$$
+F(s) = 2 \int_0^{1/2} \cos(2 \pi x s)\\,\mathrm{d}x
+$$
+
+$$
+F(s) = 2 \Big |_0^{1/2} \frac{\sin 2 \pi x s}{2 \pi s} = \frac{\sin \pi s}{\pi s} = \mathrm{sinc}(s)
+$$
+
+Note that we (and Bracewell) define
+$$
+\mathrm{sinc}(s) = \frac{\sin \pi s}{\pi s}
+$$
+this is called the normalized sinc function, and (IMO) is the most useful because of it's nice Fourier pair relationships. There is also the "unnormalized" sinc function, which doesn't have the factors of \\(\pi\\) in it, but we won't use that in this course. The **normalized sinc function** has the properties that
+
+* its peak is equal to 1 \\(\mathrm{sinc}(0) = 1\\)
+* its "nulls" are located at non-zero integer values of \\(n\\) for \\(\mathrm{sinc}(n)\\)
+* its integral from \\(-\infty,\infty\\) is equal to 1
+
+So we have the Fourier pair:
+$$
+\Pi(x) \leftrightharpoons \mathrm{sinc}(s)
+$$
+The unit rectangle (or boxcar) function has the Fourier transform pair of a normalized sinc function.
+
+### Gaussian
+
+How about the Fourier transform of a Gaussian function?
+$$
+f(x) = \exp \left ( -\frac{x^2}{2 a ^2} \right )
+$$
+
+$$
+F(s) = \int_{-\infty}^{\infty} \exp \left ( -\frac{x^2}{2 a ^2} \right ) \exp (-i 2 \pi x s)\\,\mathrm{d}x
+$$
+
+$$
+F(s) = \int_{-\infty}^{\infty} \exp \left ( -\frac{x^2}{2 a ^2} -i 2 \pi x s \right )\\,\mathrm{d}x
+$$
+
+Usually, when I see something like this, my standard approach is to start browsing books of integrals like [Gradshteyn and Ryzhik](https://en.wikipedia.org/wiki/Gradshteyn_and_Ryzhik) for ideas about how I might rearrange the integrand and successfully evaluate the integral. I'd usually just go for this. But, in this case, we can actually do something using a trick you probably learned in jr. high school, called [completing the square](https://www.mathsisfun.com/algebra/completing-square.html).
+
+Ok, so we've got terms in the exponent with \\(x^2\\) and \\(x\\), and an equation that looks like
+$$
+a x^2 + bx + c = 0
+$$
+which we want to turn into something that looks like
+$$
+a(x + d)^2 + e = 0.
+$$
+
+The answer is that
+$$
+d = \frac{b}{2a}
+$$
+and
+$$
+e = c - \frac{b^2}{4 a}
+$$
+such that our rearranged exponent becomes
+$$
+-\left [ \frac{x^2}{2 a ^2} + i 2 \pi x s \right ] = -[(x - 2i \pi a^2 s)^2 + 4 \pi^2 a^4 s^2]/2a^2
+$$
+Why was this useful? Well, the integral is over \\(x\\), so we can pull out all terms that do not depend on \\(x\\), giving us a rearranged integral of
+$$
+F(s) = \exp(-2 \pi^2 a^2 s^2 ) \int_{-\infty}^\infty \exp \left (-\frac{(x - 2 i \pi a^2 s)^2}{2 a^2} \right)\\,\mathrm{d}x
+$$
+
+Here it is helpful to remember your Gaussian integration formulas such that
+$$
+\int_{-\infty}^\infty e^{-a(x + b)^2}\\,\mathrm{d}x = \sqrt{\frac{\pi}{a}}.
+$$
+
+Thus, the integral contributes another factor of \\(\sqrt{2 \pi} a\\) and the final result is
+
+$$
+F(s) = \sqrt{2 \pi} a \exp(-2 \pi^2 a^2 s^2 )
+$$
+
+What functional form is this? This is another Gaussian, though the normalization and standard deviation are a bit different! So, we see that the Gaussian function is a Fourier transform pair with itself.
+
+Hopefully now you have a taste of how to compute Fourier transforms. At its most basic, it's just a matter of setting up and evaluating the integral. For many function forms, you can use integration strategies to arrive at analytic solutions. As a practical matter, in the next lecture we'll see how we can evaluate this integral numerically.
 
 ## Convolution
 
@@ -267,6 +370,7 @@ It is a [linear operator](https://undergroundmathematics.org/glossary/linear-ope
 $$
 f(x) = \int_{-\infty}^{\infty} f(x^\prime) \delta(x^\prime - x)\\,\mathrm{d}x^\prime.
 $$
+* Do the FT of a delta function, and show that it's a constant
 
 ## Fourier transform theorems properties: similarity, convolution, multiplication
 
