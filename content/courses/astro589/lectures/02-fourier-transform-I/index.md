@@ -423,24 +423,82 @@ There are several useful properties of the Fourier transform that you'll want to
 
 ### Similarity
 
-### Shift
+If
 
-### Convolution/multiplication
+$$
+f(x) \leftrightharpoons F(s)
+$$
 
-### Rayleigh's theorem (Parseval's theorem for Fourier Series)
+then
 
-### Autocorrelation theorem
+$$
+f(ax) \leftrightharpoons \frac{1}{|a|} F \left (\frac{s}{a} \right).
+$$
 
-And it's relation to Gaussian processes.
-
-See how similarity stretches things out (w/ shah function spacing)
-
-* Note how FFTconvolve using python speeds up. Depends on the scaling, and size of convolutional kernel.
-
-### Similarity
+I.e., applied to waveforms and spectra, a compression of the time scale corresponds to an expansion of the frequency scale.
 
 #### Fourier transforms and the Heisenberg uncertainty principle
 
-Probability distributions (i.e., wavefunctions) governing position and momentum are related by the Fourier transform. It's impossible to know both position and momentum precisely. As you begin to constrain
+In a signal-processing sense, this manifests as an inability to precisely specify a signal in *both* the time and frequency domains at the same time. As you decrease the variance of a function (i.e., make it more concentrated and thus localized) in one domain, you increase the variance of it in the other domain (i.e., make it more extended and thus dispersed).
 
-## Sampling and Nyquist sampling theorem
+In quantum mechanics, this same concept is at play in the Heisenberg Uncertainty principle, where probability distributions (i.e., wavefunctions) governing position and momentum are related by the Fourier transform. It's impossible to know both position and momentum precisely.
+
+### Shift
+
+If
+
+$$
+f(x) \leftrightharpoons F(s)
+$$
+
+then
+
+$$
+f(x - a) \leftrightharpoons \exp(- 2 \pi i a s) F(s).
+$$
+
+If you shift a function, then there are no changes in the *amplitude* of the Fourier transform, but, there are changes to its phase, dependent on *s*. The higher the frequency, the greater the change in phase angle. In radio astronomy, it's common to hear of this as a translation in the R.A./Dec. plane results in a *phase shift* in the visibility plane.
+
+### Convolution/multiplication
+
+The convolution of two functions corresponds to the multiplication of their Fourier transforms.
+
+If
+
+$$
+f(x) \leftrightharpoons F(s)
+$$
+
+and
+
+$$
+g(x) \leftrightharpoons G(s)
+$$
+
+then
+
+$$
+f(x) * g(x) \leftrightharpoons F(s)G(s).
+$$
+
+This is an *extremely* useful theorem. At least in my career, this, and concepts related to sampling, have been the ones I have used the most often. You may have already used this theorem (numerically) if you've ever carried out a convolution operation using FFTconvolve functions in Python, which can be dramatically faster than directly implementing the convolution, at least for certain array sizes.
+
+### Rayleigh's theorem (Parseval's theorem for Fourier Series)
+
+The amount of energy in a system is the same whether you calculate it in the time domain or in the frequency domain.
+
+The integral of the mod-squared of a function is equal to the integral of the mod-squared of its spectrum
+
+$$
+\int_{-\infty}^\infty |f(x)|^2\\,\mathrm{d}x  = \int_{-\infty}^\infty |F(s)|^2\\,\mathrm{d}s.
+$$
+
+### Autocorrelation theorem
+
+The autocorrelation of a function is
+$$
+f(x) *f(x) = \int_{-\infty}^\infty f^*(u) f(u + x)\\,\mathrm{d}u
+$$
+and it has the Fourier transform $|F(s)|^2$.
+
+If you've ever worked with Gaussian processes, you might recognize this relationship between the autocorrelation (the kernel function) and the power spectrum of the Gaussian process.
