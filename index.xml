@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://iancze.github.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ian Czekala's homepage on Czekala Group</title><link>https://iancze.github.io/</link><description>Recent content in Ian Czekala's homepage on Czekala Group</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://iancze.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Syllabus</title><link>https://iancze.github.io/courses/astro589/syllabus/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/syllabus/</guid><description>&lt;h2 id="objective-radio-astronomy-and-interferometric-imaging">Objective: radio astronomy and interferometric imaging&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://iancze.github.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ian Czekala's homepage on Czekala Group</title><link>https://iancze.github.io/</link><description>Recent content in Ian Czekala's homepage on Czekala Group</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 31 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://iancze.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Syllabus</title><link>https://iancze.github.io/courses/astro589/syllabus/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/syllabus/</guid><description>&lt;h2 id="objective-radio-astronomy-and-interferometric-imaging">Objective: radio astronomy and interferometric imaging&lt;/h2>
 &lt;p>Interferometric astrophysical observations are a vast and deep topic. The goal of this course is to help students develop a &lt;strong>practical understanding&lt;/strong> of how interferometers (in particular arrays like the VLA or ALMA) &lt;strong>observe an astrophysical source&lt;/strong>, build a &lt;strong>mathematical foundation&lt;/strong> for working with &lt;strong>complex-valued, Fourier-plane data&lt;/strong>, and survey some of the many approaches that are used to &lt;strong>investigate astrophysical phenomena&lt;/strong>, focusing on &lt;strong>forward-modeling&lt;/strong> and &lt;strong>regularized maximum likelihood&lt;/strong> techniques.&lt;/p>
 &lt;h2 id="instructor">Instructor&lt;/h2>
 &lt;ul>
@@ -314,49 +314,49 @@ The Fourier Transform II
 &lt;td>Sep 14&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/courses/astro589/lectures/04-fft/>The Fast Fourier Transform and Numerical Implementation&lt;/a>
+The Fast Fourier Transform and Numerical Implementation
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Sep 21&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/courses/astro589/lectures/05-interferometry/>Interferometry in Practice&lt;/a>
+Interferometry in Practice
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Sep 28&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/courses/astro589/lectures/06-psfs-and-gridding/>PSFs, Gridding, and Dirty Images&lt;/a>
+Making Images: PSFs, Gridding, and Dirty Images
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Oct 5&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/>Bayesian Inference and Model Fitting&lt;/a>
+Bayesian Inference and Model Fitting
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Oct 12&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/>Image Plane Deconvolution (CLEAN)&lt;/a>
+Image Plane Deconvolution (CLEAN)
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Oct 19&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/>Regularized Maximum Likelihood (RML) I&lt;/a>
+Regularized Maximum Likelihood (RML) I
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Oct 26&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-&lt;a href=https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/>Regularized Maximum Likelihood (RML) II&lt;/a>
+Regularized Maximum Likelihood (RML) II
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -681,7 +681,423 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Regularized Maximum Likelihood (RML) II</title><link>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</guid><description/></item><item><title>Regularized Maximum Likelihood (RML) I</title><link>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</guid><description/></item><item><title>Image Plane Deconvolution (CLEAN)</title><link>https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/</guid><description/></item><item><title>Bayesian Inference and Model Fitting</title><link>https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/</guid><description/></item><item><title>PSFs, Gridding, and Dirty Images</title><link>https://iancze.github.io/courses/astro589/lectures/06-psfs-and-gridding/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/06-psfs-and-gridding/</guid><description/></item><item><title>Interferometry in Practice</title><link>https://iancze.github.io/courses/astro589/lectures/05-interferometry/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/05-interferometry/</guid><description/></item><item><title>The Fast Fourier Transform and Numerical Implementation</title><link>https://iancze.github.io/courses/astro589/lectures/04-fft/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/04-fft/</guid><description/></item><item><title>The Fourier Transform II</title><link>https://iancze.github.io/courses/astro589/lectures/03-fourier-transform-ii/</link><pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/03-fourier-transform-ii/</guid><description/></item><item><title>Introduction and Course Overview</title><link>https://iancze.github.io/courses/astro589/lectures/01-introduction/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/01-introduction/</guid><description>&lt;h1 id="references-and-resources-for-this-lecture">References and Resources for this lecture&lt;/h1>
+&lt;/table></description></item><item><title>The Fourier Transform I</title><link>https://iancze.github.io/courses/astro589/lectures/02-fourier-transform-i/</link><pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/02-fourier-transform-i/</guid><description>&lt;p>&lt;strong>Reference Materials for this lecture&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/2010095">The Fourier Transform and its Applications&lt;/a> by R. Bracewell&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson, particularly Appendix 2.1&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/34517505">Fourier Analysis and Imaging&lt;/a> by R. Bracewell&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Useful (and entertaining!) introductions to the topic&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>Youtube: &lt;a href="https://www.youtube.com/watch?v=spUNpyF58BY&amp;amp;ab_channel=3Blue1Brown">3Blue1Brown&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="complex-numbers">Complex Numbers&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Complex_number#Polar_complex_plane">Wikipedia Reference&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>A complex number \(z\) is one in the form of \(z = a + b i\), where \(i\) is the imaginary unit. The imaginary unit satisfies the equation
+$$
+i^2 = -1.
+$$&lt;/p>
+&lt;p>So a complex number has both real (\(a\)) and imaginary (\(b\)) components to it. We can represent this as a plot on the Cartesian plane:&lt;/p>
+&lt;figure>&lt;a href="https://en.wikipedia.org/wiki/File:Complex_number_illustration.svg">&lt;img src="complex-cartesian.png"
+alt="Representation of a complex number on the Cartesian plane. Credit: Wolfkeeper"/>&lt;/a>&lt;figcaption>
+&lt;p>Representation of a complex number on the Cartesian plane. Credit: Wolfkeeper&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Alternatively, we can also represent a complex number on the polar plane, using an amplitude \(r\) and phase \(\varphi\):&lt;/p>
+&lt;figure>&lt;a href="https://en.wikipedia.org/wiki/File:Complex_number_illustration_modarg.svg">&lt;img src="complex-polar.png"
+alt="Representation of a complex number on the polar plane. Credit: Kan8eDie, based on Wolfkeeper"/>&lt;/a>&lt;figcaption>
+&lt;p>Representation of a complex number on the polar plane. Credit: Kan8eDie, based on Wolfkeeper&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>$$
+z = r e^{i \varphi} = r (\cos \varphi + i \sin \varphi).
+$$&lt;/p>
+&lt;p>This is closely related to Euler&amp;rsquo;s formula
+$$
+e^{i x} = \cos x + i \sin x
+$$
+for a complex sinusoid. It&amp;rsquo;s useful to keep in mind Euler&amp;rsquo;s identity:
+$$
+e^{i \pi} + 1 = 0.
+$$&lt;/p>
+&lt;p>It&amp;rsquo;s possible to convert from the Cartesian form to polar form and vice-versa:
+$$
+r = |z| = \sqrt{a^2 + b^2}
+$$
+and
+$$
+\varphi = \arg(z) = \arg(a + bi)
+$$
+which is most easily carried out using the &lt;code>arctan2&lt;/code> function, to avoid quadrant ambiguities.
+$$
+\varphi = \mathrm{arctan2}(b, a).
+$$&lt;/p>
+&lt;p>You can go from polar back to Cartesian by writing
+$$
+z = r e^{i \varphi} = r (\cos \varphi + i \sin \varphi)
+$$
+and then doing
+$$
+a = \Re(z) = r \cos \varphi
+$$
+and
+$$
+b = \Im(z) = r \sin \varphi.
+$$&lt;/p>
+&lt;h2 id="the-fourier-transform">The Fourier Transform&lt;/h2>
+&lt;p>References include a mix of&lt;/p>
+&lt;ul>
+&lt;li>Ch 2 of &lt;a href="https://catalog.libraries.psu.edu/catalog/2010095">The Fourier Transform and its Applications&lt;/a> by R. Bracewell&lt;/li>
+&lt;li>Appendix 2.1 of &lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson&lt;/li>
+&lt;/ul>
+&lt;p>First, we&amp;rsquo;ll introduce the equations and then explain what&amp;rsquo;s going on.&lt;/p>
+&lt;p>&lt;strong>Forward transform&lt;/strong>:
+$$
+F(s) = \int_{-\infty}^{\infty} f(x) e^{-i 2 \pi x s}\,\mathrm{d}x
+$$
+also called the &amp;ldquo;minus-\(i\)&amp;rdquo; transform.&lt;/p>
+&lt;p>&lt;strong>Inverse transform&lt;/strong>:
+$$
+f(x) = \int_{-\infty}^{\infty} F(s) e^{i 2 \pi x s}\,\mathrm{d}s
+$$
+also called the &amp;ldquo;plus-\(i\)&amp;rdquo; transform.&lt;/p>
+&lt;p>Note that there are alternate conventions for the Fourier transform pairs, which vary as to whether the \(2 \pi\) factor appears in the exponent or as a pre-factor. We prefer the notation we&amp;rsquo;ve provided here because we find it much easier to keep track of \(2\pi\) factors.&lt;/p>
+&lt;p>&lt;strong>Successive transforms&lt;/strong>:&lt;/p>
+&lt;p>We can show that
+$$
+f(x) = \int_{-\infty}^{\infty} \left [ \int_{-\infty}^{\infty} f(x) e^{-i 2 \pi x s}\,\mathrm{d}x \right ] e^{i 2 \pi x s}\,\mathrm{d}s,
+$$
+i.e., successive transformations yield back the original function. We don&amp;rsquo;t have time to walk through the proof, but it&amp;rsquo;s available in &lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">TMS Section A2.1&lt;/a>.&lt;/p>
+&lt;p>Therefore, we have
+$$
+f(x) \leftrightharpoons F(s),
+$$
+where the \(\leftrightharpoons\) denotes a Fourier transform pair. Sometimes you might also see the notation \(\leftrightarrow\). Generally, if we have functions like \(f\) or \(g\), then we denote their Fourier transform pairs with captial letters (e.g., \(F\), \(G\))).&lt;/p>
+&lt;p>&lt;strong>How to think about the domains&lt;/strong>
+The Fourier transform maps domains from \(x\) to \(s\), where \(s\) has units of &amp;ldquo;cycles per unit of \(x\)&amp;rdquo;. E.g., if \(x\) is in units of time (seconds), then \(s\) has units of cycles/second, commonly known as hertz. The FT can also be applied to spatial distance coordinates (e.g., \(x\) in meters) and spatial coordinates on the sky (e.g., \(x\) in arcseconds).&lt;/p>
+&lt;p>So let&amp;rsquo;s say someone is playing a chord on a musical instrument. If \(f(x)\) represents the time-series of pressure values near your ear, then \(F(s)\) represents the notes that are being played (we would probably be most interested in something like \(|F(s)|^2\) for power as a function of frequency, like a spectrogram).&lt;/p>
+&lt;p>&lt;a href="https://musiclab.chromeexperiments.com/spectrogram/">Musical Spectrogram link&lt;/a>&lt;/p>
+&lt;h3 id="conditions-on-existence">Conditions on existence&lt;/h3>
+&lt;p>Given the strong evidence via physical systems that the Fourier transform of particular time-series exists (e.g., spectrums for waveforms, antenna radiation patterns), there are actually some mathematical functions whose Fourier transforms do not exist.&lt;/p>
+&lt;p>Physical possibility (in physical systems) is a sufficient condition for the existence of its transform.&lt;/p>
+&lt;p>Sometimes, though, we consider waveforms like&lt;/p>
+&lt;ul>
+&lt;li>\(\sin(t)\): harmonic wave&lt;/li>
+&lt;li>\(H(t)\): Heaviside step&lt;/li>
+&lt;li>\(\delta(t)\): impulse&lt;/li>
+&lt;/ul>
+&lt;p>Strictly speaking, none of these functions has a Fourier transform. What do we mean that they do not have Fourier transforms?
+$$
+F(s) = \int_{-\infty}^{\infty} f(x) e^{-i 2 \pi x s}\,\mathrm{d}x
+$$
+does not converge for all values of \(s\). Consider \(\sin(t)\) integrated from \((-\infty, \infty)\)&amp;hellip; it&amp;rsquo;ll just keep oscillating about 0.&lt;/p>
+&lt;p>None of these waveforms are actually physically possible, though, because a waveform \(\sin(t)\) would have need to been switched on an infinite time ago, a step function would need to be maintained for an infinite time, and an impulse would need to be infinitely large for an infinitely short time.&lt;/p>
+&lt;p>So, what are the conditions for the existence of Fourier transforms.&lt;/p>
+&lt;ol>
+&lt;li>The integral of \(|f(x)|\) from \(-\infty\) to \(\infty\) exists.&lt;/li>
+&lt;li>Any discontinuities in \(f(x)\) are finite.&lt;/li>
+&lt;/ol>
+&lt;p>In a physical circumstance, these conditions would be violated when there is infinite energy.&lt;/p>
+&lt;h3 id="transforms-in-the-limit">Transforms in the limit&lt;/h3>
+&lt;p>Though we just outlined functional forms whose Fourier transforms do not &lt;em>strictly&lt;/em> exist, we can find a way to think such that the transforms of these functions do exist in a practical sense. This is by considering them &lt;em>in the limit&lt;/em>.&lt;/p>
+&lt;p>Consider a periodic function whose transform would strictly not exist, such as \(P(x) = \sin(x) \), since
+$$
+\int_{-\infty}^\infty |P(x)|\,\mathrm{d}x
+$$
+would not converge.&lt;/p>
+&lt;p>We could modify this function ever so slightly by multiplication with a &lt;em>very&lt;/em> broad Gaussian envelope \(\exp(-\alpha x^2)\), where \(\alpha\) is a small positive number, then this modified version may have a transform. As we let \(\alpha \rightarrow 0\), then we approach \(P\) in the limit.
+$$
+\int_{-\infty}^\infty |e^{-\alpha x^2} P(x)|\,\mathrm{d}x
+$$&lt;/p>
+&lt;p>As \(\alpha \rightarrow 0\) the transform may still not exist for all \(s\), however, we can still be quite productive with the sequence of transforms that do exist as we approach this limit. Therefore, we can practically use the Fourier transform for all physical systems that we might consider. We&amp;rsquo;ll revisit this in more detail when we talk about Fourier series, line spectra, and the sampling theorem.&lt;/p>
+&lt;h3 id="oddness-evenness-and-complex-conjugates">Oddness, Evenness, and Complex Conjugates&lt;/h3>
+&lt;figure>&lt;img src="even-odd.png"
+alt="An even function \(E(x)\) and an odd function \(O(x)\), followed by their sum. Credit: The Fourier Transform and Its Applications, Bracewell, Figs 2.2 and 2.3."/>&lt;figcaption>
+&lt;p>An even function \(E(x)\) and an odd function \(O(x)\), followed by their sum. Credit: The Fourier Transform and Its Applications, Bracewell, Figs 2.2 and 2.3.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>&lt;strong>Even functions&lt;/strong> have
+$$
+E(-x) = E(x)
+$$
+and are symmetrical.&lt;/p>
+&lt;p>&lt;strong>Odd functions&lt;/strong> have
+$$
+O(-x) = -O(x)
+$$
+and are antisymmetrical.&lt;/p>
+&lt;p>The sum of even and odd functions is, in general, neither even nor odd.&lt;/p>
+&lt;p>Any function \(f(x)\) can be split unambiguously into it&amp;rsquo;s odd and even parts, though, where
+$$
+E(x) = \frac{1}{2} \left [ f(x) + f(-x) \right]
+$$
+and
+$$
+O(x) = \frac{1}{2} \left [ f(x) - f(-x) \right]
+$$
+and so we have
+$$
+f(x) = E(x) + O(x),
+$$
+where both \(E\) and \(O\) are in general complex-valued.&lt;/p>
+&lt;p>Evenness and oddness are very useful because we can these definitions to re-write the Fourier transform as
+$$
+F(s) = 2 \int_0^\infty E(x) \cos(2 \pi x s)\,\mathrm{d}x - 2 i \int_0^\infty O(x) \sin (2 \pi x s)\,\mathrm{d}x.
+$$&lt;/p>
+&lt;p>We see that&lt;/p>
+&lt;ol>
+&lt;li>If a function is even, its transform is even&lt;/li>
+&lt;li>If a function is odd, its transform is odd&lt;/li>
+&lt;/ol>
+&lt;p>and other results summarized by Bracewell in Chapter 2:&lt;/p>
+&lt;figure>&lt;img src="ft-relationships.png"
+alt="If a function has the characteristics in the left column, then its Fourier transform has the characteristics in the right column. Credit: Bracewell Ch. 2"/>&lt;figcaption>
+&lt;p>If a function has the characteristics in the left column, then its Fourier transform has the characteristics in the right column. Credit: Bracewell Ch. 2&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>These relationships are extremely useful for quickly ascertaining the basic nature of the Fourier transform of any function you may encounter, as well as planning how to numerically compute transforms using &lt;code>fft&lt;/code> or &lt;code>rfft&lt;/code> packages.&lt;/p>
+&lt;p>&lt;strong>Complex conjugates&lt;/strong>&lt;/p>
+&lt;p>If we have the complex conjugate of function \(f(x)\), denoted by \(f^*(x)\), then we have&lt;/p>
+&lt;p>$$
+f^{*}(x) \leftrightharpoons F^{*}(-s)
+$$&lt;/p>
+&lt;h2 id="transforms-of-some-simple-functions">Transforms of some simple functions&lt;/h2>
+&lt;p>Let&amp;rsquo;s practice by taking the Fourier transforms of some functions.&lt;/p>
+&lt;h3 id="boxcar">Boxcar&lt;/h3>
+&lt;p>The rectangle or &amp;ldquo;boxcar&amp;rdquo; function is
+&lt;figure>&lt;img src="rectangle.png"
+alt="The rectangle, or boxcar function. Credit: Bracewell Ch. 3"/>&lt;figcaption>
+&lt;p>The rectangle, or boxcar function. Credit: Bracewell Ch. 3&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>Let&amp;rsquo;s calculate the Fourier transform. The function itself is simple, so this is mainly an exercise in choosing the right limits
+$$
+F(s) = \int_{-\infty}^{\infty} f(x) e^{-i 2 \pi x s}\,\mathrm{d}x
+$$&lt;/p>
+&lt;p>$$
+F(s) = \int_{-1/2}^{1/2} e^{-i 2 \pi x s}\,\mathrm{d}x
+$$&lt;/p>
+&lt;p>We can use Euler&amp;rsquo;s formula to write
+$$
+F(s) = \int_{-1/2}^{1/2} \cos(2 \pi x s) + i \sin(2 \pi x s) \,\mathrm{d}x
+$$
+and visually seen that the \(\sin\) term would eventually cancel itself out, or we could have relied upon the fact that we know \(\Pi(x)\) is an even function (\(O(x) = 0\)) and used
+$$
+F(s) = 2 \int_0^\infty E(x) \cos(2 \pi x s)\,\mathrm{d}x - 2 i \int_0^\infty O(x) \sin (2 \pi x s)\,\mathrm{d}x.
+$$
+to yield
+$$
+F(s) = 2 \int_0^{1/2} \cos(2 \pi x s)\,\mathrm{d}x
+$$&lt;/p>
+&lt;p>$$
+F(s) = 2 \Big |_0^{1/2} \frac{\sin 2 \pi x s}{2 \pi s} = \frac{\sin \pi s}{\pi s} = \mathrm{sinc}(s)
+$$&lt;/p>
+&lt;p>Note that we (and Bracewell) define
+$$
+\mathrm{sinc}(s) = \frac{\sin \pi s}{\pi s}
+$$
+this is called the normalized sinc function, and (IMO) is the most useful because of it&amp;rsquo;s nice Fourier pair relationships. There is also the &amp;ldquo;unnormalized&amp;rdquo; sinc function, which doesn&amp;rsquo;t have the factors of \(\pi\) in it, but we won&amp;rsquo;t use that in this course. The &lt;strong>normalized sinc function&lt;/strong> has the properties that&lt;/p>
+&lt;ul>
+&lt;li>its peak is equal to 1 \(\mathrm{sinc}(0) = 1\)&lt;/li>
+&lt;li>its &amp;ldquo;nulls&amp;rdquo; are located at non-zero integer values of \(n\) for \(\mathrm{sinc}(n)\)&lt;/li>
+&lt;li>its integral from \(-\infty,\infty\) is equal to 1&lt;/li>
+&lt;/ul>
+&lt;p>So we have the Fourier pair:
+$$
+\Pi(x) \leftrightharpoons \mathrm{sinc}(s)
+$$
+The unit rectangle (or boxcar) function has the Fourier transform pair of a normalized sinc function.&lt;/p>
+&lt;p>This is also the same relationship that we introduced in the first lecture: the far field electric field pattern (sinc) is the Fourier transform of the electric field illuminating the aperture of the telescope (boxcar).&lt;/p>
+&lt;h3 id="gaussian">Gaussian&lt;/h3>
+&lt;p>How about the Fourier transform of a Gaussian function?
+$$
+f(x) = \exp \left ( -\frac{x^2}{2 a ^2} \right )
+$$&lt;/p>
+&lt;p>$$
+F(s) = \int_{-\infty}^{\infty} \exp \left ( -\frac{x^2}{2 a ^2} \right ) \exp (-i 2 \pi x s)\,\mathrm{d}x
+$$&lt;/p>
+&lt;p>$$
+F(s) = \int_{-\infty}^{\infty} \exp \left ( -\frac{x^2}{2 a ^2} -i 2 \pi x s \right )\,\mathrm{d}x
+$$&lt;/p>
+&lt;p>Usually, when I see something like this, my standard approach is to start browsing books of integrals like &lt;a href="https://en.wikipedia.org/wiki/Gradshteyn_and_Ryzhik">Gradshteyn and Ryzhik&lt;/a> for ideas about how I might rearrange the integrand and successfully evaluate the integral. I&amp;rsquo;d usually just go for this. But, in this case, we can actually do something using a trick you probably learned in jr. high school, called &lt;a href="https://www.mathsisfun.com/algebra/completing-square.html">completing the square&lt;/a>.&lt;/p>
+&lt;p>Ok, so we&amp;rsquo;ve got terms in the exponent with \(x^2\) and \(x\), and an equation that looks like
+$$
+a x^2 + bx + c = 0
+$$
+which we want to turn into something that looks like
+$$
+a(x + d)^2 + e = 0.
+$$&lt;/p>
+&lt;p>The answer is that
+$$
+d = \frac{b}{2a}
+$$
+and
+$$
+e = c - \frac{b^2}{4 a}
+$$
+such that our rearranged exponent becomes
+$$
+-\left [ \frac{x^2}{2 a ^2} + i 2 \pi x s \right ] = -[(x - 2i \pi a^2 s)^2 + 4 \pi^2 a^4 s^2]/2a^2
+$$
+Why was this useful? Well, the integral is over \(x\), so we can pull out all terms that do not depend on \(x\), giving us a rearranged integral of
+$$
+F(s) = \exp(-2 \pi^2 a^2 s^2 ) \int_{-\infty}^\infty \exp \left (-\frac{(x - 2 i \pi a^2 s)^2}{2 a^2} \right)\,\mathrm{d}x
+$$&lt;/p>
+&lt;p>Here it is helpful to remember your Gaussian integration formulas such that
+$$
+\int_{-\infty}^\infty e^{-a(x + b)^2}\,\mathrm{d}x = \sqrt{\frac{\pi}{a}}.
+$$&lt;/p>
+&lt;p>Thus, the integral contributes another factor of \(\sqrt{2 \pi} a\) and the final result is&lt;/p>
+&lt;p>$$
+F(s) = \sqrt{2 \pi} a \exp(-2 \pi^2 a^2 s^2 )
+$$&lt;/p>
+&lt;p>What functional form is this? This is another Gaussian, though the normalization and standard deviation are a bit different! So, we see that the Gaussian function is a Fourier transform pair with itself.&lt;/p>
+&lt;p>Hopefully now you have a taste of how to compute Fourier transforms. At its most basic, it&amp;rsquo;s just a matter of setting up and evaluating the integral. For many function forms, you can use integration strategies to arrive at analytic solutions. As a practical matter, in the next lecture we&amp;rsquo;ll see how we can evaluate this integral numerically.&lt;/p>
+&lt;h2 id="convolution">Convolution&lt;/h2>
+&lt;p>The convolution of two functions \(f(x)\) and \(g(x)\) is defined as
+$$
+\int_{-\infty}^\infty f(u) g(x - u)\,\mathrm{d}u
+$$
+and is frequently written using the \(*\) symbol. The convolution produces a new function, so we have
+$$
+h(x) = f(x) * g(x).
+$$&lt;/p>
+&lt;p>Convolution as a process is very useful to think of graphically&lt;/p>
+&lt;figure>&lt;img src="convolution-1.png"
+alt="A graphical representation of the convolution of two functions \(f(x)\) and \(g(x)\). The \(g\) function is flipped, shifted to \(x\), and then multiplied against \(f\). The value of the convolution \(h(x)\) is given by the integral of the multiplied product. Credit: Bracewell Ch. 3"/>&lt;figcaption>
+&lt;p>A graphical representation of the convolution of two functions \(f(x)\) and \(g(x)\). The \(g\) function is flipped, shifted to \(x\), and then multiplied against \(f\). The value of the convolution \(h(x)\) is given by the integral of the multiplied product. Credit: Bracewell Ch. 3&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;img src="convolution-2.png"
+alt="In general, convolution by most functions (e.g., boxcars, Gaussians, etc&amp;amp;hellip;) results in a smoothing out of high-frequency structure. Credit: Bracewell Ch. 3"/>&lt;figcaption>
+&lt;p>In general, convolution by most functions (e.g., boxcars, Gaussians, etc&amp;hellip;) results in a smoothing out of high-frequency structure. Credit: Bracewell Ch. 3&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;img src="convolution-3.png"
+alt="Convolution can also be thought of as a superposition of characteristic contributions. I.e., the final function \(h(x)\) has grabbed value from nearby regions of \(f(x)\), modulated by the envelope of \(g(x)\). This paradigm is very useful for understanding interpolation, smoothing, and kernel density estimation (KDE). Credit: Bracewell Ch. 3"/>&lt;figcaption>
+&lt;p>Convolution can also be thought of as a superposition of characteristic contributions. I.e., the final function \(h(x)\) has grabbed value from nearby regions of \(f(x)\), modulated by the envelope of \(g(x)\). This paradigm is very useful for understanding interpolation, smoothing, and kernel density estimation (KDE). Credit: Bracewell Ch. 3&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Convolution is commutative&lt;/p>
+&lt;p>$$
+f * g = g * f
+$$&lt;/p>
+&lt;p>and associative&lt;/p>
+&lt;p>$$
+f * (g * h) = (f * g) * h
+$$&lt;/p>
+&lt;p>and distributive over addition&lt;/p>
+&lt;p>$$
+f * (g + h) = f * g + f * h.
+$$&lt;/p>
+&lt;p>It is a &lt;a href="https://undergroundmathematics.org/glossary/linear-operator#:~:text=A%20function%20f%20is%20called,x%20and%20all%20constants%20c.">linear operator&lt;/a>, just like the Fourier transform.&lt;/p>
+&lt;h2 id="the-impulse-symbol">The impulse symbol&lt;/h2>
+&lt;p>We&amp;rsquo;ll develop a notation for an intense (unit-area) pulse so brief that the measuring equipment is unable to distinguish it from pulses yet briefer still. You may be quite familiar with this concept as a &amp;ldquo;delta-function,&amp;rdquo; especially in the context of quantum physics. Physically speaking, things like &amp;ldquo;point masses&amp;rdquo;, &amp;ldquo;point charges,&amp;rdquo; and (astrophysically speaking) &amp;ldquo;point sources&amp;rdquo; do not physically exist, but they are very useful concepts. The only important attribute of an impulse is &lt;em>how it reacts under integration&lt;/em>&lt;/p>
+&lt;ul>
+&lt;li>\(\delta(x) = 0\) for \(x \ne 0\)&lt;/li>
+&lt;li>\(\int_{-\infty}^\infty \delta(x)\,\mathrm{d}x = 1\)&lt;/li>
+&lt;/ul>
+&lt;p>And, there is a close relationship between the impulse symbol and the unit step function \(H(x)\) such that
+$$
+\int_{-\infty}^x \delta(x^\prime)\,\mathrm{d}x^\prime = H(x).
+$$&lt;/p>
+&lt;p>Another very important property of the impulse function is its &amp;ldquo;sifting property&amp;rdquo; (TMS A2.11), such that
+$$
+f(a) = \int_{-\infty}^{\infty} f(x) \delta(x - a)\,\mathrm{d}x^\prime.
+$$
+i.e., the integral of function \(f(x)\) times a delta-function located at \(a\) will give the value of the function evaluated at \(a\), \(f(a)\).&lt;/p>
+&lt;p>The Fourier transform of a delta function (centered on 0) is&lt;/p>
+&lt;p>$$
+F(s) = \int_{-\infty}^{\infty} \delta(0) \exp (-i 2 \pi x s)\,\mathrm{d}x = 1.
+$$
+This is yet another important Fourier pair
+$$
+\delta(x) \leftrightharpoons \mathrm{constant\;amplitude\,\forall\, s}.
+$$&lt;/p>
+&lt;h2 id="the-sampling-or-replicating-symbol-shah-function">The Sampling or Replicating Symbol &amp;ldquo;Shah function&amp;rdquo;&lt;/h2>
+&lt;p>This is an infinite sequence of unit impulses, given by
+$$
+\mathrm{shah}(x) = \sum_{n=-\infty}^\infty \delta(x - n)
+$$&lt;/p>
+&lt;figure>&lt;img src="shah.png"
+alt="The replicating function. Credit: Bracewell Fig 5.4"/>&lt;figcaption>
+&lt;p>The replicating function. Credit: Bracewell Fig 5.4&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Also sometimes called a &amp;ldquo;Dirac Comb.&amp;rdquo; There is a generalization of the sifting property, such that if you multiply a function by a shah, you are effectively sampling it at unit intervals.&lt;/p>
+&lt;p>You can use it to sample \(f(x)\) (by multiplication)&lt;/p>
+&lt;figure>&lt;img src="sampling.png"
+alt="Sampling property of the shah function by multiplication. Credit: Bracewell Fig 5.5"/>&lt;figcaption>
+&lt;p>Sampling property of the shah function by multiplication. Credit: Bracewell Fig 5.5&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>And you can use it to replicate \(f(x)\) (by convolution)&lt;/p>
+&lt;figure>&lt;img src="replicating.png"
+alt="Replicating property of the shah function by convolution. Credit: Bracewell Fig 5.6"/>&lt;figcaption>
+&lt;p>Replicating property of the shah function by convolution. Credit: Bracewell Fig 5.6&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>The unit shah function is also its own Fourier transform
+$$
+\mathrm{shah}(x) \leftrightharpoons \mathrm{shah}(s)
+$$&lt;/p>
+&lt;h2 id="fourier-transform-theorems-properties-similarity-convolution-multiplication">Fourier transform theorems properties: similarity, convolution, multiplication&lt;/h2>
+&lt;p>There are several useful properties of the Fourier transform that you&amp;rsquo;ll want to familiarize yourself with. See Bracewell Ch. 6 or TMS A2.1.2.&lt;/p>
+&lt;h3 id="similarity">Similarity&lt;/h3>
+&lt;p>If&lt;/p>
+&lt;p>$$
+f(x) \leftrightharpoons F(s)
+$$&lt;/p>
+&lt;p>then&lt;/p>
+&lt;p>$$
+f(ax) \leftrightharpoons \frac{1}{|a|} F \left (\frac{s}{a} \right).
+$$&lt;/p>
+&lt;p>I.e., applied to waveforms and spectra, a compression of the time scale corresponds to an expansion of the frequency scale.&lt;/p>
+&lt;h4 id="fourier-transforms-and-the-heisenberg-uncertainty-principle">Fourier transforms and the Heisenberg uncertainty principle&lt;/h4>
+&lt;p>In a signal-processing sense, this manifests as an inability to precisely specify a signal in &lt;em>both&lt;/em> the time and frequency domains at the same time. As you decrease the variance of a function (i.e., make it more concentrated and thus localized) in one domain, you increase the variance of it in the other domain (i.e., make it more extended and thus dispersed).&lt;/p>
+&lt;p>In quantum mechanics, this same concept is at play in the Heisenberg Uncertainty principle, where probability distributions (i.e., wavefunctions) governing position and momentum are related by the Fourier transform. It&amp;rsquo;s impossible to know both position and momentum precisely.&lt;/p>
+&lt;h3 id="shift">Shift&lt;/h3>
+&lt;p>If&lt;/p>
+&lt;p>$$
+f(x) \leftrightharpoons F(s)
+$$&lt;/p>
+&lt;p>then&lt;/p>
+&lt;p>$$
+f(x - a) \leftrightharpoons \exp(- 2 \pi i a s) F(s).
+$$&lt;/p>
+&lt;p>If you shift a function, then there are no changes in the &lt;em>amplitude&lt;/em> of the Fourier transform, but, there are changes to its phase, dependent on &lt;em>s&lt;/em>. The higher the frequency, the greater the change in phase angle. In radio astronomy, it&amp;rsquo;s common to hear of this as a translation in the R.A./Dec. plane results in a &lt;em>phase shift&lt;/em> in the visibility plane.&lt;/p>
+&lt;h3 id="convolutionmultiplication">Convolution/multiplication&lt;/h3>
+&lt;p>The convolution of two functions corresponds to the multiplication of their Fourier transforms.&lt;/p>
+&lt;p>If&lt;/p>
+&lt;p>$$
+f(x) \leftrightharpoons F(s)
+$$&lt;/p>
+&lt;p>and&lt;/p>
+&lt;p>$$
+g(x) \leftrightharpoons G(s)
+$$&lt;/p>
+&lt;p>then&lt;/p>
+&lt;p>$$
+f(x) * g(x) \leftrightharpoons F(s)G(s).
+$$&lt;/p>
+&lt;p>This is an &lt;em>extremely&lt;/em> useful theorem. At least in my career, this, and concepts related to sampling, have been the ones I have used the most often. You may have already used this theorem (numerically) if you&amp;rsquo;ve ever carried out a convolution operation using FFTconvolve functions in Python, which can be dramatically faster than directly implementing the convolution, at least for certain array sizes.&lt;/p>
+&lt;h3 id="rayleighs-theorem-parsevals-theorem-for-fourier-series">Rayleigh&amp;rsquo;s theorem (Parseval&amp;rsquo;s theorem for Fourier Series)&lt;/h3>
+&lt;p>The amount of energy in a system is the same whether you calculate it in the time domain or in the frequency domain.&lt;/p>
+&lt;p>The integral of the mod-squared of a function is equal to the integral of the mod-squared of its spectrum&lt;/p>
+&lt;p>$$
+\int_{-\infty}^\infty |f(x)|^2\,\mathrm{d}x = \int_{-\infty}^\infty |F(s)|^2\,\mathrm{d}s.
+$$&lt;/p>
+&lt;h3 id="autocorrelation-theorem">Autocorrelation theorem&lt;/h3>
+&lt;p>The autocorrelation of a function is
+$$
+f(x) &lt;em>f(x) = \int_{-\infty}^\infty f^&lt;/em>(u) f(u + x)\,\mathrm{d}u
+$$
+and it has the Fourier transform \(|F(s)|^2\).&lt;/p>
+&lt;p>If you&amp;rsquo;ve ever worked with (stationary) Gaussian processes (e.g., squared-exponential, Matern, etc&amp;hellip;), you might recognize this relationship between the autocorrelation (the kernel function) and the power spectrum of the Gaussian process.&lt;/p></description></item><item><title>Introduction and Course Overview</title><link>https://iancze.github.io/courses/astro589/lectures/01-introduction/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/01-introduction/</guid><description>&lt;h1 id="references-and-resources-for-this-lecture">References and Resources for this lecture&lt;/h1>
 &lt;p>Full reference information can always be found in the &lt;a href="https://iancze.github.io/courses/astro589/syllabus/">syllabus&lt;/a>, under &amp;ldquo;References Materials.&amp;rdquo;&lt;/p>
 &lt;ul>
 &lt;li>&lt;em>Essential Radio Astronomy&lt;/em> &lt;a href="https://www.cv.nrao.edu/~sransom/web/Ch1.html#S3">Ch 1&lt;/a>: emission mechanisms, relevant astrophysical objects&lt;/li>
