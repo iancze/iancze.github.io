@@ -1094,7 +1094,7 @@ $$&lt;/p>
 &lt;h3 id="autocorrelation-theorem">Autocorrelation theorem&lt;/h3>
 &lt;p>The autocorrelation of a function is&lt;/p>
 &lt;p>$$
-f(x) &lt;em>f(x) = \int_{-\infty}^\infty f^&lt;/em>(u) f(u + x)\,\mathrm{d}u
+f(x) * f(x) = \int_{-\infty}^\infty f^{*}(u) f(u + x)\,\mathrm{d}u
 $$&lt;/p>
 &lt;p>and it has the Fourier transform \(|F(s)|^2\).&lt;/p>
 &lt;p>If you&amp;rsquo;ve ever worked with (stationary) Gaussian processes (e.g., squared-exponential, Matern, etc&amp;hellip;), you might recognize this relationship between the autocorrelation (the kernel function) and the power spectrum of the Gaussian process.&lt;/p></description></item><item><title>Introduction and Course Overview</title><link>https://iancze.github.io/courses/astro589/lectures/01-introduction/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/01-introduction/</guid><description>&lt;h1 id="references-and-resources-for-this-lecture">References and Resources for this lecture&lt;/h1>
