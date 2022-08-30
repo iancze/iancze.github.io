@@ -495,9 +495,11 @@ $$
 ### Autocorrelation theorem
 
 The autocorrelation of a function is
+
 $$
 f(x) *f(x) = \int_{-\infty}^\infty f^*(u) f(u + x)\\,\mathrm{d}u
 $$
+
 and it has the Fourier transform \\(|F(s)|^2\\).
 
 If you've ever worked with (stationary) Gaussian processes (e.g., squared-exponential, Matern, etc...), you might recognize this relationship between the autocorrelation (the kernel function) and the power spectrum of the Gaussian process.
