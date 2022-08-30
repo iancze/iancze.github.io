@@ -497,7 +497,7 @@ $$
 The autocorrelation of a function is
 
 $$
-f(x) *f(x) = \int_{-\infty}^\infty f^*(u) f(u + x)\\,\mathrm{d}u
+f(x) \* f(x) = \int_{-\infty}^\infty f^{\*}(u) f(u + x)\\,\mathrm{d}u
 $$
 
 and it has the Fourier transform \\(|F(s)|^2\\).
