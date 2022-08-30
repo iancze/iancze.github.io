@@ -199,9 +199,7 @@ $$</p><p>then</p><p>$$
 f(x) * g(x) \leftrightharpoons F(s)G(s).
 $$</p><p>This is an <em>extremely</em> useful theorem. At least in my career, this, and concepts related to sampling, have been the ones I have used the most often. You may have already used this theorem (numerically) if you&rsquo;ve ever carried out a convolution operation using FFTconvolve functions in Python, which can be dramatically faster than directly implementing the convolution, at least for certain array sizes.</p><h3 id=rayleighs-theorem-parsevals-theorem-for-fourier-series>Rayleigh&rsquo;s theorem (Parseval&rsquo;s theorem for Fourier Series)</h3><p>The amount of energy in a system is the same whether you calculate it in the time domain or in the frequency domain.</p><p>The integral of the mod-squared of a function is equal to the integral of the mod-squared of its spectrum</p><p>$$
 \int_{-\infty}^\infty |f(x)|^2\,\mathrm{d}x = \int_{-\infty}^\infty |F(s)|^2\,\mathrm{d}s.
-$$</p><h3 id=autocorrelation-theorem>Autocorrelation theorem</h3><p>The autocorrelation of a function is
-$$
+$$</p><h3 id=autocorrelation-theorem>Autocorrelation theorem</h3><p>The autocorrelation of a function is</p><p>$$
 f(x) <em>f(x) = \int_{-\infty}^\infty f^</em>(u) f(u + x)\,\mathrm{d}u
-$$
-and it has the Fourier transform \(|F(s)|^2\).</p><p>If you&rsquo;ve ever worked with (stationary) Gaussian processes (e.g., squared-exponential, Matern, etc&mldr;), you might recognize this relationship between the autocorrelation (the kernel function) and the power spectrum of the Gaussian process.</p></article></main></div></div></main><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+$$</p><p>and it has the Fourier transform \(|F(s)|^2\).</p><p>If you&rsquo;ve ever worked with (stationary) Gaussian processes (e.g., squared-exponential, Matern, etc&mldr;), you might recognize this relationship between the autocorrelation (the kernel function) and the power spectrum of the Gaussian process.</p></article></main></div></div></main><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script></body></html>
