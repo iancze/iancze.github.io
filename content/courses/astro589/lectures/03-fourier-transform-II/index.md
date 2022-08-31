@@ -1,7 +1,7 @@
 ---
 title: The Fourier Transform II
 date: 2022-09-07
-publishdate: 2022-09-01
+publishdate: 2022-08-30
 draft: true
 ---
 
@@ -9,6 +9,10 @@ Review of last time:
 
 * Defined Fourier transform, inverse
 * Introduced convolution, impluse symbol, and theorems
+
+## Filters and transfer functions
+
+Pg 200, Bracewell.
 
 This lecture:
 

@@ -503,3 +503,64 @@ $$
 and it has the Fourier transform \\(|F(s)|^2\\).
 
 If you've ever worked with (stationary) Gaussian processes (e.g., squared-exponential, Matern, etc...), you might recognize this relationship between the autocorrelation (the kernel function) and the power spectrum of the Gaussian process.
+
+### The derivative theorem
+
+If
+
+$$
+f(x) \leftrightharpoons F(s)
+$$
+
+then
+
+$$
+f^\prime(x) \leftrightharpoons i 2 \pi s F(s).
+$$
+
+### Using the transform pairs
+
+Now that we have a few basic transform pairs, and some of the transform theorems, you can mix and match these to build up a library of new transform pairs. You will explore this in the problem set.
+
+### Definite integral
+
+The zero-valued frequency of a Fourier transform is equal to the definite integral of a function over all space
+
+$$
+\int_{-\infty}^\infty f(x)\\,\mathrm{d}x = F(0).
+$$
+
+I.e., to compute the area under the curve, you can just read off the zero-frequency value of the Fourier transform.
+
+### First moment
+
+The first moment of \\(f(x)\\) about the origin is
+
+$$
+\int_{-\infty}^\infty x f(x)\\,\mathrm{d}x
+$$
+
+Using the derivative theorem (not shown), you can determine that the first moment \\(\bar{f}\\) is
+
+$$
+\bar{f} = \int_{-\infty}^\infty x f(x)\\,\mathrm{d}x = \frac{F^\prime(0)}{-2 \pi i}
+$$
+i.e., the slope of the Fourier transform evaluated at \\(s = 0\\), times \\(-1/2 \pi i\\).
+
+### Second moment
+
+Second moment (moment of inertia) is given by
+
+$$
+\int_{-\infty}^\infty x^2 f(x)\\,\mathrm{d}x = -\frac{1}{4 \pi^2} F^{\prime\prime}(0).
+$$
+
+{{< figure src="second-moment.png" caption="Credit: Bracewell Fig 8.4">}}
+
+Similar arguments extend to variance \\(\sigma^2\\) as we had mentioned with regards to the uncertainty principle.
+
+## Smoothness and compactness
+
+In general, the smoother a function is in the time domain, the more compact its Fourier transform will be in the frequency domain.
+
+Smoother functions will have a larger number of continuous derivatives.  Something like the Gaussian envelope \\(\exp(-\pi x^2)\\) is "as smooth as possible" and therefore its Fourier transform (also a Gaussian envelope) is as compact as possible.
