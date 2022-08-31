@@ -201,5 +201,18 @@ $$</p><p>This is an <em>extremely</em> useful theorem. At least in my career, th
 \int_{-\infty}^\infty |f(x)|^2\,\mathrm{d}x = \int_{-\infty}^\infty |F(s)|^2\,\mathrm{d}s.
 $$</p><h3 id=autocorrelation-theorem>Autocorrelation theorem</h3><p>The autocorrelation of a function is</p><p>$$
 f(x) * f(x) = \int_{-\infty}^\infty f^{*}(u) f(u + x)\,\mathrm{d}u
-$$</p><p>and it has the Fourier transform \(|F(s)|^2\).</p><p>If you&rsquo;ve ever worked with (stationary) Gaussian processes (e.g., squared-exponential, Matern, etc&mldr;), you might recognize this relationship between the autocorrelation (the kernel function) and the power spectrum of the Gaussian process.</p></article></main></div></div></main><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+$$</p><p>and it has the Fourier transform \(|F(s)|^2\).</p><p>If you&rsquo;ve ever worked with (stationary) Gaussian processes (e.g., squared-exponential, Matern, etc&mldr;), you might recognize this relationship between the autocorrelation (the kernel function) and the power spectrum of the Gaussian process.</p><h3 id=the-derivative-theorem>The derivative theorem</h3><p>If</p><p>$$
+f(x) \leftrightharpoons F(s)
+$$</p><p>then</p><p>$$
+f^\prime(x) \leftrightharpoons i 2 \pi s F(s).
+$$</p><h3 id=using-the-transform-pairs>Using the transform pairs</h3><p>Now that we have a few basic transform pairs, and some of the transform theorems, you can mix and match these to build up a library of new transform pairs. You will explore this in the problem set.</p><h3 id=definite-integral>Definite integral</h3><p>The zero-valued frequency of a Fourier transform is equal to the definite integral of a function over all space</p><p>$$
+\int_{-\infty}^\infty f(x)\,\mathrm{d}x = F(0).
+$$</p><p>I.e., to compute the area under the curve, you can just read off the zero-frequency value of the Fourier transform.</p><h3 id=first-moment>First moment</h3><p>The first moment of \(f(x)\) about the origin is</p><p>$$
+\int_{-\infty}^\infty x f(x)\,\mathrm{d}x
+$$</p><p>Using the derivative theorem (not shown), you can determine that the first moment \(\bar{f}\) is</p><p>$$
+\bar{f} = \int_{-\infty}^\infty x f(x)\,\mathrm{d}x = \frac{F^\prime(0)}{-2 \pi i}
+$$
+i.e., the slope of the Fourier transform evaluated at \(s = 0\), times \(-1/2 \pi i\).</p><h3 id=second-moment>Second moment</h3><p>Second moment (moment of inertia) is given by</p><p>$$
+\int_{-\infty}^\infty x^2 f(x)\,\mathrm{d}x = -\frac{1}{4 \pi^2} F^{\prime\prime}(0).
+$$</p><figure><img src=second-moment.png alt="Credit: Bracewell Fig 8.4"><figcaption><p>Credit: Bracewell Fig 8.4</p></figcaption></figure><p>Similar arguments extend to variance \(\sigma^2\) as we had mentioned with regards to the uncertainty principle.</p><h2 id=smoothness-and-compactness>Smoothness and compactness</h2><p>In general, the smoother a function is in the time domain, the more compact its Fourier transform will be in the frequency domain.</p><p>Smoother functions will have a larger number of continuous derivatives. Something like the Gaussian envelope \(\exp(-\pi x^2)\) is &ldquo;as smooth as possible&rdquo; and therefore its Fourier transform (also a Gaussian envelope) is as compact as possible.</p></article></main></div></div></main><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script></body></html>
