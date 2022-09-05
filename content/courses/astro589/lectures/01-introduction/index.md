@@ -4,6 +4,8 @@ date: 2022-08-24
 publishdate: 2022-06-21
 ---
 
+* [Zoom recording](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+1/1_jr8qrgi1)
+
 # References and Resources for this lecture
 
 Full reference information can always be found in the [syllabus]({{<relref "/courses/astro589/syllabus">}}), under "References Materials."
