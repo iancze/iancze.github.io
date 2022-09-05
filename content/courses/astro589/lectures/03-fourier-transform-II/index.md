@@ -15,6 +15,11 @@ draft: true
 ## Review *of last time*
 
 * Defined Fourier transform, inverse
+$$
+F(s) = \int_{-\infty}^{\infty} f(x) e^{-i 2 \pi x s}\\,\mathrm{d}x
+$$
+
+* Note that because \\(x\\) and \\(s\\) appear in the argument of the exponential, their product must be dimensionless. This means that they will also have inverse units, e.g., "seconds" and "cycles per second."
 * Introduced convolution, impluse symbol, and theorems
 
 ## Where are we headed *today*?
@@ -22,7 +27,6 @@ draft: true
 * Finish up Fourier transform theorems
 * Nyquist sampling theorem
 * Discrete Fourier Transform
-* If time: windowing and sidelobes
 
 ## Continuing from last time: *Fourier transform theorems*
 
@@ -48,7 +52,7 @@ $$
 f(x) * g(x) \leftrightharpoons F(s)G(s).
 $$
 
-This is an *extremely* useful theorem. At least in my career, this, and concepts related to sampling, have been the ones I have used the most often. You may have already used this theorem (numerically) if you've ever carried out a convolution operation using FFTconvolve functions in Python, which can be dramatically faster than directly implementing the convolution, at least for certain array sizes.
+This is an *extremely* useful theorem. At least in my career, this, and concepts related to sampling, have been the ones I have used the most often. You may have already used this theorem (numerically) if you've ever carried out a convolution operation using [scipy.signal.fftconvolve](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.fftconvolve.html) in Python, which can be dramatically faster than directly implementing the convolution, at least for certain array sizes.
 
 ### Rayleigh's theorem (Parseval's theorem for Fourier Series)
 
@@ -68,7 +72,16 @@ $$
 f(x) \* f(x) = \int_{-\infty}^\infty f^{\*}(u) f(u + x)\\,\mathrm{d}u
 $$
 
-and it has the Fourier transform \\(|F(s)|^2\\).
+and it has the Fourier transform
+$$
+f(x) \* f(x) \leftrightharpoons |F(s)|^2.
+$$
+
+Thus, the power spectrum is the Fourier transform of the autocorrelation function. It can also be computed directly by taking the "mod-squared" of \\(F(s)\\),
+
+$$
+|F|^2 = F F^*.
+$$
 
 If you've ever worked with (stationary) Gaussian processes (e.g., squared-exponential, Matern, etc...), you might recognize this relationship between the autocorrelation (the kernel function) and the power spectrum of the Gaussian process.
 
@@ -140,10 +153,12 @@ Smoother functions will have a larger number of continuous derivatives.  Somethi
 
 We can say that we have some (electrical) waveform 
 $$
-V_1(t) = A \cos 2 (\pi f t)
+V_1(t) = A \cos (2 \pi f t)
 $$ which is a single-valued function of time. You can think of this as a voltage time-series or another physical quantity. By definition, the waveform is real.
 
 Let's put on our electrical/acoustical/mechanical engineering hats for a moment and consider that a *filter* is a physical system with an input an and output, e.g., something that is transmitting vibrations or oscillations, like our waveform.
+
+{{< figure src="filter.png" caption="How a filter changes the amplitude and phase of an waveform. Credit: Ian Czekala" >}}
 
 If we feed our waveform into a *linear* filter, we get output
 $$
@@ -152,18 +167,16 @@ $$
 
 The output is still a waveform, but its amplitude and its phase have changed. These changes are likely frequency dependent, too.
 
-TODO: [Draw an example of the waveform being attenuated and shifted in phase].
-
 We can specify the filter by a frequency-dependent quantity \\(T(f)\\) called the *transfer function*. It is a complex-valued function (having both an amplitude and a phase) and is given by
 $$
 T(f) = \frac{B}{A}e^{i \phi}.
 $$
 
-Interesting, perhaps, but maybe not immediately obviously useful. Let's introduce the *spectrum* and we'll circle back to the transfer function.
+Interesting, perhaps, but maybe not immediately obviously useful. Let's introduce the *spectrum* and then circle back to the transfer function.
 
-### Frequency domain
+### Obtaining \\(V_2\\) using the frequency domain
 
-The *spectrum* of the waveform is the Fourier transform of \\(V(t)\\), which we'll call \\(S(f)\\) in this section. We've broken slightly from our \\(f \leftrightharpoons F\\) notation, but \\(V \leftrightharpoons S\\) is a classic in the signal processing and electrical engineering fields.
+The *spectrum* of the waveform is the Fourier transform of \\(V(t)\\), which we'll call \\(S(f)\\) in this section. We've broken slightly from our \\(f \leftrightharpoons F\\) notation, but \\(V \leftrightharpoons S\\) is a classic in the signal processing and electrical engineering fields, so we'll at least build familiarity with it in this example.
 
 The "spectrum" here is just the Fourier transform quantity, it can definitely be complex-valued. 
 
@@ -174,11 +187,7 @@ $$
 \mathrm{ergs}\\;\mathrm{s}^{-1}\\;\mathrm{cm}^{-2}\\;\mathrm{Hz}^{-1}.
 $$
 
-The clue is in the \\(\mathrm{ergs}\\;\mathrm{s}^{-1}\\) part, which we could also write in terms of "watts" if we wanted to be strictly S.I. about it. When we are measuring the electromagnetic spectrum, we are actually measuring the **power** spectral density, \\(|F(\nu)|^2\\). The absolute squared means
-$$
-|F|^2 = F F^*
-$$
-i.e., the quantity \\(|F(\nu)|^2\\) is real-valued, and is the reason why you never hear about measurements of the electromagnetic spectrum containing imaginary values!
+The clue is in the \\(\mathrm{ergs}\\;\mathrm{s}^{-1}\\) part, which we could also write in terms of "watts" if we wanted to be strictly S.I. about it. When we are measuring the electromagnetic spectrum, we are actually measuring the **power** spectral density, \\(|F(\nu)|^2\\). The absolute squared means the quantity \\(|F(\nu)|^2\\) is real-valued, and is the reason why you never hear about measurements of the electromagnetic spectrum containing imaginary values!
 
 In this course, at least, we'll try to be explicit about which spectrum we're referring to. When we actually mean power spectrum, we'll try to call it as such. Otherwise, "spectrum" will refer to a quantity like \\(S\\).
 
@@ -199,13 +208,12 @@ $$
 
 I.e., the spectrum of the output waveform is simply the spectrum of the input waveform *multiplied* by the transfer function. 
 
-Then you can get \\(V_2(t)\\) by
+Once you have \\(S_2\\), then you can get \\(V_2(t)\\) from
 $$
 V_2 \leftrightharpoons S_2.
 $$
 
-
-TODO: the square showing the relationship between these quantities.
+### Obtaining \\(V_2\\) using the time domain
 
 Now let's think of digital signal processing, where you wanted to practically apply a filter to some waveform to produce a new waveform. As we just outlined, you could acquire \\(V_1(t)\\), Fourier transform it to access its spectrum \\(S_1(f)\\), multiply by the transfer function \\(T_(f)\\), and then do the inverse Fourier transform to get \\(V_2(t)\\). Is there a way to do this *directly* in the time domain? What if you don't have the complete waveform all at once?
 
@@ -219,6 +227,12 @@ and we'd have
 $$
 V_2(t) = I(t) * V_1(t).
 $$
+
+To summarize, 
+{{< figure src="square.png" caption="Credit Bracewell, Chapter 9.">}}
+
+
+### Determining \\(I(t)\\)
 
 If you had some system already in place, and you wanted to determine \\(I(t)\\) experimentally, what is one way you could do it? What waveform could you send the system?
 
@@ -416,3 +430,9 @@ So with typical setups the DFT’s output can always be referred to units of cyc
 Next week we'll cover the FFT, and we'll talk more about how to use the FFT to take transforms of functions when we need to care about the units.
 
 We'll also discuss how one "packs" the array of samples.
+
+
+## Figure list:
+
+* Filter in/out
+* 
