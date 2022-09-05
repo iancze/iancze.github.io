@@ -199,42 +199,204 @@ $$
 
 I.e., the spectrum of the output waveform is simply the spectrum of the input waveform *multiplied* by the transfer function. 
 
-TODO: the square showing the relationship between these quantities.
-
-Now let's think of digital signal processing, where you wanted to practically apply a filter to some waveform to get a new waveform. As we just outlined, you could acquire \\(V_1(t)\\), Fourier transform it to access its spectrum \\(S_1(f)\\), multiply by the transfer function \\(T_(f)\\), and then do the inverse Fourier transform to get \\(V_2(t)\\). Is there a way to do this *directly* in the time domain? 
-
-Convolutional filtering in the time domain. You can think of a running average as a type of convolutional filter. It has effects in the spectral domain too.
-
-
-So the filter can be defined by convolution with \\(I(t)\\) in the time domain
-$$
-V_2(t) = I(t) * V_1(t)
-$$
-or by multiplication via a transfer function in the Fourier domain
-$$
-S_2(f) = T(f) S_1(f) 
-$$
-and then you can get \\(V_2(t)\\) by
+Then you can get \\(V_2(t)\\) by
 $$
 V_2 \leftrightharpoons S_2.
 $$
 
 
+TODO: the square showing the relationship between these quantities.
+
+Now let's think of digital signal processing, where you wanted to practically apply a filter to some waveform to produce a new waveform. As we just outlined, you could acquire \\(V_1(t)\\), Fourier transform it to access its spectrum \\(S_1(f)\\), multiply by the transfer function \\(T_(f)\\), and then do the inverse Fourier transform to get \\(V_2(t)\\). Is there a way to do this *directly* in the time domain? What if you don't have the complete waveform all at once?
+
+The answer is provided by the convolution theorem for Fourier transforms. Since the transfer function is applied via a multiplication in the Fourier domain, we could equivalently carry out the same operation by a convolution in the time domain.
+
+The convolutional kernel would be
+$$
+I(t) \leftrightharpoons T(f)
+$$
+and we'd have 
+$$
+V_2(t) = I(t) * V_1(t).
+$$
+
+If you had some system already in place, and you wanted to determine \\(I(t)\\) experimentally, what is one way you could do it? What waveform could you send the system?
+
+One simple option would be to send 
+$$
+V_1(t) = \delta(t),
+$$
+then
+$$
+V_2(t) = I(t) * \delta(t) = I(t).
+$$
+
+## Nyquist-Shannon sampling
+
+Thus far we have been talking about continuous functions. In the world of data, however, we're frequently dealing with discrete data points, which are presumed to be *samples* of some unknown function. Maybe you're the one designing the experiment to capture these data points, or maybe you've just been handed some dataset.
+
+Concisely put, the *sampling theorem* states that under a certain condition, a function can be *completely* reconstructed from a set of discrete samples, without information loss. I.e., the set of discrete samples is fully equivalent to having access to the full set of function values. Today, this sampling theorem is most commonly known as the Nyquist-Shannon sampling theorem, also the Whittaker–Nyquist–Shannon theorem, or simply "the sampling theorem."
+
+TODO: [Draw a bunch of data points, and sketch possible functions going through them, some oversampled and some undersampled].
+
+If we were to try to use these data points to actually reconstruct a function, then what sort of constraint would we need to impose on the function? We'd want to place some constraint on its spectrum, i.e., that there are no higher frequency components oscillating around faster than our sampling points.
+
+TODO: [Could split the function into higher and lower frequency components too, since linear]
+
+### Aliasing
+
+{{< figure src="sine-wave.png" caption="Given a set of discrete samples, there are a multitude of sine waves that , when the frequency of one sine wave is above 1/2 the sample rate. Credit: Wikipedia Pluke" >}}
+
+Stroboscopic effect, also called rolling shutter effect. 
+
+* [Youtube/SmarterEveryDay](https://www.youtube.com/watch?v=dNVtMmLlnoE&ab_channel=SmarterEveryDay).
+* [Stationary helicopter](https://www.youtube.com/watch?v=smDpCsVVgPA&ab_channel=Edyourself).
+* Exoplanet transits! [Dawson and Fabrycky 2010](https://ui.adsabs.harvard.edu/abs/2010ApJ...722..937D/abstract) find a shorter period for the transiting exoplanet 55 Cnc e, previously confounded by the timing of the RV observations.
+
+{{< figure src="band-limited.png" caption="Credit: Bracewell Fig 10.2" >}}
+
+When this criterion is met relative to the sampling spacing, the function is called *band-limited*. This comes about because of the band-pass in the frequency domain being limited.
+
+If \\(s_c\\) is the critical frequency defining the band-limited nature of the signal, then so long as the function is sampled at equal intervals not exceeding \\(1/2 s_c\\) then the function is properly sampled.
+
+Let's derive this result and use our understanding of the sampling/replicating theorem.
+
+Recall that the "shah" function is an infinite series of delta functions spaced a unit dimension apart, and that it is its own Fourier transform
+$$
+\mathrm{shah}(x) \leftrightharpoons \mathrm{shah}(s).
+$$
+
+We will use \\(f(x) \mathrm{shah}(x)\\) to represent sampling of the function. As we had talked about in the last lecture, this had consequences for the Fourier transform
+$$
+f(x) \mathrm{shah}(x) \leftrightharpoons F(s) * \mathrm{shah}(s).
+$$
+If the delta functions of the shah get closer in the \\(x\\) domain, then they spread out in the Fourier domain, and vice-versa.
+
+
+We can adjust the spacing of the samples by dilating or shrinking the shah function \\(\mathrm{shah}(x/\tau)\\). According to the similarity theorem, this has an effect in the frequency domain
+$$
+f(x) \mathrm{shah}(x/\tau) \leftrightharpoons F(s) * \tau \mathrm{shah}(\tau s).
+$$
+
+
+{{< figure src="sampling-demonstration.png" caption="Credit: Bracewell Fig 10.3" >}}
+
+So lets come back and make a quantitative statement of the sampling theorem (Bracewell):
+
+*A function whose Fourier transform is zero for \\(|s| > s_c\\) is fully specified by values spaced at equal intervals not exceeding \\(1/2 s_c\\).*
+
+
+
+### Convolutional kernels
+
+Now let's talk about how we would actually reconstruct the continuous function from a set of samples.
+
+Multiply by boxcar in Fourier domain to completely truncate higher order terms. This is equivalent to sinc interpolation in the time domain.
+
+---
+
+Let's circle back to our discussion on transfer functions and convolutional kernels
+
+A side note here that this discussion has huge implications for interpolation---creating a continuous representation from discrete points---which can also be thought of as a convolution. For example, whether we do nearest-neighbor, linear, or cubic, or a "band-limited" interpolation,
+
+TOD: [Draw a bunch of points and then do linear or cubic interpolation]
+
+will play an important role in the spectral properties of the resulting waveform. This is because each of these types of interpolation can be cast as convolution with a different type of kernel (tophat, triangle, sinc, etc), which have
+
 This plays a role in interpolation.
 
-Linear interpolation. 
+Linear interpolation.
 
 Sinc or "band-limited" interpolation.
 
-## Nyquist sampling
 
-* Role of compressed sensing to go "sub-Nyquist" sampling
+### Compressed sensing 
+
+You may have heard of "compressed sensing," which is one of major signal processing results of the last few decades. The idea is that you can reconstruct a functional form using far fewer samples than required for the Nyquist rate, using some dictionary of functional forms, or knowledege that the signal may be sparse. You can, indeed, perfectly reconstruct the signal through optimization using the \\(L_1\\) norm. If you don't want to make the assumption that your signal is sparse, though, it's a good idea to sample at the Nyquist rate.
+
+## Fourier series
+
+You probably first encountered Fourier series as part of your calculus course and later on as part of a partial differential equations course. 
+Say we have some periodic function \\(g(x)\\), then the Fourier series associated with this is
+$$
+a_0 + \sum_1^\infty (a_n \cos 2 \pi n f x + b_n \sin 2 \pi n f x)
+$$
+where the Fourier coefficients are determined by
+$$
+a_0 = \frac{1}{T} \int_{-T/2}^{T/2} g(x) \\,\mathrm{d}x
+$$
+
+$$
+a_n = \frac{1}{T} \int_{-T/2}^{T/2} g(x) \cos 2 \pi n f x \\,\mathrm{d}x
+$$
+
+$$
+b_n = \frac{1}{T} \int_{-T/2}^{T/2} g(x) \sin 2 \pi n f x \\,\mathrm{d}x
+$$
+
+i.e., we've projected the function onto its basis set of sines and cosines.
+
+Already, I'm sure you are starting to see the close connection with what we've discussed of the Fourier transform. Traditionally, Fourier series are used as a jumping off point for the discussion of the Fourier transform.
+
+In the last lecture, however, we signaled our intention to take the opposite approach, whereby we skipped over Fourier series and *started* with the idea that Fourier transforms exist because we observe physical systems which exhibit their behavior. Now, let's unify the discussion and demonstrate the Fourier series as an extreme situation of the Fourier transform.
+
+Let's revisit the FT of a sine wave example, presented as two delta functions. Or FT of a cosine wave.
+
+TODO: Figures: hand draw, then Adobe.
+
+Strictly periodic. Convolution with some function with Shah to create an infinitely periodic function.
+
+This is as though you've taken the same transform of F and then multiplied it by the Shah to create discrete samples of the spectrum, called line spectra. Because 
+
+Line spectra.
 
 ## The Discrete Fourier transform (DFT)
 
+Now we'll talk about how we deal with samples of data. We'll stick with the same example that we're dealing with a function of time. But rather than \\(t\\), having units of seconds, we'll simply label each data point by an index \\(m\\) which takes on non-negative, integer values like \\(m = 0, 1, \ldots, N\\). The forward discrete Fourier transform (DFT) is 
+$$
+F_k = \sum_{m=0}^{N-1} f_m \exp \left ( - 2 \pi i \frac{m k}{N} \right)
+$$
+and we could compute \\(F_k\\) for \\(k = 0, 1, \ldots, N-1\\).
+
+Here, the discrete index variable \\(k\\) has replaced the continuous-frequency variable \\(s\\), just like \\(m\\) replaced the continuous-time variable \\(t\\).
+
+The inverse discrete Fourier transform is
+$$
+f_m = \frac{1}{N} \sum_{k=0}^{N -1} F_k \exp \left ( 2 \pi i \frac{m k}{N}\right).
+$$
+Like the continuous-Fourier transform, one of the differences from the forward is the \\(+i\\) in the exponential. The other is the inclusion of the normalization pre-factor.
+
+Note: depending on whom you talk to, you'll see a wide variety of conventions as to where the normalization prefactor goes and where the \\(2 \pi\\) lives. The convention presented here is the same one used by the [Python/NumPy package](https://numpy.org/doc/stable/reference/routines.fft.html#module-numpy.fft) and the [Julia/AbstractFFTs.jl](https://juliamath.github.io/AbstractFFTs.jl/stable/api/#Public-Interface) package, so it *should* be the one you encounter most frequently.
+
+Like the continuous Fourier transform, if you take the DFT of a set of samples and then take the iDFT of that, you will end up with the original set of samples.
+
 ### Units of the DFT 
 
-The DFT only knows that it was fed a set of equally spaced samples (n).
+The DFT only knows/assumes that it was fed a set of equally spaced samples
+$$
+f_m = f(x_m)
+$$
+where 
+$$
+m = 0, 1, \ldots, N.
+$$
+
+There isn't any information about what type of variable \\(x\\) is or what the spacing 
+$$
+\Delta x = x_{m+1} -x_m 
+$$
+is.
+
+So, at its most abstract, the DFT takes in a bunch of \\(N\\) samples spaced \\(\Delta x\\) apart and returns \\(N\\) samples corresponding to the Fourier components. The spacing \\(\Delta k\\) of the frequency axis is in cycles/sample.
+
+To make this concrete, let's say we have a time series of samples \\(\\{f_m\\}\\) and we know that \\(\Delta x = 0.1\\) seconds.
+
+The spacing in the frequency domain will be 1/()
+
+What 
+To make th
+
+See also [fftfreq](https://numpy.org/doc/stable/reference/generated/numpy.fft.fftfreq.html#numpy.fft.fftfreq).
 
 We can express these units in cycles/sample by dividing frequencies in cycles/set by the number of evenly spaced samples/set  – watch how the units cancel out – to obtain the frequency range
  from 0 to almost 1 cycle/sample in 1/
@@ -246,5 +408,11 @@ So with typical setups the DFT’s output can always be referred to units of cyc
 
 <https://www.strollswithmydog.com/units-of-discrete-fourier-transform/>
 
+
+* What have we assumed about the periodic nature of the samples?
+
 * Windowing / response / filters
 
+Next week we'll cover the FFT, and we'll talk more about how to use the FFT to take transforms of functions when we need to care about the units.
+
+We'll also discuss how one "packs" the array of samples.

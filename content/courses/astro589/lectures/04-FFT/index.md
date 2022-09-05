@@ -5,6 +5,9 @@ publishdate: 2022-08-21
 draft: true
 ---
 
+
+{{< figure src="dft-cyclical.png" caption="Credit: Bracewell Fig 11.4" >}}
+
 * Mention that the FFT is a linear operator
 * Dynamic power spectrum / spectrogram
 
