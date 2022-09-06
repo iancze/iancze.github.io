@@ -125,9 +125,7 @@ There are many additional resources that will be helpful during this course (and
 
 ## Masking Policy
 
-We encourage you to get COVID-19 vaccinated and follow University policies on masking, especially in indoor spaces. In consultation with background rates in Centre County, masks may be required part or all of the fall semester (see policy below).
-
-*University policy*: Penn State University requires everyone to wear a face mask in all university buildings, including classrooms, regardless of vaccination status. ALL STUDENTS MUST wear a mask appropriately (i.e., covering both your mouth and nose) while you are indoors on campus.  This is to protect your health and safety as well as the health and safety of your classmates, instructor, and the university community.   Anyone attending class without a mask will be asked to put one on or leave.  Instructors may end class if anyone present refuses to appropriately wear a mask for the duration of class. Students who refuse to wear masks appropriately may face disciplinary action for Code of Conduct violations.  If you feel you cannot wear a mask during class, please speak with your adviser immediately about your options for altering your schedule.
+We encourage you to get COVID-19 vaccinated and follow University policies on masking, especially in indoor spaces. In consultation with background rates in Centre County, masks may be required part or all of the fall semester. Please consult [PSU VirusInfo](https://virusinfo.psu.edu/) for the latest policy.
 
 ## Academic Integrity
 

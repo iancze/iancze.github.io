@@ -384,6 +384,9 @@ In the last lecture, however, we signaled our intention to take the opposite app
 
 Let's revisit the FT of a sine wave example, presented as two delta functions. Or FT of a cosine wave.
 
+{{< figure src="cosine.png" caption="Credit: Bracewell, appendix" >}}
+{{< figure src="sine.png" caption="Credit: Bracewell, appendix" >}}
+
 TODO: Figures: hand draw, then Adobe.
 
 Strictly periodic. Convolution with some function with Shah to create an infinitely periodic function.
