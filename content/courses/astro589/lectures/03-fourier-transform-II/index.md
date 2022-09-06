@@ -247,81 +247,109 @@ $$
 
 ## Nyquist-Shannon sampling
 
-Thus far we have been talking about continuous functions. In the world of data, however, we're frequently dealing with discrete data points, which are presumed to be *samples* of some unknown function. Maybe you're the one designing the experiment to capture these data points, or maybe you've just been handed some dataset.
-
-Concisely put, the *sampling theorem* states that under a certain condition, a function can be *completely* reconstructed from a set of discrete samples, without information loss. I.e., the set of discrete samples is fully equivalent to having access to the full set of function values. Today, this sampling theorem is most commonly known as the Nyquist-Shannon sampling theorem, also the Whittaker–Nyquist–Shannon theorem, or simply "the sampling theorem."
+Thus far we have been talking about continuous functions. As astrophysicists, though, we're frequently dealing with discrete data points, which are presumed to be *samples* of some unknown function. Maybe you're the one designing the experiment to capture these data points, or maybe you've just been handed some dataset.
 
 TODO: [Draw a bunch of data points, and sketch possible functions going through them, some oversampled and some undersampled].
 
+Concisely put, the *sampling theorem* states that under a certain condition, a function can be *completely* reconstructed from a set of discrete samples---without information loss. I.e., the set of discrete samples is *fully equivalent* to having access to the full set of function values. Today, this sampling theorem is known as the Nyquist-Shannon sampling theorem, the Whittaker–Nyquist–Shannon theorem, or simply "the sampling theorem."
+
+TODO: [Sketch possible functions going through them, some oversampled and some undersampled].
+
 If we were to try to use these data points to actually reconstruct a function, then what sort of constraint would we need to impose on the function? We'd want to place some constraint on its spectrum, i.e., that there are no higher frequency components oscillating around faster than our sampling points.
 
-TODO: [Could split the function into higher and lower frequency components too, since linear]
+Before we dive into the derivation of the sampling theorem, let's first take another look at what can go wrong when you undersample a time series. 
 
 ### Aliasing
 
-{{< figure src="sine-wave.png" caption="Given a set of discrete samples, there are a multitude of sine waves that , when the frequency of one sine wave is above 1/2 the sample rate. Credit: Wikipedia Pluke" >}}
+{{< figure src="sine-wave.png" caption="If the true signal is given by the solid line, but we *undersample* it, then the sine-wave we naively reconstruct from the samples would have the wrong frequency. Here we would say that the higher frequency signal has been aliased into the lower frequency range. Credit: Wikipedia Pluke" >}}
 
-Stroboscopic effect, also called rolling shutter effect. 
+This is also called the Stroboscopic effect. There are some nice examples online:
 
 * [Youtube/SmarterEveryDay](https://www.youtube.com/watch?v=dNVtMmLlnoE&ab_channel=SmarterEveryDay).
 * [Stationary helicopter](https://www.youtube.com/watch?v=smDpCsVVgPA&ab_channel=Edyourself).
-* Exoplanet transits! [Dawson and Fabrycky 2010](https://ui.adsabs.harvard.edu/abs/2010ApJ...722..937D/abstract) find a shorter period for the transiting exoplanet 55 Cnc e, previously confounded by the timing of the RV observations.
+* Exoplanet transits! [Dawson and Fabrycky 2010](https://ui.adsabs.harvard.edu/abs/2010ApJ...722..937D/abstract) find a shorter period for the exoplanet 55 Cnc e, previously confounded by the timing of the RV observations.
 
-{{< figure src="band-limited.png" caption="Credit: Bracewell Fig 10.2" >}}
+### Derivation of sampling theorem
 
-When this criterion is met relative to the sampling spacing, the function is called *band-limited*. This comes about because of the band-pass in the frequency domain being limited.
-
-If \\(s_c\\) is the critical frequency defining the band-limited nature of the signal, then so long as the function is sampled at equal intervals not exceeding \\(1/2 s_c\\) then the function is properly sampled.
-
-Let's derive this result and use our understanding of the sampling/replicating theorem.
+Now, let's use our understanding of Fourier transforms and the sampling/replicating function to develop a precise formulation of the sampling theorem.
 
 Recall that the "shah" function is an infinite series of delta functions spaced a unit dimension apart, and that it is its own Fourier transform
 $$
 \mathrm{shah}(x) \leftrightharpoons \mathrm{shah}(s).
 $$
 
-We will use \\(f(x) \mathrm{shah}(x)\\) to represent sampling of the function. As we had talked about in the last lecture, this had consequences for the Fourier transform
-$$
-f(x) \mathrm{shah}(x) \leftrightharpoons F(s) * \mathrm{shah}(s).
-$$
-If the delta functions of the shah get closer in the \\(x\\) domain, then they spread out in the Fourier domain, and vice-versa.
+Via the similarity theorem, if the delta functions of the shah get closer in the \\(x\\) domain, then they spread out in the Fourier domain, and vice-versa.
 
+We can adjust the spacing of the samples by dilating or shrinking the shah function by some factor. Here, we'll write this as the sampling interval \\(\Delta x = \tau\\) or the sampling frequency \\(1/\tau\\). 
 
-We can adjust the spacing of the samples by dilating or shrinking the shah function \\(\mathrm{shah}(x/\tau)\\). According to the similarity theorem, this has an effect in the frequency domain
+According to the similarity theorem, adjusting the sampling frequency in the \\(x\\) domain has the following effect in the frequency domain
 $$
-f(x) \mathrm{shah}(x/\tau) \leftrightharpoons F(s) * \tau \mathrm{shah}(\tau s).
+\mathrm{shah}(x/\tau) \leftrightharpoons \tau \mathrm{shah}(\tau s).
 $$
 
+For example, if \\(\tau = 0.2\\), then we have
 
-{{< figure src="sampling-demonstration.png" caption="Credit: Bracewell Fig 10.3" >}}
+{{< figure src="panel-b.png" caption="The shah function is its own Fourier transform. Via the similarity theorem, if we compress the shah function in the time domain (left), we expand it in the Fourier domain (right). Credit: Bracewell, Fig 10.3">}}
 
-So lets come back and make a quantitative statement of the sampling theorem (Bracewell):
+Now let's consider a function and its Fourier transform
 
-*A function whose Fourier transform is zero for \\(|s| > s_c\\) is fully specified by values spaced at equal intervals not exceeding \\(1/2 s_c\\).*
+{{< figure src="function.png" caption="A generic function (left) and its Fourier transform (right). We say that this function is 'band-limited' because its Fourier transform is 0 for all frequencies below some *cutoff frequency* \\(|s| < s_c\\). Credit: Bracewell Fig 10.2" >}}
+
+As before, we will use multiplication by the shah function to represent sampling of the function. 
+
+{{< figure src="sampled-function.png" caption="Left: the sampled version of \\(f\\), which has the Fourier transform on the right. So long as the sampling frequency exceeds twice the cutoff frequency, the Fourier transform 'islands' do not overlap (top two rows). Credit: Bracewell Fig 10.3" >}}
+
+The non-overlappingness of the 'islands' is the key to properly sampling a function, and we'll see why in a moment when we talk about reconstruction. But first, let's make a quantitative statement of the sampling theorem (Bracewell):
+
+If \\(s_c\\) is the cutoff frequency defining the band-limited nature of the signal, then so long as the function is sampled at equal intervals not exceeding \\(\Delta x = 1/(2 s_c)\\) then the function is properly sampled, i.e.
+$$
+\frac{1}{\tau} \geq 2 s_c.
+$$
 
 
+### Restoration of signal kernels
+
+Now let's talk about how we would actually reconstruct the continuous function from a set of samples. Let's re-examine our plot of the Fourier domain
+
+{{< figure src="reconstruction.png" caption="Credit: Bracewell Fig 10.3" >}}
+
+The "function" on the left is technically not the same (continuous) function that we started with, it is a discrete representation of it. We did just say, though, that if the function was band-limited, then these samples contained all of the same information as if we had access to the full function. So how do we go from these samples back to the full function?
+
+Let's look at the Fourier side of this plot and compare it to the original Fourier side. The main difference is that *this* Fourier plot has repeating 'islands' at progressively higher frequencies, essentially to infinity. How can we get rid of these higher frequency islands?
+
+The answer is to multiply by a boxcar function in Fourier domain, completely truncating these higher order terms. Then, we can do the inverse Fourier transform and recover the original, continuous function.
+
+What is the analogous operation for the time-domain? This is the same thing as we discussed with the transfer function. Since it was a multiplication in the Fourier domain, it is a convolution in the time domain. And the convolutional kernel is the Fourier transform of the boxcar, which is a sinc function.
+
+So, to *exactly* reconstruct a band-limited function from a set of samples, we do sinc-interpolation. 
+
+{{< figure src="sinc-interpolation.png" link="https://www.dsprelated.com/freebooks/pasp/Windowed_Sinc_Interpolation.html" caption="Credit: DSP related." >}}
+
+### Undersampling and aliasing 
+
+If we didn't sample the function at a sufficiently high rate, then we would have overlapping islands. Essentially, the higher frequency components of the Fourier islands are "folded-over" back into the range of frequencies *we thought* was band-limited, resulting in a corrupted signal.
+
+In an alias, a higher frequency signal is masquerading as a lower-frequency signal.
+
+{{< figure src="aliased.png" caption="Credit: Bracewell Fig 10.3" >}}
 
 ### Convolutional kernels
 
-Now let's talk about how we would actually reconstruct the continuous function from a set of samples.
+Now that we've developed our understanding of band-limited functions, sampling, and restoration, let's circle back to our discussion on transfer functions and convolutional kernels.
 
-Multiply by boxcar in Fourier domain to completely truncate higher order terms. This is equivalent to sinc interpolation in the time domain.
+We just said that in order to restore a continuous function from a set of samples, we needed to do sinc-interpolation. What happens if we do one of the more commonly used forms of interpolation, like nearest neighbor or linear?
 
----
+{{< figure src="nearest-neighbor-vs-linear.png" link="https://octave.sourceforge.io/octave/function/interp1.html" caption="Credit: Octave" >}}
 
-Let's circle back to our discussion on transfer functions and convolutional kernels
+We can cast each of these as convolution with a different kind of kernel.
 
-A side note here that this discussion has huge implications for interpolation---creating a continuous representation from discrete points---which can also be thought of as a convolution. For example, whether we do nearest-neighbor, linear, or cubic, or a "band-limited" interpolation,
+{{< figure src="interpolation-kernels.png" link="https://www.researchgate.net/figure/Interpolation-kernels-in-one-dimension-The-width-of-the-support-is-shown-below_fig3_10624120" caption="Credit Jeffrey Tsao." >}}
 
-TOD: [Draw a bunch of points and then do linear or cubic interpolation]
+The nearest neighbor kernel will have a corresponding Fourier transform of a sinc and the linear kernel will have a \\(\mathrm{sinc}^2\\). These functions all have non-zero values above the cutoff frequency. Of these, *only* the sinc function has zero amplitude beyond the cutoff frequency.
 
-will play an important role in the spectral properties of the resulting waveform. This is because each of these types of interpolation can be cast as convolution with a different type of kernel (tophat, triangle, sinc, etc), which have
+So reconstruction of a function using linear interpolation, for example, will introduce higher-frequency features, like these sharp transitions around each data point. Depending on what you're doing the interpolation for, sometimes this matters, sometimes it doesn't. Later on, when we talk about "gridding" of visibility data from radio interferometers, the type of interpolation used will have a big impact on the dynamic range of the resulting images.
 
-This plays a role in interpolation.
-
-Linear interpolation.
-
-Sinc or "band-limited" interpolation.
+**Q**: Why is sinc interpolation generally *not* used in practice? Because the kernel size is large/infinite, you're actually using all of the data points in each and every interpolation. Compare that to linear interpolation, which only uses the two nearest points.
 
 
 ### Compressed sensing 
