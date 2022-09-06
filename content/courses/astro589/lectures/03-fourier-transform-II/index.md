@@ -382,28 +382,82 @@ Already, I'm sure you are starting to see the close connection with what we've d
 
 In the last lecture, however, we signaled our intention to take the opposite approach, whereby we skipped over Fourier series and *started* with the idea that Fourier transforms exist because we observe physical systems which exhibit their behavior. Now, let's unify the discussion and demonstrate the Fourier series as an extreme situation of the Fourier transform.
 
-Let's revisit the FT of a sine wave example, presented as two delta functions. Or FT of a cosine wave.
+### Fourier transform of sine and cosine
 
-{{< figure src="cosine.png" caption="Credit: Bracewell, appendix" >}}
-{{< figure src="sine.png" caption="Credit: Bracewell, appendix" >}}
+Let's put together a number of the theorems that we've discussed to build up our understanding of what a Fourier series looks like in the Fourier domain.
 
-TODO: Figures: hand draw, then Adobe.
+In the previous lecture we introduced the Fourier transform theorem for a delta function located at the origin
 
-Strictly periodic. Convolution with some function with Shah to create an infinitely periodic function.
+$$
+F(s) = \int_{-\infty}^{\infty} \delta(0) \exp (-i 2 \pi x s)\\,\mathrm{d}x = 1
+$$
+which is a constant.
 
-This is as though you've taken the same transform of F and then multiplied it by the Shah to create discrete samples of the spectrum, called line spectra. Because 
+We also introduced the shift theorem, which says
+$$
+f(x - a) \leftrightharpoons \exp(- 2 \pi i a s) F(s).
+$$
 
-Line spectra.
+We can couple these together and write a relationship
+$$
+\delta(x - a) \leftrightharpoons \exp(-2 \pi i a s).
+$$
+
+Now, let's see if we can use this Fourier pair to derive the Fourier pairs for cosine and sine. In your quantum physics or partial differential equations classes, you probably used the Euler identity to write cosine and sine like
+$$
+\cos 2 \pi a s = \frac{e^{i 2 \pi a s} + e^{-i 2 \pi a s}}{2}
+$$
+and
+$$
+\sin 2 \pi a s = \frac{e^{i 2 \pi a s} - e^{-i 2 \pi a s}}{2i}
+$$
+
+So we can do a bit of rearranging and arrive at
+
+$$
+\cos \pi x \leftrightharpoons \mathrm{even}(x) = \frac{1}{2}\delta \left (x +  \frac{1}{2} \right) + \frac{1}{2}\delta \left (x -  \frac{1}{2} \right)
+$$
+and 
+$$
+\sin \pi x \leftrightharpoons i\mathrm{odd}(x) = i \frac{1}{2}\delta \left (x +  \frac{1}{2}\right) - i \frac{1}{2}\delta \left (x -  \frac{1}{2}\right).
+$$
+
+where these symbols are the even and odd impulse pairs.
+
+{{< figure src="even-odd-impulse.png" caption="The Fourier transform pairs of cosine and sine as the even and odd impulse pairs, respectively. Credit: Bracewell Fig 6.1">}}
+
+Now we're well on our way to determining the Fourier spectrum of a Fourier series. The Fourier series is just a sum of sines and cosines at different frequencies. The Fourier transform is a linear operator, so we can just add together the contributions from each component in the Fourier domain
+$$
+a_0 + \sum_1^\infty (a_n \cos 2 \pi n f x + b_n \sin 2 \pi n f x)
+$$
+
+We arrive at the result that the spectrum of a Fourier series is a collection of delta functions whose locations and amplitudes correspond to the frequencies and values of the Fourier coefficients, respectively.
+
+{{< figure src="line-spectra.png" link="https://www.tutorialspoint.com/what-is-fourier-spectrum-theory-and-example#:~:text=The%20graph%20plotted%20between%20the,spectrum%20of%20a%20periodic%20signal.&text=Amplitude%20Spectrum%20%E2%88%92%20The%20amplitude%20spectrum,of%20Fourier%20coefficients%20versus%20frequency" caption="The amplitude of the line spectra corresponding to a Fourier series. Credit: TutorialsPoint">}}
+
+Now that we've derived the Fourier spectrum of a Fourier series, we can see at least two reasons why this represents an extreme situation of the Fourier transform:
+1. The input waveform is strictly periodic
+2. The input waveform is infinite in duration
+
+As we talked about in the last lecture, these conditions are violated in the real world. If we limit the duration of the sine wave to a finite duration (say, by multiplication of a truncated Gaussian (because technically the Gaussian is also non-zero over an infinite domain), which we call a *window function*), then we see what happens in the Fourier domain: the delta functions are broadened by convolution with the Fourier transform of the window function.
+
+{{< figure src="broadening-line.png" caption="Left: the dotted line represents a broad window function to eventually make the waveform finite in duration. Right: this has the effect of broadening the delta functions by convolution with the Fourier transform of the window function. Credit: Bracewell Fig 10.12" >}}
+
 
 ## The Discrete Fourier transform (DFT)
 
-Now we'll talk about how we deal with samples of data. We'll stick with the same example that we're dealing with a function of time. But rather than \\(t\\), having units of seconds, we'll simply label each data point by an index \\(m\\) which takes on non-negative, integer values like \\(m = 0, 1, \ldots, N\\). The forward discrete Fourier transform (DFT) is 
+Now we'll talk about how we deal with samples of data. We'll stick with the same example that we're dealing with a function of time. But rather than \\(t\\), having units of seconds, we'll simply label each data point by an index \\(m\\) which takes on non-negative, integer values like \\(m = 0, 1, \ldots, N\\). 
+
+{{< figure src="DFT-samples.png" caption="Credit: Bracewell Fig 11.2" >}}
+
+The forward discrete Fourier transform (DFT) is 
 $$
 F_k = \sum_{m=0}^{N-1} f_m \exp \left ( - 2 \pi i \frac{m k}{N} \right)
 $$
 and we could compute \\(F_k\\) for \\(k = 0, 1, \ldots, N-1\\).
 
 Here, the discrete index variable \\(k\\) has replaced the continuous-frequency variable \\(s\\), just like \\(m\\) replaced the continuous-time variable \\(t\\).
+
 
 The inverse discrete Fourier transform is
 $$
@@ -426,44 +480,23 @@ $$
 m = 0, 1, \ldots, N.
 $$
 
-There isn't any information about what type of variable \\(x\\) is or what the spacing 
+So, at its most abstract, the DFT takes in a bunch of \\(N\\) samples spaced \\(\Delta x\\) apart and returns \\(N\\) samples corresponding to the Fourier components. The frequency of each component corresponds is given by \\(k/N\\) in units of "cycles per sampling interval."
+
+I.e., so if we had \\(N = 8\\) samples, then the \\(k=3\\) frequency component returned from the DFT would be equal to \\(3/8\\) cycles per "the interval between samples."
+
+On its own, the DFT doesn't provide any information about what type of variable \\(x\\) is or what the spacing is. But there is hope. We can make this concrete, we just have to be careful. Let's say we have a time series of 20 samples \\(\\{f_m\\}\\) and we know that \\(\Delta x = 0.1\\) seconds,
 $$
-\Delta x = x_{m+1} -x_m 
+\Delta x = x_{m+1} -x_m
 $$
-is.
 
-So, at its most abstract, the DFT takes in a bunch of \\(N\\) samples spaced \\(\Delta x\\) apart and returns \\(N\\) samples corresponding to the Fourier components. The spacing \\(\Delta k\\) of the frequency axis is in cycles/sample.
+The spacing in the frequency domain will be 1/20 cycles per 0.1 seconds, or 0.5 Hz. 
 
-To make this concrete, let's say we have a time series of samples \\(\\{f_m\\}\\) and we know that \\(\Delta x = 0.1\\) seconds.
+Next time, we'll 
+* introduce the Fast Fourier transform, which is a special implementation of the DFT 
+* develop some code examples
 
-The spacing in the frequency domain will be 1/()
-
-What 
-To make th
-
-See also [fftfreq](https://numpy.org/doc/stable/reference/generated/numpy.fft.fftfreq.html#numpy.fft.fftfreq).
-
-We can express these units in cycles/sample by dividing frequencies in cycles/set by the number of evenly spaced samples/set  – watch how the units cancel out – to obtain the frequency range
- from 0 to almost 1 cycle/sample in 1/
-
- cycles/sample increments (1/1024th in our example), as shown in Figure
-
- cycles/sample,
-So with typical setups the DFT’s output can always be referred to units of cycles/set and cycles/sample.   In the absence of additional information, however, these units cannot be directly related to linear space or to other physical units.
-
-<https://www.strollswithmydog.com/units-of-discrete-fourier-transform/>
-
+and then revisit some questions that also apply to the DFT:
 
 * What have we assumed about the periodic nature of the samples?
-
+* The input/output arrays---where does the signal "start?" How do we "pack" the arrays?
 * Windowing / response / filters
-
-Next week we'll cover the FFT, and we'll talk more about how to use the FFT to take transforms of functions when we need to care about the units.
-
-We'll also discuss how one "packs" the array of samples.
-
-
-## Figure list:
-
-* Filter in/out
-* 
