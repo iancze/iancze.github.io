@@ -4,6 +4,8 @@ date: 2022-09-07
 publishdate: 2022-09-05
 ---
 
+* [Video recording](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+3/1_607jh3p1)
+
 ## References for today
 * [The Fourier Transform and its Applications](https://catalog.libraries.psu.edu/catalog/2010095) by R. Bracewell
 * [Interferometry and Synthesis in Radio Astronomy](https://catalog.libraries.psu.edu/catalog/20789467) by Thompson, Moran, and Swenson, particularly Appendix 2.1
