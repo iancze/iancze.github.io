@@ -834,6 +834,12 @@ $$&lt;/p>
 $$
 V_2 \leftrightharpoons S_2.
 $$&lt;/p>
+&lt;p>Two examples are low-pass and high-pass filters.&lt;/p>
+&lt;figure>&lt;a href="https://en.wikipedia.org/wiki/Filter_%28signal_processing">&lt;img src="filter-pass.png"
+alt="Examples of different filter transfer functions \(T(f)\). Credit: Wikipedia/SpinningSpark"/>&lt;/a>&lt;figcaption>
+&lt;p>Examples of different filter transfer functions \(T(f)\). Credit: Wikipedia/SpinningSpark&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
 &lt;h3 id="obtaining-v_2-using-the-time-domain">Obtaining \(V_2\) using the time domain&lt;/h3>
 &lt;p>Now let&amp;rsquo;s think of digital signal processing, where you wanted to practically apply a filter to some waveform to produce a new waveform. As we just outlined, you could acquire \(V_1(t)\), Fourier transform it to access its spectrum \(S_1(f)\), multiply by the transfer function \(T_(f)\), and then do the inverse Fourier transform to get \(V_2(t)\). Is there a way to do this &lt;em>directly&lt;/em> in the time domain? What if you don&amp;rsquo;t have the complete waveform all at once?&lt;/p>
 &lt;p>The answer is provided by the convolution theorem for Fourier transforms. Since the transfer function is applied via a multiplication in the Fourier domain, we could equivalently carry out the same operation by a convolution in the time domain.&lt;/p>
@@ -864,9 +870,12 @@ V_2(t) = I(t) * \delta(t) = I(t).
 $$&lt;/p>
 &lt;h2 id="nyquist-shannon-sampling">Nyquist-Shannon sampling&lt;/h2>
 &lt;p>Thus far we have been talking about continuous functions. As astrophysicists, though, we&amp;rsquo;re frequently dealing with discrete data points, which are presumed to be &lt;em>samples&lt;/em> of some unknown function. Maybe you&amp;rsquo;re the one designing the experiment to capture these data points, or maybe you&amp;rsquo;ve just been handed some dataset.&lt;/p>
-&lt;p>TODO: [Draw a bunch of data points, and sketch possible functions going through them, some oversampled and some undersampled].&lt;/p>
+&lt;figure>&lt;img src="lines.png"
+alt="Say you are given a set of (noisless) samples that look like this. What do you think the function should look like in between the points? Credit: Ian Czekala"/>&lt;figcaption>
+&lt;p>Say you are given a set of (noisless) samples that look like this. What do you think the function should look like in between the points? Credit: Ian Czekala&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
 &lt;p>Concisely put, the &lt;em>sampling theorem&lt;/em> states that under a certain condition, a function can be &lt;em>completely&lt;/em> reconstructed from a set of discrete samples&amp;mdash;without information loss. I.e., the set of discrete samples is &lt;em>fully equivalent&lt;/em> to having access to the full set of function values. Today, this sampling theorem is known as the Nyquist-Shannon sampling theorem, the Whittaker–Nyquist–Shannon theorem, or simply &amp;ldquo;the sampling theorem.&amp;rdquo;&lt;/p>
-&lt;p>TODO: [Sketch possible functions going through them, some oversampled and some undersampled].&lt;/p>
 &lt;p>If we were to try to use these data points to actually reconstruct a function, then what sort of constraint would we need to impose on the function? We&amp;rsquo;d want to place some constraint on its spectrum, i.e., that there are no higher frequency components oscillating around faster than our sampling points.&lt;/p>
 &lt;p>Before we dive into the derivation of the sampling theorem, let&amp;rsquo;s first take another look at what can go wrong when you undersample a time series.&lt;/p>
 &lt;h3 id="aliasing">Aliasing&lt;/h3>
@@ -942,7 +951,7 @@ alt="Credit: Bracewell Fig 10.3"/>&lt;figcaption>
 &lt;/figcaption>
 &lt;/figure>
 &lt;h3 id="convolutional-kernels">Convolutional kernels&lt;/h3>
-&lt;p>Now that we&amp;rsquo;ve developed our understanding of band-limited functions, sampling, and restoration, let&amp;rsquo;s circle back to our discussion on transfer functions and convolutional kernels.&lt;/p>
+&lt;p>Now that we&amp;rsquo;ve developed our understanding of band-limited functions, sampling, and restoration, let&amp;rsquo;s make one more point about interpolation and convolutional kernels.&lt;/p>
 &lt;p>We just said that in order to restore a continuous function from a set of samples, we needed to do sinc-interpolation. What happens if we do one of the more commonly used forms of interpolation, like nearest neighbor or linear?&lt;/p>
 &lt;figure>&lt;a href="https://octave.sourceforge.io/octave/function/interp1.html">&lt;img src="nearest-neighbor-vs-linear.png"
 alt="Credit: Octave"/>&lt;/a>&lt;figcaption>
@@ -957,7 +966,7 @@ alt="Credit Jeffrey Tsao."/>&lt;/a>&lt;figcaption>
 &lt;/figure>
 &lt;p>The nearest neighbor kernel will have a corresponding Fourier transform of a sinc and the linear kernel will have a \(\mathrm{sinc}^2\). These functions all have non-zero values above the cutoff frequency. Of these, &lt;em>only&lt;/em> the sinc function has zero amplitude beyond the cutoff frequency.&lt;/p>
 &lt;p>So reconstruction of a function using linear interpolation, for example, will introduce higher-frequency features, like these sharp transitions around each data point. Depending on what you&amp;rsquo;re doing the interpolation for, sometimes this matters, sometimes it doesn&amp;rsquo;t. Later on, when we talk about &amp;ldquo;gridding&amp;rdquo; of visibility data from radio interferometers, the type of interpolation used will have a big impact on the dynamic range of the resulting images.&lt;/p>
-&lt;p>&lt;strong>Q&lt;/strong>: Why is sinc interpolation generally &lt;em>not&lt;/em> used in practice? Because the kernel size is large/infinite, you&amp;rsquo;re actually using all of the data points in each and every interpolation. Compare that to linear interpolation, which only uses the two nearest points.&lt;/p>
+&lt;p>&lt;strong>Q&lt;/strong>: Why is sinc interpolation generally &lt;em>not&lt;/em> used in practice? Because the kernel size is large/infinite, you&amp;rsquo;re actually using all of the data points in each and every interpolation and this can be computationally prohibitive for many applications. Compare that to linear interpolation, which only uses the two nearest points.&lt;/p>
 &lt;h3 id="compressed-sensing">Compressed sensing&lt;/h3>
 &lt;p>You may have heard of &amp;ldquo;compressed sensing,&amp;rdquo; which is one of major signal processing results of the last few decades. The idea is that you can reconstruct a functional form using far fewer samples than required for the Nyquist rate, using some dictionary of functional forms, or knowledege that the signal may be sparse. You can, indeed, perfectly reconstruct the signal through optimization using the \(L_1\) norm. If you don&amp;rsquo;t want to make the assumption that your signal is sparse, though, it&amp;rsquo;s a good idea to sample at the Nyquist rate.&lt;/p>
 &lt;h2 id="fourier-series">Fourier series&lt;/h2>
