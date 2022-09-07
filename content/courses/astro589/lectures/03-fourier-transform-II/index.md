@@ -212,6 +212,10 @@ $$
 V_2 \leftrightharpoons S_2.
 $$
 
+Two examples are low-pass and high-pass filters.
+
+{{< figure src="filter-pass.png" link="https://en.wikipedia.org/wiki/Filter_(signal_processing" caption="Examples of different filter transfer functions \\(T(f)\\). Credit: Wikipedia/SpinningSpark">}}
+
 ### Obtaining \\(V_2\\) using the time domain
 
 Now let's think of digital signal processing, where you wanted to practically apply a filter to some waveform to produce a new waveform. As we just outlined, you could acquire \\(V_1(t)\\), Fourier transform it to access its spectrum \\(S_1(f)\\), multiply by the transfer function \\(T_(f)\\), and then do the inverse Fourier transform to get \\(V_2(t)\\). Is there a way to do this *directly* in the time domain? What if you don't have the complete waveform all at once?
@@ -248,11 +252,9 @@ $$
 
 Thus far we have been talking about continuous functions. As astrophysicists, though, we're frequently dealing with discrete data points, which are presumed to be *samples* of some unknown function. Maybe you're the one designing the experiment to capture these data points, or maybe you've just been handed some dataset.
 
-TODO: [Draw a bunch of data points, and sketch possible functions going through them, some oversampled and some undersampled].
+{{< figure src="lines.png" caption="Say you are given a set of (noisless) samples that look like this. What do you think the function should look like in between the points? Credit: Ian Czekala" >}}
 
 Concisely put, the *sampling theorem* states that under a certain condition, a function can be *completely* reconstructed from a set of discrete samples---without information loss. I.e., the set of discrete samples is *fully equivalent* to having access to the full set of function values. Today, this sampling theorem is known as the Nyquist-Shannon sampling theorem, the Whittaker–Nyquist–Shannon theorem, or simply "the sampling theorem."
-
-TODO: [Sketch possible functions going through them, some oversampled and some undersampled].
 
 If we were to try to use these data points to actually reconstruct a function, then what sort of constraint would we need to impose on the function? We'd want to place some constraint on its spectrum, i.e., that there are no higher frequency components oscillating around faster than our sampling points.
 
@@ -334,7 +336,7 @@ In an alias, a higher frequency signal is masquerading as a lower-frequency sign
 
 ### Convolutional kernels
 
-Now that we've developed our understanding of band-limited functions, sampling, and restoration, let's circle back to our discussion on transfer functions and convolutional kernels.
+Now that we've developed our understanding of band-limited functions, sampling, and restoration, let's make one more point about interpolation and convolutional kernels.
 
 We just said that in order to restore a continuous function from a set of samples, we needed to do sinc-interpolation. What happens if we do one of the more commonly used forms of interpolation, like nearest neighbor or linear?
 
@@ -348,7 +350,7 @@ The nearest neighbor kernel will have a corresponding Fourier transform of a sin
 
 So reconstruction of a function using linear interpolation, for example, will introduce higher-frequency features, like these sharp transitions around each data point. Depending on what you're doing the interpolation for, sometimes this matters, sometimes it doesn't. Later on, when we talk about "gridding" of visibility data from radio interferometers, the type of interpolation used will have a big impact on the dynamic range of the resulting images.
 
-**Q**: Why is sinc interpolation generally *not* used in practice? Because the kernel size is large/infinite, you're actually using all of the data points in each and every interpolation. Compare that to linear interpolation, which only uses the two nearest points.
+**Q**: Why is sinc interpolation generally *not* used in practice? Because the kernel size is large/infinite, you're actually using all of the data points in each and every interpolation and this can be computationally prohibitive for many applications. Compare that to linear interpolation, which only uses the two nearest points.
 
 
 ### Compressed sensing 
