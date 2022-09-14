@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://iancze.github.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Courses on Czekala Group</title><link>https://iancze.github.io/courses/</link><description>Recent content in Courses on Czekala Group</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 07 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://iancze.github.io/courses/index.xml" rel="self" type="application/rss+xml"/><item><title>Syllabus</title><link>https://iancze.github.io/courses/astro589/syllabus/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/syllabus/</guid><description>&lt;h2 id="objective-radio-astronomy-and-interferometric-imaging">Objective: radio astronomy and interferometric imaging&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://iancze.github.io/xml/base.min.xml"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Courses on Czekala Group</title><link>https://iancze.github.io/courses/</link><description>Recent content in Courses on Czekala Group</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 14 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://iancze.github.io/courses/index.xml" rel="self" type="application/rss+xml"/><item><title>Syllabus</title><link>https://iancze.github.io/courses/astro589/syllabus/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/syllabus/</guid><description>&lt;h2 id="objective-radio-astronomy-and-interferometric-imaging">Objective: radio astronomy and interferometric imaging&lt;/h2>
 &lt;p>Interferometric astrophysical observations are a vast and deep topic. The goal of this course is to help students develop a &lt;strong>practical understanding&lt;/strong> of how interferometers (in particular arrays like the VLA or ALMA) &lt;strong>observe an astrophysical source&lt;/strong>, build a &lt;strong>mathematical foundation&lt;/strong> for working with &lt;strong>complex-valued, Fourier-plane data&lt;/strong>, and survey some of the many approaches that are used to &lt;strong>investigate astrophysical phenomena&lt;/strong>, focusing on &lt;strong>forward-modeling&lt;/strong> and &lt;strong>regularized maximum likelihood&lt;/strong> techniques.&lt;/p>
 &lt;h2 id="instructor">Instructor&lt;/h2>
 &lt;ul>
@@ -299,21 +299,21 @@ faculty, staff, and students possess and will endorse to make ECoS a place where
 &lt;td>Aug 31&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-The Fourier Transform I
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/02-fourier-transform-i/>The Fourier Transform I&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Sep 7&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-The Fourier Transform II
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/03-fourier-transform-ii/>The Fourier Transform II&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Sep 14&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-The Fast Fourier Transform and Numerical Implementation
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/04-fft/>The DFT and FFT&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -680,7 +680,138 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>The Fourier Transform II</title><link>https://iancze.github.io/courses/astro589/lectures/03-fourier-transform-ii/</link><pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/03-fourier-transform-ii/</guid><description>&lt;ul>
+&lt;/table></description></item><item><title>The DFT and FFT</title><link>https://iancze.github.io/courses/astro589/lectures/04-fft/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/04-fft/</guid><description>&lt;h2 id="references-for-today">References for today&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/2010095">The Fourier Transform and its Applications&lt;/a> by R. Bracewell&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson, particularly Appendix 2.1&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/34517505">Fourier Analysis and Imaging&lt;/a> by R. Bracewell&lt;/li>
+&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem">Wikipedia on Nyqist-Shannon sampling theorem&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="review-of-last-time">Review &lt;em>of last time&lt;/em>&lt;/h2>
+&lt;ul>
+&lt;li>Convolution/multiplication theorem&lt;/li>
+&lt;li>Band-limited functions&lt;/li>
+&lt;li>Nyquist-Shannon sampling theorem&lt;/li>
+&lt;li>Aliasing&lt;/li>
+&lt;li>&amp;ldquo;Band-limited&amp;rdquo; interpolation with sinc kernel&lt;/li>
+&lt;/ul>
+&lt;h2 id="this-time">This time:&lt;/h2>
+&lt;ul>
+&lt;li>Convolution/Interpolation with different kernels&lt;/li>
+&lt;li>Discrete Fourier Transform (DFT)&lt;/li>
+&lt;/ul>
+&lt;h3 id="convolutional-kernels">Convolutional kernels&lt;/h3>
+&lt;p>Now that we&amp;rsquo;ve developed our understanding of band-limited functions, sampling, and restoration, let&amp;rsquo;s make one more point about interpolation and convolutional kernels.&lt;/p>
+&lt;p>We just said that in order to restore a continuous function from a set of samples, we needed to do sinc-interpolation. What happens if we do one of the more commonly used forms of interpolation, like nearest neighbor or linear?&lt;/p>
+&lt;figure>&lt;a href="https://octave.sourceforge.io/octave/function/interp1.html">&lt;img src="nearest-neighbor-vs-linear.png"
+alt="Credit: Octave"/>&lt;/a>&lt;figcaption>
+&lt;p>Credit: Octave&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>We can cast each of these as convolution with a different kind of kernel.&lt;/p>
+&lt;figure>&lt;a href="https://www.researchgate.net/figure/Interpolation-kernels-in-one-dimension-The-width-of-the-support-is-shown-below_fig3_10624120">&lt;img src="interpolation-kernels.png"
+alt="Credit Jeffrey Tsao."/>&lt;/a>&lt;figcaption>
+&lt;p>Credit Jeffrey Tsao.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>The nearest neighbor kernel will have a corresponding Fourier transform of a sinc and the linear kernel will have a \(\mathrm{sinc}^2\). These functions all have non-zero values above the cutoff frequency. Of these, &lt;em>only&lt;/em> the sinc function has zero amplitude beyond the cutoff frequency.&lt;/p>
+&lt;p>So reconstruction of a function using linear interpolation, for example, will introduce higher-frequency features, like these sharp transitions around each data point. Depending on what you&amp;rsquo;re doing the interpolation for, sometimes this matters, sometimes it doesn&amp;rsquo;t. Later on, when we talk about &amp;ldquo;gridding&amp;rdquo; of visibility data from radio interferometers, the type of interpolation used will have a big impact on the dynamic range of the resulting images.&lt;/p>
+&lt;p>&lt;strong>Q&lt;/strong>: Why is sinc interpolation generally &lt;em>not&lt;/em> used in practice? Because the kernel size is large/infinite, you&amp;rsquo;re actually using all of the data points in each and every interpolation and this can be computationally prohibitive for many applications. Compare that to linear interpolation, which only uses the two nearest points.&lt;/p>
+&lt;h2 id="the-discrete-fourier-transform-dft">The Discrete Fourier transform (DFT)&lt;/h2>
+&lt;p>Now we&amp;rsquo;ll talk about how we deal with samples of data. We&amp;rsquo;ll stick with the same example that we&amp;rsquo;re dealing with a function of time. But rather than \(t\), having units of seconds, we&amp;rsquo;ll simply label each data point by an index \(m\) which takes on non-negative, integer values like \(m = 0, 1, \ldots, N\).&lt;/p>
+&lt;figure>&lt;img src="DFT-samples.png"
+alt="Credit: Bracewell Fig 11.2"/>&lt;figcaption>
+&lt;p>Credit: Bracewell Fig 11.2&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>The forward discrete Fourier transform (DFT) is
+$$
+F_k = \sum_{m=0}^{N-1} f_m \exp \left ( - 2 \pi i \frac{m k}{N} \right)
+$$
+and we could compute \(F_k\) for \(k = 0, 1, \ldots, N-1\).&lt;/p>
+&lt;p>Here, the discrete index variable \(k\) has replaced the continuous-frequency variable \(s\), just like \(m\) replaced the continuous-time variable \(t\).&lt;/p>
+&lt;p>The inverse discrete Fourier transform is
+$$
+f_m = \frac{1}{N} \sum_{k=0}^{N -1} F_k \exp \left ( 2 \pi i \frac{m k}{N}\right).
+$$
+Like the continuous-Fourier transform, one of the differences from the forward is the \(+i\) in the exponential. The other is the inclusion of the normalization pre-factor.&lt;/p>
+&lt;p>Note: depending on whom you talk to, you&amp;rsquo;ll see a wide variety of conventions as to where the normalization prefactor goes and where the \(2 \pi\) lives. The convention presented here is the same one used by the &lt;a href="https://numpy.org/doc/stable/reference/routines.fft.html#module-numpy.fft">Python/NumPy package&lt;/a> and the &lt;a href="https://juliamath.github.io/AbstractFFTs.jl/stable/api/#Public-Interface">Julia/AbstractFFTs.jl&lt;/a> package, so it &lt;em>should&lt;/em> be the one you encounter most frequently.&lt;/p>
+&lt;p>Like the continuous Fourier transform, if you take the DFT of a set of samples and then take the iDFT of that, you will end up with the original set of samples.&lt;/p>
+&lt;h3 id="units-of-the-dft">Units of the DFT&lt;/h3>
+&lt;p>The DFT only knows/assumes that it was fed a set of equally spaced samples
+$$
+f_m = f(x_m)
+$$
+where
+$$
+m = 0, 1, \ldots, N.
+$$&lt;/p>
+&lt;p>So, at its most abstract, the DFT takes in a bunch of \(N\) samples spaced \(\Delta x\) apart and returns \(N\) samples corresponding to the Fourier components. The frequency of each component corresponds is given by \(k/N\) in units of &amp;ldquo;cycles per sampling interval.&amp;rdquo;&lt;/p>
+&lt;p>I.e., so if we had \(N = 8\) samples, then the \(k=3\) frequency component returned from the DFT would be equal to \(3/8\) cycles per &amp;ldquo;the interval between samples.&amp;rdquo;&lt;/p>
+&lt;p>On its own, the DFT doesn&amp;rsquo;t provide any information about what type of variable \(x\) is or what the spacing is. But there is hope. We can make this concrete, we just have to be careful. Using our example of a time series with \(N=8\) samples \(\{f_m\}\), say we know that \(\Delta x = 0.1\) seconds,
+$$
+\Delta x = x_{m+1} -x_m
+$$&lt;/p>
+&lt;p>The spacing in the frequency domain will be 1/8 cycles per 0.1 seconds, or 1.25 Hz.&lt;/p>
+&lt;h3 id="dft-as-a-matrix-operation">DFT as a matrix operation&lt;/h3>
+&lt;p>Thus far we have just been talking about a &amp;ldquo;set&amp;rdquo; of samples. We can also think of the collection of data as a vector
+$$
+\mathbf{f} =
+\begin{bmatrix}
+f_1 \\
+f_2 \\
+\vdots \\
+f_N \\
+\end{bmatrix}
+$$&lt;/p>
+&lt;p>and the frequency samples as a vector too&lt;/p>
+&lt;p>$$
+\mathbf{F} =
+\begin{bmatrix}
+F_1 \\
+F_2 \\
+\vdots \\
+F_N \\
+\end{bmatrix}.
+$$&lt;/p>
+&lt;p>We&amp;rsquo;ve now mentioned that the Fourier transform is a linear operator a few times. Another way of demonstrating this is that we could write the DFT as a matrix multiplication
+$$
+\mathbf{F} = \mathbf{W} \mathbf{f}.
+$$&lt;/p>
+&lt;p>If we look back at the definition of the DFT
+$$
+F_k = \sum_{m=0}^{N-1} f_m \exp \left ( - 2 \pi i \frac{m k}{N} \right)
+$$
+hopefully we can see how this might be cast in matrix form. If we define the quantity
+$$
+\omega = e^{- 2 \pi i / N}
+$$
+then we can write
+$$
+W = \begin{bmatrix}
+1 &amp;amp; 1 &amp;amp; 1 &amp;amp; \ldots &amp;amp; 1 \\
+1 &amp;amp; \omega &amp;amp; \omega^2 &amp;amp; \ldots &amp;amp; \omega^{N - 1} \\
+1 &amp;amp; \omega^2 &amp;amp; \omega^4 &amp;amp; \ldots &amp;amp; \omega^{2(N-1)} \\
+\vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\
+1 &amp;amp; \omega^{N-1} &amp;amp; \omega^{2(N-1)} &amp;amp; \ldots &amp;amp; \omega^{(N-1)(N-1)}\\
+\end{bmatrix}
+$$&lt;/p>
+&lt;p>This formulation can be really useful if you&amp;rsquo;re into forward modeling using linear models. Because we can write the DFT as a matrix multiplication, it can essentially be just another linear transformation to your linear model. Determining the &amp;ldquo;best-fit&amp;rdquo; parameters can still be done analytically. We&amp;rsquo;ll talk about this a bit more when we get to the lecture on Bayesian inference.&lt;/p>
+&lt;figure>&lt;img src="DFT-graphical.png"
+alt="The elements of the DFT matrix represented as samples of complex exponentials. Credit: Wikipedia/Glogger"/>&lt;figcaption>
+&lt;p>The elements of the DFT matrix represented as samples of complex exponentials. Credit: Wikipedia/Glogger&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="fast-fourier-transform-fft">Fast Fourier Transform (FFT)&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=E8HeD-MUrjY&amp;amp;ab_channel=SteveBrunton">Youtube/SteveBrunton&lt;/a> on the Fast Fourier Transform&lt;/li>
+&lt;/ul>
+&lt;p>The Fast Fourier Transform or FFT is an algorithm (class of algorithms) for computing the discrete Fourier transform. Practically speaking, if you&amp;rsquo;re going to perform a Fourier transform on discrete data with a computer, you will almost certainly use an FFT algorithm, so FFT and DFT end up being synonymous.&lt;/p>
+&lt;p>If we have a data array of length \(N\), the complexity of the DFT is \(\mathcal{O}(N^2)\), while the complexity of the FFT is only \(\mathcal{O}(N \log N)\). This can make a huge difference in computational time if N is large. Say if you have an array of \(N = 4096\) datapoints, then you could be looking at a factor of 1000 speedup.&lt;/p>
+&lt;p>The development and implementation of FFT packages turned the DFT from something that was too slow for many practical applications into a formidable analysis tool. This really enabled the widespread usage of the Fourier transform in signal manipulation and data analysis. I don&amp;rsquo;t think anyone would argue with you that strongly if you said that the FFT is the most important algorithm of the last century &lt;a href="http://pi.math.cornell.edu/~ajt/presentations/TopTenAlgorithms.pdf">Cornell&amp;rsquo;s top ten algorithms of the 20th century&lt;/a>.&lt;/p>
+&lt;p>There are many different FFT algorithms out there. The most popular one is the &lt;a href="https://en.wikipedia.org/wiki/Cooley%E2%80%93Tukey_FFT_algorithm">Cooley-Tukey&lt;/a> algorithm and relies on the factorization of a size \(N\) DFT matrix into \(N_1\) smaller DFTs of sizes \(N_2\) in a recursive manner. Therefore there is a (historical) preference towards array sizes that powers of \(2\). However, there are algorithms out that still give \(\mathcal{O}(N \log N)\) even for prime values of \(N\), so it&amp;rsquo;s not much of a constraint in practice.&lt;/p>
+&lt;p>We don&amp;rsquo;t have time to go into much more detail about the FFT algorithm here, but hopefully you can see from the structure of the \(\mathbf{W}\) matrix that there are plenty of opportunities to make the calculation more efficient by factoring and caching values.&lt;/p>
+&lt;p>Now, lets look at some code examples of how we might actually use the FFT in Python.&lt;/p></description></item><item><title>The Fourier Transform II</title><link>https://iancze.github.io/courses/astro589/lectures/03-fourier-transform-ii/</link><pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/03-fourier-transform-ii/</guid><description>&lt;ul>
 &lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+3/1_607jh3p1">Video recording&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="references-for-today">References for today&lt;/h2>
@@ -872,6 +1003,9 @@ $$
 V_2(t) = I(t) * \delta(t) = I(t).
 $$&lt;/p>
 &lt;h2 id="nyquist-shannon-sampling">Nyquist-Shannon sampling&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=FcXZ28BX-xE&amp;amp;ab_channel=SteveBrunton">Youtube/SteveBrunton&lt;/a> on The Sampling Theorem&lt;/li>
+&lt;/ul>
 &lt;p>Thus far we have been talking about continuous functions. As astrophysicists, though, we&amp;rsquo;re frequently dealing with discrete data points, which are presumed to be &lt;em>samples&lt;/em> of some unknown function. Maybe you&amp;rsquo;re the one designing the experiment to capture these data points, or maybe you&amp;rsquo;ve just been handed some dataset.&lt;/p>
 &lt;figure>&lt;img src="lines.png"
 alt="Say you are given a set of (noisless) samples that look like this. What do you think the function should look like in between the points? Credit: Ian Czekala"/>&lt;figcaption>
@@ -953,23 +1087,6 @@ alt="Credit: Bracewell Fig 10.3"/>&lt;figcaption>
 &lt;p>Credit: Bracewell Fig 10.3&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
-&lt;h3 id="convolutional-kernels">Convolutional kernels&lt;/h3>
-&lt;p>Now that we&amp;rsquo;ve developed our understanding of band-limited functions, sampling, and restoration, let&amp;rsquo;s make one more point about interpolation and convolutional kernels.&lt;/p>
-&lt;p>We just said that in order to restore a continuous function from a set of samples, we needed to do sinc-interpolation. What happens if we do one of the more commonly used forms of interpolation, like nearest neighbor or linear?&lt;/p>
-&lt;figure>&lt;a href="https://octave.sourceforge.io/octave/function/interp1.html">&lt;img src="nearest-neighbor-vs-linear.png"
-alt="Credit: Octave"/>&lt;/a>&lt;figcaption>
-&lt;p>Credit: Octave&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;p>We can cast each of these as convolution with a different kind of kernel.&lt;/p>
-&lt;figure>&lt;a href="https://www.researchgate.net/figure/Interpolation-kernels-in-one-dimension-The-width-of-the-support-is-shown-below_fig3_10624120">&lt;img src="interpolation-kernels.png"
-alt="Credit Jeffrey Tsao."/>&lt;/a>&lt;figcaption>
-&lt;p>Credit Jeffrey Tsao.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;p>The nearest neighbor kernel will have a corresponding Fourier transform of a sinc and the linear kernel will have a \(\mathrm{sinc}^2\). These functions all have non-zero values above the cutoff frequency. Of these, &lt;em>only&lt;/em> the sinc function has zero amplitude beyond the cutoff frequency.&lt;/p>
-&lt;p>So reconstruction of a function using linear interpolation, for example, will introduce higher-frequency features, like these sharp transitions around each data point. Depending on what you&amp;rsquo;re doing the interpolation for, sometimes this matters, sometimes it doesn&amp;rsquo;t. Later on, when we talk about &amp;ldquo;gridding&amp;rdquo; of visibility data from radio interferometers, the type of interpolation used will have a big impact on the dynamic range of the resulting images.&lt;/p>
-&lt;p>&lt;strong>Q&lt;/strong>: Why is sinc interpolation generally &lt;em>not&lt;/em> used in practice? Because the kernel size is large/infinite, you&amp;rsquo;re actually using all of the data points in each and every interpolation and this can be computationally prohibitive for many applications. Compare that to linear interpolation, which only uses the two nearest points.&lt;/p>
 &lt;h3 id="compressed-sensing">Compressed sensing&lt;/h3>
 &lt;p>You may have heard of &amp;ldquo;compressed sensing,&amp;rdquo; which is one of major signal processing results of the last few decades. The idea is that you can reconstruct a functional form using far fewer samples than required for the Nyquist rate, using some dictionary of functional forms, or knowledege that the signal may be sparse. You can, indeed, perfectly reconstruct the signal through optimization using the \(L_1\) norm. If you don&amp;rsquo;t want to make the assumption that your signal is sparse, though, it&amp;rsquo;s a good idea to sample at the Nyquist rate.&lt;/p>
 &lt;h2 id="fourier-series">Fourier series&lt;/h2>
@@ -1048,54 +1165,7 @@ alt="The amplitude of the line spectra corresponding to a Fourier series. Credit
 alt="Left: the dotted line represents a broad window function to eventually make the waveform finite in duration. Right: this has the effect of broadening the delta functions by convolution with the Fourier transform of the window function. Credit: Bracewell Fig 10.12"/>&lt;figcaption>
 &lt;p>Left: the dotted line represents a broad window function to eventually make the waveform finite in duration. Right: this has the effect of broadening the delta functions by convolution with the Fourier transform of the window function. Credit: Bracewell Fig 10.12&lt;/p>
 &lt;/figcaption>
-&lt;/figure>
-&lt;h2 id="the-discrete-fourier-transform-dft">The Discrete Fourier transform (DFT)&lt;/h2>
-&lt;p>Now we&amp;rsquo;ll talk about how we deal with samples of data. We&amp;rsquo;ll stick with the same example that we&amp;rsquo;re dealing with a function of time. But rather than \(t\), having units of seconds, we&amp;rsquo;ll simply label each data point by an index \(m\) which takes on non-negative, integer values like \(m = 0, 1, \ldots, N\).&lt;/p>
-&lt;figure>&lt;img src="DFT-samples.png"
-alt="Credit: Bracewell Fig 11.2"/>&lt;figcaption>
-&lt;p>Credit: Bracewell Fig 11.2&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;p>The forward discrete Fourier transform (DFT) is
-$$
-F_k = \sum_{m=0}^{N-1} f_m \exp \left ( - 2 \pi i \frac{m k}{N} \right)
-$$
-and we could compute \(F_k\) for \(k = 0, 1, \ldots, N-1\).&lt;/p>
-&lt;p>Here, the discrete index variable \(k\) has replaced the continuous-frequency variable \(s\), just like \(m\) replaced the continuous-time variable \(t\).&lt;/p>
-&lt;p>The inverse discrete Fourier transform is
-$$
-f_m = \frac{1}{N} \sum_{k=0}^{N -1} F_k \exp \left ( 2 \pi i \frac{m k}{N}\right).
-$$
-Like the continuous-Fourier transform, one of the differences from the forward is the \(+i\) in the exponential. The other is the inclusion of the normalization pre-factor.&lt;/p>
-&lt;p>Note: depending on whom you talk to, you&amp;rsquo;ll see a wide variety of conventions as to where the normalization prefactor goes and where the \(2 \pi\) lives. The convention presented here is the same one used by the &lt;a href="https://numpy.org/doc/stable/reference/routines.fft.html#module-numpy.fft">Python/NumPy package&lt;/a> and the &lt;a href="https://juliamath.github.io/AbstractFFTs.jl/stable/api/#Public-Interface">Julia/AbstractFFTs.jl&lt;/a> package, so it &lt;em>should&lt;/em> be the one you encounter most frequently.&lt;/p>
-&lt;p>Like the continuous Fourier transform, if you take the DFT of a set of samples and then take the iDFT of that, you will end up with the original set of samples.&lt;/p>
-&lt;h3 id="units-of-the-dft">Units of the DFT&lt;/h3>
-&lt;p>The DFT only knows/assumes that it was fed a set of equally spaced samples
-$$
-f_m = f(x_m)
-$$
-where
-$$
-m = 0, 1, \ldots, N.
-$$&lt;/p>
-&lt;p>So, at its most abstract, the DFT takes in a bunch of \(N\) samples spaced \(\Delta x\) apart and returns \(N\) samples corresponding to the Fourier components. The frequency of each component corresponds is given by \(k/N\) in units of &amp;ldquo;cycles per sampling interval.&amp;rdquo;&lt;/p>
-&lt;p>I.e., so if we had \(N = 8\) samples, then the \(k=3\) frequency component returned from the DFT would be equal to \(3/8\) cycles per &amp;ldquo;the interval between samples.&amp;rdquo;&lt;/p>
-&lt;p>On its own, the DFT doesn&amp;rsquo;t provide any information about what type of variable \(x\) is or what the spacing is. But there is hope. We can make this concrete, we just have to be careful. Let&amp;rsquo;s say we have a time series of 20 samples \(\{f_m\}\) and we know that \(\Delta x = 0.1\) seconds,
-$$
-\Delta x = x_{m+1} -x_m
-$$&lt;/p>
-&lt;p>The spacing in the frequency domain will be 1/20 cycles per 0.1 seconds, or 0.5 Hz.&lt;/p>
-&lt;p>Next time, we&amp;rsquo;ll&lt;/p>
-&lt;ul>
-&lt;li>introduce the Fast Fourier transform, which is a special implementation of the DFT&lt;/li>
-&lt;li>develop some code examples&lt;/li>
-&lt;/ul>
-&lt;p>and then revisit some questions that also apply to the DFT:&lt;/p>
-&lt;ul>
-&lt;li>What have we assumed about the periodic nature of the samples?&lt;/li>
-&lt;li>The input/output arrays&amp;mdash;where does the signal &amp;ldquo;start?&amp;rdquo; How do we &amp;ldquo;pack&amp;rdquo; the arrays?&lt;/li>
-&lt;li>Windowing / response / filters&lt;/li>
-&lt;/ul></description></item><item><title>The Fourier Transform I</title><link>https://iancze.github.io/courses/astro589/lectures/02-fourier-transform-i/</link><pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/02-fourier-transform-i/</guid><description>&lt;ul>
+&lt;/figure></description></item><item><title>The Fourier Transform I</title><link>https://iancze.github.io/courses/astro589/lectures/02-fourier-transform-i/</link><pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/02-fourier-transform-i/</guid><description>&lt;ul>
 &lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+2/1_xc62zimg">Zoom recording&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Reference Materials for this lecture&lt;/strong>:&lt;/p>
