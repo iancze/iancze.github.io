@@ -158,3 +158,4 @@ There are many different FFT algorithms out there. The most popular one is the [
 We don't have time to go into much more detail about the FFT algorithm here, but hopefully you can see from the structure of the \\(\mathbf{W}\\) matrix that there are plenty of opportunities to make the calculation more efficient by factoring and caching values.
 
 Now, lets look at some code examples of how we might actually use the FFT in Python.
+* [Jupyter Notebook Slides](FFT-lecture.slides.html)
