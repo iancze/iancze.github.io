@@ -252,6 +252,8 @@ $$
 
 ## Nyquist-Shannon sampling
 
+* [Youtube/SteveBrunton](https://www.youtube.com/watch?v=FcXZ28BX-xE&ab_channel=SteveBrunton) on The Sampling Theorem
+
 Thus far we have been talking about continuous functions. As astrophysicists, though, we're frequently dealing with discrete data points, which are presumed to be *samples* of some unknown function. Maybe you're the one designing the experiment to capture these data points, or maybe you've just been handed some dataset.
 
 {{< figure src="lines.png" caption="Say you are given a set of (noisless) samples that look like this. What do you think the function should look like in between the points? Credit: Ian Czekala" >}}
@@ -335,25 +337,6 @@ If we didn't sample the function at a sufficiently high rate, then we would have
 In an alias, a higher frequency signal is masquerading as a lower-frequency signal.
 
 {{< figure src="aliased.png" caption="Credit: Bracewell Fig 10.3" >}}
-
-### Convolutional kernels
-
-Now that we've developed our understanding of band-limited functions, sampling, and restoration, let's make one more point about interpolation and convolutional kernels.
-
-We just said that in order to restore a continuous function from a set of samples, we needed to do sinc-interpolation. What happens if we do one of the more commonly used forms of interpolation, like nearest neighbor or linear?
-
-{{< figure src="nearest-neighbor-vs-linear.png" link="https://octave.sourceforge.io/octave/function/interp1.html" caption="Credit: Octave" >}}
-
-We can cast each of these as convolution with a different kind of kernel.
-
-{{< figure src="interpolation-kernels.png" link="https://www.researchgate.net/figure/Interpolation-kernels-in-one-dimension-The-width-of-the-support-is-shown-below_fig3_10624120" caption="Credit Jeffrey Tsao." >}}
-
-The nearest neighbor kernel will have a corresponding Fourier transform of a sinc and the linear kernel will have a \\(\mathrm{sinc}^2\\). These functions all have non-zero values above the cutoff frequency. Of these, *only* the sinc function has zero amplitude beyond the cutoff frequency.
-
-So reconstruction of a function using linear interpolation, for example, will introduce higher-frequency features, like these sharp transitions around each data point. Depending on what you're doing the interpolation for, sometimes this matters, sometimes it doesn't. Later on, when we talk about "gridding" of visibility data from radio interferometers, the type of interpolation used will have a big impact on the dynamic range of the resulting images.
-
-**Q**: Why is sinc interpolation generally *not* used in practice? Because the kernel size is large/infinite, you're actually using all of the data points in each and every interpolation and this can be computationally prohibitive for many applications. Compare that to linear interpolation, which only uses the two nearest points.
-
 
 ### Compressed sensing 
 
@@ -447,59 +430,3 @@ As we talked about in the last lecture, these conditions are violated in the rea
 {{< figure src="broadening-line.png" caption="Left: the dotted line represents a broad window function to eventually make the waveform finite in duration. Right: this has the effect of broadening the delta functions by convolution with the Fourier transform of the window function. Credit: Bracewell Fig 10.12" >}}
 
 
-## The Discrete Fourier transform (DFT)
-
-Now we'll talk about how we deal with samples of data. We'll stick with the same example that we're dealing with a function of time. But rather than \\(t\\), having units of seconds, we'll simply label each data point by an index \\(m\\) which takes on non-negative, integer values like \\(m = 0, 1, \ldots, N\\). 
-
-{{< figure src="DFT-samples.png" caption="Credit: Bracewell Fig 11.2" >}}
-
-The forward discrete Fourier transform (DFT) is 
-$$
-F_k = \sum_{m=0}^{N-1} f_m \exp \left ( - 2 \pi i \frac{m k}{N} \right)
-$$
-and we could compute \\(F_k\\) for \\(k = 0, 1, \ldots, N-1\\).
-
-Here, the discrete index variable \\(k\\) has replaced the continuous-frequency variable \\(s\\), just like \\(m\\) replaced the continuous-time variable \\(t\\).
-
-
-The inverse discrete Fourier transform is
-$$
-f_m = \frac{1}{N} \sum_{k=0}^{N -1} F_k \exp \left ( 2 \pi i \frac{m k}{N}\right).
-$$
-Like the continuous-Fourier transform, one of the differences from the forward is the \\(+i\\) in the exponential. The other is the inclusion of the normalization pre-factor.
-
-Note: depending on whom you talk to, you'll see a wide variety of conventions as to where the normalization prefactor goes and where the \\(2 \pi\\) lives. The convention presented here is the same one used by the [Python/NumPy package](https://numpy.org/doc/stable/reference/routines.fft.html#module-numpy.fft) and the [Julia/AbstractFFTs.jl](https://juliamath.github.io/AbstractFFTs.jl/stable/api/#Public-Interface) package, so it *should* be the one you encounter most frequently.
-
-Like the continuous Fourier transform, if you take the DFT of a set of samples and then take the iDFT of that, you will end up with the original set of samples.
-
-### Units of the DFT 
-
-The DFT only knows/assumes that it was fed a set of equally spaced samples
-$$
-f_m = f(x_m)
-$$
-where 
-$$
-m = 0, 1, \ldots, N.
-$$
-
-So, at its most abstract, the DFT takes in a bunch of \\(N\\) samples spaced \\(\Delta x\\) apart and returns \\(N\\) samples corresponding to the Fourier components. The frequency of each component corresponds is given by \\(k/N\\) in units of "cycles per sampling interval."
-
-I.e., so if we had \\(N = 8\\) samples, then the \\(k=3\\) frequency component returned from the DFT would be equal to \\(3/8\\) cycles per "the interval between samples."
-
-On its own, the DFT doesn't provide any information about what type of variable \\(x\\) is or what the spacing is. But there is hope. We can make this concrete, we just have to be careful. Let's say we have a time series of 20 samples \\(\\{f_m\\}\\) and we know that \\(\Delta x = 0.1\\) seconds,
-$$
-\Delta x = x_{m+1} -x_m
-$$
-
-The spacing in the frequency domain will be 1/20 cycles per 0.1 seconds, or 0.5 Hz. 
-
-Next time, we'll 
-* introduce the Fast Fourier transform, which is a special implementation of the DFT 
-* develop some code examples
-
-and then revisit some questions that also apply to the DFT:
-
-* What have we assumed about the periodic nature of the samples?
-* The input/output arrays---where does the signal "start?" How do we "pack" the arrays?
-* Windowing / response / filters

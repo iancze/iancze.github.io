@@ -14,8 +14,8 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Date | Activity | Topic |
 | ---  | ----     |  ---- |
 | Aug 24 | Lecture | {{< relreftitle href=01-introduction alt="Intro and Overview" >}} |
-| Aug 31 | Lecture | {{< relreftitle href=02-fourier-transform alt="The Fourier Transform I">}} |
-| Sep 7 | Lecture | {{< relreftitle href=03-fourier-transform alt="The Fourier Transform II">}} |
+| Aug 31 | Lecture | {{< relreftitle href=02-fourier-transform-I alt="The Fourier Transform I">}} |
+| Sep 7 | Lecture | {{< relreftitle href=03-fourier-transform-II alt="The Fourier Transform II">}} |
 | Sep 14 | Lecture | {{< relreftitle href=04-FFT alt="The Fast Fourier Transform and Numerical Implementation">}} |
 | Sep 21 | Lecture | {{< relreftitle href=05-interferometry alt="Interferometry in Practice">}} |
 | Sep 28 | Lecture | {{< relreftitle href=06-PSFs-and-gridding alt="Making Images: PSFs, Gridding, and Dirty Images">}} |
