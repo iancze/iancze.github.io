@@ -16,7 +16,7 @@ f_m = f(x_m)
 $$
 where
 $$
-m = 0, 1, \ldots, N.
+m = 0, 1, \ldots, N - 1.
 $$</p><p>So, at its most abstract, the DFT takes in a bunch of \(N\) samples spaced \(\Delta x\) apart and returns \(N\) samples corresponding to the Fourier components. The frequency of each component corresponds is given by \(k/N\) in units of &ldquo;cycles per sampling interval.&rdquo;</p><p>I.e., so if we had \(N = 8\) samples, then the \(k=3\) frequency component returned from the DFT would be equal to \(3/8\) cycles per &ldquo;the interval between samples.&rdquo;</p><p>On its own, the DFT doesn&rsquo;t provide any information about what type of variable \(x\) is or what the spacing is. But there is hope. We can make this concrete, we just have to be careful. Using our example of a time series with \(N=8\) samples \(\{f_m\}\), say we know that \(\Delta x = 0.1\) seconds,
 $$
 \Delta x = x_{m+1} -x_m
@@ -24,18 +24,18 @@ $$</p><p>The spacing in the frequency domain will be 1/8 cycles per 0.1 seconds,
 $$
 \mathbf{f} =
 \begin{bmatrix}
+f_0 \\
 f_1 \\
-f_2 \\
 \vdots \\
-f_N \\
+f_{N-1} \\
 \end{bmatrix}
 $$</p><p>and the frequency samples as a vector too</p><p>$$
 \mathbf{F} =
 \begin{bmatrix}
+F_0 \\
 F_1 \\
-F_2 \\
 \vdots \\
-F_N \\
+F_{N-1} \\
 \end{bmatrix}.
 $$</p><p>We&rsquo;ve now mentioned that the Fourier transform is a linear operator a few times. Another way of demonstrating this is that we could write the DFT as a matrix multiplication
 $$
