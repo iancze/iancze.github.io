@@ -81,7 +81,7 @@ f_m = f(x_m)
 $$
 where
 $$
-m = 0, 1, \ldots, N.
+m = 0, 1, \ldots, N - 1.
 $$
 
 So, at its most abstract, the DFT takes in a bunch of \\(N\\) samples spaced \\(\Delta x\\) apart and returns \\(N\\) samples corresponding to the Fourier components. The frequency of each component corresponds is given by \\(k/N\\) in units of "cycles per sampling interval."
@@ -101,10 +101,10 @@ Thus far we have just been talking about a "set" of samples. We can also think o
 $$
 \mathbf{f} =
     \begin{bmatrix}
+    f_0 \\\\
     f_1 \\\\
-    f_2 \\\\
     \vdots \\\\
-    f_N \\\\
+    f_{N-1} \\\\
     \end{bmatrix} 
 $$
 
@@ -113,10 +113,10 @@ and the frequency samples as a vector too
 $$
 \mathbf{F} = 
 \begin{bmatrix}
+    F_0 \\\\
     F_1 \\\\
-    F_2 \\\\
     \vdots \\\\
-    F_N \\\\
+    F_{N-1} \\\\
     \end{bmatrix}.
 $$
 
