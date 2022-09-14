@@ -4,6 +4,11 @@ date: 2022-09-14
 publishdate: 2022-09-13
 ---
 
+## Zoom links
+
+* [Part I (whiteboard)](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+4+part+1/1_ohzd132x)
+* [Part II (slides)](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+4+part+2/1_p10hq79o)
+
 ## References for today
 
 * [The Fourier Transform and its Applications](https://catalog.libraries.psu.edu/catalog/2010095) by R. Bracewell
