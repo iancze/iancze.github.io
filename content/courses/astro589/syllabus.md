@@ -98,9 +98,13 @@ It is a wise idea to practice your presentation from start to finish "live" to m
 * Spectral line capabilities of ALMA, image a molecular line from ALMA archive
 * Wavelets: what are they, how have they been used in radio astronomy applications
 * Design new ALMA observations using CASA/simobserve
-* Expanding MPoL to do model fitting with Pyro
-* Expanding MPoL to use nufft for gridding
-* Expanding MPoL to do self-calibration
+* Expanding MPoL to do [model fitting with Pyro](https://github.com/MPoL-dev/MPoL/issues/33)
+* Expanding MPoL for [fake data generation](https://github.com/MPoL-dev/MPoL/issues/77)
+* Expanding MPoL to use [nufft for gridding](https://github.com/MPoL-dev/MPoL/issues/17)
+* Expanding MPoL to do [self-calibration](https://github.com/MPoL-dev/MPoL/issues/24)
+* Expanding MPoL to do [primary beam corrections](https://github.com/MPoL-dev/MPoL/issues/23)
+* Wide-field imaging: what changes about the imaging assumptions, applications
+* Beam-forming and applications
 
 ## Reference Materials
 
