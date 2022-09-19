@@ -19,21 +19,97 @@ publishdate: 2022-09-18
 
 ## This time
 
-The punchline of today is that the complex-valued visibility function \\(\mathcal{V}\\) is the 2D Fourier transform of an image on the celestial sphere
+The punchline of today is that the complex-valued visibility function \\(\mathcal{V}\\) is the 2D Fourier transform of an image on the celestial sphere (with a small field of view)
 
 $$
 I(l, m) \leftrightharpoons \mathcal{V}(u, v)
 $$
 
-and it is the visibility function that interferometers measure directly. 
+and it is the visibility function that interferometers measure directly. The values of \\(u, v\\) for which interferometers are able to measure the visibility function depend on how the array of antennas is laid out and the spacing between them.
 
-## Interferometers
+Most of today's lecture will follow Chapters 2 and 3 of [Interferometry and Synthesis in Radio Astronomy](https://catalog.libraries.psu.edu/catalog/20789467) by Thompson, Moran, and Swenson. First, we will introduce a two-element interferometer and it's response to a point source. Then, we'll complexify this a bit to talk about an extended source (but still in 1D). Then, we'll move on to discuss intensity distributions and the visibility function in the general case and then derive the relationship between \\(I(l, m) \leftrightharpoons \mathcal{V}(u, v)\\).
 
-Most of today's lecture will follow Chapters 2 and 3 of [Interferometry and Synthesis in Radio Astronomy](https://catalog.libraries.psu.edu/catalog/20789467) by Thompson, Moran, and Swenson. First, we will consider the response of a two-element interferometer, discuss how a correlator works, and examine one-dimensional source synthesis. Then we'll move on to discuss intensity distributions and the visibility function in the general case and then derive the relationship between \\(I(l, m) \leftrightharpoons \mathcal{V}(u, v)\\).
+## Introduction to a 2-element interferometer
+
+Consider this geometric situation
+
+{{< figure src="elementary-interferometer.png" caption="Credit: TMS Fig 2.1" >}}
+
+The antennas are spaced directly east-west, and they are observing a source in the *far-field*, i.e., the radiation from a distant cosmic source appears as a plane wave. First, we will consider the case of a *point-source*; later we will extend this formalism to spatially extended sources. We'll assume the primary beam of each antenna is large, such that they can observe radiation from a source located a wide range of \\(\theta\\) angles. We'll assume that we're observing in a narrow slice of frequency around \\(\nu\\), essentially monochromatic.
 
 
+The wavefront from the source arrives at the right antenna some time 
+$$
+\tau_g = \frac{D}{c} \sin \theta
+$$
+before it reaches the left one. This is called the *geometric time delay*. 
+
+Each antenna has its own signal voltage stream:
+$$
+V_1 = \sin 2 \pi \nu t
+$$
+and
+$$
+V_2 = \sin 2 \pi \nu (t - \tau_g).
+$$
+
+These streams are multiplied together in a *correlator* and then time-averaged over some interval. The output of the correlator is proportional to 
+$$
+F(t, \tau_g) = \sin (2 \pi \nu t) \sin 2 \pi \nu (t - \tau_g),
+$$
+which we can expand using our trig sum identities for sine to
+$$
+F(t, \tau_g) = \sin^2(2 \pi \nu t) \cos(2 \pi \nu \tau_g) - \sin(2 \pi \nu t)\cos(2 \pi \nu t) \sin(2 \pi \nu \tau_g).
+$$
+
+We can simplify this equation based on our knowledge that the correlator multiplies and then adds (integrates, typically for a few seconds). 
+* The central frequency \\(\nu\\) is on the order of 10s of MHz to nearly a THz
+* \\(\theta\\) (baked into \\(\tau_g\\)) is rotating at the Earth's rotational velocity, which is \\(10^{-4}\\;\mathrm{rad\\,s}^{-1}\\).
+* \\(D\\) must be smaller than \\(10^7\\;\\)m for terrestrial baselines
+
+This means that the rate of variation of \\(\nu \tau_g \ll \nu t\\) by several orders of magnitude.
+
+So long as our averaging interval is \\(T \gg 1/\nu\\) (which is satisfied by a typical multi-second integration), 
+$$
+\langle \sin^2 (2 \pi \nu t) \rangle = 1/2
+$$
+and 
+$$
+\langle \sin(2 \pi \nu t)\cos(2 \pi \nu t) \rangle = 0
+$$
+so we're left with 
+$$
+F \propto \cos (2 \pi \nu \tau_g).
+$$
+We can also define \\(l = \sin \theta\\) and then we can write
+$$
+F \propto \cos (2 \pi \nu \tau_g) = \cos \left (\frac{2 \pi D l}{\lambda} \right ).
+$$
 
 
+This is called the *fringe function* of a two-element interferometer. We'll come back to discuss \\(l\\) in more detail in a moment, but for now you can think of it as a coordinate on the sky.
+
+Let's draw the fringe pattern
+
+TODO: draw as a linear relationship vs. \\(l\\), i.e., an oscillating sine wave
+TODO: then include the fringe plot itself
+
+{{< figure src="fringe.png" caption="The fringe function (plotted here as \\(|F|\\)) can be thought of as the directional power pattern of the interferometer in the case the antennas are isotropic. Credit: TMS Fig 2.2" >}}
+
+So, you see that the 2-element interferometer has a sine/cosine sensitivity to the sky along the east-west axis. It has no sensitivity along the north-south direction.
+
+## 2-element interferometer for a spatially resolved source
+
+N
+
+let 
+$$
+u = \frac{D \cos \theta_0}{\lambda} = \frac{\nu_0 D \cos \theta_0}{c}.
+$$
+
+$$
+F(l) \propto \cos(2 \pi u l)
+$$
 
 
 ---
