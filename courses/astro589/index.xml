@@ -324,7 +324,7 @@ faculty, staff, and students possess and will endorse to make ECoS a place where
 &lt;td>Sep 21&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-Interferometry in Practice
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/05-interferometry/>Interferometry in Practice&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -684,7 +684,188 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>The DFT and FFT</title><link>https://iancze.github.io/courses/astro589/lectures/04-fft/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/04-fft/</guid><description>&lt;h2 id="zoom-links">Zoom links&lt;/h2>
+&lt;/table></description></item><item><title>Interferometry in Practice</title><link>https://iancze.github.io/courses/astro589/lectures/05-interferometry/</link><pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/05-interferometry/</guid><description>&lt;h2 id="references-for-today">References for today&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/2010095">The Fourier Transform and its Applications&lt;/a> by R. Bracewell&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson, particularly Appendix 2.1&lt;/li>
+&lt;li>&lt;a href="https://www.cv.nrao.edu/~sransom/web/xxx.html">Essential Radio Astronomy&lt;/a> by James Condon and Scott Ransom&lt;/li>
+&lt;/ul>
+&lt;h2 id="review-of-last-time">Review &lt;em>of last time&lt;/em>&lt;/h2>
+&lt;ul>
+&lt;li>Interpolation kernels&lt;/li>
+&lt;li>Discrete Fourier Transform (DFT)&lt;/li>
+&lt;li>Fast Fourier Transform (FFT)&lt;/li>
+&lt;/ul>
+&lt;h2 id="this-time">This time&lt;/h2>
+&lt;p>The punchline of today is that the complex-valued visibility function \(\mathcal{V}\) is the 2D Fourier transform of an image on the celestial sphere&lt;/p>
+&lt;p>$$
+I(l, m) \leftrightharpoons \mathcal{V}(u, v)
+$$&lt;/p>
+&lt;p>and it is the visibility function that interferometers measure directly.&lt;/p>
+&lt;h2 id="interferometers">Interferometers&lt;/h2>
+&lt;p>Most of today&amp;rsquo;s lecture will follow Chapters 2 and 3 of &lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson. First, we will consider the response of a two-element interferometer, discuss how a correlator works, and examine one-dimensional source synthesis. Then we&amp;rsquo;ll move on to discuss intensity distributions and the visibility function in the general case and then derive the relationship between \(I(l, m) \leftrightharpoons \mathcal{V}(u, v)\).&lt;/p>
+&lt;hr>
+&lt;p>We&amp;rsquo;ll first develop the geometry and math of this relationship for small fields of view, so that you understand the result, at least in an abstract manner. Then we&amp;rsquo;ll spend the latter part of the course working through how a radio interferometer like the VLA or ALMA works to actually sample the visibility function.&lt;/p>
+&lt;h2 id="images">Images&lt;/h2>
+&lt;p>Thus far, we&amp;rsquo;ve been talking about 1 dimensional Fourier transforms. Now we&amp;rsquo;ll talk about images and 2D Fourier transforms. Let&amp;rsquo;s review our coordinates for images on the celestial sphere.&lt;/p>
+&lt;h3 id="ra-and-dec">R.A. and Dec.&lt;/h3>
+&lt;p>Declination&amp;rsquo;s the easier one, in my opinion. No matter where you are, if you move in declination, you move along a great circle (i.e., a circle that actually traces the circumference of the celestial sphere). We measure this in terms of 0 (celestial equator) to +90 degrees at the north celestial pole and -90 degrees at the southern celestial pole. You can split a degree into 60 arcminutes and an arcminute into 60 arcseconds.&lt;/p>
+&lt;p>TODO: celestial sphere figure&lt;/p>
+&lt;p>Right Ascension is the one that sometimes trips me up. Because the sky rotates, we have this system of marking it using sidereal &lt;em>time&lt;/em>: 24 &lt;em>hours&lt;/em> of right ascension, sometimes broken up into 60 &lt;em>minutes&lt;/em>, and 60 &lt;em>seconds&lt;/em>. Although they are still in multiples of 60, these &lt;em>minutes&lt;/em> and &lt;em>seconds&lt;/em> we use for right ascension do not have the same angular size as arcminutes and arcseconds (even if we are on the celestial equator). For example, let&amp;rsquo;s say we have two points on the sky.&lt;/p>
+&lt;pre>&lt;code>p1 = '00h42m00s', '+41d12m'
+p2 = '00h42m01s', '+41d12m'
+&lt;/code>&lt;/pre>
+&lt;p>Same declination, but their R.A. values differ by one second. Can anyone guess how many &lt;em>arcseconds&lt;/em> separate these points? The answer is about 11.3 arcseconds.&lt;/p>
+&lt;p>TODO: plot with points labeled, and distance between them&lt;/p>
+&lt;p>Usually, when we are talking about observing a smaller source (like a protoplanetary disk, or galaxy), we point in some direction towards that object and then define a small little postage stamp, commonly in units of \(\Delta \delta \) and \(\Delta \alpha \cos \delta\), in which case, the units describing the image are arcseconds. We&amp;rsquo;re still talking about spherical astronomy though, so this isn&amp;rsquo;t necessarily limited to small fields of view. We could have \(\Delta \delta\) be several degrees, for example.&lt;/p>
+&lt;p>TODO: Figure: point relative to center, and then Delta directions coming off of it.&lt;/p>
+&lt;h3 id="direction-cosines">Direction cosines&lt;/h3>
+&lt;p>In a moment, we&amp;rsquo;re going talk about the mechanics of interferometers observing the celestial sphere and how these relate to Fourier transforms. Before we talk about that, though, there&amp;rsquo;s a concept I want to introduce while we&amp;rsquo;re still talking about units for images.&lt;/p>
+&lt;p>Practically speaking, most images we might make with ALMA or the VLA will have a small field of view (&amp;lt; 1 arcminute). In this regime, it simplifies a lot to talk about &amp;ldquo;flat&amp;rdquo; images, i.e., image planes that are tangent to the field center. In 1D, it would look like this&lt;/p>
+&lt;figure>&lt;img src="direction-cosine.png"
+alt="The concept of the direction cosine. Credit: Fig 3.3 TMS"/>&lt;figcaption>
+&lt;p>The concept of the direction cosine. Credit: Fig 3.3 TMS&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>The direction cosines are
+$$
+l = \sin(\Delta \alpha \cos \delta)
+$$
+and
+$$
+m = \sin(\Delta \delta)
+$$
+relative to the phase center. You can see from the figure that it is the direction cosine that is actually tracking the position on the tangent plane, where we are defining our image.&lt;/p>
+&lt;p>Because they are outputs from trigonometric functions, they are technically unitless. Though l and m are technically unitless and measures of &lt;em>linear&lt;/em> distance, for small angular extent, they could also be considered to have units of radians. So it will be common that we refer to
+$$
+l = \sin(\Delta \alpha \cos \delta) \approx \Delta \alpha \cos \delta
+$$
+and
+$$
+m = \sin(\Delta \delta) \approx \Delta \delta.
+$$&lt;/p>
+&lt;p>This probably sounds pointless, since we just arrived back at the same units we started with. Hopefully the reasons why we might wish to use these units will become apparent after we cover more about the interferometer. And remember that you can always &lt;em>exactly&lt;/em> convert from direction cosine back to angular usits (e.g. \(\Delta \alpha \cos \delta\)) by doing \(\sin^{-1}\), it&amp;rsquo;s just that for most small angles we&amp;rsquo;ll be dealing with, this operation is essentially an identity function. All of this goes out the window when we consider wide-field imaging (which we won&amp;rsquo;t have time to talk about in this course, though you might consider as a topic for a course project).&lt;/p>
+&lt;h3 id="images-and-fourier-transforms-of-images">Images and Fourier Transforms of Images&lt;/h3>
+&lt;p>We usually talk about images on the celestial sky as \(I_\nu(\alpha, \delta)\), i.e., some specific intensity parameterized as a function of angular position. When we&amp;rsquo;re using interferometers to observe a small field of view, we will usually write this as
+$$
+I_\nu(l, m)
+$$
+where \(l, m\) are measured as the direction cosines relative to some phase center, given by \(\alpha, \delta\). E.g., the phase center will be&lt;/p>
+&lt;pre>&lt;code>p1 = '00h42m00s', '+41d12m'
+&lt;/code>&lt;/pre>
+&lt;p>and the direction cosines will be Cartesian offsets from that center, on the image tangent plane.&lt;/p>
+&lt;p>Now, let us define the &lt;em>visibility function&lt;/em> \(\mathcal{V}\) as the 2D Fourier transform of the image plane
+$$
+\mathcal{V}(u,v) = \int \int I_\nu(l,m) \exp \{ - 2 \pi i (ul + vm)\}\, \mathrm{d}l\, \mathrm{d}m.
+$$&lt;/p>
+&lt;p>\(u\) and \(v\) are called spatial frequencies. If we considered that \(l\) and \(m\) had units of arcseconds (or radians) for small angular extent, then \(u\) and \(v\) could also be interpreted in units of &amp;ldquo;cycles per arcsecond&amp;rdquo; or &amp;ldquo;cycles per radian,&amp;rdquo; where \(u\) points in the east-west direction and \(v\) points in the north-south direction.&lt;/p>
+&lt;p>What are the units of \(\mathcal{V}\) itself? We can get at this by looking at the units of \(I_\nu(l,m)\) and how we carried out the Fourier transform integral.&lt;/p>
+&lt;p>If we parameterized our image using \(\mathrm{Jy} / \mathrm{arcsec}^2\) and we integrated over \( \mathrm{d}l\, \mathrm{d}m\) (both assuming they had units of arcsec), then \(\mathcal{V}\) must have units of Jy. I.e., you can think of it sort of like the flux being observed at that angular scale. The visibility function is complex-valued, so if you want to discuss &amp;ldquo;power&amp;rdquo; at some angular scale then you should consider \(|\mathcal{V}|^2\) .&lt;/p>
+&lt;p>All of the Fourier transform theorems we discussed in 1D (shift, similarity, convolution/multiplication, etc&amp;hellip;) have 2D equivalents.&lt;/p>
+&lt;h2 id="two-element-interferometer">Two-element interferometer&lt;/h2>
+&lt;p>Now that we&amp;rsquo;ve introduced the mathematical formalism relating the image-plane to the visibility-plane
+$$
+I(l, m) \leftrightharpoons \mathcal{V}(u, v),
+$$
+let&amp;rsquo;s get a bit more practical and examine how radio/sub-mm interferometers like the VLA and ALMA actually sample the visibility function.&lt;/p>
+&lt;p>A very good reference for what follows is &lt;a href="https://www.cv.nrao.edu/~sransom/web/xxx.html">Essential Radio Astronomy&lt;/a> by James Condon and Scott Ransom, in particular Chapter 3.&lt;/p>
+&lt;h3 id="two-element-interferometer-1">Two-element interferometer&lt;/h3>
+&lt;p>We&amp;rsquo;ll focus our discussion around the two-element interferometer, since even arrays of antennas (like ALMA, containing 66 individual antennas) can be understood by breaking them down (conceptually) into this fundamental unit. At first we&amp;rsquo;ll keep the reference frame generic just by using vector quantities. But once we&amp;rsquo;ve introduced the concept then we&amp;rsquo;ll get specific about the coordinate system and (re)introduce \(l,m,u,v)\).&lt;/p>
+&lt;p>Consider two antennas separated by some distance \(\vec{b}\) simultaneously observing a source. Let the (unit) direction vector towards the source be given by \(\hat{s}\). Unless the source is directly overhead, a wavefront originating from the source will arrive at the antennas at slightly different times, corresponding to a geometric time delay \(\tau_g\).&lt;/p>
+&lt;p>Each of these antennas is equipped with its own receiver hardware that records voltage as a function of time. Unfortunately, we don&amp;rsquo;t have time to cover much about receiver design in this course, but you should be aware that there are many different types of receiver technology in use across the radio spectrum and this is an active area of research and development. The type of receiver used at 100 GHz (band 3) are very different from those used at 700 GHz (band 9).&lt;/p>
+&lt;figure>&lt;a href="https://www.cv.nrao.edu/~sransom/web/Ch3.html#S7">&lt;img src="interferometer.png"
+alt="A schematic of a two-element interferometer. Credit: Essential Radio Astronomy"/>&lt;/a>&lt;figcaption>
+&lt;p>A schematic of a two-element interferometer. Credit: Essential Radio Astronomy&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>We can relate the voltage streams from these two antennas \(V_1\) and \(V_2\) by a single voltage amplitude \(V\) and a time delay.
+$$
+V_1 = V \cos \left [ \omega (t - \tau_g )\right]
+$$
+and
+$$
+V_2 = V \cos (\omega t).
+$$&lt;/p>
+&lt;p>The two voltage streams are then &lt;strong>correlated&lt;/strong> (multiplied together and then averaged) to form the output stream \(R\)
+$$
+R = (V^2/2) \cos (\omega \tau_g)
+$$&lt;/p>
+&lt;p>For now, we&amp;rsquo;ll call this a &lt;em>cosine&lt;/em> correlator because of the cosine dependence of the correlation stream.&lt;/p>
+&lt;p>The fringe pattern in the lower right of this figure is what you would get if you kept the antennas stationary and let a point source drift across the field of view. The broad envelope is the attenuation from the primary beam response of the antennas as the source enters and then leaves the field of view. The fringe frequency depends on the observing frequency and the baseline separating the antennas.&lt;/p>
+&lt;p>Interestingly, the time averaged response of a multiplying interferometer has a mean of 0. This has the consequence that uncorrelated noise power from very extended sources (such as the CMB) will average to 0, therefore, the interferometer is not sensitive to radiation on those large spatial scales. This is called &lt;em>spatial filtering&lt;/em>.&lt;/p>
+&lt;h3 id="multiple-antennas">Multiple antennas&lt;/h3>
+&lt;p>With multiple pairs of antennas, we can build up an improved point source response, because the fringe patterns of the individual two-element interferometers add up.&lt;/p>
+&lt;figure>&lt;a href="https://www.cv.nrao.edu/~sransom/web/Ch3.html#S7">&lt;img src="building_a_beam.png"
+alt="How the fringe patterns of the individual two-element interferometers in an array build up to create a beam. Each shaded circle represents an antenna spaced out along a 1D line. Credit: Essential Radio Astronomy."/>&lt;/a>&lt;figcaption>
+&lt;p>How the fringe patterns of the individual two-element interferometers in an array build up to create a beam. Each shaded circle represents an antenna spaced out along a 1D line. Credit: Essential Radio Astronomy.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>In the limit of many antennas, the beam usually looks like something centralized, approximately Gaussian, but usually containing many sidelobes (hence, why radio astronomers call this a &amp;ldquo;dirty beam&amp;rdquo;).&lt;/p>
+&lt;p>The resolution of the beam is on the order of \(\lambda/b\), where \(b\) is the projected baseline of the longest antenna pair. Note that this resolution strongly depends on the relative number of baselines at long/short separations, since what you&amp;rsquo;re really talking about is sensitivity at certain spatial scales. We&amp;rsquo;ll return to this in the next lecture. It won&amp;rsquo;t suffice to just have a single long-baseline pair of antennas if most other antenna pairs are at much shorter baselines.&lt;/p>
+&lt;h3 id="complex-correlators">Complex correlators&lt;/h3>
+&lt;p>Now let&amp;rsquo;s move beyond a discussion of point sources and consider what we&amp;rsquo;ll call a &amp;ldquo;slightly extended source,&amp;rdquo; something that is larger than the dirty beam but smaller than the primary beam of each telescope.&lt;/p>
+&lt;p>Instantaneous field of view of an interferometer is the same as the primary beam of each telescope, treated as a single dish (see previous section). Each single dish antenna is still seeing the same thing as before, it&amp;rsquo;s just that we have a correlator backend that&amp;rsquo;s doing things with the signals, allowing us to create a &lt;em>synthesized beam&lt;/em> that is considerably smaller than the size of the primary beam. For example, at 220 GHz (band 6), ALMA has a primary beam of about 20 arcseconds in diameter. However, it&amp;rsquo;s common to make synthesized beams on the size of 0.1 arcseconds or smaller.&lt;/p>
+&lt;p>TODO: develop formalism either with ERA or TMS to cover coordinates moving from correlator to l, m, u, v.&lt;/p>
+&lt;p>The cosine correlator we discussed has some limitations, namely that the quantity
+$$
+R_c = \int I(\hat{s}) \cos(2 \pi \vec{b} \cdot \hat{s}/\lambda) d\Omega
+$$
+term is only sensitive to the &lt;em>even&lt;/em> (symmetric) component of a source.&lt;/p>
+&lt;p>[Draw cosine curve centered around \(\vec{b} \cdot \hat{s} = 0 \), show that there is ambiguity in the response.]&lt;/p>
+&lt;p>We can decompose any function into a sum of its even and odd (antisymmetric) parts. To capture the &lt;em>odd&lt;/em> parts of the source, we need a different kind of correlation,
+$$
+R_s = \int I(\hat{s}) \sin(2 \pi \vec{b} \cdot \hat{s}/\lambda) d\Omega
+$$
+which can be obtained by inserting a \(\pi/2 = 90^\circ\) phase delay in the output of one antenna.&lt;/p>
+&lt;p>When we combine cosine and sine correlators (in hardware, this is all the same system), we have what is called a &lt;em>complex correlator&lt;/em>. It is usually more convenient to treat the cosine and sine components simultaneously using Euler&amp;rsquo;s formula and we have
+$$
+\mathcal{V} = R_c - i R_s
+$$
+or
+$$
+\mathcal{V} = \int I(\hat{s}) \exp(- i 2 \pi \vec{b} \cdot \hat{s}/\lambda) d\Omega.
+$$
+The quantity \(\mathcal{V}\) is called the &lt;em>visibility&lt;/em> and it is a complex number. It is the fundamental data product from an interferometer, and, like all data, it is usually measured with some noise.&lt;/p>
+&lt;h3 id="coordinates">Coordinates&lt;/h3>
+&lt;p>The equation we&amp;rsquo;ve just derived is fairly general, but let&amp;rsquo;s expand this a bit to the astronomical coordinate systems we&amp;rsquo;re more used to.&lt;/p>
+&lt;p>Rather than referring to the source brightness distribution with \(I_\nu(\hat{s})\), usually we&amp;rsquo;ll refer to some &lt;em>phase center&lt;/em>. [Typically this is the direction the antennas are pointed (i.e., center of primary beam), but doesn&amp;rsquo;t need to be and can be changed after the fact in software.]&lt;/p>
+&lt;p>We can define the direction cosines in a tangent plane, such that we have \(l = \sin(\Delta \alpha \cos \delta)\) and \(m = \sin(\Delta \delta)\), where \(\alpha\) and \(\delta\) are R.A. and Dec., respectively.&lt;/p>
+&lt;figure>&lt;img src="thompson_uv.png"
+alt="The relationship between baseline orientation, source position, and direction cosines \(x = l\) and \(y = m\). Credit: Tools of Radio Astronomy from Thompson 1982."/>&lt;figcaption>
+&lt;p>The relationship between baseline orientation, source position, and direction cosines \(x = l\) and \(y = m\). Credit: Tools of Radio Astronomy from Thompson 1982.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>We can rewrite the projected baseline in terms of its east-west \(u\) and north-south \(v\) components, where&lt;/p>
+&lt;p>$$
+u = \left [ \frac{\vec{b} \cdot \hat{s}}{\lambda} \right ]_\mathrm{east-west}
+$$&lt;/p>
+&lt;p>and&lt;/p>
+&lt;p>$$
+v = \left [ \frac{\vec{b} \cdot \hat{s}}{\lambda} \right ]_\mathrm{north-south}.
+$$&lt;/p>
+&lt;p>So we have that the image domain coordinates \(l, m\) have corresponding Fourier plane coordinates \(u, v\), called spatial frequencies.&lt;/p>
+&lt;p>And the relationship between source brightness distribution and the visibility function is given by
+$$
+\mathcal{V}(u,v) = \int \int I(l,m) \exp \{ - 2 \pi i (ul + vm)\} dl dm.
+$$
+This is a two-dimensional Fourier transform.&lt;/p>
+&lt;p>It turns out that the measured spatial frequencies correspond directly to the projected baseline vector lengths, if the baseline is measured in multiples of the observing frequency.&lt;/p>
+&lt;p>Longer baselines measure higher spatial frequencies, which correspond to finer-scale image plane features.&lt;/p>
+&lt;ul>
+&lt;li>TODO: talk about fringes, UV plane, and baselines. Show sine-wave fringes.&lt;/li>
+&lt;li>TODO: develop easy FFT between uv plane population and fringes, with MPoL?&lt;/li>
+&lt;/ul>
+&lt;p>TMS pg 93, 95.
+van Cettert-Zernike theorem (15.1.1 TMS)&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>fringe-patterns&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Complex noise and measurement
+For more on this, see the &lt;a href="https://mpol-dev.github.io/MPoL/rml_intro.html">MPoL notes on likelihood functions&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>The DFT and FFT</title><link>https://iancze.github.io/courses/astro589/lectures/04-fft/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/04-fft/</guid><description>&lt;h2 id="zoom-links">Zoom links&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+4+part+1/1_ohzd132x">Part I (whiteboard)&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+4+part+2/1_p10hq79o">Part II (slides)&lt;/a>&lt;/li>
