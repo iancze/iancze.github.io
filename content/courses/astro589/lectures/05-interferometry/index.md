@@ -1,8 +1,7 @@
 ---
 title: Interferometry in Practice
 date: 2022-09-21
-publishdate: 2022-08-21
-draft: true
+publishdate: 2022-09-18
 ---
 
 ## References for today
@@ -26,7 +25,22 @@ $$
 I(l, m) \leftrightharpoons \mathcal{V}(u, v)
 $$
 
-and it is the visibility function that interferometers measure directly. We'll first develop the geometry and math of this relationship for small fields of view, so that you understand the result, at least in an abstract manner. Then we'll spend the latter part of the course working through how a radio interferometer like the VLA or ALMA works to actually sample the visibility function.
+and it is the visibility function that interferometers measure directly. 
+
+## Interferometers
+
+Most of today's lecture will follow Chapters 2 and 3 of [Interferometry and Synthesis in Radio Astronomy](https://catalog.libraries.psu.edu/catalog/20789467) by Thompson, Moran, and Swenson. First, we will consider the response of a two-element interferometer, discuss how a correlator works, and examine one-dimensional source synthesis. Then we'll move on to discuss intensity distributions and the visibility function in the general case and then derive the relationship between \\(I(l, m) \leftrightharpoons \mathcal{V}(u, v)\\).
+
+
+
+
+
+
+---
+
+
+
+We'll first develop the geometry and math of this relationship for small fields of view, so that you understand the result, at least in an abstract manner. Then we'll spend the latter part of the course working through how a radio interferometer like the VLA or ALMA works to actually sample the visibility function.
 
 ## Images
 
@@ -114,11 +128,13 @@ I(l, m) \leftrightharpoons \mathcal{V}(u, v),
 $$
 let's get a bit more practical and examine how radio/sub-mm interferometers like the VLA and ALMA actually sample the visibility function.
 
+A very good reference for what follows is [Essential Radio Astronomy](https://www.cv.nrao.edu/~sransom/web/xxx.html) by James Condon and Scott Ransom, in particular Chapter 3.
+
 ### Two-element interferometer
 
-We'll focus our discussion around the two-element interferometer, since even arrays of antennas (like ALMA) can be understood by breaking them down (conceptually) into this fundamental unit.
+We'll focus our discussion around the two-element interferometer, since even arrays of antennas (like ALMA, containing 66 individual antennas) can be understood by breaking them down (conceptually) into this fundamental unit. At first we'll keep the reference frame generic just by using vector quantities. But once we've introduced the concept then we'll get specific about the coordinate system and (re)introduce \\(l,m,u,v)\\).
 
-Consider two antennas separated by some distance \\(b\\) simultaneously observing a source. Unless the source is directly overhead, a wavefront originating from the source will arrive at the antennas at slightly different times, corresponding to a geometric time delay \\(\tau_g\\). 
+Consider two antennas separated by some distance \\(\vec{b}\\) simultaneously observing a source. Let the (unit) direction vector towards the source be given by \\(\hat{s}\\). Unless the source is directly overhead, a wavefront originating from the source will arrive at the antennas at slightly different times, corresponding to a geometric time delay \\(\tau_g\\). 
 
 Each of these antennas is equipped with its own receiver hardware that records voltage as a function of time. Unfortunately, we don't have time to cover much about receiver design in this course, but you should be aware that there are many different types of receiver technology in use across the radio spectrum and this is an active area of research and development. The type of receiver used at 100 GHz (band 3) are very different from those used at 700 GHz (band 9).
 
