@@ -766,7 +766,12 @@ alt="The fringe function (plotted here as \(|F|\)) can be thought of as the dire
 &lt;/figure>
 &lt;p>So, you see that the 2-element interferometer has a sine/cosine sensitivity to the sky along the east-west axis. It has no sensitivity along the north-south direction.&lt;/p>
 &lt;h2 id="2-element-interferometer-for-a-spatially-resolved-source">2-element interferometer for a spatially resolved source&lt;/h2>
-&lt;p>N&lt;/p>
+&lt;p>Now we&amp;rsquo;ll consider a slightly more complex interferometer.&lt;/p>
+&lt;ul>
+&lt;li>The antennas are (somewhat) directional&lt;/li>
+&lt;li>They track the source as it moves across the sky, from the rotation of the Earth&lt;/li>
+&lt;/ul>
+&lt;p>The direction the antennas are pointed is called the &lt;em>phase reference position&lt;/em>.&lt;/p>
 &lt;p>let
 $$
 u = \frac{D \cos \theta_0}{\lambda} = \frac{\nu_0 D \cos \theta_0}{c}.
