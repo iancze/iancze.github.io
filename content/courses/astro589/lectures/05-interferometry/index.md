@@ -100,7 +100,12 @@ So, you see that the 2-element interferometer has a sine/cosine sensitivity to t
 
 ## 2-element interferometer for a spatially resolved source
 
-N
+Now we'll consider a slightly more complex interferometer. 
+
+* The antennas are (somewhat) directional
+* They track the source as it moves across the sky, from the rotation of the Earth
+
+The direction the antennas are pointed is called the *phase reference position*.
 
 let 
 $$
