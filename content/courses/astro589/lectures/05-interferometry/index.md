@@ -105,7 +105,20 @@ Now we'll consider a slightly more complex interferometer.
 * The antennas are (somewhat) directional
 * They track the source as it moves across the sky, from the rotation of the Earth
 
-The direction the antennas are pointed is called the *phase reference position*.
+The direction the antennas are pointed is called the *phase reference position*, which we'll denote as \\(\theta_0\\) and tracks the source as it rotates across the sky.
+
+Then, as before, we can define a delay for this position 
+$$ 
+\tau_0 = \frac{D}{c} \sin \theta_0.
+$$
+
+And let us consider radiation from a direction \\(\theta_0 - \Delta \theta\\), where \\(\Delta \theta\\) is a small angle. The fringe response term is 
+$$
+\cos (2 \pi \nu \tau) = \cos \left \\{ 2 \pi \nu \left [ \frac{D}{c} \sin (\theta_0 - \Delta \theta) - \tau_0 \right ] \right \\}
+$$
+
+
+
 
 let 
 $$
