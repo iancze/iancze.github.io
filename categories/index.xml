@@ -771,7 +771,15 @@ alt="The fringe function (plotted here as \(|F|\)) can be thought of as the dire
 &lt;li>The antennas are (somewhat) directional&lt;/li>
 &lt;li>They track the source as it moves across the sky, from the rotation of the Earth&lt;/li>
 &lt;/ul>
-&lt;p>The direction the antennas are pointed is called the &lt;em>phase reference position&lt;/em>.&lt;/p>
+&lt;p>The direction the antennas are pointed is called the &lt;em>phase reference position&lt;/em>, which we&amp;rsquo;ll denote as \(\theta_0\) and tracks the source as it rotates across the sky.&lt;/p>
+&lt;p>Then, as before, we can define a delay for this position
+$$
+\tau_0 = \frac{D}{c} \sin \theta_0.
+$$&lt;/p>
+&lt;p>And let us consider radiation from a direction \(\theta_0 - \Delta \theta\), where \(\Delta \theta\) is a small angle. The fringe response term is
+$$
+\cos (2 \pi \nu \tau) = \cos \left \{ 2 \pi \nu \left [ \frac{D}{c} \sin (\theta_0 - \Delta \theta) - \tau_0 \right ] \right \}
+$$&lt;/p>
 &lt;p>let
 $$
 u = \frac{D \cos \theta_0}{\lambda} = \frac{\nu_0 D \cos \theta_0}{c}.
