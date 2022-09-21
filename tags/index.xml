@@ -684,7 +684,10 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Interferometry in Practice</title><link>https://iancze.github.io/courses/astro589/lectures/05-interferometry/</link><pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/05-interferometry/</guid><description>&lt;h2 id="references-for-today">References for today&lt;/h2>
+&lt;/table></description></item><item><title>Interferometry in Practice</title><link>https://iancze.github.io/courses/astro589/lectures/05-interferometry/</link><pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/05-interferometry/</guid><description>&lt;ul>
+&lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+5/1_2zi2doy2">Video Recording&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="references-for-today">References for today&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/2010095">The Fourier Transform and its Applications&lt;/a> by R. Bracewell&lt;/li>
 &lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson, particularly Appendix 2.1&lt;/li>
@@ -891,108 +894,7 @@ $$
 &lt;p>Then, we can bring out our old friend the multiplication/convolution algorithm.
 $$
 \cos(2 \pi u l) * I(l) \leftrightharpoons \frac{\mathcal{V}(u)}{2} [\delta(u + u_0) + \delta(u - u_0)].
-$$&lt;/p>
-&lt;p>TODO: draw delta-functions on \(u\) axis&lt;/p>
-&lt;p>The instantaneous output of the interferometer corresponds to two delta functions situated at \(\pm u_0\). Here we see that the interferometer acts as a &lt;em>spatial filter&lt;/em> that only responds to the two spatial frequencies \(\pm u_0\).&lt;/p>
-&lt;p>The negative spatial frequency doesn&amp;rsquo;t have a physical meaning but is a mathematical convenience. Because the intensity distribution on the sky is a real quantity, the visibility function itself is symmetric about the origin in a Hermitian sense, meaning it has real even parts and odd imaginary parts.&lt;/p>
-&lt;h2 id="moving-on-to-the-general-case">Moving on to the general case&lt;/h2>
-&lt;h3 id="coordinates">Coordinates&lt;/h3>
-&lt;p>Let&amp;rsquo;s consider a generic situation of a two-element interferometer observing (tracking) a source on the sky with phase center \(\mathbf{s}_0\).&lt;/p>
-&lt;figure>&lt;img src="tms-general-coord.png"
-alt="TMS Fig 3.1"/>&lt;figcaption>
-&lt;p>TMS Fig 3.1&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;p>An element of the source with solid angle \(d\Omega\) at some position \(\mathbf{s} = \mathbf{s}_0 + \mathbf{\sigma}\) will contribute an element of power \( \frac{1}{2} A(\sigma) I(\sigma) \Delta \nu d\Omega\), where \(A\) is some (normalized) power pattern of a single antenna. For now, you can consider it to be a smooth function that is effectively constant.&lt;/p>
-&lt;p>From what we just talked about for the 1D example, the component of the correlator output will be equal to the received power and to the fringe term \(\cos(2 \pi \nu \tau_g)\).&lt;/p>
-&lt;p>Let \(\mathbf{D}_\lambda\) be a baseline vector which points from the central antenna to the other one, and specifies the baseline length in multiples of the observing wavelength. Then&lt;/p>
-&lt;p>$$
-\nu \tau_g = \mathbf{D}_\lambda \cdot \mathbf{s} = \mathbf{D} \cdot (\mathbf{s}_0 + \mathbf{\sigma})
-$$&lt;/p>
-&lt;p>and the output from the correlator is
-$$
-r(D_\lambda, \mathbf{s}&lt;em>0) = \Delta \nu \int&lt;/em>{4 \pi} A(\mathbf{\sigma}) I(\sigma) \cos [2 \pi D_\lambda \cdot (\mathbf{s}&lt;em>0 + \mathbf{\sigma})]\,\mathrm{d}\Omega
-$$
-which we can split up into
-$$
-r(D&lt;/em>\lambda, \mathbf{s}&lt;em>0) =
-\Delta \nu \cos(2 \pi D&lt;/em>\lambda \cdot s_0) \int_{4 \pi} A(\mathbf{\sigma}) I(\sigma) \cos(2 \pi D_\lambda \cdot \sigma)\,\mathrm{d}\Omega - \Delta \nu \sin(2 \pi D_\lambda \cdot s_0) \int_{4 \pi} A(\mathbf{\sigma}) I(\sigma) \sin(2 \pi D_\lambda \cdot \sigma)\,\mathrm{d}\Omega
-$$&lt;/p>
-&lt;p>Let us define the complex visibility as
-$$
-\mathcal{V} = |\mathcal{V}|e^{i \phi} = \int_{4 \pi} A_N(\sigma) I(\sigma) e^{-i 2 \pi D_\lambda \cdot \sigma}\,\mathrm{d}\Omega
-$$&lt;/p>
-&lt;p>and then we can rewrite the response from the correlator as
-$$
-r(D_\lambda, \mathbf{s}&lt;em>0) = A_0 \Delta \nu |\mathcal{V}| \cos(2 \pi D&lt;/em>\lambda \cdot \mathbf{s}_0 - \phi).
-$$&lt;/p>
-&lt;p>So now we can describe the response of the correlator in terms of a fringe function (cosine) which depends on the antenna position and projected baseline and a &lt;em>visibility function&lt;/em> which is independent of the array entirely, it is just this spatial integral over the source brightness (modulo the antenna power pattern, which we said to ignore) that looks suspiciously like a Fourier transform.&lt;/p>
-&lt;h3 id="3d-coordinates">3D coordinates&lt;/h3>
-&lt;p>Now that we&amp;rsquo;ve introduced how the visibility function comes about in a general vector formalism, let&amp;rsquo;s get concrete with respect to coordinates on Earth and in the sky.&lt;/p>
-&lt;figure>&lt;img src="tms-uv-curved.png"
-alt="Credit: TMS Fig 3.2. Note that the \(l\) and \(m\) coordinates are technically index the flat image plane tangent to \(\mathbf{s_0}\), not curved as they are shown here."/>&lt;figcaption>
-&lt;p>Credit: TMS Fig 3.2. Note that the \(l\) and \(m\) coordinates are technically index the &lt;em>flat&lt;/em> image plane tangent to \(\mathbf{s_0}\), not curved as they are shown here.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;p>The key is to focus in on the \(u,v\) plane in the bottom of the figure, which is actually a 3D space and includes the \(w\) component, which points towards phase center. The plane is centered on \(u=0,v=0\) at the location of one of the antennas.&lt;/p>
-&lt;p>Recall that the dot product between two vectors is
-$$
-\mathbf{a} \cdot \mathbf{b} = ||a|| \; ||b|| \cos \theta
-$$&lt;/p>
-&lt;p>From our previous discussion, we have
-$$
-\mathbf{D}_\lambda \cdot \mathbf{s}_0 = w
-$$
-i.e., the \(u,v\) plane is oriented orthogonal to the vector pointing towards phase center. The baseline vector itself does not necessarily live in the \(w = 0\), plane, it can have a non-zero \(w\) component.&lt;/p>
-&lt;p>And we have
-$$
-\mathbf{D}_\lambda \cdot \mathbf{s} = \left ( ul + vm + w\sqrt{1 - l^2 - m^2} \right).
-$$
-Now, hopefully you see why it was convenient to use \(l, m\) as direction cosines!&lt;/p>
-&lt;p>We also have
-$$
-d \Omega = \frac{\mathrm{d}l\; \mathrm{d} m}{\sqrt{1 - l^2 - m^2}}.
-$$
-I.e., as we move further and further from the phase center, \(\mathrm{d}\Omega\) grows larger, because it is actually on the image tangent plane.&lt;/p>
-&lt;figure>&lt;img src="2D-uv-plane.png"
-alt="Credit: TMS Fig 2.7"/>&lt;figcaption>
-&lt;p>Credit: TMS Fig 2.7&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;p>We also have the third direction cosine, w.r.t. the \(w\) axis, which is
-$$
-n = \sqrt{1 - l^2 - m^2}
-$$&lt;/p>
-&lt;p>With these relationships in hand, we can rewrite the visibility function as
-$$
-\mathcal{V}(u, v, w) = \int_{-\infty}^\infty \int_{-\infty}^\infty A_N(l,m) I(l,m) \exp \left \{ -i 2 \pi \left [ ul + vm + w \left ( \sqrt{1 - l^2 - m^2} - 1 \right )\right ] \right \} \;\frac{\mathrm{d}l\;\mathrm{d}m}{\sqrt{1 - l^2 - m^2}}.
-$$&lt;/p>
-&lt;p>The factor in the exponential comes about from the measurement of angular position with respect to phase center, as we saw in the &amp;ldquo;general coordinates&amp;rdquo; example.&lt;/p>
-&lt;p>&lt;em>If&lt;/em> all of the measurements could be made with the antennas in a plane normal to the \(w\) direction such that \(w=0\), then we would turn this equation into an exact 2D transform. But this isn&amp;rsquo;t usually the case and we need to make approximations.&lt;/p>
-&lt;p>So long as we are in the small-field regime and \(l\) and \(m\) are small enough such that the term
-$$
-\left ( \sqrt{1 - l^2 - m^2} - 1 \right ) w \simeq - \frac{1}{2}(l^2 + m^2)w
-$$
-can be neglected, then we have
-$$
-\mathcal{V}(u, v, w) = \int_{-\infty}^\infty \int_{-\infty}^\infty \frac{A_N(l,m) I(l,m)}{\sqrt{1 - l^2 - m^2}} \exp \left \{ -i 2 \pi \left [ ul + vm \right ] \right \} \;\mathrm{d}l\;\mathrm{d}m.
-$$&lt;/p>
-&lt;p>OK! So we&amp;rsquo;ve arrived at the result that I told you about at the beginning of class, that the visibility function is the Fourier transform of the sky brightness (modified by the primary beam of each antenna, which we can mostly ignore for this discussion as a constant). The approximation we made for the \(w\) term places a limit on the maximum size of the field that we can image (at once). There are approaches designed to overcome this scenario, but at least in the context of this course we will restrict our discussion to those that don&amp;rsquo;t require it. This is generally the case for all images made with VLA or ALMA for a single pointing (i.e., imaging the full primary beam).&lt;/p>
-&lt;hr>
-&lt;p>What are the units of \(\mathcal{V}\) itself? We can get at this by looking at the units of \(I_\nu(l,m)\) and how we carried out the Fourier transform integral.&lt;/p>
-&lt;p>If we parameterized our image using \(\mathrm{Jy} / \mathrm{arcsec}^2\) and we integrated over \( \mathrm{d}l\, \mathrm{d}m\) (both assuming they had units of arcsec), then \(\mathcal{V}\) must have units of Jy. I.e., you can think of it sort of like the flux being observed at that angular scale. The visibility function is complex-valued, so if you want to discuss &amp;ldquo;power&amp;rdquo; at some angular scale then you should consider \(|\mathcal{V}|^2\).&lt;/p>
-&lt;h3 id="multiple-antennas">Multiple antennas&lt;/h3>
-&lt;p>With multiple pairs of antennas, we can build up an improved point source response, because the fringe patterns of the individual two-element interferometers add up.&lt;/p>
-&lt;figure>&lt;a href="https://www.cv.nrao.edu/~sransom/web/Ch3.html#S7">&lt;img src="building_a_beam.png"
-alt="How the fringe patterns of the individual two-element interferometers in an array build up to create a beam. Each shaded circle represents an antenna spaced out along a 1D line. Credit: Essential Radio Astronomy."/>&lt;/a>&lt;figcaption>
-&lt;p>How the fringe patterns of the individual two-element interferometers in an array build up to create a beam. Each shaded circle represents an antenna spaced out along a 1D line. Credit: Essential Radio Astronomy.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;p>In the limit of many antennas, the beam usually looks like something centralized, approximately Gaussian, but usually containing many sidelobes (hence, why radio astronomers call this a &amp;ldquo;dirty beam&amp;rdquo;).&lt;/p>
-&lt;p>The resolution of the beam is on the order of \(\lambda/b\), where \(b\) is the projected baseline of the longest antenna pair. Note that this resolution strongly depends on the relative number of baselines at long/short separations, since what you&amp;rsquo;re really talking about is sensitivity at certain spatial scales. We&amp;rsquo;ll return to this in the next lecture. It won&amp;rsquo;t suffice to just have a single long-baseline pair of antennas if most other antenna pairs are at much shorter baselines.&lt;/p>
-&lt;hr>
-&lt;h2 id="wrapping-up">Wrapping up&lt;/h2>
-&lt;p>A &amp;ldquo;slightly extended source&amp;rdquo; is something that is larger than the dirty beam but smaller than the primary beam of each telescope. Instantaneous field of view of an interferometer is the same as the primary beam of each telescope, treated as a single dish (see previous section). Each single dish antenna is still seeing the same thing as before, it&amp;rsquo;s just that we have a correlator backend that&amp;rsquo;s doing things with the signals, allowing us to create a &lt;em>synthesized beam&lt;/em> that is considerably smaller than the size of the primary beam. For example, at 220 GHz (band 6), ALMA has a primary beam of about 20 arcseconds in diameter. However, it&amp;rsquo;s common to make synthesized beams on the size of 0.1 arcseconds or smaller.&lt;/p></description></item><item><title>The DFT and FFT</title><link>https://iancze.github.io/courses/astro589/lectures/04-fft/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/04-fft/</guid><description>&lt;h2 id="zoom-links">Zoom links&lt;/h2>
+$$&lt;/p></description></item><item><title>The DFT and FFT</title><link>https://iancze.github.io/courses/astro589/lectures/04-fft/</link><pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/04-fft/</guid><description>&lt;h2 id="zoom-links">Zoom links&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+4+part+1/1_ohzd132x">Part I (whiteboard)&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+4+part+2/1_p10hq79o">Part II (slides)&lt;/a>&lt;/li>
