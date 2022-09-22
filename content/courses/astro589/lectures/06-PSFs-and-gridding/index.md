@@ -1,11 +1,32 @@
 ---
-title: PSFs, Gridding, and Dirty Images
+title: 2D Interferometry, PSFs, Gridding, and Dirty Images
 date: 2022-09-28
-publishdate: 2022-08-21
+publishdate: 2022-09-22
 draft: true
 ---
 
+## References for today
 
+* [Interferometry and Synthesis in Radio Astronomy](https://catalog.libraries.psu.edu/catalog/20789467) by Thompson, Moran, and Swenson, particularly Appendix 2.1
+* [Essential Radio Astronomy](https://www.cv.nrao.edu/~sransom/web/xxx.html) by James Condon and Scott Ransom
+* [The Fourier Transform and its Applications](https://catalog.libraries.psu.edu/catalog/2010095) by R. Bracewell
+
+## Review *of last time*
+
+* Interpolation kernels
+* Discrete Fourier Transform (DFT)
+* Fast Fourier Transform (FFT)
+
+## This time
+
+* response of an interferometer (2D case)
+* complex noise and measurement
+* Earth aperture synthesis
+* uv sampling distributions for various arrays
+* gridding
+
+
+## 1D review
 
 The instantaneous output of the interferometer corresponds to two delta functions situated at \\(\pm u_0\\). Here we see that the interferometer acts as a *spatial filter* that only responds to the two spatial frequencies \\(\pm u_0\\).
 

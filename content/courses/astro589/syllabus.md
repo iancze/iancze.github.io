@@ -104,6 +104,9 @@ It is a wise idea to practice your presentation from start to finish "live" to m
 * Expanding MPoL to do [self-calibration](https://github.com/MPoL-dev/MPoL/issues/24)
 * Expanding MPoL to do [primary beam corrections](https://github.com/MPoL-dev/MPoL/issues/23)
 * Wide-field imaging: what changes about the imaging assumptions, applications
+* Briggs weighting: (introduction, Briggs's thesis, application w/ CASA)
+* Time and bandwidth smearing: theory, demonstrations with CASA and real ALMA data
+* Non-parametric techniques for protoplanetary surface brightness profiles, including [frank](https://ui.adsabs.harvard.edu/abs/2020MNRAS.495.3209J/abstract)
 * Beam-forming and applications
 
 ## Reference Materials
