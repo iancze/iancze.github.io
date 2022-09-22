@@ -70,6 +70,9 @@
 &lt;li>Expanding MPoL to do &lt;a href="https://github.com/MPoL-dev/MPoL/issues/24">self-calibration&lt;/a>&lt;/li>
 &lt;li>Expanding MPoL to do &lt;a href="https://github.com/MPoL-dev/MPoL/issues/23">primary beam corrections&lt;/a>&lt;/li>
 &lt;li>Wide-field imaging: what changes about the imaging assumptions, applications&lt;/li>
+&lt;li>Briggs weighting: (introduction, Briggs&amp;rsquo;s thesis, application w/ CASA)&lt;/li>
+&lt;li>Time and bandwidth smearing: theory, demonstrations with CASA and real ALMA data&lt;/li>
+&lt;li>Non-parametric techniques for protoplanetary surface brightness profiles, including &lt;a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.495.3209J/abstract">frank&lt;/a>&lt;/li>
 &lt;li>Beam-forming and applications&lt;/li>
 &lt;/ul>
 &lt;h2 id="reference-materials">Reference Materials&lt;/h2>
