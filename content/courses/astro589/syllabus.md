@@ -109,6 +109,18 @@ It is a wise idea to practice your presentation from start to finish "live" to m
 * Non-parametric techniques for protoplanetary surface brightness profiles, including [frank](https://ui.adsabs.harvard.edu/abs/2020MNRAS.495.3209J/abstract)
 * Beam-forming and applications
 
+#### A note about scope
+
+Radio astronomy is a vast and deep topic---some of these project topics are considerable in scope and could constitute Ph.D. theses (some have). The primary purpose of the group project is to *educate yourself and your classmates on an advanced radio astronomy and/or imaging topic*. To that end, I encourage you to focus most of your time on developing a solid understanding of the concept and designing a pedagogical presentation that clearly develops and introduces core practical and theoretical components. 
+
+For example, if you were to choose to cover time and bandwidth smearing, I would expect at least half and potentially 2/3 of your presentation to be pedagogical, i.e., extending the mathematical formalism we discussed in class to arrive at why time and bandwidth smearing occur in an interferometric system, highlighting and presenting classical treatments on the topic from our class textbooks, and presenting an astrophysical observation (i.e., published journal article) that discussed their approach to mitigating these effects. You may also choose to cover historical development of the topic, if relevant.
+
+The "technical" component of the presentation is designed to be an opportunity for you to practically apply your knowledge, either by application to a real dataset or development of a new algorithm (e.g., for MPoL). It is meant as a *supplement* to the aforementioned pedagogical treatment, not a substitute for it. Keeping with the time/bandwidth smearing example, an appropriate technical component to the project would be to download a dataset from the ALMA archive and use CASA to synthesize a range of images after various amounts of time and/or bandwidth averaging have been applied, and discuss if/how time or bandwidth smearing has compromised the image quality.
+
+Presentations that do not devote proper coverage to introductory/pedagogical material will find it difficult to achieve a satisfactory grade---even those that have an impressive technical application. Conversely, group projects that fail to write a single line of new code but deliver a quality pedagogical component would likely still receive a passing grade.
+
+I strongly encourage all groups to keep in contact with me as you are developing your project ideas, so that I may provide feedback on scope.
+
 ## Reference Materials
 
 There are many additional resources that will be helpful during this course (and beyond) and will be called out in the course at the appropriate juncture. Many of these resources are freely available online or through the [University library](https://libraries.psu.edu/).
