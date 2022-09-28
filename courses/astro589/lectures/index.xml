@@ -693,7 +693,12 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>2D Interferometry, PSFs, Gridding, and Dirty Images</title><link>https://iancze.github.io/courses/astro589/lectures/06-psfs-and-gridding/</link><pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/06-psfs-and-gridding/</guid><description>&lt;h2 id="references-for-today">References for today&lt;/h2>
+&lt;/table></description></item><item><title>2D Interferometry, PSFs, Gridding, and Dirty Images</title><link>https://iancze.github.io/courses/astro589/lectures/06-psfs-and-gridding/</link><pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/06-psfs-and-gridding/</guid><description>&lt;ul>
+&lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+6+part+1/1_tf6rbhb7">Recording of whiteboard component&lt;/a>&lt;/li>
+&lt;li>Slides [&lt;a href="beams-and-arrays.pdf">PDF&lt;/a>] [&lt;a href="beams-and-arrays.key">Keynote&lt;/a> (better for movies)]&lt;/li>
+&lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+6+part+2/1_5rwp9jwx">Audio for slides&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="references-for-today">References for today&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson, particularly Appendix 2.1&lt;/li>
 &lt;li>&lt;a href="https://www.cv.nrao.edu/~sransom/web/xxx.html">Essential Radio Astronomy&lt;/a> by James Condon and Scott Ransom&lt;/li>
