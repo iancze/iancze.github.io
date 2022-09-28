@@ -30,6 +30,7 @@ publishdate: 2022-09-22
 ## Group Projects and Presentations
 * Dates are set for presentations
 * **Review the syllabus for [group projects]({{<relref "/courses/astro589/syllabus">}}/#group-project-and-presentation)**.
+* Suggest that your group sets up a meeting with me to discuss topics
 
 ## Wrapping up 1D
 
@@ -86,9 +87,11 @@ $$
 $$
 
 To calculate the output from the correlator, we need to integrate over the spatial distribution of the source
+
 $$
 r(D_\lambda, \mathbf{s}_0) = \Delta \nu \int_{4 \pi} A(\mathbf{\sigma}) I(\sigma) \cos [2 \pi D_\lambda \cdot (\mathbf{s}_0 + \mathbf{\sigma})]\\,\mathrm{d}\Omega
 $$
+
 Here we see an opportunity to use our sine/cosine difference angle formulae again to split this up into sine and cosine components and then use Euler's formula to put it back together. 
 
 Let's define the complex visibility as
@@ -179,16 +182,5 @@ $$
 $$
 
 If we parameterized our image using \\(\mathrm{Jy} / \mathrm{arcsec}^2\\) and we integrated over \\( \mathrm{d}l\\, \mathrm{d}m\\) (both assuming they had units of arcsec), then \\(\mathcal{V}\\) must have units of Jy. I.e., you can think of it sort of like the flux being observed at that angular scale. The visibility function is complex-valued, so if you want to discuss the "power" of an image at some angular scale then you should consider \\(|\mathcal{V}|^2\\).
-
-### Multiple antennas
-
-With multiple pairs of antennas, we can build up an improved point source response, because the fringe patterns of the individual two-element interferometers add up.
-
-{{< figure src="building_a_beam.png" link="https://www.cv.nrao.edu/~sransom/web/Ch3.html#S7" caption="How the fringe patterns of the individual two-element interferometers in an array build up to create a beam. Each shaded circle represents an antenna spaced out along a 1D line. Credit: Essential Radio Astronomy.">}}
-
-In the limit of many antennas, the beam usually looks like something centralized, approximately Gaussian, but usually containing many sidelobes (hence, why radio astronomers call this a "dirty beam").
-
-The resolution of the beam is on the order of \\(\lambda/b\\), where \\(b\\) is the projected baseline of the longest antenna pair. Note that this resolution strongly depends on the relative number of baselines at long/short separations, since what you're really talking about is sensitivity at certain spatial scales. We'll return to this in the next lecture. It won't suffice to just have a single long-baseline pair of antennas if most other antenna pairs are at much shorter baselines.
-
 
 * **Slides**

@@ -83,7 +83,7 @@ Good presentations will:
 * Finish the presentation within the allotted time (35 +/- 5 minutes)
 * Adequately answer questions raised by the instructor and students
 
-Each group should provide the instructor with the two dates that they prefer by **Wednesday, September 21st**. The instructor will then assign one presentation date to each group. You should notify the instructor of your project topic at least two weeks prior to your presentation date to confirm that it is an acceptable choice.
+Each group should provide the instructor with their proposed group by **Wednesday, September 21st**. The instructor will then assign one presentation date to each group. You should notify the instructor of your project topic at least two weeks prior to your presentation date to confirm that it is an acceptable choice.
 
 It is a wise idea to practice your presentation from start to finish "live" to make sure your timing is correct. Groups whose talks are wildly under/over time will find it difficult to achieve full credit.
 
