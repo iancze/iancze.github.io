@@ -51,7 +51,7 @@
 &lt;li>Finish the presentation within the allotted time (35 +/- 5 minutes)&lt;/li>
 &lt;li>Adequately answer questions raised by the instructor and students&lt;/li>
 &lt;/ul>
-&lt;p>Each group should provide the instructor with the two dates that they prefer by &lt;strong>Wednesday, September 21st&lt;/strong>. The instructor will then assign one presentation date to each group. You should notify the instructor of your project topic at least two weeks prior to your presentation date to confirm that it is an acceptable choice.&lt;/p>
+&lt;p>Each group should provide the instructor with their proposed group by &lt;strong>Wednesday, September 21st&lt;/strong>. The instructor will then assign one presentation date to each group. You should notify the instructor of your project topic at least two weeks prior to your presentation date to confirm that it is an acceptable choice.&lt;/p>
 &lt;p>It is a wise idea to practice your presentation from start to finish &amp;ldquo;live&amp;rdquo; to make sure your timing is correct. Groups whose talks are wildly under/over time will find it difficult to achieve full credit.&lt;/p>
 &lt;h4 id="example-project-ideas">Example Project Ideas&lt;/h4>
 &lt;ul>
@@ -720,6 +720,7 @@ Protostars to PPDs
 &lt;ul>
 &lt;li>Dates are set for presentations&lt;/li>
 &lt;li>&lt;strong>Review the syllabus for &lt;a href="https://iancze.github.io/courses/astro589/syllabus//#group-project-and-presentation">group projects&lt;/a>&lt;/strong>.&lt;/li>
+&lt;li>Suggest that your group sets up a meeting with me to discuss topics&lt;/li>
 &lt;/ul>
 &lt;h2 id="wrapping-up-1d">Wrapping up 1D&lt;/h2>
 &lt;p>Last time, we had said the response \(R(l)\) of the interferometer to some sky distribution \(I(l)\) is to act as a convolution
@@ -765,11 +766,11 @@ alt="TMS Fig 3.1"/>&lt;figcaption>
 &lt;p>$$
 \nu \tau_g = \mathbf{D}_\lambda \cdot \mathbf{s} = \mathbf{D} \cdot (\mathbf{s}_0 + \mathbf{\sigma}).
 $$&lt;/p>
-&lt;p>To calculate the output from the correlator, we need to integrate over the spatial distribution of the source
-$$
+&lt;p>To calculate the output from the correlator, we need to integrate over the spatial distribution of the source&lt;/p>
+&lt;p>$$
 r(D_\lambda, \mathbf{s}&lt;em>0) = \Delta \nu \int&lt;/em>{4 \pi} A(\mathbf{\sigma}) I(\sigma) \cos [2 \pi D_\lambda \cdot (\mathbf{s}_0 + \mathbf{\sigma})]\,\mathrm{d}\Omega
-$$
-Here we see an opportunity to use our sine/cosine difference angle formulae again to split this up into sine and cosine components and then use Euler&amp;rsquo;s formula to put it back together.&lt;/p>
+$$&lt;/p>
+&lt;p>Here we see an opportunity to use our sine/cosine difference angle formulae again to split this up into sine and cosine components and then use Euler&amp;rsquo;s formula to put it back together.&lt;/p>
 &lt;p>Let&amp;rsquo;s define the complex visibility as
 $$
 \mathcal{V} = \int_{4 \pi} A_N(\sigma) I(\sigma) e^{-i 2 \pi D_\lambda \cdot \sigma}\,\mathrm{d}\Omega
@@ -842,15 +843,6 @@ alt="Credit: TMS Fig 2.7"/>&lt;figcaption>
 \mathcal{V}(u, v) = \int_{-\infty}^\infty \int_{-\infty}^\infty I(l,m) \exp \left \{ -i 2 \pi \left [ ul + vm \right ] \right \} \;\mathrm{d}l\;\mathrm{d}m.
 $$&lt;/p>
 &lt;p>If we parameterized our image using \(\mathrm{Jy} / \mathrm{arcsec}^2\) and we integrated over \( \mathrm{d}l\, \mathrm{d}m\) (both assuming they had units of arcsec), then \(\mathcal{V}\) must have units of Jy. I.e., you can think of it sort of like the flux being observed at that angular scale. The visibility function is complex-valued, so if you want to discuss the &amp;ldquo;power&amp;rdquo; of an image at some angular scale then you should consider \(|\mathcal{V}|^2\).&lt;/p>
-&lt;h3 id="multiple-antennas">Multiple antennas&lt;/h3>
-&lt;p>With multiple pairs of antennas, we can build up an improved point source response, because the fringe patterns of the individual two-element interferometers add up.&lt;/p>
-&lt;figure>&lt;a href="https://www.cv.nrao.edu/~sransom/web/Ch3.html#S7">&lt;img src="building_a_beam.png"
-alt="How the fringe patterns of the individual two-element interferometers in an array build up to create a beam. Each shaded circle represents an antenna spaced out along a 1D line. Credit: Essential Radio Astronomy."/>&lt;/a>&lt;figcaption>
-&lt;p>How the fringe patterns of the individual two-element interferometers in an array build up to create a beam. Each shaded circle represents an antenna spaced out along a 1D line. Credit: Essential Radio Astronomy.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;p>In the limit of many antennas, the beam usually looks like something centralized, approximately Gaussian, but usually containing many sidelobes (hence, why radio astronomers call this a &amp;ldquo;dirty beam&amp;rdquo;).&lt;/p>
-&lt;p>The resolution of the beam is on the order of \(\lambda/b\), where \(b\) is the projected baseline of the longest antenna pair. Note that this resolution strongly depends on the relative number of baselines at long/short separations, since what you&amp;rsquo;re really talking about is sensitivity at certain spatial scales. We&amp;rsquo;ll return to this in the next lecture. It won&amp;rsquo;t suffice to just have a single long-baseline pair of antennas if most other antenna pairs are at much shorter baselines.&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Slides&lt;/strong>&lt;/li>
 &lt;/ul></description></item><item><title>Interferometry in Practice</title><link>https://iancze.github.io/courses/astro589/lectures/05-interferometry/</link><pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/05-interferometry/</guid><description>&lt;ul>
