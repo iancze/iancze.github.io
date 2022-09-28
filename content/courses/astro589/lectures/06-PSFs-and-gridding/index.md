@@ -4,6 +4,10 @@ date: 2022-09-28
 publishdate: 2022-09-22
 ---
 
+* [Recording of whiteboard component](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+6+part+1/1_tf6rbhb7)
+* Slides [[PDF](beams-and-arrays.pdf)] [[Keynote](beams-and-arrays.key) (better for movies)]
+* [Audio for slides](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+6+part+2/1_5rwp9jwx)
+
 ## References for today
 
 * [Interferometry and Synthesis in Radio Astronomy](https://catalog.libraries.psu.edu/catalog/20789467) by Thompson, Moran, and Swenson, particularly Appendix 2.1
