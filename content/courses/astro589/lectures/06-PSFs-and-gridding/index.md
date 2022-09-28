@@ -89,7 +89,7 @@ $$
 To calculate the output from the correlator, we need to integrate over the spatial distribution of the source
 
 $$
-r(D_\lambda, \mathbf{s}_0) = \Delta \nu \int_{4 \pi} A(\mathbf{\sigma}) I(\sigma) \cos [2 \pi D_\lambda \cdot (\mathbf{s}_0 + \mathbf{\sigma})]\\,\mathrm{d}\Omega
+r(D_\lambda, s_0) = \Delta \nu \int_{4 \pi} A(\mathbf{\sigma}) I(\sigma) \cos [2 \pi D_\lambda \cdot (s_0 + \mathbf{\sigma})]\\,\mathrm{d}\Omega
 $$
 
 Here we see an opportunity to use our sine/cosine difference angle formulae again to split this up into sine and cosine components and then use Euler's formula to put it back together. 
