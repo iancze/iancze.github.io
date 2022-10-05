@@ -5,3 +5,4 @@ publishdate: 2022-08-21
 draft: true
 ---
 
+Bishop, Chapter 1 has a good discussion on likelihood functions, maximum likelihood, and Bayesian inference.
