@@ -4,6 +4,8 @@ date: 2022-10-05
 publishdate: 2022-10-04
 ---
 
+[Zoom link](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+7/1_hnzpjmiw)
+
 ## References for today
 
 * [MPoL introduction](https://mpol-dev.github.io/MPoL/rml_intro.html)
@@ -45,7 +47,6 @@ Probability functions are normalized.
 $$
 \int_{-\infty}^\infty p(a)\\,\mathrm{d}a = 1
 $$
-
 
 Say that \\(a\\) represents the height of an individual from the US population, measured in meters.
 
