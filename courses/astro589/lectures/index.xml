@@ -354,7 +354,7 @@ faculty, staff, and students possess and will endorse to make ECoS a place where
 &lt;td>Oct 12&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-Image Plane Deconvolution (CLEAN)
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/>Image Plane Deconvolution (CLEAN)&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -693,7 +693,146 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Bayesian Inference, Complex Measurement, and Model Fitting</title><link>https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+7/1_hnzpjmiw">Zoom link&lt;/a>&lt;/p>
+&lt;/table></description></item><item><title>Image Plane Deconvolution (CLEAN)</title><link>https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/</link><pubDate>Sat, 08 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/</guid><description>&lt;h3 id="references">References&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://leo.phys.unm.edu/~gbtaylor/astr423/s98book.pdf">Synthesis Imaging in Radio Astronomy II&lt;/a>: Lecture 7: Imaging by Briggs, Schwab, and Sramek and Lecture 8: Deconvolution by Cornwell, Braun, and Briggs&lt;/li>
+&lt;/ul>
+&lt;h3 id="outline">Outline&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>Concept of &amp;ldquo;direct Fourier transform&amp;rdquo; and the image that results&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Brief mention of how you adjust the weights&lt;/p>
+&lt;ul>
+&lt;li>Briggs robust weighting&lt;/li>
+&lt;li>and effects on PSF, sensitivity&lt;/li>
+&lt;li>Can we drive home the idea that we have different sensitivity to different spatial scales? This is where the spectrogram concept really comes in handy.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>However, this image that we produce isn&amp;rsquo;t unique&lt;/p>
+&lt;ul>
+&lt;li>any of the fourier modes could be changed (show image w/ saturn/ALMA logo)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>CLEAN process&lt;/p>
+&lt;ul>
+&lt;li>Image-plane deconvolution via CLEAN (w/ point sources)&lt;/li>
+&lt;li>w/ extended structure&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Definition of likelihood function: sort of free from it&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Examining the CLEAN model as your non-parametric sky model&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Criticisms of CLEAN&lt;/p>
+&lt;ul>
+&lt;li>procedural, in practice&lt;/li>
+&lt;li>Basis sets are not great, computational barrier in the limit of many components.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Keynote pres:
+* show how the beam shape and size changes based upon how you weight the visibilities
+* show image w/ saturn/ALMA logo to demonstrate unchanging likelihood
+* erroneous components at the end with my movie with HD 163296&lt;/p>
+&lt;h2 id="visibility-datasets">Visibility datasets&lt;/h2>
+&lt;p>Recall from last time that the visibility function is the Fourier transform of the sky brightness distribution&lt;/p>
+&lt;p>$$
+\mathcal{V}(u,v) \leftrightharpoons I(l,m)
+$$&lt;/p>
+&lt;p>and that each baseline (pair of antennas) of an interferometric array corresponds to a sample of the visibility function at a specific \(u,v\) point. The \(u,v\) point corresponds to the length of the &lt;em>projected&lt;/em> baseline in multiples of the observing wavelength and is the &lt;em>spatial frequency&lt;/em> of the image plane that is being sampled.&lt;/p>
+&lt;p>For a large array with &amp;gt; 50 antennas, like ALMA, you get nearly 1000 unique &lt;em>instantaneous&lt;/em> baselines, from each pairwise combination of antennas in the array. As the earth rotates, you can quickly acquire new projected baseline samples.&lt;/p>
+&lt;h2 id="sampling-function">Sampling function&lt;/h2>
+&lt;p>If you do radio interferometry, you will very often see the baseline distributions plotted as a series of \(\delta\) functions on the \(u,v\) plane.&lt;/p>
+&lt;p>TODO: draw approximate plot with points&lt;/p>
+&lt;p>This is called the sampling function&lt;/p>
+&lt;p>$$
+S(u,v) = \sum_{k=1}^M \delta(u - u_k, v - v_k).
+$$&lt;/p>
+&lt;p>And, we can write down the sampling of the visibility function as&lt;/p>
+&lt;p>$$
+S(u, v) \times \mathcal{V}(u, v).
+$$&lt;/p>
+&lt;p>If you recall from our Fourier transform distribution, this sampling function is also called the &lt;em>transfer function&lt;/em>. It allows certain spatial frequencies through the interferometric system. Both terminologies are used in the radio astronomy community.&lt;/p>
+&lt;h3 id="image-plane-implications">Image plane implications&lt;/h3>
+&lt;p>Now, let&amp;rsquo;s discuss the image-plane ramifications of the sampling operation. We started with \(I(l,m,)\), the &amp;ldquo;true&amp;rdquo; sky brightness, i.e., the one you would observe if you had a perfectly sensitive telescope with infinite resolving power.&lt;/p>
+&lt;p>$$
+\mathcal{V}(u,v) \leftrightharpoons I(l,m)
+$$&lt;/p>
+&lt;p>but we&amp;rsquo;ve &lt;em>multiplied&lt;/em> it by the sampling distribution. This means that the true sky brightness is &lt;em>convolved&lt;/em> by something in the image plane&lt;/p>
+&lt;p>$$
+I(l, m) * B_D(l, m) \leftrightharpoons S(u, v) \times \mathcal{V}(u, v).
+$$&lt;/p>
+&lt;p>the quantity \(B_D(l,m,)\) is called the dirty beam. We&amp;rsquo;ll soon talk about the CLEAN algorithm, so the dirty/clean terminology will soon make sense. But first, let&amp;rsquo;s just think about this for a second. This dirty beam is the same thing we showed in previous lectures, and can also be thought of as the sum of the fringe functions.&lt;/p>
+&lt;p>Remember how we talked about interferometers as &lt;em>spatial filters&lt;/em>? We just showed how this conceptually works in the Fourier domain, the \(u,v\) coverage provided by the antenna spacings &lt;em>is&lt;/em> the transfer function.&lt;/p>
+&lt;p>But, we can also show that interferometers are spatial filters by considering the image plane implications. If you take an image, convolve it with the dirty beam, and then take its Fourier transform, you&amp;rsquo;ll see that you will have visibility samples only at the spatial frequencies corresponding to your baselines.&lt;/p>
+&lt;p>Another way to think of the dirty beam is as the &lt;em>impulse response&lt;/em> of the interferometric system. Let&amp;rsquo;s assume we are observing a point source \(I(l,m) = \delta(l,m)\). The visibility function corresponding to a point source is a constant, so we have&lt;/p>
+&lt;p>$$
+\delta(l,m) * B_D(l,m) = S(u,v) \times \mathrm{constant}
+$$&lt;/p>
+&lt;p>$$
+B_D(l,m) \leftrightharpoons S(u,v).
+$$&lt;/p>
+&lt;p>So, another we can say this is that the dirty beam is the &lt;em>point spread function&lt;/em> (PSF) of the interferometer, and it is given by the Fourier transform of the sampling function, which is set by the configuration of the baselines within the array.&lt;/p>
+&lt;h2 id="the-dirty-image">The Dirty Image&lt;/h2>
+&lt;p>In last week&amp;rsquo;s lecture, we talked a bit about the actual visibility data products, a discrete set of (noisy) visibility samples&lt;/p>
+&lt;p>$$
+\mathbf{V} = \{V_1, V_2, \ldots, V_M\}^M_{k=1}.
+$$&lt;/p>
+&lt;p>The idea is that each was sampled with some (complex) noise draw&lt;/p>
+&lt;p>$$
+V_i = \mathcal{V}(u_i, v_i) + \epsilon
+$$&lt;/p>
+&lt;p>such that
+$$
+\epsilon_\Re \sim \mathcal{N}(0, \sigma)
+$$&lt;/p>
+&lt;p>$$
+\epsilon_\Im \sim \mathcal{N}(0, \sigma)
+$$&lt;/p>
+&lt;p>$$
+\epsilon = \epsilon_\Re + i \epsilon_\Im.
+$$&lt;/p>
+&lt;p>And then we said that radio interferometers commonly represent the uncertainty on each visibility measurement by a &amp;ldquo;weight&amp;rdquo; \(w_i\), where&lt;/p>
+&lt;p>$$
+w_i = \frac{1}{\sigma_i^2}.
+$$&lt;/p>
+&lt;h3 id="more-details-about-the-sampling-function">More details about the sampling function&lt;/h3>
+&lt;p>The fact that each visibility measurement is made in the presence of noise means that we should be taking this into account in our sampling function. So a more sophisticated sampling function looks like&lt;/p>
+&lt;p>$$
+S(u, v) = \sum_{k=1}^M T_k D_k w_k \delta(u - u_k, v - v_k).
+$$&lt;/p>
+&lt;p>In addition to weighting each sample by its inverse variance \(w_k\) (something you might do to take a statistical average), there are other factors you might fiddle with, like a &amp;ldquo;taper&amp;rdquo; \(T_k\) and density weight \(D_k\). For now, you can just think of them as equal to 1.0.&lt;/p>
+&lt;p>Now, let&amp;rsquo;s think about how we would take our sampled visibilities \(\mathbf{V} = \{V_1, V_2, \ldots, V_M\}^M_{k=1}\) and make an image from them. Well, the way to do this looks like an inverse Fourier transform&lt;/p>
+&lt;p>$$
+I_D(l, m) = C \sum_{k=1}^{N^\dagger} T_k D_k w_k V_k \exp \{2 \pi i (u_k l + v_k m) \}.
+$$
+with normalization constant
+$$
+C = 1 / \sum_{k=1}^{N^\dagger} T_k D_k w_k.
+$$&lt;/p>
+&lt;p>where \(N^\dagger = 2 N\) is the set of visibilities that includes their complex conjugates such that the sampling is Hermitian. This image that results is called the &lt;em>dirty image&lt;/em>, and we denote it with a &amp;ldquo;D&amp;rdquo; subscript.&lt;/p>
+&lt;h3 id="a-quick-note-about-the-ill-defined-imaging-problem-and-weighting-choices">A quick note about the &amp;ldquo;ill-defined&amp;rdquo; imaging problem and weighting choices&lt;/h3>
+&lt;p>Making images from Fourier samples is generally an ill-defined inverse process, which is only complicated in the presence of noise. What do we mean by ill-defined?&lt;/p>
+&lt;p>When we observe an astrophysical source with an interferometer. In the forward process, we collect samples of the visibility function at specific \(u,v\) values \(S(u, v) \times \mathcal{V}(u, v)\). To make a dirty image, we take the inverse Fourier transform of those values to produce &lt;em>an&lt;/em> image. This is the inverse process.&lt;/p>
+&lt;p>&lt;strong>The ill-defined nature of imaging&lt;/strong> (even in the presence of noise): Think about what&amp;rsquo;s happening in the forward process. If the visibility function had non-zero amplitudes at some \(u,v\) values that we didn&amp;rsquo;t sample, then these never enter our dataset (obviously). The inverse process itself doesn&amp;rsquo;t include these values (obviously), and by their omission, assumes that their amplitudes are equal to zero.&lt;/p>
+&lt;p>So, as far as our interferometer is concerned, it can&amp;rsquo;t distinguish between a set of degenerate image brightness distributions on the sky so long as they have the exact same \(\mathcal{V}(u,v)\) values at the sampled \(u,v\) points. The unsampled \(\mathcal{V}(u,v)\) locations can take on arbitrary values and still result in the exact same dataset.&lt;/p>
+&lt;p>Another way of saying the same thing is to think of an interferometer as a &lt;em>spatial filter&lt;/em>, i.e., its transfer function (the array configuration) only allows measurements of certain spatial frequencies to enter the dataset. But most images contain power at many spatial frequencies, including those that have been filtered out. So, if you just try to make an image with the spatial frequencies in your dataset, your image will most likely be missing some spatial frequencies that would be there in actuality.&lt;/p>
+&lt;h4 id="weighting-choices">Weighting choices&lt;/h4>
+&lt;p>The whole discussion about the ill-defined inverse problem applies &lt;em>even if&lt;/em> we sampled the visibility function perfectly with no noise, so long as there are still unsampled \(u,v\) points that contain significant visibility &amp;ldquo;power.&amp;rdquo;&lt;/p>
+&lt;p>The problem gets even more complicated when we consider measurement noise and the fact that array configurations usually sample some parts of \(u,v\) space better than others. In my opinion, this is really why various weighting schemes have developed. The common way to do this is by tuning the \(D_k\) and \(T_k\) terms. As we&amp;rsquo;ll show later in the slides, these provide a tradeoff between:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>natural weighting&lt;/strong> maximizing point source sensitivity at the cost of spatial resolution (broader beam)&lt;/li>
+&lt;li>&lt;strong>uniform weighting&lt;/strong> maximizing spatial resolution (narrow beam) at the cost of point source sensitivity (higher RMS noise floor in the image)&lt;/li>
+&lt;li>&amp;ldquo;Briggs&amp;rdquo; &lt;strong>robust weighting&lt;/strong> a tradeoff between these two regimes, ranging from (-2 to 2). The tradeoff is non-linear, so coming from natural weighting, for example, good spatial resolution can be gained with only modest sacrifices in point source sensitivity. Or, vice versa, coming from uniform weighting, good sensitivity to point sources can be gained with only modest losses in resolution.&lt;/li>
+&lt;/ul>
+&lt;p>Typically, a reasonable starting point with ALMA observations is to use some in between value of Briggs weighting.&lt;/p></description></item><item><title>Bayesian Inference, Complex Measurement, and Model Fitting</title><link>https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+7/1_hnzpjmiw">Zoom link&lt;/a>&lt;/p>
 &lt;h2 id="references-for-today">References for today&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://mpol-dev.github.io/MPoL/rml_intro.html">MPoL introduction&lt;/a>&lt;/li>
