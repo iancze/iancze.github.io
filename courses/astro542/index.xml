@@ -693,7 +693,11 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Image Plane Deconvolution (CLEAN)</title><link>https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/</link><pubDate>Sat, 08 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/</guid><description>&lt;h3 id="references">References&lt;/h3>
+&lt;/table></description></item><item><title>Image Plane Deconvolution (CLEAN)</title><link>https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/</link><pubDate>Sat, 08 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/08-image-plane-deconvolution/</guid><description>&lt;ul>
+&lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+8+CLEAN/1_99zi3w9d">Whiteboard recording&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+8+CLEAN+part+II/1_nw7x5iky">Zoom slides&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="references">References&lt;/h3>
 &lt;ul>
 &lt;li>&lt;a href="https://leo.phys.unm.edu/~gbtaylor/astr423/s98book.pdf">Synthesis Imaging in Radio Astronomy II&lt;/a>: Lecture 7: Imaging by Briggs, Schwab, and Sramek and Lecture 8: Deconvolution by Cornwell, Braun, and Briggs&lt;/li>
 &lt;li>&lt;a href="https://ui.adsabs.harvard.edu/abs/2021ApJS..257....2C/abstract">Molecules with ALMA at Planet-forming Scales (MAPS). II. CLEAN Strategies for Synthesizing Images of Molecular Line Emission in Protoplanetary Disks&lt;/a> by Czekala et al. 2021&lt;/li>
