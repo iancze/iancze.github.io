@@ -4,6 +4,9 @@ date: 2022-10-12
 publishdate: 2022-10-08
 ---
 
+* [Whiteboard recording](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+8+CLEAN/1_99zi3w9d)
+* [Zoom slides](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+8+CLEAN+part+II/1_nw7x5iky)
+
 ### References
 
 * [Synthesis Imaging in Radio Astronomy II](https://leo.phys.unm.edu/~gbtaylor/astr423/s98book.pdf): Lecture 7: Imaging by Briggs, Schwab, and Sramek and Lecture 8: Deconvolution by Cornwell, Braun, and Briggs
