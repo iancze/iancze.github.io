@@ -700,23 +700,6 @@ Protostars to PPDs
 &lt;h3 id="outline">Outline&lt;/h3>
 &lt;ul>
 &lt;li>
-&lt;p>Concept of &amp;ldquo;direct Fourier transform&amp;rdquo; and the image that results&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Brief mention of how you adjust the weights&lt;/p>
-&lt;ul>
-&lt;li>Briggs robust weighting&lt;/li>
-&lt;li>and effects on PSF, sensitivity&lt;/li>
-&lt;li>Can we drive home the idea that we have different sensitivity to different spatial scales? This is where the spectrogram concept really comes in handy.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>However, this image that we produce isn&amp;rsquo;t unique&lt;/p>
-&lt;ul>
-&lt;li>any of the fourier modes could be changed (show image w/ saturn/ALMA logo)&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
 &lt;p>CLEAN process&lt;/p>
 &lt;ul>
 &lt;li>Image-plane deconvolution via CLEAN (w/ point sources)&lt;/li>
@@ -823,16 +806,63 @@ $$&lt;/p>
 &lt;p>When we observe an astrophysical source with an interferometer. In the forward process, we collect samples of the visibility function at specific \(u,v\) values \(S(u, v) \times \mathcal{V}(u, v)\). To make a dirty image, we take the inverse Fourier transform of those values to produce &lt;em>an&lt;/em> image. This is the inverse process.&lt;/p>
 &lt;p>&lt;strong>The ill-defined nature of imaging&lt;/strong> (even in the presence of noise): Think about what&amp;rsquo;s happening in the forward process. If the visibility function had non-zero amplitudes at some \(u,v\) values that we didn&amp;rsquo;t sample, then these never enter our dataset (obviously). The inverse process itself doesn&amp;rsquo;t include these values (obviously), and by their omission, assumes that their amplitudes are equal to zero.&lt;/p>
 &lt;p>So, as far as our interferometer is concerned, it can&amp;rsquo;t distinguish between a set of degenerate image brightness distributions on the sky so long as they have the exact same \(\mathcal{V}(u,v)\) values at the sampled \(u,v\) points. The unsampled \(\mathcal{V}(u,v)\) locations can take on arbitrary values and still result in the exact same dataset.&lt;/p>
+&lt;p>$$
+I_D(l,m) = I(l, m) * B_D(l, m) \leftrightharpoons S(u, v) \times \mathcal{V}(u, v).
+$$&lt;/p>
 &lt;p>Another way of saying the same thing is to think of an interferometer as a &lt;em>spatial filter&lt;/em>, i.e., its transfer function (the array configuration) only allows measurements of certain spatial frequencies to enter the dataset. But most images contain power at many spatial frequencies, including those that have been filtered out. So, if you just try to make an image with the spatial frequencies in your dataset, your image will most likely be missing some spatial frequencies that would be there in actuality.&lt;/p>
 &lt;h4 id="weighting-choices">Weighting choices&lt;/h4>
 &lt;p>The whole discussion about the ill-defined inverse problem applies &lt;em>even if&lt;/em> we sampled the visibility function perfectly with no noise, so long as there are still unsampled \(u,v\) points that contain significant visibility &amp;ldquo;power.&amp;rdquo;&lt;/p>
-&lt;p>The problem gets even more complicated when we consider measurement noise and the fact that array configurations usually sample some parts of \(u,v\) space better than others. In my opinion, this is really why various weighting schemes have developed. The common way to do this is by tuning the \(D_k\) and \(T_k\) terms. As we&amp;rsquo;ll show later in the slides, these provide a tradeoff between:&lt;/p>
+&lt;p>The problem gets even more complicated when we consider measurement noise and the fact that array configurations usually sample some parts of \(u,v\) space better than others. In my opinion, this is really why various weighting schemes are as popular as they are. The common way to do this is by tuning the \(D_k\) and \(T_k\) terms. As we&amp;rsquo;ll show later in the slides, tuning the \(D_k\) terms provide a tradeoff between:&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>natural weighting&lt;/strong> maximizing point source sensitivity at the cost of spatial resolution (broader beam)&lt;/li>
 &lt;li>&lt;strong>uniform weighting&lt;/strong> maximizing spatial resolution (narrow beam) at the cost of point source sensitivity (higher RMS noise floor in the image)&lt;/li>
 &lt;li>&amp;ldquo;Briggs&amp;rdquo; &lt;strong>robust weighting&lt;/strong> a tradeoff between these two regimes, ranging from (-2 to 2). The tradeoff is non-linear, so coming from natural weighting, for example, good spatial resolution can be gained with only modest sacrifices in point source sensitivity. Or, vice versa, coming from uniform weighting, good sensitivity to point sources can be gained with only modest losses in resolution.&lt;/li>
 &lt;/ul>
-&lt;p>Typically, a reasonable starting point with ALMA observations is to use some in between value of Briggs weighting.&lt;/p></description></item><item><title>Bayesian Inference, Complex Measurement, and Model Fitting</title><link>https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+7/1_hnzpjmiw">Zoom link&lt;/a>&lt;/p>
+&lt;p>Typically, a reasonable starting point with ALMA observations is to use some in between value of Briggs weighting. Different weighting choices can change your sensitivities on different spatial scales.&lt;/p>
+&lt;p>The \(T_k\) terms are for applying a &lt;em>taper&lt;/em>, whereby one downweights longer baseline observations.&lt;/p>
+&lt;h2 id="clean">CLEAN&lt;/h2>
+&lt;p>We&amp;rsquo;ve talked about how&lt;/p>
+&lt;p>$$
+I_D(l,m) = I(l, m) * B_D(l, m) \leftrightharpoons S(u, v) \times \mathcal{V}(u, v).
+$$&lt;/p>
+&lt;p>Specifically, the &lt;em>dirty image&lt;/em> is the &lt;em>convolution&lt;/em> of the true sky brightness \(I\) with the dirty beam \(B_D\). We know what the dirty beam is to high precision.&lt;/p>
+&lt;p>TODO: draw a 1D cut of the dirty beam&lt;/p>
+&lt;p>First, it&amp;rsquo;s important to note that convolution is a &lt;em>lossy&lt;/em> procedure, you (irrevocably) lose information. For example, consider applying a Gaussian blur to an image. The high resolution information in that image has been lost.&lt;/p>
+&lt;p>CLEAN is an &lt;em>image deconvolution&lt;/em> algorithm. We just said that convolution is a lossy procedure, so, how does the algorithm get that information back? What follows are my own opinions about the CLEAN algorithm, its use cases I&amp;rsquo;m most familiar with in the protoplanetary disk community, and its limitations.&lt;/p>
+&lt;p>The short answer is that CLEAN can help restore an image &lt;em>up to a point&lt;/em>. The thing that CLEAN is best at is removing the effect of those nasty sidelobes from a dirty beam, and replacing them with a more Gaussian beam response that is usually easier to work with. CLEAN will not give you &amp;ldquo;super-resolution&amp;rdquo; access to lost spatial frequencies that you have lost, but it can help you make better looking images, and ones that have better dynamic range.&lt;/p>
+&lt;h3 id="iterative-processes">Iterative processes&lt;/h3>
+&lt;p>CLEAN is a procedure that iteratively builds up a model image. To carry this out on the whiteboard, I&amp;rsquo;m going to do things in 1D. In a moment we&amp;rsquo;ll show an example with 2D images in the slides.&lt;/p>
+&lt;p>TODO: draw in 1D a dirty image of a few point sources, a representation of the dirty beam, and a blank model image&lt;/p>
+&lt;p>Before you start, we&amp;rsquo;ll define a quantity called the CLEAN beam. It&amp;rsquo;s usually chosen to be a Gaussian fit to the main lobe of the beam.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;ol>
+&lt;li>First, we identify the &lt;em>peak&lt;/em> location in the dirty image.&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>2a. Then, we subtract some fraction of the flux times the dirty beam from this location. This dirty image becomes a &amp;ldquo;residual image&amp;rdquo; now.&lt;/li>
+&lt;li>2b. At the same time, we add a \(\delta\) function at corresponding location in the model image with the same amplitude as the flux we subtracted. So, if we subtracted 0.1 Jy of flux in the dirty beam, then we would add a \(\delta\) function with amplitude of 0.1 Jy in the model image.&lt;/li>
+&lt;li>2c. You can think of these steps as equivalent, because a \(\delta\) function times the dirty beam gives you back the dirty beam. These steps are &lt;em>also&lt;/em> equivalently carried out in the visibility domain.&lt;/li>
+&lt;li>
+&lt;ol start="3">
+&lt;li>Go back to step 1, and repeat with the next-highest &lt;em>peak&lt;/em> location. Continue this loop until the peak flux in the image drops below some threshold&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="4">
+&lt;li>Once this threshold is reached, the CLEANing is done. The final step is to put everything back together. The model image is convolved with the CLEAN beam to form the restored image. This &amp;ldquo;smooths out&amp;rdquo; the model image to some resolution limit, and hides imperfections on smaller scales.&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="5">
+&lt;li>The remainder of the residual image is added back to the restored image to give a sense of the &amp;ldquo;noise&amp;rdquo; in the image.&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="limitations">Limitations&lt;/h3>
+&lt;p>CLEAN is &lt;em>procedural&lt;/em>. What this means is that you set parameters that guide the above process and then carry on until some termination criterion is reached. This could also be part of an interactive process. There is no guarantee that the CLEANed image is unique, either.&lt;/p>
+&lt;p>In my opinion, CLEAN is best at removing the sidelobe effect of the dirty beam, improving the dynamic range of your image.&lt;/p>
+&lt;p>You may have identified one limitation, already, is the choice of basis set or &amp;ldquo;CLEAN components.&amp;rdquo; In the above example, we said that we would use a \(\delta\) function to build up a model image. This works great for fields of point sources, but what about extended sources?&lt;/p></description></item><item><title>Bayesian Inference, Complex Measurement, and Model Fitting</title><link>https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/</link><pubDate>Tue, 04 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/07-bayesian-inference/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+7/1_hnzpjmiw">Zoom link&lt;/a>&lt;/p>
 &lt;h2 id="references-for-today">References for today&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://mpol-dev.github.io/MPoL/rml_intro.html">MPoL introduction&lt;/a>&lt;/li>
