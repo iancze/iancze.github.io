@@ -10,14 +10,6 @@ publishdate: 2022-10-08
 
 ### Outline
 
-* Concept of "direct Fourier transform" and the image that results
-* Brief mention of how you adjust the weights
-    * Briggs robust weighting
-    * and effects on PSF, sensitivity
-    * Can we drive home the idea that we have different sensitivity to different spatial scales? This is where the spectrogram concept really comes in handy.
-* However, this image that we produce isn't unique
-    * any of the fourier modes could be changed (show image w/ saturn/ALMA logo)
-
 * CLEAN process
     * Image-plane deconvolution via CLEAN (w/ point sources)
     * w/ extended structure
@@ -152,6 +144,7 @@ $$
 
 where \\(N^\dagger = 2 N\\) is the set of visibilities that includes their complex conjugates such that the sampling is Hermitian. This image that results is called the *dirty image*, and we denote it with a "D" subscript.
 
+
 ### A quick note about the "ill-defined" imaging problem and weighting choices
 
 Making images from Fourier samples is generally an ill-defined inverse process, which is only complicated in the presence of noise. What do we mean by ill-defined? 
@@ -162,16 +155,64 @@ When we observe an astrophysical source with an interferometer. In the forward p
 
 So, as far as our interferometer is concerned, it can't distinguish between a set of degenerate image brightness distributions on the sky so long as they have the exact same \\(\mathcal{V}(u,v)\\) values at the sampled \\(u,v\\) points. The unsampled \\(\mathcal{V}(u,v)\\) locations can take on arbitrary values and still result in the exact same dataset. 
 
+$$
+I_D(l,m) = I(l, m) \* B_D(l, m) \leftrightharpoons S(u, v) \times \mathcal{V}(u, v).
+$$
+
 Another way of saying the same thing is to think of an interferometer as a *spatial filter*, i.e., its transfer function (the array configuration) only allows measurements of certain spatial frequencies to enter the dataset. But most images contain power at many spatial frequencies, including those that have been filtered out. So, if you just try to make an image with the spatial frequencies in your dataset, your image will most likely be missing some spatial frequencies that would be there in actuality.
 
 #### Weighting choices
 
 The whole discussion about the ill-defined inverse problem applies *even if* we sampled the visibility function perfectly with no noise, so long as there are still unsampled \\(u,v\\) points that contain significant visibility "power."
 
-The problem gets even more complicated when we consider measurement noise and the fact that array configurations usually sample some parts of \\(u,v\\) space better than others. In my opinion, this is really why various weighting schemes have developed. The common way to do this is by tuning the \\(D_k\\) and \\(T_k\\) terms. As we'll show later in the slides, these provide a tradeoff between:
+The problem gets even more complicated when we consider measurement noise and the fact that array configurations usually sample some parts of \\(u,v\\) space better than others. In my opinion, this is really why various weighting schemes are as popular as they are. The common way to do this is by tuning the \\(D_k\\) and \\(T_k\\) terms. As we'll show later in the slides, tuning the \\(D_k\\) terms provide a tradeoff between:
 
 * **natural weighting** maximizing point source sensitivity at the cost of spatial resolution (broader beam) 
 * **uniform weighting** maximizing spatial resolution (narrow beam) at the cost of point source sensitivity (higher RMS noise floor in the image)
 * "Briggs" **robust weighting** a tradeoff between these two regimes, ranging from (-2 to 2). The tradeoff is non-linear, so coming from natural weighting, for example, good spatial resolution can be gained with only modest sacrifices in point source sensitivity. Or, vice versa, coming from uniform weighting, good sensitivity to point sources can be gained with only modest losses in resolution.
 
-Typically, a reasonable starting point with ALMA observations is to use some in between value of Briggs weighting.
+Typically, a reasonable starting point with ALMA observations is to use some in between value of Briggs weighting. Different weighting choices can change your sensitivities on different spatial scales.
+
+The \\(T_k\\) terms are for applying a *taper*, whereby one downweights longer baseline observations.
+
+## CLEAN
+
+We've talked about how
+
+$$
+I_D(l,m) = I(l, m) \* B_D(l, m) \leftrightharpoons S(u, v) \times \mathcal{V}(u, v).
+$$
+
+Specifically, the *dirty image* is the *convolution* of the true sky brightness \\(I\\) with the dirty beam \\(B_D\\). We know what the dirty beam is to high precision.
+
+TODO: draw a 1D cut of the dirty beam
+
+First, it's important to note that convolution is a *lossy* procedure, you (irrevocably) lose information. For example, consider applying a Gaussian blur to an image. The high resolution information in that image has been lost.
+
+CLEAN is an *image deconvolution* algorithm. We just said that convolution is a lossy procedure, so, how does the algorithm get that information back? What follows are my own opinions about the CLEAN algorithm, its use cases I'm most familiar with in the protoplanetary disk community, and its limitations.
+
+The short answer is that CLEAN can help restore an image *up to a point*. The thing that CLEAN is best at is removing the effect of those nasty sidelobes from a dirty beam, and replacing them with a more Gaussian beam response that is usually easier to work with. CLEAN will not give you "super-resolution" access to lost spatial frequencies that you have lost, but it can help you make better looking images, and ones that have better dynamic range.
+
+### Iterative processes
+
+CLEAN is a procedure that iteratively builds up a model image. To carry this out on the whiteboard, I'm going to do things in 1D. In a moment we'll show an example with 2D images in the slides.
+
+TODO: draw in 1D a dirty image of a few point sources, a representation of the dirty beam, and a blank model image
+
+Before you start, we'll define a quantity called the CLEAN beam. It's usually chosen to be a Gaussian fit to the main lobe of the beam.
+
+* 1. First, we identify the *peak* location in the dirty image.
+* 2a. Then, we subtract some fraction of the flux times the dirty beam from this location. This dirty image becomes a "residual image" now.
+* 2b. At the same time, we add a \\(\delta\\) function at corresponding location in the model image with the same amplitude as the flux we subtracted. So, if we subtracted 0.1 Jy of flux in the dirty beam, then we would add a \\(\delta\\) function with amplitude of 0.1 Jy in the model image.
+* 2c. You can think of these steps as equivalent, because a \\(\delta\\) function times the dirty beam gives you back the dirty beam. These steps are *also* equivalently carried out in the visibility domain.
+* 3. Go back to step 1, and repeat with the next-highest *peak* location. Continue this loop until the peak flux in the image drops below some threshold
+* 4. Once this threshold is reached, the CLEANing is done. The final step is to put everything back together. The model image is convolved with the CLEAN beam to form the restored image. This "smooths out" the model image to some resolution limit, and hides imperfections on smaller scales.
+* 5. The remainder of the residual image is added back to the restored image to give a sense of the "noise" in the image.
+
+### Limitations
+
+CLEAN is *procedural*. What this means is that you set parameters that guide the above process and then carry on until some termination criterion is reached. This could also be part of an interactive process. There is no guarantee that the CLEANed image is unique, either.
+
+In my opinion, CLEAN is best at removing the sidelobe effect of the dirty beam, improving the dynamic range of your image.
+
+You may have identified one limitation, already, is the choice of basis set or "CLEAN components." In the above example, we said that we would use a \\(\delta\\) function to build up a model image. This works great for fields of point sources, but what about extended sources?
