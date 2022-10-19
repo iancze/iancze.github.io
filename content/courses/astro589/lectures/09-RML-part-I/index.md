@@ -4,6 +4,9 @@ date: 2022-10-19
 publishdate: 2022-10-17
 ---
 
+* [Recording Part I: whiteboard](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+9A+RML+Part+I/1_3ehfryrc)
+* [Zoom Part II: slides](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+9+part+IIA+RML/1_5k3v0oqn)
+
 ## References
 
 * [MPoL introduction](https://mpol-dev.github.io/MPoL/rml_intro.html)
