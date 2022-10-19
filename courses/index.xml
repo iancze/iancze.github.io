@@ -693,7 +693,11 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Regularized Maximum Likelihood (RML) I</title><link>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</guid><description>&lt;h2 id="references">References&lt;/h2>
+&lt;/table></description></item><item><title>Regularized Maximum Likelihood (RML) I</title><link>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</guid><description>&lt;ul>
+&lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+9A+RML+Part+I/1_3ehfryrc">Recording Part I: whiteboard&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+9+part+IIA+RML/1_5k3v0oqn">Zoom Part II: slides&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://mpol-dev.github.io/MPoL/rml_intro.html">MPoL introduction&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/19499523">Machine Learning: A Probabilistic Perspective&lt;/a> by Murphy, Chapter 10&lt;/li>
