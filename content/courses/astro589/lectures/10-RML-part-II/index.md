@@ -4,6 +4,9 @@ date: 2022-10-26
 publishdate: 2022-10-21
 ---
 
+* [Whiteboard recording](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+10+RML+Part+II+Part+I/1_syjygobk)
+* [Zoom Slides](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+10+RML+Part+II+Part+II/1_b483lcx9)
+
 ## References
 
 * [MPoL introduction](https://mpol-dev.github.io/MPoL/rml_intro.html)
@@ -61,70 +64,12 @@ This math is fully equivalent to the RML imaging problem we introduced last week
 * Useful thoughts from <https://biometry.github.io/APES/LectureNotes/2017-Resampling/CrossValidationLecture.html>
 
 
-The idea is to test the *predictive power* of your model. In this case, the model would be your setup of your . In the RML case, the model would be the settings of your image pixelization, 
-
-The idea of cross validation is to use the properties of your data to set your regularization. 
+The idea is to test the *predictive power* of your model. In this case, the model would be your setup of your. In the RML case, the model would be the settings of your image pixelization, 
 
 
-Think about it, if we have *the right model*, we will generalize perfectly to new data. The problem is that our training data are always limited and will usually always have some noise.
+If we have *the right model*, we will generalize perfectly to new data. The problem is that our training data are always limited and will usually always have some noise.
 
 
-The problem of non-independence of your random hold-outs.
+The problem of non-independence of your random hold-outs. When the data are small, it is possible to overfit your cross validation. This is a hard place to be in, especially when getting new data is expensive.
 
-
-
-When the data are small, it is possible to overfit your cross validation. This is a hard place to be in, especially when getting new data is expensive.
-
-
-
-
-
-
-We would call this model
-
-
-The 
-
-
-(Channeling Hogg and Villar): Overfitting is not primarily a problem of having too many parameters.
-
-A good model is one that *generalizes well* to new data. Think about this in the context of 
-
-Training, and testing.
-
-
-Overfitting is 
-
-The problem of the Fourier basis. 
-
-
-## Future directions
-
-* Wavelets
-* Scattering transform
-* Natural images
-
-
-Model comparison.
-
-
-Likelihood function only gets you so far. The dirty image is. In this type of framework, you have many more parameters than you do data points.
-
-Cross-validation. Hogg and Villar paper.
-
-In general. 
-
-K-fold cross-validation.
-
-Figures from Brianna's paper about splitting up Fourier cells. 
-
-
-* Structure of "natural" images, what the amp, phase, etc.. looks like for real scenes
-
-## 09 RML part II
-
-* Cross-validation
-* Artificial Intelligence and imaging
-
-  
 
