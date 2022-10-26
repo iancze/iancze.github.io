@@ -693,7 +693,11 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Regularized Maximum Likelihood (RML) II</title><link>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</link><pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</guid><description>&lt;h2 id="references">References&lt;/h2>
+&lt;/table></description></item><item><title>Regularized Maximum Likelihood (RML) II</title><link>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</link><pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</guid><description>&lt;ul>
+&lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+10+RML+Part+II+Part+I/1_syjygobk">Whiteboard recording&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+10+RML+Part+II+Part+II/1_b483lcx9">Zoom Slides&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://mpol-dev.github.io/MPoL/rml_intro.html">MPoL introduction&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/19499523">Machine Learning: A Probabilistic Perspective&lt;/a> by Murphy, Chapter 10&lt;/li>
@@ -737,38 +741,9 @@ $$&lt;/p>
 &lt;ul>
 &lt;li>Useful thoughts from &lt;a href="https://biometry.github.io/APES/LectureNotes/2017-Resampling/CrossValidationLecture.html">https://biometry.github.io/APES/LectureNotes/2017-Resampling/CrossValidationLecture.html&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>The idea is to test the &lt;em>predictive power&lt;/em> of your model. In this case, the model would be your setup of your . In the RML case, the model would be the settings of your image pixelization,&lt;/p>
-&lt;p>The idea of cross validation is to use the properties of your data to set your regularization.&lt;/p>
-&lt;p>Think about it, if we have &lt;em>the right model&lt;/em>, we will generalize perfectly to new data. The problem is that our training data are always limited and will usually always have some noise.&lt;/p>
-&lt;p>The problem of non-independence of your random hold-outs.&lt;/p>
-&lt;p>When the data are small, it is possible to overfit your cross validation. This is a hard place to be in, especially when getting new data is expensive.&lt;/p>
-&lt;p>We would call this model&lt;/p>
-&lt;p>The&lt;/p>
-&lt;p>(Channeling Hogg and Villar): Overfitting is not primarily a problem of having too many parameters.&lt;/p>
-&lt;p>A good model is one that &lt;em>generalizes well&lt;/em> to new data. Think about this in the context of&lt;/p>
-&lt;p>Training, and testing.&lt;/p>
-&lt;p>Overfitting is&lt;/p>
-&lt;p>The problem of the Fourier basis.&lt;/p>
-&lt;h2 id="future-directions">Future directions&lt;/h2>
-&lt;ul>
-&lt;li>Wavelets&lt;/li>
-&lt;li>Scattering transform&lt;/li>
-&lt;li>Natural images&lt;/li>
-&lt;/ul>
-&lt;p>Model comparison.&lt;/p>
-&lt;p>Likelihood function only gets you so far. The dirty image is. In this type of framework, you have many more parameters than you do data points.&lt;/p>
-&lt;p>Cross-validation. Hogg and Villar paper.&lt;/p>
-&lt;p>In general.&lt;/p>
-&lt;p>K-fold cross-validation.&lt;/p>
-&lt;p>Figures from Brianna&amp;rsquo;s paper about splitting up Fourier cells.&lt;/p>
-&lt;ul>
-&lt;li>Structure of &amp;ldquo;natural&amp;rdquo; images, what the amp, phase, etc.. looks like for real scenes&lt;/li>
-&lt;/ul>
-&lt;h2 id="09-rml-part-ii">09 RML part II&lt;/h2>
-&lt;ul>
-&lt;li>Cross-validation&lt;/li>
-&lt;li>Artificial Intelligence and imaging&lt;/li>
-&lt;/ul></description></item><item><title>Regularized Maximum Likelihood (RML) I</title><link>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</guid><description>&lt;ul>
+&lt;p>The idea is to test the &lt;em>predictive power&lt;/em> of your model. In this case, the model would be your setup of your. In the RML case, the model would be the settings of your image pixelization,&lt;/p>
+&lt;p>If we have &lt;em>the right model&lt;/em>, we will generalize perfectly to new data. The problem is that our training data are always limited and will usually always have some noise.&lt;/p>
+&lt;p>The problem of non-independence of your random hold-outs. When the data are small, it is possible to overfit your cross validation. This is a hard place to be in, especially when getting new data is expensive.&lt;/p></description></item><item><title>Regularized Maximum Likelihood (RML) I</title><link>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</guid><description>&lt;ul>
 &lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+9A+RML+Part+I/1_3ehfryrc">Recording Part I: whiteboard&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+9+part+IIA+RML/1_5k3v0oqn">Zoom Part II: slides&lt;/a>&lt;/li>
 &lt;/ul>
