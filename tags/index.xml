@@ -368,7 +368,7 @@ faculty, staff, and students possess and will endorse to make ECoS a place where
 &lt;td>Oct 26&lt;/td>
 &lt;td>Lecture&lt;/td>
 &lt;td>
-Regularized Maximum Likelihood (RML) II
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/>Regularized Maximum Likelihood (RML) II&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -693,7 +693,82 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Regularized Maximum Likelihood (RML) I</title><link>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</guid><description>&lt;ul>
+&lt;/table></description></item><item><title>Regularized Maximum Likelihood (RML) II</title><link>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</link><pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</guid><description>&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://mpol-dev.github.io/MPoL/rml_intro.html">MPoL introduction&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/19499523">Machine Learning: A Probabilistic Perspective&lt;/a> by Murphy, Chapter 10&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/3405468">Pattern Recognition and Machine Learning&lt;/a> by Bishop, Chapter 8&lt;/li>
+&lt;li>The fourth paper in the 2019 &lt;a href="https://ui.adsabs.harvard.edu/abs/2019ApJ...875L...4E/abstract">Event Horizon Telescope Collaboration series&lt;/a> describing the imaging principles&lt;/li>
+&lt;li>&lt;a href="https://ui.adsabs.harvard.edu/abs/1986ARA%26A..24..127N/abstract">Maximum entropy image restoration in astronomy&lt;/a> AR&amp;amp;A by Narayan and Nityananda 1986&lt;/li>
+&lt;li>&lt;a href="https://ui.adsabs.harvard.edu/abs/2018A%26C....22...16C/abstract">Multi-GPU maximum entropy image synthesis for radio astronomy&lt;/a> by Cárcamo et al. 2018&lt;/li>
+&lt;li>&lt;a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220911813Z/abstract">Regularized Maximum Likelihood Techniques for ALMA Observations&lt;/a> by Zawadzki, Czekala, et al.&lt;/li>
+&lt;li>&lt;a href="https://ui.adsabs.harvard.edu/abs/2021PASP..133i3001H/abstract">Fitting Very Flexible Models: Linear Regression With Large Numbers of Parameters&lt;/a> by Hogg and Villar&lt;/li>
+&lt;/ul>
+&lt;h2 id="last-time">Last time&lt;/h2>
+&lt;ul>
+&lt;li>Recap of (parametric) forward modeling in a Bayesian context&lt;/li>
+&lt;li>Recap of the CLEAN procedural image deconvolution algorithm&lt;/li>
+&lt;li>Introduction of RML process as a non-parametric model&lt;/li>
+&lt;li>Discussion of regularization, in the context of priors&lt;/li>
+&lt;li>Discussion of loss function space (defined by probability distribution) vs. the optimization engineering that helps you navigate it&lt;/li>
+&lt;/ul>
+&lt;h2 id="today">Today&lt;/h2>
+&lt;ul>
+&lt;li>Overarching question&amp;mdash;how do you assess whether something is good? Forays into Machine Learning&lt;/li>
+&lt;li>Deeper dive into future RML applications and opportunities&lt;/li>
+&lt;/ul>
+&lt;h2 id="model-comparison">Model comparison&lt;/h2>
+&lt;p>Last time we talked about the difference between parametric and non-parametric models, i.e., the difference between fitting a line with slope and intercept vs. fitting a spline or Gaussian process. And we made the simple distinction that a parametric model has a fixed number of parameters, whereas a non-parametric model generally has parameters that grow with your number of data points. The truth is that in several contexts these exist as part of a continuum.&lt;/p>
+&lt;p>Today we&amp;rsquo;re going to take a journey along this continuum and examine some of the failure modes that can come about. The discussion will first be general and applicable to &lt;em>many&lt;/em> problems, but then we&amp;rsquo;ll zero in on the case of interferometric imaging (both CLEAN and RML) specifically.&lt;/p>
+&lt;p>Let&amp;rsquo;s think of a polynomial basis. If you recall back to one of our first lectures, where I asked you to draw a function through a set of discrete samples. Let&amp;rsquo;s narrow in on the specific case of a polynomial basis set of degree \(N\), where \(N\) is the number of terms. I&amp;rsquo;m going to write it like this&lt;/p>
+&lt;p>$$
+y = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \ldots.
+$$
+but similar arguments apply to Legendre polynomials or Chebyshev polynomials, etc, and in practice it&amp;rsquo;s better to use on of those for your actual fitting problem.&lt;/p>
+&lt;p>But lets say we have 10 data points. We can fit a 0th order polynomial, 1st order, etc.., using say a \(\chi^2\) likelihood function. And then we can get to a polynomial of degree ten. Who has heard the common critique &amp;ldquo;your model has more parameters than data, it&amp;rsquo;s so flexible&amp;rdquo;. This situation is where the common advice against using a model with more parameters than your data comes from, and when people utter this critique, I think this is the situation that they are referring to.&lt;/p>
+&lt;p>What are the criticisms of this model? On one hand, it has fit the data &lt;em>perfectly&lt;/em>. It&amp;rsquo;s done what we&amp;rsquo;ve asked. On the other hand, it doesn&amp;rsquo;t seem to do what we want. If we were to get new data, our model probably wouldn&amp;rsquo;t be that useful.&lt;/p>
+&lt;p>What can we do? Well, the common wisdom would have us stick to models with fewer parameters. But, this is being a little shortsighted. Instead, we can add a &lt;em>regularization&lt;/em> that discourages the fit from taking on large amplitudes in many of the terms. One type of regularization is &amp;ldquo;ridge regression,&amp;rdquo; also called Tikhonov or L2 regularization. It adds an extra term to the fit metric that says&lt;/p>
+&lt;p>$$
+\lambda \sum_{i=0}^{N-1}|a_i|^2
+$$&lt;/p>
+&lt;p>then we find that the amplitudes of those higher order terms (which might not be necessary) will be diminished. If you recall from very early in the semester, where we talked about the concept of band-limited signals, this regularization is related. In the limit we let \(N\rightarrow \infty\), we arrive at a Gaussian process, and the autocovariance of the function (the Gaussian process kernel) is related to the power spectrum of the signal. If we say the signal is band-limited, then that puts a &lt;em>cap&lt;/em> on the number of higher order terms that we can actually use.&lt;/p>
+&lt;p>This math is fully equivalent to the RML imaging problem we introduced last week, and it also raises the same problem: how do we set the regularizer strength? What is the best choice?&lt;/p>
+&lt;h2 id="cross-validation">Cross validation&lt;/h2>
+&lt;ul>
+&lt;li>Useful thoughts from &lt;a href="https://biometry.github.io/APES/LectureNotes/2017-Resampling/CrossValidationLecture.html">https://biometry.github.io/APES/LectureNotes/2017-Resampling/CrossValidationLecture.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>The idea is to test the &lt;em>predictive power&lt;/em> of your model. In this case, the model would be your setup of your . In the RML case, the model would be the settings of your image pixelization,&lt;/p>
+&lt;p>The idea of cross validation is to use the properties of your data to set your regularization.&lt;/p>
+&lt;p>Think about it, if we have &lt;em>the right model&lt;/em>, we will generalize perfectly to new data. The problem is that our training data are always limited and will usually always have some noise.&lt;/p>
+&lt;p>The problem of non-independence of your random hold-outs.&lt;/p>
+&lt;p>When the data are small, it is possible to overfit your cross validation. This is a hard place to be in, especially when getting new data is expensive.&lt;/p>
+&lt;p>We would call this model&lt;/p>
+&lt;p>The&lt;/p>
+&lt;p>(Channeling Hogg and Villar): Overfitting is not primarily a problem of having too many parameters.&lt;/p>
+&lt;p>A good model is one that &lt;em>generalizes well&lt;/em> to new data. Think about this in the context of&lt;/p>
+&lt;p>Training, and testing.&lt;/p>
+&lt;p>Overfitting is&lt;/p>
+&lt;p>The problem of the Fourier basis.&lt;/p>
+&lt;h2 id="future-directions">Future directions&lt;/h2>
+&lt;ul>
+&lt;li>Wavelets&lt;/li>
+&lt;li>Scattering transform&lt;/li>
+&lt;li>Natural images&lt;/li>
+&lt;/ul>
+&lt;p>Model comparison.&lt;/p>
+&lt;p>Likelihood function only gets you so far. The dirty image is. In this type of framework, you have many more parameters than you do data points.&lt;/p>
+&lt;p>Cross-validation. Hogg and Villar paper.&lt;/p>
+&lt;p>In general.&lt;/p>
+&lt;p>K-fold cross-validation.&lt;/p>
+&lt;p>Figures from Brianna&amp;rsquo;s paper about splitting up Fourier cells.&lt;/p>
+&lt;ul>
+&lt;li>Structure of &amp;ldquo;natural&amp;rdquo; images, what the amp, phase, etc.. looks like for real scenes&lt;/li>
+&lt;/ul>
+&lt;h2 id="09-rml-part-ii">09 RML part II&lt;/h2>
+&lt;ul>
+&lt;li>Cross-validation&lt;/li>
+&lt;li>Artificial Intelligence and imaging&lt;/li>
+&lt;/ul></description></item><item><title>Regularized Maximum Likelihood (RML) I</title><link>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/09-rml-part-i/</guid><description>&lt;ul>
 &lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+9A+RML+Part+I/1_3ehfryrc">Recording Part I: whiteboard&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+9+part+IIA+RML/1_5k3v0oqn">Zoom Part II: slides&lt;/a>&lt;/li>
 &lt;/ul>
