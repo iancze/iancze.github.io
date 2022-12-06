@@ -27,4 +27,4 @@ The following is the anticipated schedule for course lectures and activities. Le
 | Nov 9 | Project presentation | TBD |
 | Nov 16 | Project presentation | TBD |
 | Nov 30 | Project presentation | TBD |
-| Dec 7 | Lecture | Summary and Future Directions |
+| Dec 7 | Lecture | {{< relreftitle href=11-covariance alt="Correlation in ALMA data">}} |
