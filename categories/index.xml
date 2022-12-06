@@ -394,7 +394,9 @@ faculty, staff, and students possess and will endorse to make ECoS a place where
 &lt;tr>
 &lt;td>Dec 7&lt;/td>
 &lt;td>Lecture&lt;/td>
-&lt;td>Summary and Future Directions&lt;/td>
+&lt;td>
+&lt;a href=https://iancze.github.io/courses/astro589/lectures/11-covariance/>Correlation and Covariance in ALMA Data&lt;/a>
+&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Fall 2021 Class Schedule</title><link>https://iancze.github.io/courses/astro542/schedule/</link><pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/schedule/</guid><description>&lt;p>ASTRO 542 meets three times a week (9:05am to 9:55am) on Monday, Wednesday, and Friday in a &lt;em>remote synchronous&lt;/em> format over Zoom. The Zoom link is provided to enrolled students via email for security purposes. If you would like to audit a course, please email the instructor.&lt;/p>
@@ -693,7 +695,9 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Regularized Maximum Likelihood (RML) II</title><link>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</link><pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</guid><description>&lt;ul>
+&lt;/table></description></item><item><title>Correlation and Covariance in ALMA Data</title><link>https://iancze.github.io/courses/astro589/lectures/11-covariance/</link><pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/11-covariance/</guid><description>&lt;ul>
+&lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589+Lecture+11A+Covariance+and+Correlations/1_1jr8jqht">Zoom Slides&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Regularized Maximum Likelihood (RML) II</title><link>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</link><pubDate>Fri, 21 Oct 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/lectures/10-rml-part-ii/</guid><description>&lt;ul>
 &lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+10+RML+Part+II+Part+I/1_syjygobk">Whiteboard recording&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+10+RML+Part+II+Part+II/1_b483lcx9">Zoom Slides&lt;/a>&lt;/li>
 &lt;/ul>
