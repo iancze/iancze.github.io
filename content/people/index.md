@@ -8,38 +8,38 @@ stageNames:
     prof : ""
     postdoc: Postdocs
     grad: Graduate Students
-    ugrad: Undergraduate Students
+    # ugrad: Undergraduate Students
     former: Former Group Members
 
 stageOrder: 
     - prof
     - postdoc
     - grad
-    - ugrad
+    # - ugrad
     - former
 
 people: 
     - name: Ian Czekala
       stage: prof 
       src: Ian_Czekala.jpeg
-      blurb: Ian is an assistant professor in the [Astronomy and Astrophysics department](https://science.psu.edu/astro) at Pennsylvania State University and leader of the Czekala research group. Ian is also a Co-Hire of PSU's [Institute for Computational and Data Sciences](https://www.icds.psu.edu/). He is broadly interested in star and planet formation, machine learning, and Bayesian inference for astrophysics.
+      blurb: Ian is a lecturer in the [School of Physics and Astronomy](https://www.st-andrews.ac.uk/physics-astronomy/) at the [University of St. Andrews](https://www.st-andrews.ac.uk/) in Scotland. He is broadly interested in star and planet formation, machine learning, and Bayesian inference for astrophysics.
     - name: Jeff Jennings
       stage: postdoc
       src: Jeff_Jennings.jpeg
       blurb: Jeff is an Eberly Research Fellow postdoc in the Astronomy and Astrophysics department at Pennsylvania State University. He focuses on protoplanetary disk science and statistical techniques for data analysis, including applications to image synthesis for astronomical interferometry. 
     - name : Brianna Zawadzki
-      stage: grad 
+      stage: former 
       src: Brianna_Zawadzki.png
-      link: https://science.psu.edu/astro/people/bjz16
-      blurb: Brianna is a Ph.D. candidate at Pennsylvania State University working on N-body planet formation simulations, ALMA observations of protoplanetary disks, and regularized maximum likelihood imaging algorithms.
+      link: https://briannazawadzki.github.io/
+      blurb: In 2023, Brianna completed her Ph.D. entitled "Investigating Planet Formation Through Simulation, Observation, And Machine Learning" at Pennsylvania State University. Her work at Penn State ranged from N-body planet formation simulations to ALMA observations of protoplanetary disks to development of regularized maximum likelihood imaging algorithms. Brianna is now a Brinson Prize Postdoctoral Fellow at Wesleyan University.
     - name: Kadri M. Nizam
       stage: grad 
       src: Kadri_Nizam.png
       blurb: Kadri is a graduate student at Pennsylvania State University working on protoplanetary disk dynamics and machine learning for regularized maximum imaging algorithms.
     - name: Zoe Ko
-      stage: ugrad 
+      stage: former 
       src: Zoe_Ko.png
-      blurb: Zoe is an undergraduate student and physics major at the University of California, Berkeley working on high resolution stellar spectroscopy and radial velocity analysis for circumbinary protoplanetary disks.
+      blurb: Zoe worked with our group as an undergraduate student and physics major at the University of California, Berkeley. She worked on high resolution stellar spectroscopy and radial velocity analysis for circumbinary protoplanetary disks. Zoe will begin a Ph.D. in Astronomy at Johns Hopkins University in 2024.
     - name: Tyler Quinn
       stage: former 
       src: Tyler_Quinn.png
