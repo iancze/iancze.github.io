@@ -1,0 +1,195 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Reference Materials for this lecture:
+The Fourier Transform and its Applications by R. Bracewell Interferometry and Synthesis in Radio Astronomy by Thompson, Moran, and Swenson, particularly Appendix 2.1 Fourier Analysis and Imaging by R. Bracewell Useful (and entertaining!) introductions to the topic:
+Youtube: 3Blue1Brown Complex Numbers Wikipedia Reference A complex number \(z\) is one in the form of \(z = a + b i\), where \(i\) is the imaginary unit. The imaginary unit satisfies the equation $$ i^2 = -1."><meta name=generator content="Hugo 0.117.0"><title>The Fourier Transform I | Czekala Group</title><link rel=canonical href=/courses/as5003/lectures/02-fourier-transform-i/><script async src="https://www.googletagmanager.com/gtag/js?id=G-W5586VESJK"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-W5586VESJK",{anonymize_ip:!1})}</script><script src=https://cdn.jsdelivr.net/npm/vega@5.20.2></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-lite@5.1.0></script>
+<script src=https://cdn.jsdelivr.net/npm/vega-embed@6.17.0></script>
+<link rel=stylesheet href=/css/base.min.e9a98f863db62272e3c41bb8784b2588cd338ebba264b169f66d736c05d1b47f.css integrity="sha256-6amPhj22InLjxBu4eEsliM0zjruiZLFp9m1zbAXRtH8=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=/>Czekala Group</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/people/>People</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/posts/>Posts</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/publications/>CV and publications</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/courses/>Courses</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><main><article><header><h1>The Fourier Transform I</h1></header><p><strong>Reference Materials for this lecture</strong>:</p><ul><li><a href=https://catalog.libraries.psu.edu/catalog/2010095>The Fourier Transform and its Applications</a> by R. Bracewell</li><li><a href=https://catalog.libraries.psu.edu/catalog/20789467>Interferometry and Synthesis in Radio Astronomy</a> by Thompson, Moran, and Swenson, particularly Appendix 2.1</li><li><a href=https://catalog.libraries.psu.edu/catalog/34517505>Fourier Analysis and Imaging</a> by R. Bracewell</li></ul><p><strong>Useful (and entertaining!) introductions to the topic</strong>:</p><ul><li>Youtube: <a href="https://www.youtube.com/watch?v=spUNpyF58BY&amp;ab_channel=3Blue1Brown">3Blue1Brown</a></li></ul><h2 id=complex-numbers>Complex Numbers</h2><ul><li><a href=https://en.wikipedia.org/wiki/Complex_number#Polar_complex_plane>Wikipedia Reference</a></li></ul><p>A complex number \(z\) is one in the form of \(z = a + b i\), where \(i\) is the imaginary unit. The imaginary unit satisfies the equation
+$$
+i^2 = -1.
+$$</p><p>So a complex number has both real (\(a\)) and imaginary (\(b\)) components to it. We can represent this as a plot on the Cartesian plane:</p><figure><a href=https://en.wikipedia.org/wiki/File:Complex_number_illustration.svg><img src=complex-cartesian.png alt="Representation of a complex number on the Cartesian plane. Credit: Wolfkeeper"></a><figcaption><p>Representation of a complex number on the Cartesian plane. Credit: Wolfkeeper</p></figcaption></figure><p>Alternatively, we can also represent a complex number on the polar plane, using an amplitude \(r\) and phase \(\varphi\):</p><figure><a href=https://en.wikipedia.org/wiki/File:Complex_number_illustration_modarg.svg><img src=complex-polar.png alt="Representation of a complex number on the polar plane. Credit: Kan8eDie, based on Wolfkeeper"></a><figcaption><p>Representation of a complex number on the polar plane. Credit: Kan8eDie, based on Wolfkeeper</p></figcaption></figure><p>$$
+z = r e^{i \varphi} = r (\cos \varphi + i \sin \varphi).
+$$</p><p>This is closely related to Euler&rsquo;s formula
+$$
+e^{i x} = \cos x + i \sin x
+$$
+for a complex sinusoid. It&rsquo;s useful to keep in mind Euler&rsquo;s identity:
+$$
+e^{i \pi} + 1 = 0.
+$$</p><p>It&rsquo;s possible to convert from the Cartesian form to polar form and vice-versa:
+$$
+r = |z| = \sqrt{a^2 + b^2}
+$$
+and
+$$
+\varphi = \arg(z) = \arg(a + bi)
+$$
+which is most easily carried out using the <code>arctan2</code> function, to avoid quadrant ambiguities.
+$$
+\varphi = \mathrm{arctan2}(b, a).
+$$</p><p>You can go from polar back to Cartesian by writing
+$$
+z = r e^{i \varphi} = r (\cos \varphi + i \sin \varphi)
+$$
+and then doing
+$$
+a = \Re(z) = r \cos \varphi
+$$
+and
+$$
+b = \Im(z) = r \sin \varphi.
+$$</p><h2 id=the-fourier-transform>The Fourier Transform</h2><p>References include a mix of</p><ul><li>Ch 2 of <a href=https://catalog.libraries.psu.edu/catalog/2010095>The Fourier Transform and its Applications</a> by R. Bracewell</li><li>Appendix 2.1 of <a href=https://catalog.libraries.psu.edu/catalog/20789467>Interferometry and Synthesis in Radio Astronomy</a> by Thompson, Moran, and Swenson</li></ul><p>First, we&rsquo;ll introduce the equations and then explain what&rsquo;s going on.</p><p><strong>Forward transform</strong>:
+$$
+F(s) = \int_{-\infty}^{\infty} f(x) e^{-i 2 \pi x s}\,\mathrm{d}x
+$$
+also called the &ldquo;minus-\(i\)&rdquo; transform.</p><p><strong>Inverse transform</strong>:
+$$
+f(x) = \int_{-\infty}^{\infty} F(s) e^{i 2 \pi x s}\,\mathrm{d}s
+$$
+also called the &ldquo;plus-\(i\)&rdquo; transform.</p><p>Note that there are alternate conventions for the Fourier transform pairs, which vary as to whether the \(2 \pi\) factor appears in the exponent or as a pre-factor. We prefer the notation we&rsquo;ve provided here because we find it much easier to keep track of \(2\pi\) factors.</p><p><strong>Successive transforms</strong>:</p><p>We can show that
+$$
+f(x) = \int_{-\infty}^{\infty} \left [ \int_{-\infty}^{\infty} f(x) e^{-i 2 \pi x s}\,\mathrm{d}x \right ] e^{i 2 \pi x s}\,\mathrm{d}s,
+$$
+i.e., successive transformations yield back the original function. We don&rsquo;t have time to walk through the proof, but it&rsquo;s available in <a href=https://catalog.libraries.psu.edu/catalog/20789467>TMS Section A2.1</a>.</p><p>Therefore, we have
+$$
+f(x) \leftrightharpoons F(s),
+$$
+where the \(\leftrightharpoons\) denotes a Fourier transform pair. Sometimes you might also see the notation \(\leftrightarrow\). Generally, if we have functions like \(f\) or \(g\), then we denote their Fourier transform pairs with captial letters (e.g., \(F\), \(G\))).</p><p><strong>How to think about the domains</strong>
+The Fourier transform maps domains from \(x\) to \(s\), where \(s\) has units of &ldquo;cycles per unit of \(x\)&rdquo;. E.g., if \(x\) is in units of time (seconds), then \(s\) has units of cycles/second, commonly known as hertz. The FT can also be applied to spatial distance coordinates (e.g., \(x\) in meters) and spatial coordinates on the sky (e.g., \(x\) in arcseconds).</p><p>So let&rsquo;s say someone is playing a chord on a musical instrument. If \(f(x)\) represents the time-series of pressure values near your ear, then \(F(s)\) represents the notes that are being played (we would probably be most interested in something like \(|F(s)|^2\) for power as a function of frequency, like a spectrogram).</p><p><a href=https://musiclab.chromeexperiments.com/spectrogram/>Musical Spectrogram link</a></p><h3 id=conditions-on-existence>Conditions on existence</h3><p>Given the strong evidence via physical systems that the Fourier transform of particular time-series exists (e.g., spectrums for waveforms, antenna radiation patterns), there are actually some mathematical functions whose Fourier transforms do not exist.</p><p>Physical possibility (in physical systems) is a sufficient condition for the existence of its transform.</p><p>Sometimes, though, we consider waveforms like</p><ul><li>\(\sin(t)\): harmonic wave</li><li>\(H(t)\): Heaviside step</li><li>\(\delta(t)\): impulse</li></ul><p>Strictly speaking, none of these functions has a Fourier transform. What do we mean that they do not have Fourier transforms?
+$$
+F(s) = \int_{-\infty}^{\infty} f(x) e^{-i 2 \pi x s}\,\mathrm{d}x
+$$
+does not converge for all values of \(s\). Consider \(\sin(t)\) integrated from \((-\infty, \infty)\)&mldr; it&rsquo;ll just keep oscillating about 0.</p><p>None of these waveforms are actually physically possible, though, because a waveform \(\sin(t)\) would have need to been switched on an infinite time ago, a step function would need to be maintained for an infinite time, and an impulse would need to be infinitely large for an infinitely short time.</p><p>So, what are the conditions for the existence of Fourier transforms.</p><ol><li>The integral of \(|f(x)|\) from \(-\infty\) to \(\infty\) exists.</li><li>Any discontinuities in \(f(x)\) are finite.</li></ol><p>In a physical circumstance, these conditions would be violated when there is infinite energy.</p><h3 id=transforms-in-the-limit>Transforms in the limit</h3><p>Though we just outlined functional forms whose Fourier transforms do not <em>strictly</em> exist, we can find a way to think such that the transforms of these functions do exist in a practical sense. This is by considering them <em>in the limit</em>.</p><p>Consider a periodic function whose transform would strictly not exist, such as \(P(x) = \sin(x) \), since
+$$
+\int_{-\infty}^\infty |P(x)|\,\mathrm{d}x
+$$
+would not converge.</p><p>We could modify this function ever so slightly by multiplication with a <em>very</em> broad Gaussian envelope \(\exp(-\alpha x^2)\), where \(\alpha\) is a small positive number, then this modified version may have a transform. As we let \(\alpha \rightarrow 0\), then we approach \(P\) in the limit.
+$$
+\int_{-\infty}^\infty |e^{-\alpha x^2} P(x)|\,\mathrm{d}x
+$$</p><p>As \(\alpha \rightarrow 0\) the transform may still not exist for all \(s\), however, we can still be quite productive with the sequence of transforms that do exist as we approach this limit. Therefore, we can practically use the Fourier transform for all physical systems that we might consider. We&rsquo;ll revisit this in more detail when we talk about Fourier series, line spectra, and the sampling theorem.</p><h3 id=oddness-evenness-and-complex-conjugates>Oddness, Evenness, and Complex Conjugates</h3><figure><img src=even-odd.png alt="An even function \(E(x)\) and an odd function \(O(x)\), followed by their sum. Credit: The Fourier Transform and Its Applications, Bracewell, Figs 2.2 and 2.3."><figcaption><p>An even function \(E(x)\) and an odd function \(O(x)\), followed by their sum. Credit: The Fourier Transform and Its Applications, Bracewell, Figs 2.2 and 2.3.</p></figcaption></figure><p><strong>Even functions</strong> have
+$$
+E(-x) = E(x)
+$$
+and are symmetrical.</p><p><strong>Odd functions</strong> have
+$$
+O(-x) = -O(x)
+$$
+and are antisymmetrical.</p><p>The sum of even and odd functions is, in general, neither even nor odd.</p><p>Any function \(f(x)\) can be split unambiguously into it&rsquo;s odd and even parts, though, where
+$$
+E(x) = \frac{1}{2} \left [ f(x) + f(-x) \right]
+$$
+and
+$$
+O(x) = \frac{1}{2} \left [ f(x) - f(-x) \right]
+$$
+and so we have
+$$
+f(x) = E(x) + O(x),
+$$
+where both \(E\) and \(O\) are in general complex-valued.</p><p>Evenness and oddness are very useful because we can these definitions to re-write the Fourier transform as
+$$
+F(s) = 2 \int_0^\infty E(x) \cos(2 \pi x s)\,\mathrm{d}x - 2 i \int_0^\infty O(x) \sin (2 \pi x s)\,\mathrm{d}x.
+$$</p><p>We see that</p><ol><li>If a function is even, its transform is even</li><li>If a function is odd, its transform is odd</li></ol><p>and other results summarized by Bracewell in Chapter 2:</p><figure><img src=ft-relationships.png alt="If a function has the characteristics in the left column, then its Fourier transform has the characteristics in the right column. Credit: Bracewell Ch. 2"><figcaption><p>If a function has the characteristics in the left column, then its Fourier transform has the characteristics in the right column. Credit: Bracewell Ch. 2</p></figcaption></figure><p>These relationships are extremely useful for quickly ascertaining the basic nature of the Fourier transform of any function you may encounter, as well as planning how to numerically compute transforms using <code>fft</code> or <code>rfft</code> packages.</p><p><strong>Complex conjugates</strong></p><p>If we have the complex conjugate of function \(f(x)\), denoted by \(f^*(x)\), then we have</p><p>$$
+f^{*}(x) \leftrightharpoons F^{*}(-s)
+$$</p><h2 id=transforms-of-some-simple-functions>Transforms of some simple functions</h2><p>Let&rsquo;s practice by taking the Fourier transforms of some functions.</p><h3 id=boxcar>Boxcar</h3><p>The rectangle or &ldquo;boxcar&rdquo; function is<figure><img src=rectangle.png alt="The rectangle, or boxcar function. Credit: Bracewell Ch. 3"><figcaption><p>The rectangle, or boxcar function. Credit: Bracewell Ch. 3</p></figcaption></figure></p><p>Let&rsquo;s calculate the Fourier transform. The function itself is simple, so this is mainly an exercise in choosing the right limits
+$$
+F(s) = \int_{-\infty}^{\infty} f(x) e^{-i 2 \pi x s}\,\mathrm{d}x
+$$</p><p>$$
+F(s) = \int_{-1/2}^{1/2} e^{-i 2 \pi x s}\,\mathrm{d}x
+$$</p><p>We can use Euler&rsquo;s formula to write
+$$
+F(s) = \int_{-1/2}^{1/2} \cos(2 \pi x s) + i \sin(2 \pi x s) \,\mathrm{d}x
+$$
+and visually seen that the \(\sin\) term would eventually cancel itself out, or we could have relied upon the fact that we know \(\Pi(x)\) is an even function (\(O(x) = 0\)) and used
+$$
+F(s) = 2 \int_0^\infty E(x) \cos(2 \pi x s)\,\mathrm{d}x - 2 i \int_0^\infty O(x) \sin (2 \pi x s)\,\mathrm{d}x.
+$$
+to yield
+$$
+F(s) = 2 \int_0^{1/2} \cos(2 \pi x s)\,\mathrm{d}x
+$$</p><p>$$
+F(s) = 2 \Big |_0^{1/2} \frac{\sin 2 \pi x s}{2 \pi s} = \frac{\sin \pi s}{\pi s} = \mathrm{sinc}(s)
+$$</p><p>Note that we (and Bracewell) define
+$$
+\mathrm{sinc}(s) = \frac{\sin \pi s}{\pi s}
+$$
+this is called the normalized sinc function, and (IMO) is the most useful because of it&rsquo;s nice Fourier pair relationships. There is also the &ldquo;unnormalized&rdquo; sinc function, which doesn&rsquo;t have the factors of \(\pi\) in it, but we won&rsquo;t use that in this course. The <strong>normalized sinc function</strong> has the properties that</p><ul><li>its peak is equal to 1 \(\mathrm{sinc}(0) = 1\)</li><li>its &ldquo;nulls&rdquo; are located at non-zero integer values of \(n\) for \(\mathrm{sinc}(n)\)</li><li>its integral from \(-\infty,\infty\) is equal to 1</li></ul><p>So we have the Fourier pair:
+$$
+\Pi(x) \leftrightharpoons \mathrm{sinc}(s)
+$$
+The unit rectangle (or boxcar) function has the Fourier transform pair of a normalized sinc function.</p><p>This is also the same relationship that we introduced in the first lecture: the far field electric field pattern (sinc) is the Fourier transform of the electric field illuminating the aperture of the telescope (boxcar).</p><h3 id=gaussian>Gaussian</h3><p>How about the Fourier transform of a Gaussian function?
+$$
+f(x) = \exp \left ( -\frac{x^2}{2 a ^2} \right )
+$$</p><p>$$
+F(s) = \int_{-\infty}^{\infty} \exp \left ( -\frac{x^2}{2 a ^2} \right ) \exp (-i 2 \pi x s)\,\mathrm{d}x
+$$</p><p>$$
+F(s) = \int_{-\infty}^{\infty} \exp \left ( -\frac{x^2}{2 a ^2} -i 2 \pi x s \right )\,\mathrm{d}x
+$$</p><p>Usually, when I see something like this, my standard approach is to start browsing books of integrals like <a href=https://en.wikipedia.org/wiki/Gradshteyn_and_Ryzhik>Gradshteyn and Ryzhik</a> for ideas about how I might rearrange the integrand and successfully evaluate the integral. I&rsquo;d usually just go for this. But, in this case, we can actually do something using a trick you probably learned in jr. high school, called <a href=https://www.mathsisfun.com/algebra/completing-square.html>completing the square</a>.</p><p>Ok, so we&rsquo;ve got terms in the exponent with \(x^2\) and \(x\), and an equation that looks like
+$$
+a x^2 + bx + c = 0
+$$
+which we want to turn into something that looks like
+$$
+a(x + d)^2 + e = 0.
+$$</p><p>The answer is that
+$$
+d = \frac{b}{2a}
+$$
+and
+$$
+e = c - \frac{b^2}{4 a}
+$$
+such that our rearranged exponent becomes
+$$
+-\left [ \frac{x^2}{2 a ^2} + i 2 \pi x s \right ] = -[(x - 2i \pi a^2 s)^2 + 4 \pi^2 a^4 s^2]/2a^2
+$$
+Why was this useful? Well, the integral is over \(x\), so we can pull out all terms that do not depend on \(x\), giving us a rearranged integral of
+$$
+F(s) = \exp(-2 \pi^2 a^2 s^2 ) \int_{-\infty}^\infty \exp \left (-\frac{(x - 2 i \pi a^2 s)^2}{2 a^2} \right)\,\mathrm{d}x
+$$</p><p>Here it is helpful to remember your Gaussian integration formulas such that
+$$
+\int_{-\infty}^\infty e^{-a(x + b)^2}\,\mathrm{d}x = \sqrt{\frac{\pi}{a}}.
+$$</p><p>Thus, the integral contributes another factor of \(\sqrt{2 \pi} a\) and the final result is</p><p>$$
+F(s) = \sqrt{2 \pi} a \exp(-2 \pi^2 a^2 s^2 )
+$$</p><p>What functional form is this? This is another Gaussian, though the normalization and standard deviation are a bit different! So, we see that the Gaussian function is a Fourier transform pair with itself.</p><p>Hopefully now you have a taste of how to compute Fourier transforms. At its most basic, it&rsquo;s just a matter of setting up and evaluating the integral. For many function forms, you can use integration strategies to arrive at analytic solutions. As a practical matter, in the next lecture we&rsquo;ll see how we can evaluate this integral numerically.</p><h2 id=convolution>Convolution</h2><p>The convolution of two functions \(f(x)\) and \(g(x)\) is defined as
+$$
+\int_{-\infty}^\infty f(u) g(x - u)\,\mathrm{d}u
+$$
+and is frequently written using the \(*\) symbol. The convolution produces a new function, so we have
+$$
+h(x) = f(x) * g(x).
+$$</p><p>Convolution as a process is very useful to think of graphically</p><figure><img src=convolution-1.png alt="A graphical representation of the convolution of two functions \(f(x)\) and \(g(x)\). The \(g\) function is flipped, shifted to \(x\), and then multiplied against \(f\). The value of the convolution \(h(x)\) is given by the integral of the multiplied product. Credit: Bracewell Ch. 3"><figcaption><p>A graphical representation of the convolution of two functions \(f(x)\) and \(g(x)\). The \(g\) function is flipped, shifted to \(x\), and then multiplied against \(f\). The value of the convolution \(h(x)\) is given by the integral of the multiplied product. Credit: Bracewell Ch. 3</p></figcaption></figure><figure><img src=convolution-2.png alt="In general, convolution by most functions (e.g., boxcars, Gaussians, etc&amp;hellip;) results in a smoothing out of high-frequency structure. Credit: Bracewell Ch. 3"><figcaption><p>In general, convolution by most functions (e.g., boxcars, Gaussians, etc&mldr;) results in a smoothing out of high-frequency structure. Credit: Bracewell Ch. 3</p></figcaption></figure><figure><img src=convolution-3.png alt="Convolution can also be thought of as a superposition of characteristic contributions. I.e., the final function \(h(x)\) has grabbed value from nearby regions of \(f(x)\), modulated by the envelope of \(g(x)\). This paradigm is very useful for understanding interpolation, smoothing, and kernel density estimation (KDE). Credit: Bracewell Ch. 3"><figcaption><p>Convolution can also be thought of as a superposition of characteristic contributions. I.e., the final function \(h(x)\) has grabbed value from nearby regions of \(f(x)\), modulated by the envelope of \(g(x)\). This paradigm is very useful for understanding interpolation, smoothing, and kernel density estimation (KDE). Credit: Bracewell Ch. 3</p></figcaption></figure><p>Convolution is commutative</p><p>$$
+f * g = g * f
+$$</p><p>and associative</p><p>$$
+f * (g * h) = (f * g) * h
+$$</p><p>and distributive over addition</p><p>$$
+f * (g + h) = f * g + f * h.
+$$</p><p>It is a <a href="https://undergroundmathematics.org/glossary/linear-operator#:~:text=A%20function%20f%20is%20called,x%20and%20all%20constants%20c.">linear operator</a>, just like the Fourier transform.</p><h2 id=the-impulse-symbol>The impulse symbol</h2><p>We&rsquo;ll develop a notation for an intense (unit-area) pulse so brief that the measuring equipment is unable to distinguish it from pulses yet briefer still. You may be quite familiar with this concept as a &ldquo;delta-function,&rdquo; especially in the context of quantum physics. Physically speaking, things like &ldquo;point masses&rdquo;, &ldquo;point charges,&rdquo; and (astrophysically speaking) &ldquo;point sources&rdquo; do not physically exist, but they are very useful concepts. The only important attribute of an impulse is <em>how it reacts under integration</em></p><ul><li>\(\delta(x) = 0\) for \(x \ne 0\)</li><li>\(\int_{-\infty}^\infty \delta(x)\,\mathrm{d}x = 1\)</li></ul><p>And, there is a close relationship between the impulse symbol and the unit step function \(H(x)\) such that
+$$
+\int_{-\infty}^x \delta(x^\prime)\,\mathrm{d}x^\prime = H(x).
+$$</p><p>Another very important property of the impulse function is its &ldquo;sifting property&rdquo; (TMS A2.11), such that
+$$
+f(a) = \int_{-\infty}^{\infty} f(x) \delta(x - a)\,\mathrm{d}x^\prime.
+$$
+i.e., the integral of function \(f(x)\) times a delta-function located at \(a\) will give the value of the function evaluated at \(a\), \(f(a)\).</p><p>The Fourier transform of a delta function (centered on 0) is</p><p>$$
+F(s) = \int_{-\infty}^{\infty} \delta(0) \exp (-i 2 \pi x s)\,\mathrm{d}x = 1.
+$$
+This is yet another important Fourier pair
+$$
+\delta(x) \leftrightharpoons \mathrm{constant\;amplitude\,\forall\, s}.
+$$</p><h2 id=the-sampling-or-replicating-symbol-shah-function>The Sampling or Replicating Symbol &ldquo;Shah function&rdquo;</h2><p>This is an infinite sequence of unit impulses, given by
+$$
+\mathrm{shah}(x) = \sum_{n=-\infty}^\infty \delta(x - n)
+$$</p><figure><img src=shah.png alt="The replicating function. Credit: Bracewell Fig 5.4"><figcaption><p>The replicating function. Credit: Bracewell Fig 5.4</p></figcaption></figure><p>Also sometimes called a &ldquo;Dirac Comb.&rdquo; There is a generalization of the sifting property, such that if you multiply a function by a shah, you are effectively sampling it at unit intervals.</p><p>You can use it to sample \(f(x)\) (by multiplication)</p><figure><img src=sampling.png alt="Sampling property of the shah function by multiplication. Credit: Bracewell Fig 5.5"><figcaption><p>Sampling property of the shah function by multiplication. Credit: Bracewell Fig 5.5</p></figcaption></figure><p>And you can use it to replicate \(f(x)\) (by convolution)</p><figure><img src=replicating.png alt="Replicating property of the shah function by convolution. Credit: Bracewell Fig 5.6"><figcaption><p>Replicating property of the shah function by convolution. Credit: Bracewell Fig 5.6</p></figcaption></figure><p>The unit shah function is also its own Fourier transform
+$$
+\mathrm{shah}(x) \leftrightharpoons \mathrm{shah}(s)
+$$</p><h2 id=fourier-transform-theorems-properties-similarity-convolution-multiplication>Fourier transform theorems properties: similarity, convolution, multiplication</h2><p>There are several useful properties of the Fourier transform that you&rsquo;ll want to familiarize yourself with. See Bracewell Ch. 6 or TMS A2.1.2.</p><h3 id=similarity>Similarity</h3><p>If</p><p>$$
+f(x) \leftrightharpoons F(s)
+$$</p><p>then</p><p>$$
+f(ax) \leftrightharpoons \frac{1}{|a|} F \left (\frac{s}{a} \right).
+$$</p><p>I.e., applied to waveforms and spectra, a compression of the time scale corresponds to an expansion of the frequency scale.</p><h4 id=fourier-transforms-and-the-heisenberg-uncertainty-principle>Fourier transforms and the Heisenberg uncertainty principle</h4><p>In a signal-processing sense, this manifests as an inability to precisely specify a signal in <em>both</em> the time and frequency domains at the same time. As you decrease the variance of a function (i.e., make it more concentrated and thus localized) in one domain, you increase the variance of it in the other domain (i.e., make it more extended and thus dispersed).</p><p>In quantum mechanics, this same concept is at play in the Heisenberg Uncertainty principle, where probability distributions (i.e., wavefunctions) governing position and momentum are related by the Fourier transform. It&rsquo;s impossible to know both position and momentum precisely.</p><h3 id=shift>Shift</h3><p>If</p><p>$$
+f(x) \leftrightharpoons F(s)
+$$</p><p>then</p><p>$$
+f(x - a) \leftrightharpoons \exp(- 2 \pi i a s) F(s).
+$$</p><p>If you shift a function, then there are no changes in the <em>amplitude</em> of the Fourier transform, but, there are changes to its phase, dependent on <em>s</em>. The higher the frequency, the greater the change in phase angle. In radio astronomy, it&rsquo;s common to hear of this as a translation in the R.A./Dec. plane results in a <em>phase shift</em> in the visibility plane.</p></article></main></div></div></main><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script></body></html>
