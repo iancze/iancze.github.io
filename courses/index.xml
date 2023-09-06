@@ -2688,14 +2688,28 @@ alt="Using \(F_\nu\) and \(I_\nu\) to represent point sources and spatially reso
 &lt;h2 id="the-many-temperatures-of-radio-astronomy">The many temperatures of radio astronomy&lt;/h2>
 &lt;h3 id="from-cosmic-sources-only">From Cosmic Sources only&lt;/h3>
 &lt;ul>
-&lt;li>&lt;strong>brightness temperature&lt;/strong>: \(T_b\), the temperature corresponding to the specific intensity if we used the full form of the Planck formula
+&lt;li>&lt;strong>brightness temperature&lt;/strong>: \(T_B\), the temperature such that a blackbody would emit with the observed specific intensity. &lt;strong>N.B.&lt;/strong>: &lt;em>One needs to be very careful of the context when using brightness temperature.&lt;/em> Classic radio astronomers will &lt;em>define&lt;/em> brightness temperature using the Rayleigh-Jeans definition (&lt;em>Essential Radio Astronomy&lt;/em> by Condon and Ransom, &lt;em>Tools of Radio Astronomy&lt;/em> by Wilson et al.)
 $$
-I_\nu = \frac{2 h \nu^3}{c^2} \frac{1}{\exp{(h \nu / k T_b)} - 1}
-$$&lt;/li>
-&lt;li>&lt;strong>antenna temperature&lt;/strong>: the temperature corresponding to the specific intensity if we were in the Rayleigh-Jeans domain. Added benefit that specific intensity is &lt;em>linearly related&lt;/em> to antenna temperature and makes it easy to substitute one for the other.
+T_B \equiv \frac{c^2}{2 k} \frac{1}{\nu^2} I_\nu
+$$
+&lt;em>even when&lt;/em> the Rayleigh-Jeans version of the blackbody formula is not valid for the given temperature and observing frequency. This may not be physically accurate, but has the advantage that intensity and brightness temperature are always linearly related (i.e., a 20% increase in \(T_B\) corresponds to a 20% increase in \(I_\nu\)).&lt;/li>
+&lt;/ul>
+&lt;p>Other, more physics-minded resources will define brightness temperature using the full form of the Planck formula (&lt;em>Physics of the Interstellar and Intergalactic Medium&lt;/em>, Draine).
+$$
+I_\nu = \frac{2 h \nu^3}{c^2} \frac{1}{\exp{(h \nu / k T_B)} - 1}
+$$
+such that
+$$
+T_B \equiv \frac{h \nu / k}{\ln[1 + 2 h \nu^3 / c^2 I_\nu].}
+$$
+If the source is in thermal equilibrium, this form has the advantage that \(T_B\) does correspond to a physical temperature. Draine uses the term &lt;strong>antenna temperature&lt;/strong> to refer to brightness temperature arrived at using the Rayleigh-Jeans definition.&lt;/p>
+&lt;p>Unfortunately, this ambiguity makes communicating using brightness temperature (a great concept!) confusing and error-prone. If there is any ambiguity about whether the Rayleigh-Jeans approximation is valid \(h \nu \ll k T_B \) for all observed regions in your field of view, then you should state which form of the blackbody formula you are using in your figure/article.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>antenna temperature&lt;/strong>: if you are in a radio astronomy context, you will also come across this terminology, which is functionally the same as the classic radio astronomer&amp;rsquo;s definition of brightness temperature. Key is that specific intensity is &lt;em>linearly related&lt;/em> to antenna temperature and makes it easy to substitute one for the other using the Rayleigh-Jeans approximation
 $$
 T_A(\nu) = \frac{c^2}{2 k \nu^2} I_\nu
-$$&lt;/li>
+$$
+Typically, antenna temperature is used to describe a &lt;em>measured&lt;/em> temperature from the instrument in the broader context of other noise sources.&lt;/li>
 &lt;/ul>
 &lt;p>In the field of radio astronomy, be aware that one frequently combines temperatures in other interesting ways. One can express random noise power in terms of an effective temperature
 $$
