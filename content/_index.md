@@ -3,7 +3,7 @@ description: Ian Czekala's homepage. Ian Czekala is an assistant professor at Pe
 title: Ian Czekala's homepage
 ---
 
-I am a lecturer in the [School of Physics and Astronomy](https://www.st-andrews.ac.uk/physics-astronomy/) at the [University of St. Andrews](https://www.st-andrews.ac.uk/) in Scotland. The research interests of our group include planet formation, protoplanetary disks, radio interferometry, synthesis imaging, high resolution spectroscopy, radial velocity, hierarchical Bayesian inference, and machine learning, among other topics. To learn more, get to know the [members of our group](people) and view our [refereed publications](publications).
+I am a lecturer in the [School of Physics and Astronomy](https://www.st-andrews.ac.uk/physics-astronomy/) at the [University of St Andrews](https://www.st-andrews.ac.uk/) in Scotland. The research interests of our group include planet formation, protoplanetary disks, radio interferometry, synthesis imaging, high resolution spectroscopy, radial velocity, hierarchical Bayesian inference, and machine learning, among other topics. To learn more, get to know the [members of our group](people) and view our [refereed publications](publications).
 
 Here is a press release from NRAO highlighting some of our work on planet formation in circumbinary disk systems:
 
@@ -14,7 +14,7 @@ Before July 2023, I was an assistant professor in the [Astronomy and Astrophysic
 
 ## Contact Information for Ian Czekala
 
-* Office: 
+* Office 308: 
 
     School of Physics and Astronomy \
     University of St Andrews \
