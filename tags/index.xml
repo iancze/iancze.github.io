@@ -2504,7 +2504,11 @@ $$&lt;/p>
 &lt;p>$$
 f(x - a) \leftrightharpoons \exp(- 2 \pi i a s) F(s).
 $$&lt;/p>
-&lt;p>If you shift a function, then there are no changes in the &lt;em>amplitude&lt;/em> of the Fourier transform, but, there are changes to its phase, dependent on &lt;em>s&lt;/em>. The higher the frequency, the greater the change in phase angle. In radio astronomy, it&amp;rsquo;s common to hear of this as a translation in the R.A./Dec. plane results in a &lt;em>phase shift&lt;/em> in the visibility plane.&lt;/p></description></item><item><title>Introduction and Course Overview</title><link>https://iancze.github.io/courses/as5003/lectures/01-introduction/</link><pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/as5003/lectures/01-introduction/</guid><description>&lt;h1 id="references-and-resources-for-this-lecture">References and Resources for this lecture&lt;/h1>
+&lt;p>If you shift a function, then there are no changes in the &lt;em>amplitude&lt;/em> of the Fourier transform, but, there are changes to its phase, dependent on &lt;em>s&lt;/em>. The higher the frequency, the greater the change in phase angle. In radio astronomy, it&amp;rsquo;s common to hear of this as a translation in the R.A./Dec. plane results in a &lt;em>phase shift&lt;/em> in the visibility plane.&lt;/p></description></item><item><title>Introduction and Course Overview</title><link>https://iancze.github.io/courses/as5003/lectures/01-introduction/</link><pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/as5003/lectures/01-introduction/</guid><description>&lt;ul>
+&lt;li>&lt;a href="slides.pdf">Slides (.pdf)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="slides.key">Slides (.key)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="references-and-resources-for-this-lecture">References and Resources for this lecture&lt;/h1>
 &lt;p>Full reference information can always be found in the &lt;a href="https://iancze.github.io/courses/as5003/syllabus/">syllabus&lt;/a>, under &amp;ldquo;References Materials.&amp;rdquo;&lt;/p>
 &lt;ul>
 &lt;li>&lt;em>Essential Radio Astronomy&lt;/em> &lt;a href="https://www.cv.nrao.edu/~sransom/web/Ch1.html#S3">Ch 1&lt;/a>: emission mechanisms, relevant astrophysical objects&lt;/li>
