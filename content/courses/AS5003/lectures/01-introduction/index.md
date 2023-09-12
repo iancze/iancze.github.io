@@ -4,6 +4,9 @@ date: 2023-09-12
 publishdate: 2023-08-25
 ---
 
+* [Slides (.pdf)](slides.pdf) 
+* [Slides (.key)](slides.key)
+
 # References and Resources for this lecture
 
 Full reference information can always be found in the [syllabus]({{<relref "/courses/AS5003/syllabus">}}), under "References Materials."
