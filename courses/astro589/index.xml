@@ -815,7 +815,435 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>The Fourier Transform I</title><link>https://iancze.github.io/courses/as5003/lectures/02-fourier-transform-i/</link><pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/as5003/lectures/02-fourier-transform-i/</guid><description>&lt;p>&lt;strong>Reference Materials for this lecture&lt;/strong>:&lt;/p>
+&lt;/table></description></item><item><title>The Fourier Transform II</title><link>https://iancze.github.io/courses/as5003/lectures/03-fourier-transform-ii/</link><pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/as5003/lectures/03-fourier-transform-ii/</guid><description>&lt;h2 id="references-for-today">References for today&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/2010095">The Fourier Transform and its Applications&lt;/a> by R. Bracewell&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson, particularly Appendix 2.1&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/34517505">Fourier Analysis and Imaging&lt;/a> by R. Bracewell&lt;/li>
+&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem">Wikipedia on Nyqist-Shannon sampling theorem&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="review-of-last-time">Review &lt;em>of last time&lt;/em>&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Defined Fourier transform, inverse
+$$
+F(s) = \int_{-\infty}^{\infty} f(x) e^{-i 2 \pi x s}\,\mathrm{d}x
+$$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Note that because \(x\) and \(s\) appear in the argument of the exponential, their product must be dimensionless. This means that they will also have inverse units, e.g., &amp;ldquo;seconds&amp;rdquo; and &amp;ldquo;cycles per second.&amp;rdquo;&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Introduced convolution, impluse symbol, and theorems&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="where-are-we-headed-today">Where are we headed &lt;em>today&lt;/em>?&lt;/h2>
+&lt;ul>
+&lt;li>Finish up Fourier transform theorems&lt;/li>
+&lt;li>Nyquist sampling theorem&lt;/li>
+&lt;li>Discrete Fourier Transform&lt;/li>
+&lt;/ul>
+&lt;h2 id="continuing-from-last-time-fourier-transform-theorems">Continuing from last time: &lt;em>Fourier transform theorems&lt;/em>&lt;/h2>
+&lt;h3 id="convolutionmultiplication">Convolution/multiplication&lt;/h3>
+&lt;p>The convolution of two functions corresponds to the multiplication of their Fourier transforms.&lt;/p>
+&lt;p>If&lt;/p>
+&lt;p>$$
+f(x) \leftrightharpoons F(s)
+$$&lt;/p>
+&lt;p>and&lt;/p>
+&lt;p>$$
+g(x) \leftrightharpoons G(s)
+$$&lt;/p>
+&lt;p>then&lt;/p>
+&lt;p>$$
+f(x) * g(x) \leftrightharpoons F(s)G(s).
+$$&lt;/p>
+&lt;p>This is an &lt;em>extremely&lt;/em> useful theorem. At least in my career, this, and concepts related to sampling, have been the ones I have used the most often. You may have already used this theorem (numerically) if you&amp;rsquo;ve ever carried out a convolution operation using &lt;a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.fftconvolve.html">scipy.signal.fftconvolve&lt;/a> in Python, which can be dramatically faster than directly implementing the convolution, at least for certain array sizes.&lt;/p>
+&lt;h3 id="rayleighs-theorem-parsevals-theorem-for-fourier-series">Rayleigh&amp;rsquo;s theorem (Parseval&amp;rsquo;s theorem for Fourier Series)&lt;/h3>
+&lt;p>The amount of energy in a system is the same whether you calculate it in the time domain or in the frequency domain.&lt;/p>
+&lt;p>The integral of the mod-squared of a function is equal to the integral of the mod-squared of its spectrum&lt;/p>
+&lt;p>$$
+\int_{-\infty}^\infty |f(x)|^2\,\mathrm{d}x = \int_{-\infty}^\infty |F(s)|^2\,\mathrm{d}s.
+$$&lt;/p>
+&lt;h3 id="autocorrelation-theorem">Autocorrelation theorem&lt;/h3>
+&lt;p>The autocorrelation of a function is&lt;/p>
+&lt;p>$$
+f(x) * f(x) = \int_{-\infty}^\infty f^{*}(u) f(u + x)\,\mathrm{d}u
+$$&lt;/p>
+&lt;p>and it has the Fourier transform
+$$
+f(x) * f(x) \leftrightharpoons |F(s)|^2.
+$$&lt;/p>
+&lt;p>Thus, the power spectrum is the Fourier transform of the autocorrelation function. It can also be computed directly by taking the &amp;ldquo;mod-squared&amp;rdquo; of \(F(s)\),&lt;/p>
+&lt;p>$$
+|F|^2 = F F^*.
+$$&lt;/p>
+&lt;p>If you&amp;rsquo;ve ever worked with (stationary) Gaussian processes (e.g., squared-exponential, Matern, etc&amp;hellip;), you might recognize this relationship between the autocorrelation (the kernel function) and the power spectrum of the Gaussian process.&lt;/p>
+&lt;h3 id="the-derivative-theorem">The derivative theorem&lt;/h3>
+&lt;p>If&lt;/p>
+&lt;p>$$
+f(x) \leftrightharpoons F(s)
+$$&lt;/p>
+&lt;p>then&lt;/p>
+&lt;p>$$
+f^\prime(x) \leftrightharpoons i 2 \pi s F(s).
+$$&lt;/p>
+&lt;h3 id="using-the-transform-pairs">Using the transform pairs&lt;/h3>
+&lt;p>Now that we have a few basic transform pairs, and some of the transform theorems, you can mix and match these to build up a library of new transform pairs. You will explore this in the problem set.&lt;/p>
+&lt;h3 id="definite-integral">Definite integral&lt;/h3>
+&lt;p>The zero-valued frequency of a Fourier transform is equal to the definite integral of a function over all space&lt;/p>
+&lt;p>$$
+\int_{-\infty}^\infty f(x)\,\mathrm{d}x = F(0).
+$$&lt;/p>
+&lt;p>I.e., to compute the area under the curve, you can just read off the zero-frequency value of the Fourier transform.&lt;/p>
+&lt;h2 id="smoothness-and-compactness">Smoothness and compactness&lt;/h2>
+&lt;p>In general, the smoother a function is in the time domain, the more compact its Fourier transform will be in the frequency domain.&lt;/p>
+&lt;p>Smoother functions will have a larger number of continuous derivatives. Something like the Gaussian envelope \(\exp(-\pi x^2)\) is &amp;ldquo;as smooth as possible&amp;rdquo; and therefore its Fourier transform (also a Gaussian envelope) is as compact as possible.&lt;/p>
+&lt;h2 id="filters-and-transfer-functions">Filters and transfer functions&lt;/h2>
+&lt;h3 id="time-domain">Time domain&lt;/h3>
+&lt;p>We can say that we have some (electrical) waveform
+$$
+V_1(t) = A \cos (2 \pi f t)
+$$ which is a single-valued function of time. You can think of this as a voltage time-series or another physical quantity. By definition, the waveform is real.&lt;/p>
+&lt;p>Let&amp;rsquo;s put on our electrical/acoustical/mechanical engineering hats for a moment and consider that a &lt;em>filter&lt;/em> is a physical system with an input an and output, e.g., something that is transmitting vibrations or oscillations, like our waveform.&lt;/p>
+&lt;figure>&lt;img src="filter.png"
+alt="How a filter changes the amplitude and phase of an waveform. Credit: Ian Czekala"/>&lt;figcaption>
+&lt;p>How a filter changes the amplitude and phase of an waveform. Credit: Ian Czekala&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>If we feed our waveform into a &lt;em>linear&lt;/em> filter, we get output
+$$
+V_2(t) = B \cos (2 \pi f t + \phi).
+$$&lt;/p>
+&lt;p>The output is still a waveform, but its amplitude and its phase have changed. These changes are likely frequency dependent, too.&lt;/p>
+&lt;p>We can specify the filter by a frequency-dependent quantity \(T(f)\) called the &lt;em>transfer function&lt;/em>. It is a complex-valued function (having both an amplitude and a phase) and is given by
+$$
+T(f) = \frac{B}{A}e^{i \phi}.
+$$&lt;/p>
+&lt;p>Interesting, perhaps, but maybe not immediately obviously useful. Let&amp;rsquo;s introduce the &lt;em>spectrum&lt;/em> and then circle back to the transfer function.&lt;/p>
+&lt;h3 id="obtaining-v_2-using-the-frequency-domain">Obtaining \(V_2\) using the frequency domain&lt;/h3>
+&lt;p>The &lt;em>spectrum&lt;/em> of the waveform is the Fourier transform of \(V(t)\), which we&amp;rsquo;ll call \(S(f)\) in this section. We&amp;rsquo;ve broken slightly from our \(f \leftrightharpoons F\) notation, but \(V \leftrightharpoons S\) is a classic in the signal processing and electrical engineering fields, so we&amp;rsquo;ll at least build familiarity with it in this example.&lt;/p>
+&lt;p>The &amp;ldquo;spectrum&amp;rdquo; here is just the Fourier transform quantity, it can definitely be complex-valued.&lt;/p>
+&lt;p>The &amp;ldquo;spectra&amp;rdquo; that we typically talk about in astrophysics are measurements of the electromagnetic spectrum&amp;mdash;you&amp;rsquo;ve probably never come across as one that&amp;rsquo;s complex-valued, right? What&amp;rsquo;s going on here?&lt;/p>
+&lt;p>Consider the &lt;em>units&lt;/em> of a flux measurement \(F_\nu\) of the electromagnetic spectrum. In lecture 1, we covered that the cgs units of flux are
+$$
+\mathrm{ergs}\;\mathrm{s}^{-1}\;\mathrm{cm}^{-2}\;\mathrm{Hz}^{-1}.
+$$&lt;/p>
+&lt;p>The clue is in the \(\mathrm{ergs}\;\mathrm{s}^{-1}\) part, which we could also write in terms of &amp;ldquo;watts&amp;rdquo; if we wanted to be strictly S.I. about it. When we are measuring the electromagnetic spectrum, we are actually measuring the &lt;strong>power&lt;/strong> spectral density, \(|F(\nu)|^2\). The absolute squared means the quantity \(|F(\nu)|^2\) is real-valued, and is the reason why you never hear about measurements of the electromagnetic spectrum containing imaginary values!&lt;/p>
+&lt;p>In this course, at least, we&amp;rsquo;ll try to be explicit about which spectrum we&amp;rsquo;re referring to. When we actually mean power spectrum, we&amp;rsquo;ll try to call it as such. Otherwise, &amp;ldquo;spectrum&amp;rdquo; will refer to a quantity like \(S\).&lt;/p>
+&lt;p>Now, let&amp;rsquo;s revisit our filter example, where we had input and output \(V_1(t)\) and \(V_2(t)\) respectively. From our discussion, we also have&lt;/p>
+&lt;p>$$
+V_1 \leftrightharpoons S_1
+$$
+and
+$$
+V_2 \leftrightharpoons S_2.
+$$&lt;/p>
+&lt;p>The transfer function concept is &lt;em>especially&lt;/em> useful when we think about the &lt;em>spectrum&lt;/em> of the waveforms, because we have
+$$
+S_2(f) = T(f) S_1(f).
+$$&lt;/p>
+&lt;p>I.e., the spectrum of the output waveform is simply the spectrum of the input waveform &lt;em>multiplied&lt;/em> by the transfer function.&lt;/p>
+&lt;p>Once you have \(S_2\), then you can get \(V_2(t)\) from
+$$
+V_2 \leftrightharpoons S_2.
+$$&lt;/p>
+&lt;p>Two examples are low-pass and high-pass filters.&lt;/p>
+&lt;figure>&lt;a href="https://en.wikipedia.org/wiki/Filter_%28signal_processing">&lt;img src="filter-pass.png"
+alt="Examples of different filter transfer functions \(T(f)\). Credit: Wikipedia/SpinningSpark"/>&lt;/a>&lt;figcaption>
+&lt;p>Examples of different filter transfer functions \(T(f)\). Credit: Wikipedia/SpinningSpark&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="obtaining-v_2-using-the-time-domain">Obtaining \(V_2\) using the time domain&lt;/h3>
+&lt;p>Now let&amp;rsquo;s think of digital signal processing, where you wanted to practically apply a filter to some waveform to produce a new waveform. As we just outlined, you could acquire \(V_1(t)\), Fourier transform it to access its spectrum \(S_1(f)\), multiply by the transfer function \(T_(f)\), and then do the inverse Fourier transform to get \(V_2(t)\). Is there a way to do this &lt;em>directly&lt;/em> in the time domain? What if you don&amp;rsquo;t have the complete waveform all at once?&lt;/p>
+&lt;p>The answer is provided by the convolution theorem for Fourier transforms. Since the transfer function is applied via a multiplication in the Fourier domain, we could equivalently carry out the same operation by a convolution in the time domain.&lt;/p>
+&lt;p>The convolutional kernel would be
+$$
+I(t) \leftrightharpoons T(f)
+$$
+and we&amp;rsquo;d have
+$$
+V_2(t) = I(t) * V_1(t).
+$$&lt;/p>
+&lt;p>To summarize,
+&lt;figure>&lt;img src="square.png"
+alt="Credit Bracewell, Chapter 9."/>&lt;figcaption>
+&lt;p>Credit Bracewell, Chapter 9.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;h3 id="determining-it">Determining \(I(t)\)&lt;/h3>
+&lt;p>If you had some system already in place, and you wanted to determine \(I(t)\) experimentally, what is one way you could do it? What waveform could you send the system?&lt;/p>
+&lt;p>One simple option would be to send
+$$
+V_1(t) = \delta(t),
+$$
+then
+$$
+V_2(t) = I(t) * \delta(t) = I(t).
+$$&lt;/p>
+&lt;h2 id="nyquist-shannon-sampling">Nyquist-Shannon sampling&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=FcXZ28BX-xE&amp;amp;ab_channel=SteveBrunton">Youtube/SteveBrunton&lt;/a> on The Sampling Theorem&lt;/li>
+&lt;/ul>
+&lt;p>Thus far we have been talking about continuous functions. As astrophysicists, though, we&amp;rsquo;re frequently dealing with discrete data points, which are presumed to be &lt;em>samples&lt;/em> of some unknown function. Maybe you&amp;rsquo;re the one designing the experiment to capture these data points, or maybe you&amp;rsquo;ve just been handed some dataset.&lt;/p>
+&lt;figure>&lt;img src="lines.png"
+alt="Say you are given a set of (noisless) samples that look like this. What do you think the function should look like in between the points? Credit: Ian Czekala"/>&lt;figcaption>
+&lt;p>Say you are given a set of (noisless) samples that look like this. What do you think the function should look like in between the points? Credit: Ian Czekala&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Concisely put, the &lt;em>sampling theorem&lt;/em> states that under a certain condition, a function can be &lt;em>completely&lt;/em> reconstructed from a set of discrete samples&amp;mdash;without information loss. I.e., the set of discrete samples is &lt;em>fully equivalent&lt;/em> to having access to the full set of function values. Today, this sampling theorem is known as the Nyquist-Shannon sampling theorem, the Whittaker–Nyquist–Shannon theorem, or simply &amp;ldquo;the sampling theorem.&amp;rdquo;&lt;/p>
+&lt;p>If we were to try to use these data points to actually reconstruct a function, then what sort of constraint would we need to impose on the function? We&amp;rsquo;d want to place some constraint on its spectrum, i.e., that there are no higher frequency components oscillating around faster than our sampling points.&lt;/p>
+&lt;p>Before we dive into the derivation of the sampling theorem, let&amp;rsquo;s first take another look at what can go wrong when you undersample a time series.&lt;/p>
+&lt;h3 id="aliasing">Aliasing&lt;/h3>
+&lt;figure>&lt;img src="sine-wave.png"
+alt="If the true signal is given by the solid line, but we undersample it, then the sine-wave we naively reconstruct from the samples would have the wrong frequency. Here we would say that the higher frequency signal has been aliased into the lower frequency range. Credit: Wikipedia Pluke"/>&lt;figcaption>
+&lt;p>If the true signal is given by the solid line, but we &lt;em>undersample&lt;/em> it, then the sine-wave we naively reconstruct from the samples would have the wrong frequency. Here we would say that the higher frequency signal has been aliased into the lower frequency range. Credit: Wikipedia Pluke&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>This is also called the Stroboscopic effect. There are some nice examples online:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=dNVtMmLlnoE&amp;amp;ab_channel=SmarterEveryDay">Youtube/SmarterEveryDay&lt;/a>.&lt;/li>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=smDpCsVVgPA&amp;amp;ab_channel=Edyourself">Stationary helicopter&lt;/a>.&lt;/li>
+&lt;li>Exoplanet transits! &lt;a href="https://ui.adsabs.harvard.edu/abs/2010ApJ...722..937D/abstract">Dawson and Fabrycky 2010&lt;/a> find a shorter period for the exoplanet 55 Cnc e, previously confounded by the timing of the RV observations.&lt;/li>
+&lt;/ul>
+&lt;h3 id="derivation-of-sampling-theorem">Derivation of sampling theorem&lt;/h3>
+&lt;p>Now, let&amp;rsquo;s use our understanding of Fourier transforms and the sampling/replicating function to develop a precise formulation of the sampling theorem.&lt;/p>
+&lt;p>Recall that the &amp;ldquo;shah&amp;rdquo; function is an infinite series of delta functions spaced a unit dimension apart, and that it is its own Fourier transform
+$$
+\mathrm{shah}(x) \leftrightharpoons \mathrm{shah}(s).
+$$&lt;/p>
+&lt;p>Via the similarity theorem, if the delta functions of the shah get closer in the \(x\) domain, then they spread out in the Fourier domain, and vice-versa.&lt;/p>
+&lt;p>We can adjust the spacing of the samples by dilating or shrinking the shah function by some factor. Here, we&amp;rsquo;ll write this as the sampling interval \(\Delta x = \tau\) or the sampling frequency \(1/\tau\).&lt;/p>
+&lt;p>According to the similarity theorem, adjusting the sampling frequency in the \(x\) domain has the following effect in the frequency domain
+$$
+\mathrm{shah}(x/\tau) \leftrightharpoons \tau \mathrm{shah}(\tau s).
+$$&lt;/p>
+&lt;p>For example, if \(\tau = 0.2\), then we have&lt;/p>
+&lt;figure>&lt;img src="panel-b.png"
+alt="The shah function is its own Fourier transform. Via the similarity theorem, if we compress the shah function in the time domain (left), we expand it in the Fourier domain (right). Credit: Bracewell, Fig 10.3"/>&lt;figcaption>
+&lt;p>The shah function is its own Fourier transform. Via the similarity theorem, if we compress the shah function in the time domain (left), we expand it in the Fourier domain (right). Credit: Bracewell, Fig 10.3&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Now let&amp;rsquo;s consider a function and its Fourier transform&lt;/p>
+&lt;figure>&lt;img src="function.png"
+alt="A generic function (left) and its Fourier transform (right). We say that this function is &amp;amp;lsquo;band-limited&amp;amp;rsquo; because its Fourier transform is 0 for all frequencies below some cutoff frequency \(|s| &amp;amp;lt; s_c\). Credit: Bracewell Fig 10.2"/>&lt;figcaption>
+&lt;p>A generic function (left) and its Fourier transform (right). We say that this function is &amp;lsquo;band-limited&amp;rsquo; because its Fourier transform is 0 for all frequencies below some &lt;em>cutoff frequency&lt;/em> \(|s| &amp;lt; s_c\). Credit: Bracewell Fig 10.2&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>As before, we will use multiplication by the shah function to represent sampling of the function.&lt;/p>
+&lt;figure>&lt;img src="sampled-function.png"
+alt="Left: the sampled version of \(f\), which has the Fourier transform on the right. So long as the sampling frequency exceeds twice the cutoff frequency, the Fourier transform &amp;amp;lsquo;islands&amp;amp;rsquo; do not overlap (top two rows). Credit: Bracewell Fig 10.3"/>&lt;figcaption>
+&lt;p>Left: the sampled version of \(f\), which has the Fourier transform on the right. So long as the sampling frequency exceeds twice the cutoff frequency, the Fourier transform &amp;lsquo;islands&amp;rsquo; do not overlap (top two rows). Credit: Bracewell Fig 10.3&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>The non-overlappingness of the &amp;lsquo;islands&amp;rsquo; is the key to properly sampling a function, and we&amp;rsquo;ll see why in a moment when we talk about reconstruction. But first, let&amp;rsquo;s make a quantitative statement of the sampling theorem (Bracewell):&lt;/p>
+&lt;p>If \(s_c\) is the cutoff frequency defining the band-limited nature of the signal, then so long as the function is sampled at equal intervals not exceeding \(\Delta x = 1/(2 s_c)\) then the function is properly sampled, i.e.
+$$
+\frac{1}{\tau} \geq 2 s_c.
+$$&lt;/p>
+&lt;h3 id="restoration-of-signal-kernels">Restoration of signal kernels&lt;/h3>
+&lt;p>Now let&amp;rsquo;s talk about how we would actually reconstruct the continuous function from a set of samples. Let&amp;rsquo;s re-examine our plot of the Fourier domain&lt;/p>
+&lt;figure>&lt;img src="reconstruction.png"
+alt="Credit: Bracewell Fig 10.3"/>&lt;figcaption>
+&lt;p>Credit: Bracewell Fig 10.3&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>The &amp;ldquo;function&amp;rdquo; on the left is technically not the same (continuous) function that we started with, it is a discrete representation of it. We did just say, though, that if the function was band-limited, then these samples contained all of the same information as if we had access to the full function. So how do we go from these samples back to the full function?&lt;/p>
+&lt;p>Let&amp;rsquo;s look at the Fourier side of this plot and compare it to the original Fourier side. The main difference is that &lt;em>this&lt;/em> Fourier plot has repeating &amp;lsquo;islands&amp;rsquo; at progressively higher frequencies, essentially to infinity. How can we get rid of these higher frequency islands?&lt;/p>
+&lt;p>The answer is to multiply by a boxcar function in Fourier domain, completely truncating these higher order terms. Then, we can do the inverse Fourier transform and recover the original, continuous function.&lt;/p>
+&lt;p>What is the analogous operation for the time-domain? This is the same thing as we discussed with the transfer function. Since it was a multiplication in the Fourier domain, it is a convolution in the time domain. And the convolutional kernel is the Fourier transform of the boxcar, which is a sinc function.&lt;/p>
+&lt;p>So, to &lt;em>exactly&lt;/em> reconstruct a band-limited function from a set of samples, we do sinc-interpolation.&lt;/p>
+&lt;figure>&lt;a href="https://www.dsprelated.com/freebooks/pasp/Windowed_Sinc_Interpolation.html">&lt;img src="sinc-interpolation.png"
+alt="Credit: DSP related."/>&lt;/a>&lt;figcaption>
+&lt;p>Credit: DSP related.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="undersampling-and-aliasing">Undersampling and aliasing&lt;/h3>
+&lt;p>If we didn&amp;rsquo;t sample the function at a sufficiently high rate, then we would have overlapping islands. Essentially, the higher frequency components of the Fourier islands are &amp;ldquo;folded-over&amp;rdquo; back into the range of frequencies &lt;em>we thought&lt;/em> was band-limited, resulting in a corrupted signal.&lt;/p>
+&lt;p>In an alias, a higher frequency signal is masquerading as a lower-frequency signal.&lt;/p>
+&lt;figure>&lt;img src="aliased.png"
+alt="Credit: Bracewell Fig 10.3"/>&lt;figcaption>
+&lt;p>Credit: Bracewell Fig 10.3&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="compressed-sensing">Compressed sensing&lt;/h3>
+&lt;p>You may have heard of &amp;ldquo;compressed sensing,&amp;rdquo; which is one of major signal processing results of the last few decades. The idea is that you can reconstruct a functional form using far fewer samples than required for the Nyquist rate, using some dictionary of functional forms, or knowledege that the signal may be sparse. You can, indeed, perfectly reconstruct the signal through optimization using the \(L_1\) norm. If you don&amp;rsquo;t want to make the assumption that your signal is sparse, though, it&amp;rsquo;s a good idea to sample at the Nyquist rate.&lt;/p>
+&lt;h2 id="extra-fourier-series">Extra: Fourier series&lt;/h2>
+&lt;p>You probably first encountered Fourier series as part of your calculus course and later on as part of a partial differential equations course.
+Say we have some periodic function \(g(x)\), then the Fourier series associated with this is
+$$
+a_0 + \sum_1^\infty (a_n \cos 2 \pi n f x + b_n \sin 2 \pi n f x)
+$$
+where the Fourier coefficients are determined by
+$$
+a_0 = \frac{1}{T} \int_{-T/2}^{T/2} g(x) \,\mathrm{d}x
+$$&lt;/p>
+&lt;p>$$
+a_n = \frac{1}{T} \int_{-T/2}^{T/2} g(x) \cos 2 \pi n f x \,\mathrm{d}x
+$$&lt;/p>
+&lt;p>$$
+b_n = \frac{1}{T} \int_{-T/2}^{T/2} g(x) \sin 2 \pi n f x \,\mathrm{d}x
+$$&lt;/p>
+&lt;p>i.e., we&amp;rsquo;ve projected the function onto its basis set of sines and cosines.&lt;/p>
+&lt;p>Already, I&amp;rsquo;m sure you are starting to see the close connection with what we&amp;rsquo;ve discussed of the Fourier transform. Traditionally, Fourier series are used as a jumping off point for the discussion of the Fourier transform.&lt;/p>
+&lt;p>In the last lecture, however, we signaled our intention to take the opposite approach, whereby we skipped over Fourier series and &lt;em>started&lt;/em> with the idea that Fourier transforms exist because we observe physical systems which exhibit their behavior. Now, let&amp;rsquo;s unify the discussion and demonstrate the Fourier series as an extreme situation of the Fourier transform.&lt;/p>
+&lt;h3 id="fourier-transform-of-sine-and-cosine">Fourier transform of sine and cosine&lt;/h3>
+&lt;p>Let&amp;rsquo;s put together a number of the theorems that we&amp;rsquo;ve discussed to build up our understanding of what a Fourier series looks like in the Fourier domain.&lt;/p>
+&lt;p>In the previous lecture we introduced the Fourier transform theorem for a delta function located at the origin&lt;/p>
+&lt;p>$$
+F(s) = \int_{-\infty}^{\infty} \delta(0) \exp (-i 2 \pi x s)\,\mathrm{d}x = 1
+$$
+which is a constant.&lt;/p>
+&lt;p>We also introduced the shift theorem, which says
+$$
+f(x - a) \leftrightharpoons \exp(- 2 \pi i a s) F(s).
+$$&lt;/p>
+&lt;p>We can couple these together and write a relationship
+$$
+\delta(x - a) \leftrightharpoons \exp(-2 \pi i a s).
+$$&lt;/p>
+&lt;p>Now, let&amp;rsquo;s see if we can use this Fourier pair to derive the Fourier pairs for cosine and sine. In your quantum physics or partial differential equations classes, you probably used the Euler identity to write cosine and sine like
+$$
+\cos 2 \pi a s = \frac{e^{i 2 \pi a s} + e^{-i 2 \pi a s}}{2}
+$$
+and
+$$
+\sin 2 \pi a s = \frac{e^{i 2 \pi a s} - e^{-i 2 \pi a s}}{2i}
+$$&lt;/p>
+&lt;p>So we can do a bit of rearranging and arrive at&lt;/p>
+&lt;p>$$
+\cos \pi x \leftrightharpoons \mathrm{even}(x) = \frac{1}{2}\delta \left (x + \frac{1}{2} \right) + \frac{1}{2}\delta \left (x - \frac{1}{2} \right)
+$$
+and
+$$
+\sin \pi x \leftrightharpoons i\mathrm{odd}(x) = i \frac{1}{2}\delta \left (x + \frac{1}{2}\right) - i \frac{1}{2}\delta \left (x - \frac{1}{2}\right).
+$$&lt;/p>
+&lt;p>where these symbols are the even and odd impulse pairs.&lt;/p>
+&lt;figure>&lt;img src="even-odd-impulse.png"
+alt="The Fourier transform pairs of cosine and sine as the even and odd impulse pairs, respectively. Credit: Bracewell Fig 6.1"/>&lt;figcaption>
+&lt;p>The Fourier transform pairs of cosine and sine as the even and odd impulse pairs, respectively. Credit: Bracewell Fig 6.1&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Now we&amp;rsquo;re well on our way to determining the Fourier spectrum of a Fourier series. The Fourier series is just a sum of sines and cosines at different frequencies. The Fourier transform is a linear operator, so we can just add together the contributions from each component in the Fourier domain
+$$
+a_0 + \sum_1^\infty (a_n \cos 2 \pi n f x + b_n \sin 2 \pi n f x)
+$$&lt;/p>
+&lt;p>We arrive at the result that the spectrum of a Fourier series is a collection of delta functions whose locations and amplitudes correspond to the frequencies and values of the Fourier coefficients, respectively.&lt;/p>
+&lt;figure>&lt;a href="https://www.tutorialspoint.com/what-is-fourier-spectrum-theory-and-example#:~:text=The%20graph%20plotted%20between%20the,spectrum%20of%20a%20periodic%20signal.&amp;amp;text=Amplitude%20Spectrum%20%E2%88%92%20The%20amplitude%20spectrum,of%20Fourier%20coefficients%20versus%20frequency">&lt;img src="line-spectra.png"
+alt="The amplitude of the line spectra corresponding to a Fourier series. Credit: TutorialsPoint"/>&lt;/a>&lt;figcaption>
+&lt;p>The amplitude of the line spectra corresponding to a Fourier series. Credit: TutorialsPoint&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Now that we&amp;rsquo;ve derived the Fourier spectrum of a Fourier series, we can see at least two reasons why this represents an extreme situation of the Fourier transform:&lt;/p>
+&lt;ol>
+&lt;li>The input waveform is strictly periodic&lt;/li>
+&lt;li>The input waveform is infinite in duration&lt;/li>
+&lt;/ol>
+&lt;p>As we talked about in the last lecture, these conditions are violated in the real world. If we limit the duration of the sine wave to a finite duration (say, by multiplication of a truncated Gaussian (because technically the Gaussian is also non-zero over an infinite domain), which we call a &lt;em>window function&lt;/em>), then we see what happens in the Fourier domain: the delta functions are broadened by convolution with the Fourier transform of the window function.&lt;/p>
+&lt;figure>&lt;img src="broadening-line.png"
+alt="Left: the dotted line represents a broad window function to eventually make the waveform finite in duration. Right: this has the effect of broadening the delta functions by convolution with the Fourier transform of the window function. Credit: Bracewell Fig 10.12"/>&lt;figcaption>
+&lt;p>Left: the dotted line represents a broad window function to eventually make the waveform finite in duration. Right: this has the effect of broadening the delta functions by convolution with the Fourier transform of the window function. Credit: Bracewell Fig 10.12&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="the-discrete-fourier-transform-dft">The Discrete Fourier transform (DFT)&lt;/h2>
+&lt;p>Now we&amp;rsquo;ll talk about how we deal with samples of data. We&amp;rsquo;ll stick with the same example that we&amp;rsquo;re dealing with a function of time. But rather than \(t\), having units of seconds, we&amp;rsquo;ll simply label each data point by an index \(m\) which takes on non-negative, integer values like \(m = 0, 1, \ldots, N\).&lt;/p>
+&lt;figure>&lt;img src="DFT-samples.png"
+alt="Credit: Bracewell Fig 11.2"/>&lt;figcaption>
+&lt;p>Credit: Bracewell Fig 11.2&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>The forward discrete Fourier transform (DFT) is
+$$
+F_k = \sum_{m=0}^{N-1} f_m \exp \left ( - 2 \pi i \frac{m k}{N} \right)
+$$
+and we could compute \(F_k\) for \(k = 0, 1, \ldots, N-1\).&lt;/p>
+&lt;p>Here, the discrete index variable \(k\) has replaced the continuous-frequency variable \(s\), just like \(m\) replaced the continuous-time variable \(t\).&lt;/p>
+&lt;p>The inverse discrete Fourier transform is
+$$
+f_m = \frac{1}{N} \sum_{k=0}^{N -1} F_k \exp \left ( 2 \pi i \frac{m k}{N}\right).
+$$
+Like the continuous-Fourier transform, one of the differences from the forward is the \(+i\) in the exponential. The other is the inclusion of the normalization pre-factor.&lt;/p>
+&lt;p>Note: depending on whom you talk to, you&amp;rsquo;ll see a wide variety of conventions as to where the normalization prefactor goes and where the \(2 \pi\) lives. The convention presented here is the same one used by the &lt;a href="https://numpy.org/doc/stable/reference/routines.fft.html#module-numpy.fft">Python/NumPy package&lt;/a> and the &lt;a href="https://juliamath.github.io/AbstractFFTs.jl/stable/api/#Public-Interface">Julia/AbstractFFTs.jl&lt;/a> package, so it &lt;em>should&lt;/em> be the one you encounter most frequently.&lt;/p>
+&lt;p>Like the continuous Fourier transform, if you take the DFT of a set of samples and then take the iDFT of that, you will end up with the original set of samples.&lt;/p>
+&lt;h3 id="units-of-the-dft">Units of the DFT&lt;/h3>
+&lt;p>The DFT only knows/assumes that it was fed a set of equally spaced samples
+$$
+f_m = f(x_m)
+$$
+where
+$$
+m = 0, 1, \ldots, N - 1.
+$$&lt;/p>
+&lt;p>So, at its most abstract, the DFT takes in a bunch of \(N\) samples spaced \(\Delta x\) apart and returns \(N\) samples corresponding to the Fourier components. The frequency of each component corresponds is given by \(k/N\) in units of &amp;ldquo;cycles per sampling interval.&amp;rdquo;&lt;/p>
+&lt;p>I.e., so if we had \(N = 8\) samples, then the \(k=3\) frequency component returned from the DFT would be equal to \(3/8\) cycles per &amp;ldquo;the interval between samples.&amp;rdquo;&lt;/p>
+&lt;p>On its own, the DFT doesn&amp;rsquo;t provide any information about what type of variable \(x\) is or what the spacing is. But there is hope. We can make this concrete, we just have to be careful. Using our example of a time series with \(N=8\) samples \(\{f_m\}\), say we know that \(\Delta x = 0.1\) seconds,
+$$
+\Delta x = x_{m+1} -x_m
+$$&lt;/p>
+&lt;p>The spacing in the frequency domain will be 1/8 cycles per 0.1 seconds, or 1.25 Hz.&lt;/p>
+&lt;h3 id="dft-as-a-matrix-operation">DFT as a matrix operation&lt;/h3>
+&lt;p>Thus far we have just been talking about a &amp;ldquo;set&amp;rdquo; of samples. We can also think of the collection of data as a vector
+$$
+\mathbf{f} =
+\begin{bmatrix}
+f_0 \\
+f_1 \\
+\vdots \\
+f_{N-1} \\
+\end{bmatrix}
+$$&lt;/p>
+&lt;p>and the frequency samples as a vector too&lt;/p>
+&lt;p>$$
+\mathbf{F} =
+\begin{bmatrix}
+F_0 \\
+F_1 \\
+\vdots \\
+F_{N-1} \\
+\end{bmatrix}.
+$$&lt;/p>
+&lt;p>We&amp;rsquo;ve now mentioned that the Fourier transform is a linear operator a few times. Another way of demonstrating this is that we could write the DFT as a matrix multiplication
+$$
+\mathbf{F} = \mathbf{W} \mathbf{f}.
+$$&lt;/p>
+&lt;p>If we look back at the definition of the DFT
+$$
+F_k = \sum_{m=0}^{N-1} f_m \exp \left ( - 2 \pi i \frac{m k}{N} \right)
+$$
+hopefully we can see how this might be cast in matrix form. If we define the quantity
+$$
+\omega = e^{- 2 \pi i / N}
+$$
+then we can write
+$$
+W = \begin{bmatrix}
+1 &amp;amp; 1 &amp;amp; 1 &amp;amp; \ldots &amp;amp; 1 \\
+1 &amp;amp; \omega &amp;amp; \omega^2 &amp;amp; \ldots &amp;amp; \omega^{N - 1} \\
+1 &amp;amp; \omega^2 &amp;amp; \omega^4 &amp;amp; \ldots &amp;amp; \omega^{2(N-1)} \\
+\vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\
+1 &amp;amp; \omega^{N-1} &amp;amp; \omega^{2(N-1)} &amp;amp; \ldots &amp;amp; \omega^{(N-1)(N-1)}\\
+\end{bmatrix}
+$$&lt;/p>
+&lt;p>This formulation can be really useful if you&amp;rsquo;re into forward modeling using linear models. Because we can write the DFT as a matrix multiplication, it can essentially be just another linear transformation to your linear model. Determining the &amp;ldquo;best-fit&amp;rdquo; parameters can still be done analytically. We&amp;rsquo;ll talk about this a bit more when we get to the lecture on Bayesian inference.&lt;/p>
+&lt;figure>&lt;img src="DFT-graphical.png"
+alt="The elements of the DFT matrix represented as samples of complex exponentials. Credit: Wikipedia/Glogger"/>&lt;figcaption>
+&lt;p>The elements of the DFT matrix represented as samples of complex exponentials. Credit: Wikipedia/Glogger&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h2 id="fast-fourier-transform-fft">Fast Fourier Transform (FFT)&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=E8HeD-MUrjY&amp;amp;ab_channel=SteveBrunton">Youtube/SteveBrunton&lt;/a> on the Fast Fourier Transform&lt;/li>
+&lt;/ul>
+&lt;p>The Fast Fourier Transform or FFT is an algorithm (class of algorithms) for computing the discrete Fourier transform. Practically speaking, if you&amp;rsquo;re going to perform a Fourier transform on discrete data with a computer, you will almost certainly use an FFT algorithm, so FFT and DFT end up being synonymous.&lt;/p>
+&lt;p>If we have a data array of length \(N\), the complexity of the DFT is \(\mathcal{O}(N^2)\), while the complexity of the FFT is only \(\mathcal{O}(N \log N)\). This can make a huge difference in computational time if N is large. Say if you have an array of \(N = 4096\) datapoints, then you could be looking at a factor of 1000 speedup.&lt;/p>
+&lt;p>The development and implementation of FFT packages turned the DFT from something that was too slow for many practical applications into a formidable analysis tool. This really enabled the widespread usage of the Fourier transform in signal manipulation and data analysis. I don&amp;rsquo;t think anyone would argue with you that strongly if you said that the FFT is the most important algorithm of the last century &lt;a href="http://pi.math.cornell.edu/~ajt/presentations/TopTenAlgorithms.pdf">Cornell&amp;rsquo;s top ten algorithms of the 20th century&lt;/a>.&lt;/p>
+&lt;p>There are many different FFT algorithms out there. The most popular one is the &lt;a href="https://en.wikipedia.org/wiki/Cooley%E2%80%93Tukey_FFT_algorithm">Cooley-Tukey&lt;/a> algorithm and relies on the factorization of a size \(N\) DFT matrix into \(N_1\) smaller DFTs of sizes \(N_2\) in a recursive manner. Therefore there is a (historical) preference towards array sizes that powers of \(2\). However, there are algorithms out that still give \(\mathcal{O}(N \log N)\) even for prime values of \(N\), so it&amp;rsquo;s not much of a constraint in practice.&lt;/p>
+&lt;p>We don&amp;rsquo;t have time to go into much more detail about the FFT algorithm here, but hopefully you can see from the structure of the \(\mathbf{W}\) matrix that there are plenty of opportunities to make the calculation more efficient by factoring and caching values.&lt;/p>
+&lt;p>Now, lets look at some code examples of how we might actually use the FFT in Python.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="FFT-lecture.slides.html">Jupyter Notebook Slides&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>The Fourier Transform I</title><link>https://iancze.github.io/courses/as5003/lectures/02-fourier-transform-i/</link><pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/as5003/lectures/02-fourier-transform-i/</guid><description>&lt;p>&lt;strong>Reference Materials for this lecture&lt;/strong>:&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/2010095">The Fourier Transform and its Applications&lt;/a> by R. Bracewell&lt;/li>
 &lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson, particularly Appendix 2.1&lt;/li>
@@ -1090,6 +1518,11 @@ $$&lt;/p>
 F(s) = \sqrt{2 \pi} a \exp(-2 \pi^2 a^2 s^2 )
 $$&lt;/p>
 &lt;p>What functional form is this? This is another Gaussian, though the normalization and standard deviation are a bit different! So, we see that the Gaussian function is a Fourier transform pair with itself.&lt;/p>
+&lt;p>My usual approach when dealing with Gaussians is to start with the Fourier duals (Bracewell)
+$$
+e^{- \pi x^2} \leftrightharpoons e^{- \pi s^2}
+$$
+and then use the similarity and shift theorems (discussed later) to morph it into the form needed, picking up any additional prefactors as necessary.&lt;/p>
 &lt;p>Hopefully now you have a taste of how to compute Fourier transforms. At its most basic, it&amp;rsquo;s just a matter of setting up and evaluating the integral. For many function forms, you can use integration strategies to arrive at analytic solutions. As a practical matter, in the next lecture we&amp;rsquo;ll see how we can evaluate this integral numerically.&lt;/p>
 &lt;h2 id="convolution">Convolution&lt;/h2>
 &lt;p>The convolution of two functions \(f(x)\) and \(g(x)\) is defined as

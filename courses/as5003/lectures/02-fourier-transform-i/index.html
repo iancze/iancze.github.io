@@ -151,7 +151,11 @@ $$
 \int_{-\infty}^\infty e^{-a(x + b)^2}\,\mathrm{d}x = \sqrt{\frac{\pi}{a}}.
 $$</p><p>Thus, the integral contributes another factor of \(\sqrt{2 \pi} a\) and the final result is</p><p>$$
 F(s) = \sqrt{2 \pi} a \exp(-2 \pi^2 a^2 s^2 )
-$$</p><p>What functional form is this? This is another Gaussian, though the normalization and standard deviation are a bit different! So, we see that the Gaussian function is a Fourier transform pair with itself.</p><p>Hopefully now you have a taste of how to compute Fourier transforms. At its most basic, it&rsquo;s just a matter of setting up and evaluating the integral. For many function forms, you can use integration strategies to arrive at analytic solutions. As a practical matter, in the next lecture we&rsquo;ll see how we can evaluate this integral numerically.</p><h2 id=convolution>Convolution</h2><p>The convolution of two functions \(f(x)\) and \(g(x)\) is defined as
+$$</p><p>What functional form is this? This is another Gaussian, though the normalization and standard deviation are a bit different! So, we see that the Gaussian function is a Fourier transform pair with itself.</p><p>My usual approach when dealing with Gaussians is to start with the Fourier duals (Bracewell)
+$$
+e^{- \pi x^2} \leftrightharpoons e^{- \pi s^2}
+$$
+and then use the similarity and shift theorems (discussed later) to morph it into the form needed, picking up any additional prefactors as necessary.</p><p>Hopefully now you have a taste of how to compute Fourier transforms. At its most basic, it&rsquo;s just a matter of setting up and evaluating the integral. For many function forms, you can use integration strategies to arrive at analytic solutions. As a practical matter, in the next lecture we&rsquo;ll see how we can evaluate this integral numerically.</p><h2 id=convolution>Convolution</h2><p>The convolution of two functions \(f(x)\) and \(g(x)\) is defined as
 $$
 \int_{-\infty}^\infty f(u) g(x - u)\,\mathrm{d}u
 $$
