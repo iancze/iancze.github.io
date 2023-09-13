@@ -1,7 +1,7 @@
 ---
 title: 2D Interferometry, PSFs, Gridding, and Dirty Images
 date: 2023-09-22
-publishdate: 2023-08-25
+publishdate: 2023-09-22
 ---
 
 * Slides [[PDF](beams-and-arrays.pdf)] [[Keynote](beams-and-arrays.key) (better for movies)]

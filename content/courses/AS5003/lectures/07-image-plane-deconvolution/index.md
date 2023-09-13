@@ -1,7 +1,7 @@
 ---
 title: Image Plane Deconvolution (CLEAN)
 date: 2023-09-26
-publishdate: 2023-08-25
+publishdate: 2023-09-26
 ---
 
 ### References

@@ -1,7 +1,7 @@
 ---
 title: Interferometry in Practice
 date: 2023-09-20
-publishdate: 2023-08-25
+publishdate: 2023-09-20
 ---
 
 * [Video Recording](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+5/1_2zi2doy2)

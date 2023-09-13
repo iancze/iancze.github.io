@@ -1,7 +1,7 @@
 ---
 title: Regularized Maximum Likelihood (RML) 
 date: 2023-09-27
-publishdate: 2023-08-25
+publishdate: 2023-09-27
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 title: The Fourier Transform I
 date: 2023-09-13
-publishdate: 2023-08-25
+publishdate: 2023-09-13
 ---
 
 **Reference Materials for this lecture**:
