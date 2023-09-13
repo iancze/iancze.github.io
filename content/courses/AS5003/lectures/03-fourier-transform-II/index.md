@@ -1,7 +1,7 @@
 ---
 title: The Fourier Transform II
 date: 2023-09-15
-publishdate: 2023-09-15
+publishdate: 2023-09-13
 ---
 
 

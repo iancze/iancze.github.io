@@ -323,6 +323,12 @@ $$
 
 What functional form is this? This is another Gaussian, though the normalization and standard deviation are a bit different! So, we see that the Gaussian function is a Fourier transform pair with itself.
 
+My usual approach when dealing with Gaussians is to start with the Fourier duals (Bracewell)
+$$
+e^{- \pi x^2} \leftrightharpoons e^{- \pi s^2}
+$$
+and then use the similarity and shift theorems (discussed later) to morph it into the form needed, picking up any additional prefactors as necessary.
+
 Hopefully now you have a taste of how to compute Fourier transforms. At its most basic, it's just a matter of setting up and evaluating the integral. For many function forms, you can use integration strategies to arrive at analytic solutions. As a practical matter, in the next lecture we'll see how we can evaluate this integral numerically.
 
 ## Convolution
