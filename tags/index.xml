@@ -815,7 +815,513 @@ Protostars to PPDs
 &lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>The Fourier Transform II</title><link>https://iancze.github.io/courses/as5003/lectures/03-fourier-transform-ii/</link><pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/as5003/lectures/03-fourier-transform-ii/</guid><description>&lt;h2 id="references-for-today">References for today&lt;/h2>
+&lt;/table></description></item><item><title>Image Plane Deconvolution (CLEAN)</title><link>https://iancze.github.io/courses/as5003/lectures/07-image-plane-deconvolution/</link><pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/as5003/lectures/07-image-plane-deconvolution/</guid><description>&lt;h3 id="references">References&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://leo.phys.unm.edu/~gbtaylor/astr423/s98book.pdf">Synthesis Imaging in Radio Astronomy II&lt;/a>: Lecture 7: Imaging by Briggs, Schwab, and Sramek and Lecture 8: Deconvolution by Cornwell, Braun, and Briggs&lt;/li>
+&lt;li>&lt;a href="https://ui.adsabs.harvard.edu/abs/2021ApJS..257....2C/abstract">Molecules with ALMA at Planet-forming Scales (MAPS). II. CLEAN Strategies for Synthesizing Images of Molecular Line Emission in Protoplanetary Disks&lt;/a> by Czekala et al. 2021&lt;/li>
+&lt;/ul>
+&lt;h3 id="outline">Outline&lt;/h3>
+&lt;ul>
+&lt;li>Recap of visibility datasets and the sampling function&lt;/li>
+&lt;li>Image plane implications of sampling&amp;ndash;the dirty image&lt;/li>
+&lt;li>Noise and &amp;ldquo;weighting&amp;rdquo;&lt;/li>
+&lt;li>The CLEAN image deconvolution algorithm&lt;/li>
+&lt;/ul>
+&lt;h2 id="visibility-datasets">Visibility datasets&lt;/h2>
+&lt;p>Recall from last time that the visibility function is the Fourier transform of the sky brightness distribution&lt;/p>
+&lt;p>$$
+\mathcal{V}(u,v) \leftrightharpoons I(l,m)
+$$&lt;/p>
+&lt;p>and that each baseline (pair of antennas) of an interferometric array corresponds to a sample of the visibility function at a specific \(u,v\) point. The \(u,v\) point corresponds to the length of the &lt;em>projected&lt;/em> baseline in multiples of the observing wavelength and is the &lt;em>spatial frequency&lt;/em> of the image plane that is being sampled.&lt;/p>
+&lt;p>For a large array with &amp;gt; 50 antennas, like ALMA, you get nearly 1000 unique &lt;em>instantaneous&lt;/em> baselines, from each pairwise combination of antennas in the array. As the earth rotates, you can quickly acquire new projected baseline samples.&lt;/p>
+&lt;h2 id="sampling-function">Sampling function&lt;/h2>
+&lt;p>If you do radio interferometry, you will very often see the baseline distributions plotted as a series of \(\delta\) functions on the \(u,v\) plane.&lt;/p>
+&lt;p>TODO: draw approximate plot with points&lt;/p>
+&lt;p>This is called the sampling function&lt;/p>
+&lt;p>$$
+S(u,v) = \sum_{k=1}^M \delta(u - u_k, v - v_k).
+$$&lt;/p>
+&lt;p>And, we can write down the sampling of the visibility function as&lt;/p>
+&lt;p>$$
+S(u, v) \times \mathcal{V}(u, v).
+$$&lt;/p>
+&lt;p>If you recall from our Fourier transform distribution, this sampling function is also called the &lt;em>transfer function&lt;/em>. It allows certain spatial frequencies through the interferometric system. Both terminologies are used in the radio astronomy community.&lt;/p>
+&lt;h3 id="image-plane-implications">Image plane implications&lt;/h3>
+&lt;p>Now, let&amp;rsquo;s discuss the image-plane ramifications of the sampling operation. We started with \(I(l,m)\), the &amp;ldquo;true&amp;rdquo; sky brightness, i.e., the one you would observe if you had a perfectly sensitive telescope with infinite resolving power.&lt;/p>
+&lt;p>$$
+\mathcal{V}(u,v) \leftrightharpoons I(l,m)
+$$&lt;/p>
+&lt;p>but we&amp;rsquo;ve &lt;em>multiplied&lt;/em> it by the sampling distribution&lt;/p>
+&lt;p>$$
+S(u, v) \times \mathcal{V}(u, v).
+$$&lt;/p>
+&lt;p>Remember how we talked about interferometers as &lt;em>spatial filters&lt;/em>? We just showed how this conceptually works in the Fourier domain, the \(u,v\) coverage provided by the antenna spacings &lt;em>is&lt;/em> the transfer function.&lt;/p>
+&lt;p>We can also show that interferometers are spatial filters by considering the image plane implications. This same operation implies that the true sky brightness is &lt;em>convolved&lt;/em> by something in the image plane
+$$
+I(l, m) * B_D(l, m) \leftrightharpoons S(u, v) \times \mathcal{V}(u, v).
+$$&lt;/p>
+&lt;p>The quantity \(B_D(l,m,)\) is called the dirty beam. We&amp;rsquo;ll soon talk about the CLEAN algorithm, so the dirty/clean terminology will soon make sense. But first, let&amp;rsquo;s just think about this for a second. This dirty beam is the same thing we showed in previous lectures, and can also be thought of as the sum of the fringe functions.&lt;/p>
+&lt;p>If you take an image, convolve it with the dirty beam, and then take its Fourier transform, you&amp;rsquo;ll see that you will have visibility samples only at the spatial frequencies corresponding to your baselines.&lt;/p>
+&lt;p>Another way to think of the dirty beam is as the &lt;em>impulse response&lt;/em> of the interferometric system. Let&amp;rsquo;s assume we are observing a point source \(I(l,m) = \delta(l,m)\). The visibility function corresponding to a point source is a constant, so we have&lt;/p>
+&lt;p>$$
+\delta(l,m) * B_D(l,m) = S(u,v) \times \mathrm{constant}
+$$&lt;/p>
+&lt;p>$$
+B_D(l,m) \leftrightharpoons S(u,v).
+$$&lt;/p>
+&lt;p>So, another way we can say the same thing is that the dirty beam is the &lt;em>point spread function&lt;/em> (PSF) of the interferometer, and it is given by the Fourier transform of the sampling function, which is set by the configuration of the baselines within the array.&lt;/p>
+&lt;h2 id="the-dirty-image">The Dirty Image&lt;/h2>
+&lt;p>In last week&amp;rsquo;s lecture, we talked a bit about the actual visibility data products, a discrete set of (noisy) visibility samples&lt;/p>
+&lt;p>$$
+\mathbf{V} = \{V_1, V_2, \ldots, V_M\}^M_{k=1}.
+$$&lt;/p>
+&lt;p>The idea is that each was sampled with some (complex) noise draw&lt;/p>
+&lt;p>$$
+V_i = \mathcal{V}(u_i, v_i) + \epsilon
+$$&lt;/p>
+&lt;p>such that
+$$
+\epsilon_\Re \sim \mathcal{N}(0, \sigma)
+$$&lt;/p>
+&lt;p>$$
+\epsilon_\Im \sim \mathcal{N}(0, \sigma)
+$$&lt;/p>
+&lt;p>$$
+\epsilon = \epsilon_\Re + i \epsilon_\Im.
+$$&lt;/p>
+&lt;p>And then we said that radio interferometers commonly represent the uncertainty on each visibility measurement by a &amp;ldquo;weight&amp;rdquo; \(w_i\), where&lt;/p>
+&lt;p>$$
+w_i = \frac{1}{\sigma_i^2}.
+$$&lt;/p>
+&lt;h3 id="more-details-about-the-sampling-function">More details about the sampling function&lt;/h3>
+&lt;p>The fact that each visibility measurement is made in the presence of noise means that we should be taking this into account in our sampling function. So a more sophisticated sampling function looks like&lt;/p>
+&lt;p>$$
+S(u, v) = \sum_{k=1}^M T_k D_k w_k \delta(u - u_k, v - v_k).
+$$&lt;/p>
+&lt;p>In addition to weighting each sample by its inverse variance \(w_k\) (something you might do to take a statistical average), there are other factors you might fiddle with, like a &amp;ldquo;taper&amp;rdquo; \(T_k\) and density weight \(D_k\). For now, you can just think of them as equal to 1.0.&lt;/p>
+&lt;p>Now, let&amp;rsquo;s think about how we would take our sampled visibilities \(\mathbf{V} = \{V_1, V_2, \ldots, V_M\}^M_{k=1}\) and make an image from them. Well, the way to do this looks like an inverse Fourier transform&lt;/p>
+&lt;p>$$
+I_D(l, m) = C \sum_{k=1}^{N^\dagger} T_k D_k w_k V_k \exp \{2 \pi i (u_k l + v_k m) \}.
+$$
+with normalization constant
+$$
+C = 1 / \sum_{k=1}^{N^\dagger} T_k D_k w_k.
+$$&lt;/p>
+&lt;p>where \(N^\dagger = 2 N\) is the set of visibilities that includes their complex conjugates such that the sampling is Hermitian. This image that results is called the &lt;em>dirty image&lt;/em>, and we denote it with a &amp;ldquo;D&amp;rdquo; subscript.&lt;/p>
+&lt;p>Continuing with the dirty beam concept, we also have&lt;/p>
+&lt;p>$$
+I_D(l,m) = I(l, m) * B_D(l, m) \leftrightharpoons S(u, v) \times \mathcal{V}(u, v).
+$$&lt;/p>
+&lt;h3 id="a-quick-note-about-the-ill-defined-imaging-problem-and-weighting-choices">A quick note about the &amp;ldquo;ill-defined&amp;rdquo; imaging problem and weighting choices&lt;/h3>
+&lt;p>Making images from Fourier samples is generally an ill-defined inverse process, which is only complicated in the presence of noise. What do we mean by ill-defined?&lt;/p>
+&lt;p>In the forward process, we collect samples of the visibility function at specific \(u,v\) values \(S(u, v) \times \mathcal{V}(u, v)\). To make a dirty image, we take the inverse Fourier transform of those values to produce &lt;em>an&lt;/em> image. This is the inverse process.&lt;/p>
+&lt;p>&lt;strong>The ill-defined nature of imaging&lt;/strong> (even in the presence of noise): Think about what&amp;rsquo;s happening in the forward process. If the visibility function had non-zero amplitudes at some \(u,v\) values that we didn&amp;rsquo;t sample, then these never enter our dataset (obviously). The inverse process itself doesn&amp;rsquo;t include these values (obviously), and by their omission, assumes that their amplitudes are equal to zero.&lt;/p>
+&lt;p>So, as far as our interferometer is concerned, it can&amp;rsquo;t distinguish between a set of degenerate image brightness distributions on the sky so long as they have the exact same \(\mathcal{V}(u,v)\) values at the sampled \(u,v\) points. The unsampled \(\mathcal{V}(u,v)\) locations can take on arbitrary values and still result in the exact same dataset.&lt;/p>
+&lt;p>Another way of saying the same thing is to think of an interferometer as a &lt;em>spatial filter&lt;/em>, i.e., its transfer function (the array configuration) only allows measurements of certain spatial frequencies to enter the dataset. But most images contain power at many spatial frequencies, including those that have been filtered out. So, if you just try to make an image with the spatial frequencies in your dataset, your image will most likely be missing some spatial frequencies that would be there in actuality.&lt;/p>
+&lt;h4 id="weighting-choices">Weighting choices&lt;/h4>
+&lt;p>The whole discussion about the ill-defined inverse problem applies &lt;em>even if&lt;/em> we sampled the visibility function perfectly with no noise, so long as there are still unsampled \(u,v\) points that contain significant visibility &amp;ldquo;power.&amp;rdquo;&lt;/p>
+&lt;p>The problem gets even more complicated when we consider measurement noise and the fact that array configurations usually sample some parts of \(u,v\) space better than others. In my opinion, this is really why various weighting schemes are as popular as they are. The common way to do this is by tuning the \(D_k\) and \(T_k\) terms. As we&amp;rsquo;ll show later in the slides, tuning the \(D_k\) terms provide a tradeoff between:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>natural weighting&lt;/strong> maximizing point source sensitivity at the cost of spatial resolution (broader beam)&lt;/li>
+&lt;li>&lt;strong>uniform weighting&lt;/strong> maximizing spatial resolution (narrow beam) at the cost of point source sensitivity (higher RMS noise floor in the image)&lt;/li>
+&lt;li>&amp;ldquo;Briggs&amp;rdquo; &lt;strong>robust weighting&lt;/strong> a tradeoff between these two regimes, ranging from (-2 to 2). The tradeoff is non-linear, so coming from natural weighting, for example, good spatial resolution can be gained with only modest sacrifices in point source sensitivity. Or, vice versa, coming from uniform weighting, good sensitivity to point sources can be gained with only modest losses in resolution.&lt;/li>
+&lt;/ul>
+&lt;p>Typically, a reasonable starting point with ALMA observations is to use some in-between value of Briggs weighting like -0.5, 0.0, or 0.5. Different weighting choices can change your sensitivities on different spatial scales.&lt;/p>
+&lt;p>The \(T_k\) terms are for applying a &lt;em>taper&lt;/em>, whereby one downweights longer baseline observations.&lt;/p>
+&lt;h2 id="clean">CLEAN&lt;/h2>
+&lt;p>We&amp;rsquo;ve talked about how&lt;/p>
+&lt;p>$$
+I_D(l,m) = I(l, m) * B_D(l, m) \leftrightharpoons S(u, v) \times \mathcal{V}(u, v).
+$$&lt;/p>
+&lt;p>Specifically, the &lt;em>dirty image&lt;/em> is the &lt;em>convolution&lt;/em> of the true sky brightness \(I\) with the dirty beam \(B_D\). We know what the dirty beam is to high precision.&lt;/p>
+&lt;p>First, it&amp;rsquo;s important to note that convolution is a &lt;em>lossy&lt;/em> procedure, you (irrevocably) lose information. For example, consider applying a Gaussian blur to an image. The high resolution information in that image has been lost.&lt;/p>
+&lt;p>CLEAN is an &lt;em>image deconvolution&lt;/em> algorithm. We just said that convolution is a lossy procedure, so, how does the algorithm get that information back? What follows are my own opinions about the CLEAN algorithm, its use cases I&amp;rsquo;m most familiar with in the protoplanetary disk community, and its limitations.&lt;/p>
+&lt;p>TODO: draw a 1D cut of the dirty beam&lt;/p>
+&lt;p>The short answer is that CLEAN can help restore an image &lt;em>up to a point&lt;/em>. The thing that CLEAN is best at is removing the effect of those nasty sidelobes from a dirty beam, and replacing them with a more Gaussian beam response that is usually easier to work with. CLEAN will not give you &amp;ldquo;super-resolution&amp;rdquo; access to lost spatial frequencies that you have lost, but it can help you make better looking images, and ones that have better dynamic range.&lt;/p>
+&lt;h3 id="iterative-processes">Iterative processes&lt;/h3>
+&lt;p>CLEAN is a procedure that iteratively builds up a model image. To carry this out on the whiteboard, I&amp;rsquo;m going to do things in 1D. In a moment we&amp;rsquo;ll show an example with 2D images in the slides.&lt;/p>
+&lt;p>TODO: draw in 1D a dirty image of a few point sources, a representation of the dirty beam, and a blank model image&lt;/p>
+&lt;p>Before you start, we&amp;rsquo;ll define a quantity called the CLEAN beam. It&amp;rsquo;s usually chosen to be a Gaussian fit to the main lobe of the beam.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;ol>
+&lt;li>First, we identify the &lt;em>peak&lt;/em> location in the dirty image.&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>2a. Then, we subtract some fraction of the flux times the dirty beam from this location. This dirty image becomes a &amp;ldquo;residual image&amp;rdquo; now.&lt;/li>
+&lt;li>2b. At the same time, we add a \(\delta\) function at corresponding location in the model image with the same amplitude as the flux we subtracted. So, if we subtracted 0.1 Jy of flux in the dirty beam, then we would add a \(\delta\) function with amplitude of 0.1 Jy in the model image.&lt;/li>
+&lt;li>2c. You can think of these steps as equivalent, because a \(\delta\) function times the dirty beam gives you back the dirty beam. These steps are &lt;em>also&lt;/em> equivalently carried out in the visibility domain.&lt;/li>
+&lt;li>
+&lt;ol start="3">
+&lt;li>Go back to step 1, and repeat with the next-highest &lt;em>peak&lt;/em> location. Continue this loop until the peak flux in the image drops below some threshold&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="4">
+&lt;li>Once this threshold is reached, the CLEANing is done. The final step is to put everything back together. The model image is convolved with the CLEAN beam to form the restored image. This &amp;ldquo;smooths out&amp;rdquo; the model image to some resolution limit, and hides imperfections on smaller scales.&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;ol start="5">
+&lt;li>The remainder of the residual image is added back to the restored image to give a sense of the &amp;ldquo;noise&amp;rdquo; in the image.&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="limitations">Limitations&lt;/h3>
+&lt;p>CLEAN is &lt;em>procedural&lt;/em>. What this means is that you set parameters that guide the above process and then carry on until some termination criterion is reached. This could also be part of an interactive process. There is no guarantee that the CLEANed image is unique, either.&lt;/p>
+&lt;p>In my opinion, CLEAN is best at removing the sidelobe effects of the dirty beam, improving the dynamic range of your image, and possibly detecting fainter (point-like) sources that would have been hidden by the sidelobes of other brighter point sources.&lt;/p>
+&lt;p>In the above example, we said that we would use a \(\delta\) function to build up a model image. You may have already identified this choice of basis set or &amp;ldquo;CLEAN component&amp;rdquo; as a potential limitation. This works great for fields of point sources, but what about extended sources? It turns out that it actually works &lt;em>OK&lt;/em> for extended sources, so long as you have many of them. This adds to the computational time, though, and is why I think we&amp;rsquo;re now currently in an interesting place, approaching the limitations of CLEAN.&lt;/p>
+&lt;p>There are other extensions to CLEAN (called multi-scale), which use CLEAN components of varying sizes, like little Gaussian blobs. This can help substantially over using just \(\delta\) functions. For very resolved structures, though, you still run into the problem that your components aren&amp;rsquo;t sufficiently like the morphology of the source you&amp;rsquo;re trying to deconvolve.&lt;/p></description></item><item><title>2D Interferometry, PSFs, Gridding, and Dirty Images</title><link>https://iancze.github.io/courses/as5003/lectures/06-psfs-and-gridding/</link><pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/as5003/lectures/06-psfs-and-gridding/</guid><description>&lt;ul>
+&lt;li>Slides [&lt;a href="beams-and-arrays.pdf">PDF&lt;/a>] [&lt;a href="beams-and-arrays.key">Keynote&lt;/a> (better for movies)]&lt;/li>
+&lt;/ul>
+&lt;h2 id="references-for-today">References for today&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson, particularly Appendix 2.1&lt;/li>
+&lt;li>&lt;a href="https://www.cv.nrao.edu/~sransom/web/xxx.html">Essential Radio Astronomy&lt;/a> by James Condon and Scott Ransom&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/2010095">The Fourier Transform and its Applications&lt;/a> by R. Bracewell&lt;/li>
+&lt;/ul>
+&lt;h2 id="review-of-last-time">Review &lt;em>of last time&lt;/em>&lt;/h2>
+&lt;ul>
+&lt;li>We talked about R.A., Dec., and direction cosines as coordinates on the sky&lt;/li>
+&lt;li>We introduced a two-element interferometer with multiply and add correlator backend&lt;/li>
+&lt;li>We introduced the fringe pattern \(F(l)\) of a two-antenna interferometer, which is a cosine wave on the sky&lt;/li>
+&lt;li>We discussed how the frequency of this fringe pattern (i.e., the &lt;em>spatial frequency&lt;/em>) changes as a function of baseline length between the two antennas&lt;/li>
+&lt;li>We introduced the visibility function \(\mathcal{V}(u)\) as the Fourier transform of the sky-brightness \(I(l)\)&lt;/li>
+&lt;li>And discussed how the output from the interferometer changes in response to a point source and an extended source&lt;/li>
+&lt;/ul>
+&lt;h2 id="this-time">This time&lt;/h2>
+&lt;ul>
+&lt;li>Extend our discussion to a general interferometer with north-south and east-west baselines&lt;/li>
+&lt;li>Discuss arrays with multiple antennas&lt;/li>
+&lt;li>Earth aperture synthesis&lt;/li>
+&lt;li>\(u,v\) sampling distributions for various arrays&lt;/li>
+&lt;li>point spread functions (PSFs) and their relationship to the sampling distribution&lt;/li>
+&lt;/ul>
+&lt;h2 id="wrapping-up-1d">Wrapping up 1D&lt;/h2>
+&lt;p>Last time, we had said the response \(R(l)\) of the interferometer to some sky distribution \(I(l)\) is to act as a convolution
+$$
+R(l) = \cos(2 \pi u l) * I(l).
+$$
+In this case, you can think of the fringe function as a &lt;em>point spread function&lt;/em> (a terrible one), that is convolving out the true sky brightness distribution.&lt;/p>
+&lt;p>Another way to look at this, though, is through our old friend the multiplication/convolution algorithm. Let \(u_0\) be the (fixed, instantaneous) baseline distance between two antennas, measured in multiples of the observing wavelength
+$$
+u = \frac{D \cos \theta}{\lambda}
+$$
+where \(\theta\) is the angle from zenith.&lt;/p>
+&lt;p>Then, the Fourier pair of the fringe function is
+$$
+\cos(2 \pi u_0 l) \leftrightharpoons \frac{1}{2} [\delta(u + u_0) + \delta(u - u_0)].
+$$
+These are two delta functions situated at \(\pm u_0\).&lt;/p>
+&lt;p>The Fourier pair of the sky brightness distribution is called the &lt;em>visibility function&lt;/em>
+$$
+I(l) \leftrightharpoons \mathcal{V}(u).
+$$&lt;/p>
+&lt;p>In the Fourier plane, the response of the interferometer is a multiplication
+$$
+\cos(2 \pi u l) * I(l) \leftrightharpoons \frac{1}{2} [\delta(u + u_0) + \delta(u - u_0)] \times \mathcal{V}(u)
+$$
+i.e., the interferometer has &lt;em>sampled&lt;/em> the visibility function at locations \(\pm u_0\) corresponding to the baseline distance of the two antennas.&lt;/p>
+&lt;p>Another way to think about this is that the interferometer acts as a &lt;em>spatial filter&lt;/em> that only responds to the two spatial frequencies \(\pm u_0\). \(\mathcal{V}(u)\) represents the amplitude and phase of the sinusoidal component of the intensity distribution with spatial frequency \(u\) cycles per radian. The negative spatial frequency doesn&amp;rsquo;t have a physical meaning but is a mathematical convenience. Because the intensity distribution on the sky is a real quantity, the visibility function itself is symmetric about the origin in a Hermitian sense, meaning it has real even parts and odd imaginary parts.&lt;/p>
+&lt;h2 id="moving-on-to-the-general-case">Moving on to the general case&lt;/h2>
+&lt;ol>
+&lt;li>We&amp;rsquo;re going to take our two-element interferometer and re-derive the same relationships using a general vector formalism&lt;/li>
+&lt;li>Then, we&amp;rsquo;re going to introduce a general 3D cartesian coordinate set to the problem, which is used by most interferometers&lt;/li>
+&lt;/ol>
+&lt;h3 id="coordinates">Coordinates&lt;/h3>
+&lt;p>Let&amp;rsquo;s consider a generic situation of a two-element interferometer observing (tracking) a source on the sky with phase center \(\mathbf{s}_0\).&lt;/p>
+&lt;figure>&lt;img src="tms-general-coord.png"
+alt="TMS Fig 3.1"/>&lt;figcaption>
+&lt;p>TMS Fig 3.1&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>&lt;strong>Antenna power pattern&lt;/strong>: An element of the source with solid angle \(d\Omega\) at some position \(\mathbf{s} = \mathbf{s}_0 + \mathbf{\sigma}\) will contribute an element of power \( \frac{1}{2} A(\sigma) I(\sigma) \Delta \nu d\Omega\), where \(A\) is some (normalized) power pattern of a single antenna. For now, you can consider it to be a directionally smooth function that is effectively constant over the field of view of interest.&lt;/p>
+&lt;p>From what we just talked about for the 1D example, the component of the correlator output will be equal to the received power and to the fringe term \(\cos(2 \pi \nu \tau_g)\).&lt;/p>
+&lt;p>Let \(\mathbf{D}_\lambda\) be a baseline vector which points from the central antenna to the other one, and specifies the baseline length in multiples of the observing wavelength. Then&lt;/p>
+&lt;p>$$
+\nu \tau_g = \mathbf{D}_\lambda \cdot \mathbf{s} = \mathbf{D} \cdot (\mathbf{s}_0 + \mathbf{\sigma}).
+$$&lt;/p>
+&lt;p>To calculate the output from the correlator, we need to integrate over the spatial distribution of the source&lt;/p>
+&lt;p>$$
+r(D_\lambda, s_0) = \Delta \nu \int_{4 \pi} A(\mathbf{\sigma}) I(\sigma) \cos [2 \pi D_\lambda \cdot (s_0 + \mathbf{\sigma})]\,\mathrm{d}\Omega
+$$&lt;/p>
+&lt;p>Here we see an opportunity to use our sine/cosine difference angle formulae again to split this up into sine and cosine components and then use Euler&amp;rsquo;s formula to put it back together.&lt;/p>
+&lt;p>Let&amp;rsquo;s define the complex visibility as
+$$
+\mathcal{V} = \int_{4 \pi} A_N(\sigma) I(\sigma) e^{-i 2 \pi D_\lambda \cdot \sigma}\,\mathrm{d}\Omega
+$$
+which I hope you agree looks suspiciously like a Fourier transform.&lt;/p>
+&lt;p>When an interferometer observes a source, it is sampling the visibility function at these points (corresponding to a spatial frequency of \(\pm \mathbf{D}_\lambda \cdot \mathbf{s}_0 \)). You can think of this measurement as just recording the real and imaginary values of the visibility function, or alternatively, some &lt;em>visibility amplitude&lt;/em> and some &lt;em>visibility phase&lt;/em>
+$$
+\mathcal{V} = |\mathcal{V}|e^{i \phi}.
+$$&lt;/p>
+&lt;h3 id="3d-coordinates">3D coordinates&lt;/h3>
+&lt;p>Now that we&amp;rsquo;ve introduced how the visibility function comes about in a general vector formalism, let&amp;rsquo;s get concrete with respect to coordinates on Earth and in the sky.&lt;/p>
+&lt;figure>&lt;img src="tms-uv-curved.png"
+alt="Credit: TMS Fig 3.2. Note that the \(l\) and \(m\) coordinates technically index the flat image plane tangent to \(\mathbf{s_0}\), not curved as they are shown here."/>&lt;figcaption>
+&lt;p>Credit: TMS Fig 3.2. Note that the \(l\) and \(m\) coordinates technically index the &lt;em>flat&lt;/em> image plane tangent to \(\mathbf{s_0}\), not curved as they are shown here.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Let&amp;rsquo;s focus in on the \(u,v, w\) coordinate system in the bottom of the figure. The plane is centered at the location of one of the antennas \(u=0,v=0, w=0\). We can also draw our baseline vector \(\mathbf{D}_\lambda\) in this coordinate system, pointing to the other antenna. The \(w\) unit vector is pointing towards phase center \(\mathbf{s}_0\) (i.e., the direction of the source).&lt;/p>
+&lt;p>Another way of saying this is
+$$
+\mathbf{D}_\lambda \cdot \mathbf{s}_0 = w.
+$$
+So, you can think of the \(u,v\) plane \(w = 0\) as oriented orthogonal to the vector pointing towards phase center. But, N.B. that the baseline vector &lt;em>itself&lt;/em> does not necessarily live in the \(w = 0\) plane, it can have a non-zero \(w\) component.&lt;/p>
+&lt;p>Using this coordinate system, let&amp;rsquo;s focus on rewriting the \(\mathbf{D}_\lambda \cdot \mathbf{s}\) term. Recall that the dot product between two vectors is&lt;/p>
+&lt;p>$$
+\mathbf{a} \cdot \mathbf{b} = ||a|| \; ||b|| \cos \theta.
+$$
+Therefore we have
+$$
+\mathbf{D}_\lambda \cdot \mathbf{s} = \left ( ul + vm + wn \right).
+$$
+Wow, that was simple. Hopefully now you see why it was convenient to use \(l, m\) as direction cosines!&lt;/p>
+&lt;p>\(n\) is the third direction cosine and is w.r.t. the \(w\) axis. It is not independent of \(l, m\) and can be written in terms of them as
+$$
+n = \sqrt{1 - l^2 - m^2}.
+$$&lt;/p>
+&lt;p>So we would normally write
+$$
+\mathbf{D}_\lambda \cdot \mathbf{s} = \left ( ul + vm + w\sqrt{1 - l^2 - m^2} \right).
+$$&lt;/p>
+&lt;p>This factor also appears in the solid angle differential. As we move from phase center, the solid angle is changed by a factor
+$$
+d \Omega = \frac{\mathrm{d}l\; \mathrm{d} m}{\sqrt{1 - l^2 - m^2}}.
+$$
+This is adjusting for the fact that the solid angle is something on the celestial sphere, but we are measuring it using the direction cosines on the tangent plane.&lt;/p>
+&lt;p>With these relationships in hand, we can rewrite the visibility function as
+$$
+\mathcal{V}(u, v, w) = \int_{-\infty}^\infty \int_{-\infty}^\infty A_N(l,m) I(l,m) \exp \left \{ -i 2 \pi \left [ ul + vm + w \left ( \sqrt{1 - l^2 - m^2} - 1 \right )\right ] \right \} \;\frac{\mathrm{d}l\;\mathrm{d}m}{\sqrt{1 - l^2 - m^2}}.
+$$&lt;/p>
+&lt;p>The factor in the exponential comes about from the measurement of angular position with respect to phase center (\(\mathbf{D}_\lambda \cdot \mathbf{s})\), as we saw in the &amp;ldquo;general coordinates&amp;rdquo; example.&lt;/p>
+&lt;p>&lt;em>If&lt;/em> all of the measurements could be made with the antennas in a plane normal to the \(w\) direction such that \(w=0\), then we would turn this equation into an exact 2D transform. But this isn&amp;rsquo;t usually the case and we need to make approximations.&lt;/p>
+&lt;p>So long as we are in the small-field regime and \(l\) and \(m\) are small enough such that the term
+$$
+\left ( \sqrt{1 - l^2 - m^2} - 1 \right ) w
+$$
+can be neglected (\(\simeq - \frac{1}{2}(l^2 + m^2)w\) in this regime), then we have
+$$
+\mathcal{V}(u, v, w) \simeq \mathcal{V}(u, v, 0) = \int_{-\infty}^\infty \int_{-\infty}^\infty \frac{A_N(l,m) I(l,m)}{\sqrt{1 - l^2 - m^2}} \exp \left \{ -i 2 \pi \left [ ul + vm \right ] \right \} \;\mathrm{d}l\;\mathrm{d}m.
+$$&lt;/p>
+&lt;p>OK! So we&amp;rsquo;ve arrived at the result that I told you about at the beginning of last week&amp;rsquo;s class, that the visibility function is the Fourier transform of the sky brightness (modified by the primary beam of each antenna, which we can mostly ignore for this discussion as a constant). The approximation we made for the \(w\) term places a limit on the maximum size of the field that we can image (at once). There are approaches designed to overcome this scenario, but at least in the context of this course we will restrict our discussion to those that don&amp;rsquo;t require it. This is generally the case for all images made with VLA or ALMA for a single pointing (i.e., imaging the full primary beam). If you use multiple pointings of the array (generally called &amp;ldquo;mosaicing&amp;rdquo;) to make an even larger image, you&amp;rsquo;ll need to take into account the effects of the \(w\) term.&lt;/p>
+&lt;p>&lt;strong>Revisiting &amp;ldquo;slightly extended source&lt;/strong>: A &amp;ldquo;slightly extended source&amp;rdquo; is something that is larger than the dirty beam but smaller than the primary beam of each telescope. Instantaneous field of view of an interferometer is the same as the primary beam of each telescope, treated as a single dish (see previous section). Each single dish antenna is still seeing the same thing as before, it&amp;rsquo;s just that we have a correlator backend that&amp;rsquo;s doing things with the signals, allowing us to create a &lt;em>synthesized beam&lt;/em> that is considerably smaller than the size of the primary beam. For example, at 220 GHz (band 6), ALMA has a primary beam of about 20 arcseconds in diameter. However, it&amp;rsquo;s common to make synthesized beams on the size of 0.1 arcseconds or smaller.&lt;/p>
+&lt;p>Let&amp;rsquo;s also briefly discuss what the \(u,v\) coordinate plane looks like, now that we are in 2D:&lt;/p>
+&lt;figure>&lt;img src="2D-uv-plane.png"
+alt="Credit: TMS Fig 2.7"/>&lt;figcaption>
+&lt;p>Credit: TMS Fig 2.7&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="units-of-mathcalv">Units of \(\mathcal{V}\)&lt;/h3>
+&lt;p>What are the units of \(\mathcal{V}\) itself? We can get at this by looking at the units of \(I_\nu(l,m)\) and how we carried out the Fourier transform integral (in its simplified form).&lt;/p>
+&lt;p>$$
+\mathcal{V}(u, v) = \int_{-\infty}^\infty \int_{-\infty}^\infty I(l,m) \exp \left \{ -i 2 \pi \left [ ul + vm \right ] \right \} \;\mathrm{d}l\;\mathrm{d}m.
+$$&lt;/p>
+&lt;p>If we parameterized our image using \(\mathrm{Jy} / \mathrm{arcsec}^2\) and we integrated over \( \mathrm{d}l\, \mathrm{d}m\) (both assuming they had units of arcsec), then \(\mathcal{V}\) must have units of Jy. I.e., you can think of it sort of like the flux being observed at that angular scale. The visibility function is complex-valued, so if you want to discuss the &amp;ldquo;power&amp;rdquo; of an image at some angular scale then you should consider \(|\mathcal{V}|^2\).&lt;/p></description></item><item><title>Interferometry in Practice</title><link>https://iancze.github.io/courses/as5003/lectures/05-interferometry/</link><pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/as5003/lectures/05-interferometry/</guid><description>&lt;ul>
+&lt;li>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+5/1_2zi2doy2">Video Recording&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="references-for-today">References for today&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/2010095">The Fourier Transform and its Applications&lt;/a> by R. Bracewell&lt;/li>
+&lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson, particularly Appendix 2.1&lt;/li>
+&lt;li>&lt;a href="https://www.cv.nrao.edu/~sransom/web/xxx.html">Essential Radio Astronomy&lt;/a> by James Condon and Scott Ransom&lt;/li>
+&lt;/ul>
+&lt;h2 id="this-time">This time&lt;/h2>
+&lt;p>The punchline of today is that the complex-valued visibility function \(\mathcal{V}\) is the 2D Fourier transform of an image on the celestial sphere (with a small field of view)&lt;/p>
+&lt;p>$$
+I(l, m) \leftrightharpoons \mathcal{V}(u, v)
+$$&lt;/p>
+&lt;p>and it is the visibility function that interferometers measure directly. The values of \(u, v\) for which interferometers are able to measure the visibility function depend on how the array of antennas is laid out and the spacing between them.&lt;/p>
+&lt;p>Most of today&amp;rsquo;s lecture will follow Chapters 2 and 3 of &lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson. First, we will introduce a two-element interferometer and it&amp;rsquo;s response to a point source. Then, we&amp;rsquo;ll complexify this a bit to talk about an extended source (but still in 1D). Then, we&amp;rsquo;ll move on to discuss intensity distributions and the visibility function in the general case and then derive the relationship between \(I(l, m) \leftrightharpoons \mathcal{V}(u, v)\).&lt;/p>
+&lt;p>We&amp;rsquo;ll first develop the geometry and math of this relationship for small fields of view, so that you understand the result, at least in an abstract manner. Then we&amp;rsquo;ll spend the latter part of the course working through how a radio interferometer like the VLA or ALMA works to actually sample the visibility function.&lt;/p>
+&lt;h2 id="ra-and-dec">R.A. and Dec&lt;/h2>
+&lt;p>Let&amp;rsquo;s review our coordinates for images on the celestial sphere.&lt;/p>
+&lt;p>Declination&amp;rsquo;s the easier one, in my opinion. No matter where you are, if you move in declination, you move along a great circle (i.e., a circle that actually traces the circumference of the celestial sphere). We measure this in terms of 0 (celestial equator) to +90 degrees at the north celestial pole and -90 degrees at the southern celestial pole. You can split a degree into 60 arcminutes and an arcminute into 60 arcseconds.&lt;/p>
+&lt;figure>&lt;a href="https://skyandtelescope.org/wp-content/uploads/RA-Dec-wiki-Tom-RuenCC-BY-SA-3.0.jpg">&lt;img src="celestial-sphere.jpg"
+alt="Credit: Sky and Telescope"/>&lt;/a>&lt;figcaption>
+&lt;p>Credit: Sky and Telescope&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Right Ascension is the one that sometimes trips me up. Because the sky rotates, we have this system of marking it using sidereal &lt;em>time&lt;/em>: 24 &lt;em>hours&lt;/em> of right ascension, sometimes broken up into 60 &lt;em>minutes&lt;/em>, and 60 &lt;em>seconds&lt;/em>. Although they are still in multiples of 60, these &lt;em>minutes&lt;/em> and &lt;em>seconds&lt;/em> we use for right ascension do not have the same angular size as arcminutes and arcseconds (even if we are on the celestial equator). For example, let&amp;rsquo;s say we have two points on the sky.&lt;/p>
+&lt;pre>&lt;code>p1 = '00h42m00s', '+41d12m'
+p2 = '00h42m01s', '+41d12m'
+&lt;/code>&lt;/pre>
+&lt;p>Same declination, but their R.A. values differ by one second. Can anyone guess how many &lt;em>arcseconds&lt;/em> separate these points? The answer is about 11.3 arcseconds.&lt;/p>
+&lt;p>Usually, when we are talking about observing a smaller source (like a protoplanetary disk, or galaxy), we point in some direction towards that object and then define a small little postage stamp, commonly in units of \(\Delta \delta \) and \(\Delta \alpha \cos \delta\), in which case, the units describing the image are arcseconds. We&amp;rsquo;re still talking about spherical astronomy though, so this isn&amp;rsquo;t necessarily limited to small fields of view. We could have \(\Delta \delta\) be several degrees, for example.&lt;/p>
+&lt;p>TODO: Figure: point relative to center, and then Delta directions coming off of it.&lt;/p>
+&lt;h3 id="direction-cosines">Direction cosines&lt;/h3>
+&lt;p>In a moment, we&amp;rsquo;re going talk about the mechanics of interferometers observing the celestial sphere and how these relate to Fourier transforms. Before we talk about that, though, there&amp;rsquo;s a concept I want to introduce while we&amp;rsquo;re still talking about units for images.&lt;/p>
+&lt;p>Practically speaking, most images we might make with ALMA or the VLA will have a small field of view (&amp;lt; 1 arcminute). In this regime, it simplifies a lot to talk about &amp;ldquo;flat&amp;rdquo; images, i.e., image planes that are tangent to the field center. In 1D, it would look like this&lt;/p>
+&lt;figure>&lt;img src="direction-cosine.png"
+alt="The concept of the direction cosine. Credit: Fig 3.3 TMS"/>&lt;figcaption>
+&lt;p>The concept of the direction cosine. Credit: Fig 3.3 TMS&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>The direction cosines are
+$$
+l = \sin(\Delta \alpha \cos \delta)
+$$
+and
+$$
+m = \sin(\Delta \delta)
+$$
+relative to the phase center. You can see from the figure that it is the direction cosine that is actually tracking the position on the tangent plane, where we are defining our image. I know I just wrote down \(\sin\) but I called these direction cosines. The term comes about from the way you&amp;rsquo;d set up the problem in two dimensions, where you might use cosine of the complementary angle instead, but it&amp;rsquo;s just a matter of convention.&lt;/p>
+&lt;p>Because they are outputs from trigonometric functions, they are technically unitless. Though l and m are technically unitless and measures of &lt;em>linear&lt;/em> distance, for small angular extent, they could also be considered to have units of radians. So it will be common that we refer to
+$$
+l = \sin(\Delta \alpha \cos \delta) \approx \Delta \alpha \cos \delta
+$$
+and
+$$
+m = \sin(\Delta \delta) \approx \Delta \delta.
+$$&lt;/p>
+&lt;p>This probably sounds pointless, since we just arrived back at the same units we started with. Hopefully the reasons why we might wish to use these units will become apparent after we cover more about the interferometer. And remember that you can always &lt;em>exactly&lt;/em> convert from direction cosine back to angular usits (e.g. \(\Delta \alpha \cos \delta\)) by doing \(\sin^{-1}\), it&amp;rsquo;s just that for most small angles we&amp;rsquo;ll be dealing with, this operation is essentially an identity function. All of this goes out the window when we consider wide-field imaging (which we won&amp;rsquo;t have time to talk about in this course, though you might consider as a topic for a course project).&lt;/p>
+&lt;hr>
+&lt;h2 id="introduction-to-a-2-element-interferometer">Introduction to a 2-element interferometer&lt;/h2>
+&lt;p>Consider this geometric situation&lt;/p>
+&lt;figure>&lt;img src="elementary-interferometer.png"
+alt="Credit: TMS Fig 2.1"/>&lt;figcaption>
+&lt;p>Credit: TMS Fig 2.1&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>The antennas are spaced directly east-west, and they are observing a source in the &lt;em>far-field&lt;/em>, i.e., the radiation from a distant cosmic source appears as a plane wave. First, we will consider the case of a &lt;em>point-source&lt;/em>; later we will extend this formalism to spatially extended sources. We&amp;rsquo;ll assume the primary beam of each antenna is large, such that they can observe radiation from a source located a wide range of \(\theta\) angles. We&amp;rsquo;ll assume that we&amp;rsquo;re observing in a narrow slice of frequency around \(\nu\), essentially monochromatic.&lt;/p>
+&lt;p>The wavefront from the source arrives at the right antenna some time
+$$
+\tau_g = \frac{D}{c} \sin \theta
+$$
+before it reaches the left one. This is called the &lt;em>geometric time delay&lt;/em>.&lt;/p>
+&lt;p>Each antenna has its own signal voltage stream:
+$$
+V_1 = \sin 2 \pi \nu t
+$$
+and
+$$
+V_2 = \sin 2 \pi \nu (t - \tau_g).
+$$&lt;/p>
+&lt;p>These streams are multiplied together in a &lt;em>correlator&lt;/em> and then time-averaged over some interval. The output of the correlator is proportional to
+$$
+F(t, \tau_g) = \sin (2 \pi \nu t) \sin 2 \pi \nu (t - \tau_g),
+$$
+which we can expand using our trig sum identities for sine to
+$$
+F(t, \tau_g) = \sin^2(2 \pi \nu t) \cos(2 \pi \nu \tau_g) - \sin(2 \pi \nu t)\cos(2 \pi \nu t) \sin(2 \pi \nu \tau_g).
+$$&lt;/p>
+&lt;p>We can simplify this equation based on our knowledge that the correlator multiplies and then adds (integrates, typically for a few seconds).&lt;/p>
+&lt;ul>
+&lt;li>The central frequency \(\nu\) is on the order of 10s of MHz to nearly a THz&lt;/li>
+&lt;li>\(\theta\) (baked into \(\tau_g\)) is rotating at the Earth&amp;rsquo;s rotational velocity, which is \(10^{-4}\;\mathrm{rad\,s}^{-1}\).&lt;/li>
+&lt;li>\(D\) must be smaller than \(10^7\;\)m for terrestrial baselines&lt;/li>
+&lt;/ul>
+&lt;p>This means that the rate of variation of \(\nu \tau_g \ll \nu t\) by several orders of magnitude.&lt;/p>
+&lt;p>So long as our averaging interval is \(T \gg 1/\nu\) (which is satisfied by a typical multi-second integration),
+$$
+\langle \sin^2 (2 \pi \nu t) \rangle = 1/2
+$$
+and
+$$
+\langle \sin(2 \pi \nu t)\cos(2 \pi \nu t) \rangle = 0
+$$
+so we&amp;rsquo;re left with
+$$
+F \propto \cos (2 \pi \nu \tau_g).
+$$
+We can also define \(l = \sin \theta\) and then we can write
+$$
+F \propto \cos (2 \pi \nu \tau_g) = \cos \left (\frac{2 \pi D l}{\lambda} \right ).
+$$&lt;/p>
+&lt;p>This is called the &lt;em>fringe function&lt;/em> of a two-element interferometer&lt;/p>
+&lt;p>TODO: draw as a linear relationship vs. \(l\), i.e., an oscillating sine wave
+TODO: then include the fringe plot itself&lt;/p>
+&lt;figure>&lt;img src="fringe.png"
+alt="The fringe function (plotted here as \(|F|\)) can be thought of as the directional power pattern of the interferometer in the case the antennas are isotropic. Credit: TMS Fig 2.2"/>&lt;figcaption>
+&lt;p>The fringe function (plotted here as \(|F|\)) can be thought of as the directional power pattern of the interferometer in the case the antennas are isotropic. Credit: TMS Fig 2.2&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>So, you see that the 2-element interferometer has a sine/cosine sensitivity to the sky along the east-west axis. It has no sensitivity along the north-south direction.&lt;/p>
+&lt;h2 id="2-element-interferometer-for-a-spatially-resolved-source">2-element interferometer for a spatially resolved source&lt;/h2>
+&lt;p>Now we&amp;rsquo;ll consider a slightly more complex interferometer.&lt;/p>
+&lt;ul>
+&lt;li>The antennas are (somewhat) directional&lt;/li>
+&lt;li>They track the source as it moves across the sky, from the rotation of the Earth. This introduces an &lt;em>instrumental&lt;/em> time delay&lt;/li>
+&lt;/ul>
+&lt;p>$$
+\tau_i = \frac{D}{c} \sin \theta_0.
+$$
+I.e., this keeps the waveforms in sync so long as we&amp;rsquo;re looking directly at \(\theta_0\).&lt;/p>
+&lt;p>The direction the antennas are pointed is called the &lt;em>phase reference position&lt;/em>, which we&amp;rsquo;ll denote as \(\theta_0\) and tracks the source as it rotates across the sky.&lt;/p>
+&lt;p>TODO: make a figure showing \(\Delta \theta\) offset.&lt;/p>
+&lt;p>And let us consider radiation from a direction \(\theta_0 - \Delta \theta\), where \(\Delta \theta\) is a small angle. As before, the fringe response term is
+$$
+\cos (2 \pi \nu \tau) = \cos \left \{ 2 \pi \nu \left [ \frac{D}{c} \sin (\theta_0 - \Delta \theta) - \tau_i \right ] \right \}.
+$$
+Using the sine formulas for difference and simplifying with \(\cos \Delta \simeq 1\) for small angles, we have
+$$
+\cos (2 \pi \nu \tau) \simeq \cos \left [ 2 \pi \nu \frac{D}{c} \sin \Delta \theta \cos \theta_0 \right].
+$$&lt;/p>
+&lt;p>Let&amp;rsquo;s stare at this equation a bit more. Assuming we&amp;rsquo;re holding observing frequency fixed, the angular resolution of the fringes is determined by the projected length of the baseline orthogonal to the direction of the source, which is \(D \cos \theta_0\). This is a pretty ordinary physical measurement of a distance, i.e., we would measure it to be something like 50 &lt;em>meters&lt;/em>.&lt;/p>
+&lt;p>Of course, observing frequency also makes a difference. If we&amp;rsquo;re observing at higher frequencies (shorter \(\lambda\)), the fringe resolution is going to better (this is just another form of the \(\lambda/D\) resolution relationship for telescopes showing up).&lt;/p>
+&lt;p>So, we can define a new variable for this projected baseline length
+$$
+u = \frac{D \cos \theta_0}{\lambda} = \frac{\nu_0 D \cos \theta_0}{c}.
+$$
+\(u\) is &lt;em>the number of wavelengths&lt;/em> (at that observing wavelength) that are needed to span the projected baseline length. It is measured in multiples of &amp;ldquo;\(\lambda\),&amp;rdquo; i.e., you might see a baseline length described as \(u = \) 300 kilolambda. \(u\) is called a &lt;em>spatial frequency&lt;/em>.&lt;/p>
+&lt;p>Now we will redefine our sky coordinate variable \(l = \sin \Delta \theta\), and we find that we can write the fringe response as
+$$
+F(l) \propto \cos (2 \pi \nu_0 \tau) \propto \cos (2 \pi u l).
+$$&lt;/p>
+&lt;p>If \(u\) gets larger (either by moving the antennas further apart and increasing the projected baseline, or by observing at a higher frequency), then the spatial resolution (spacing of the fringes) will get better.&lt;/p>
+&lt;p>We see that the quantity \((ul)\) appears inside of a trigonometric function, so this means the quantity must be dimensionless.&lt;/p>
+&lt;p>This motivates the many different ways we can think about these variables in the image plane and the visibility domain.&lt;/p>
+&lt;h3 id="unitless">Unitless&lt;/h3>
+&lt;p>The first way is to recognize that&lt;/p>
+&lt;ul>
+&lt;li>\(l\) is technically unitless, since it is \(\sin(\Delta \theta)\)&lt;/li>
+&lt;li>\(u\) itself is also technically unitless, it&amp;rsquo;s just the baseline length measured in a number of wavelengths (e.g., kilolambda)&lt;/li>
+&lt;li>Inside this \(\cos\) term, though, \(u\) plays the role of a &lt;em>frequency&lt;/em>, i.e., &amp;ldquo;cycles per unit \(l\)&amp;rdquo;&lt;/li>
+&lt;/ul>
+&lt;p>Both of these variables do correspond to actual distances, the interferometer does have some baseline, which corresponds to its ability to resolve a source of some actual size on the sky. It&amp;rsquo;s just with this way of thinking about it, we measured both of those sizes using dimensionless units (and that&amp;rsquo;s OK)!&lt;/p>
+&lt;h3 id="unitful">Unitful&lt;/h3>
+&lt;p>We can put a little bit more sense to this by bringing back the small angle approximation, and saying that because \(\Delta \theta\) is small, then \(l = \sin \Delta \theta \approx \Delta \theta\), and so it is as if we measured \(l\) in some angular unit, like radians or arcseconds.&lt;/p>
+&lt;ul>
+&lt;li>If \(l\) is small, then we would say that it can be measured in radians (which can then be converted to arcseconds)&lt;/li>
+&lt;li>Then \(u\) is measured in cycles/radian or cycles/arcsec&lt;/li>
+&lt;/ul>
+&lt;p>Because of this small angle approximation for the interferometer geometry, it allows us to equate &amp;ldquo;multiples of lambda&amp;rdquo; to &amp;ldquo;cycles per angle&amp;rdquo; as a spatial frequency.&lt;/p>
+&lt;p>Let&amp;rsquo;s walk through an example, and say that we&amp;rsquo;re observing a&lt;/p>
+&lt;ul>
+&lt;li>do small angle approximation to say l in units of radians&lt;/li>
+&lt;li>convert to u&lt;/li>
+&lt;/ul>
+&lt;p>TODO: redraw waveform. This makes a lot of sense if you just draw the waveform up on the sky.&lt;/p>
+&lt;p>Compared to last time, we now assumed some directional sensitivity for each antenna, such as this power pattern&lt;/p>
+&lt;figure>&lt;img src="primary-beam.png"
+alt="Credit: Tools of Radio Astronomy, Fig 7.1"/>&lt;figcaption>
+&lt;p>Credit: Tools of Radio Astronomy, Fig 7.1&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="http://www.aoc.nrao.edu/events/synthesis/2022/slides/Fundamentals-2022.pdf">&lt;img src="fringe-beam.png"
+alt="The fringe pattern modified by the antenna power pattern. Credit: Rick Perley&amp;amp;rsquo;s slides, NRAO summer synthesis imaging school 2022."/>&lt;/a>&lt;figcaption>
+&lt;p>The fringe pattern modified by the antenna power pattern. Credit: Rick Perley&amp;rsquo;s slides, NRAO summer synthesis imaging school 2022.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Recap: so now we&amp;rsquo;ve redefined the fringe function to talk about the response to a spatially resolved source, as a function of projected baseline length. And, we&amp;rsquo;ve introduced the concept of spatial frequency.&lt;/p>
+&lt;h3 id="fourier-transform-relationship">Fourier transform relationship&lt;/h3>
+&lt;p>We just derived and drew the fringe function as the response of the interferometer &lt;em>on the sky&lt;/em> and examined how it changes as we change the position of the antennas on the ground. The essential response \(R(l)\) of the interferometer to some sky distribution \(I(l)\) is to act as a convolution
+$$
+R(l) = \cos(2 \pi u l) * I(l)
+$$&lt;/p>
+&lt;p>Another way to look at this is to consider the Fourier pair of the fringe function when the antennas are at a fixed (instantaneous) baseline distance \(u_0\),
+$$
+\cos(2 \pi u_0 l) \leftrightharpoons \frac{1}{2} [\delta(u + u_0) + \delta(u - u_0)].
+$$&lt;/p>
+&lt;p>Let us define the &lt;em>visibility function&lt;/em> \(\mathcal{V}(u)\) as the Fourier transform of the sky brightness distribution (the true one)&lt;/p>
+&lt;p>$$
+I(l) \leftrightharpoons \mathcal{V}(u).
+$$
+\(\mathcal{V}(u)\) represents the amplitude and phase of the sinusoidal component of the intensity distribution with spatial frequency \(u\) cycles per radian.&lt;/p>
+&lt;p>Then, we can bring out our old friend the multiplication/convolution algorithm.
+$$
+\cos(2 \pi u l) * I(l) \leftrightharpoons \frac{\mathcal{V}(u)}{2} [\delta(u + u_0) + \delta(u - u_0)].
+$$&lt;/p></description></item><item><title>The Fourier Transform II</title><link>https://iancze.github.io/courses/as5003/lectures/03-fourier-transform-ii/</link><pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/as5003/lectures/03-fourier-transform-ii/</guid><description>&lt;h2 id="references-for-today">References for today&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/2010095">The Fourier Transform and its Applications&lt;/a> by R. Bracewell&lt;/li>
 &lt;li>&lt;a href="https://catalog.libraries.psu.edu/catalog/20789467">Interferometry and Synthesis in Radio Astronomy&lt;/a> by Thompson, Moran, and Swenson, particularly Appendix 2.1&lt;/li>
