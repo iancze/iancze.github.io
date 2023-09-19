@@ -1,7 +1,7 @@
 ---
 title: Interferometry in Practice
 date: 2023-09-20
-publishdate: 2023-09-20
+publishdate: 2023-09-19
 ---
 
 * [Video Recording](https://psu.mediaspace.kaltura.com/media/Astro+589A+Lecture+5/1_2zi2doy2)
@@ -11,13 +11,6 @@ publishdate: 2023-09-20
 * [The Fourier Transform and its Applications](https://catalog.libraries.psu.edu/catalog/2010095) by R. Bracewell
 * [Interferometry and Synthesis in Radio Astronomy](https://catalog.libraries.psu.edu/catalog/20789467) by Thompson, Moran, and Swenson, particularly Appendix 2.1
 * [Essential Radio Astronomy](https://www.cv.nrao.edu/~sransom/web/xxx.html) by James Condon and Scott Ransom
-
-
-## Review *of last time*
-
-* Interpolation kernels
-* Discrete Fourier Transform (DFT)
-* Fast Fourier Transform (FFT)
 
 ## This time
 

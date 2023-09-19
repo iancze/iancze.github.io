@@ -1,7 +1,7 @@
 ---
 title: 2D Interferometry, PSFs, Gridding, and Dirty Images
 date: 2023-09-22
-publishdate: 2023-09-22
+publishdate: 2023-09-19
 ---
 
 * Slides [[PDF](beams-and-arrays.pdf)] [[Keynote](beams-and-arrays.key) (better for movies)]
@@ -28,11 +28,6 @@ publishdate: 2023-09-22
 * Earth aperture synthesis
 * \\(u,v\\) sampling distributions for various arrays
 * point spread functions (PSFs) and their relationship to the sampling distribution
-
-## Group Projects and Presentations
-* Dates are set for presentations
-* **Review the syllabus for [group projects]({{<relref "/courses/astro589/syllabus">}}/#group-project-and-presentation)**.
-* Suggest that your group sets up a meeting with me to discuss topics
 
 ## Wrapping up 1D
 
