@@ -1174,7 +1174,7 @@ and
 $$
 m = \sin(\Delta \delta) \approx \Delta \delta.
 $$&lt;/p>
-&lt;p>This probably sounds pointless, since we just arrived back at the same units we started with. Hopefully the reasons why we might wish to use these units will become apparent after we cover more about the interferometer. And remember that you can always &lt;em>exactly&lt;/em> convert from direction cosine back to angular usits (e.g. \(\Delta \alpha \cos \delta\)) by doing \(\sin^{-1}\), it&amp;rsquo;s just that for most small angles we&amp;rsquo;ll be dealing with, this operation is essentially an identity function. All of this goes out the window when we consider wide-field imaging (which we won&amp;rsquo;t have time to talk about in this course, though you might consider as a topic for a course project).&lt;/p>
+&lt;p>This probably sounds pointless, since we just arrived back at the same units we started with. Hopefully the reasons why we might wish to use these units will become apparent after we cover more about the interferometer. And remember that you can always &lt;em>exactly&lt;/em> convert from direction cosine back to angular usits (e.g. \(\Delta \alpha \cos \delta\)) by doing \(\sin^{-1}\), it&amp;rsquo;s just that for most small angles we&amp;rsquo;ll be dealing with, this operation is essentially an identity function. All of this goes out the window when we consider wide-field imaging (which we won&amp;rsquo;t have time to talk about in this course, unfortunately).&lt;/p>
 &lt;hr>
 &lt;h2 id="introduction-to-a-2-element-interferometer">Introduction to a 2-element interferometer&lt;/h2>
 &lt;p>Consider this geometric situation&lt;/p>
