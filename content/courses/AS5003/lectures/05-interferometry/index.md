@@ -77,7 +77,7 @@ $$
 m = \sin(\Delta \delta) \approx \Delta \delta.
 $$
 
-This probably sounds pointless, since we just arrived back at the same units we started with. Hopefully the reasons why we might wish to use these units will become apparent after we cover more about the interferometer. And remember that you can always *exactly* convert from direction cosine back to angular usits (e.g. \\(\Delta \alpha \cos \delta\\)) by doing \\(\sin^{-1}\\), it's just that for most small angles we'll be dealing with, this operation is essentially an identity function. All of this goes out the window when we consider wide-field imaging (which we won't have time to talk about in this course, though you might consider as a topic for a course project).
+This probably sounds pointless, since we just arrived back at the same units we started with. Hopefully the reasons why we might wish to use these units will become apparent after we cover more about the interferometer. And remember that you can always *exactly* convert from direction cosine back to angular usits (e.g. \\(\Delta \alpha \cos \delta\\)) by doing \\(\sin^{-1}\\), it's just that for most small angles we'll be dealing with, this operation is essentially an identity function. All of this goes out the window when we consider wide-field imaging (which we won't have time to talk about in this course, unfortunately).
 
 ---
 
