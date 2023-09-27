@@ -4,7 +4,6 @@ date: 2023-09-27
 publishdate: 2023-09-27
 ---
 
-
 ## References for today
 
 * [MPoL introduction](https://mpol-dev.github.io/MPoL/rml_intro.html)
