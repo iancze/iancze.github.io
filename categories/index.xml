@@ -1888,8 +1888,8 @@ alt="The shah function is its own Fourier transform. Via the similarity theorem,
 &lt;/figure>
 &lt;p>Now let&amp;rsquo;s consider a function and its Fourier transform&lt;/p>
 &lt;figure>&lt;img src="function.png"
-alt="A generic function (left) and its Fourier transform (right). We say that this function is &amp;amp;lsquo;band-limited&amp;amp;rsquo; because its Fourier transform is 0 for all frequencies below some cutoff frequency \(|s| &amp;amp;lt; s_c\). Credit: Bracewell Fig 10.2"/>&lt;figcaption>
-&lt;p>A generic function (left) and its Fourier transform (right). We say that this function is &amp;lsquo;band-limited&amp;rsquo; because its Fourier transform is 0 for all frequencies below some &lt;em>cutoff frequency&lt;/em> \(|s| &amp;lt; s_c\). Credit: Bracewell Fig 10.2&lt;/p>
+alt="A generic function (left) and its Fourier transform (right). We say that this function is &amp;amp;lsquo;band-limited&amp;amp;rsquo; because its Fourier transform is 0 for all frequencies above some cutoff frequency \(|s| &amp;amp;gt; s_c\). Credit: Bracewell Fig 10.2"/>&lt;figcaption>
+&lt;p>A generic function (left) and its Fourier transform (right). We say that this function is &amp;lsquo;band-limited&amp;rsquo; because its Fourier transform is 0 for all frequencies above some &lt;em>cutoff frequency&lt;/em> \(|s| &amp;gt; s_c\). Credit: Bracewell Fig 10.2&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
 &lt;p>As before, we will use multiplication by the shah function to represent sampling of the function.&lt;/p>
