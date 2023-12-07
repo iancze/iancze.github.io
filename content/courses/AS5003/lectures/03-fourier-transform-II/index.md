@@ -270,7 +270,7 @@ For example, if \\(\tau = 0.2\\), then we have
 
 Now let's consider a function and its Fourier transform
 
-{{< figure src="function.png" caption="A generic function (left) and its Fourier transform (right). We say that this function is 'band-limited' because its Fourier transform is 0 for all frequencies below some *cutoff frequency* \\(|s| < s_c\\). Credit: Bracewell Fig 10.2" >}}
+{{< figure src="function.png" caption="A generic function (left) and its Fourier transform (right). We say that this function is 'band-limited' because its Fourier transform is 0 for all frequencies above some *cutoff frequency* \\(|s| > s_c\\). Credit: Bracewell Fig 10.2" >}}
 
 As before, we will use multiplication by the shah function to represent sampling of the function. 
 
