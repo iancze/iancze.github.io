@@ -17,9 +17,6 @@
 # MacOS
 .DS_Store
 
-# sync files 
-sftp_pass.sh
-
 # public build 
 public
 resources
