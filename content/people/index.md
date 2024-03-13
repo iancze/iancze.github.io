@@ -26,12 +26,13 @@ people:
     - name: Jeff Jennings
       stage: postdoc
       src: Jeff_Jennings.jpeg
-      blurb: Jeff is an Eberly Research Fellow postdoc in the Astronomy and Astrophysics department at Pennsylvania State University. He focuses on protoplanetary disk science and statistical techniques for data analysis, including applications to image synthesis for astronomical interferometry. 
+      link: https://science.psu.edu/astro/people/jzj5732
+      blurb: Jeff is an [Eberly Research Fellow](https://science.psu.edu/astro/people/jzj5732) postdoc in the Astronomy and Astrophysics department at Pennsylvania State University. He focuses on protoplanetary disk science and statistical techniques for data analysis, including applications to image synthesis for astronomical interferometry. 
     - name : Brianna Zawadzki
       stage: former 
       src: Brianna_Zawadzki.png
       link: https://briannazawadzki.github.io/
-      blurb: In 2023, Brianna completed her Ph.D. entitled "Investigating Planet Formation Through Simulation, Observation, And Machine Learning" at Pennsylvania State University. Her work at Penn State ranged from N-body planet formation simulations to ALMA observations of protoplanetary disks to development of regularized maximum likelihood imaging algorithms. Brianna is now a Brinson Prize Postdoctoral Fellow at Wesleyan University.
+      blurb: In 2023, [Brianna](https://briannazawadzki.github.io/) completed her Ph.D. entitled "Investigating Planet Formation Through Simulation, Observation, And Machine Learning" at Pennsylvania State University. Her work at Penn State ranged from N-body planet formation simulations to ALMA observations of protoplanetary disks to development of regularized maximum likelihood imaging algorithms. Brianna is now a Brinson Prize Postdoctoral Fellow at Wesleyan University.
     - name: Kadri M. Nizam
       stage: former 
       src: Kadri_Nizam.png
@@ -56,7 +57,7 @@ people:
       stage: former
       src: Joseph_Murphy.jpg
       link: https://murphyjm.github.io/
-      blurb: Joey is a graduate student in the astronomy and astrophysics department at University of California, Santa Cruz, working on exoplanet detection and characterization. While Joey was a co-terminal masters student at Stanford University, Joey and Ian worked on flexible spectroscopic models for accretion signatures of pre-main sequence stars.
+      blurb: Joey is a [graduate student](https://murphyjm.github.io/) in the astronomy and astrophysics department at University of California, Santa Cruz, working on exoplanet detection and characterization. While Joey was a co-terminal masters student at Stanford University, Joey and Ian worked on flexible spectroscopic models for accretion signatures of pre-main sequence stars.
 ---
 
 {{< figure src="RSN.jpg" link="https://science.psu.edu/diversity-initiatives/rainbow-science-network/about-us">}}
