@@ -48,7 +48,7 @@ people:
     - name: Hannah Grzybowski
       stage: former 
       src: Hannah_Grzybowski.jpg
-      blurb: Hannah worked on regularized maximum likelihood imaging algorithms in our group while in 2021, while she was an undergraduate student and astronomy and astrophysics major at Pennsylvania State University. Hannah began a Ph.D. in Astronomy and Astrophysics at Penn State University in 2023.
+      blurb: Hannah worked on regularized maximum likelihood imaging algorithms in 2021, while she was an undergraduate student and astronomy and astrophysics major at Pennsylvania State University. Hannah is now a Ph.D. student in Astronomy and Astrophysics at Penn State University (since 2023).
     - name: Robert Frazier
       stage: former 
       src: Robert_Frazier.jpeg
