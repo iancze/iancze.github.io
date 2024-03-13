@@ -23,7 +23,7 @@ Before July 2023, I was an assistant professor in the [Astronomy and Astrophysic
     KY16 9SS \
     United Kingdom
 * Email: <a href="mailto:ic95@st-andrews.ac.uk">ic95@st-andrews.ac.uk</a>
-* [Curriculum Vitae PDF](/Czekala_Ian_CV.pdf) 
+* [Curriculum Vitae PDF](/Czekala_CV.pdf) 
 
 All refereed publications from the group are available [here](publications).
 
