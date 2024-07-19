@@ -1,14 +1,10 @@
 ---
-title: Be nice to your PDF reader
+title: Vectorized vs. rasterized plots in PDFs
 date: 2020-10-12
 publishdate: 2020-10-12
 ---
 
-With the rise of "big data," it's become common for figures in journal articles to show several hundred or more points on a single graph. This, and the statistical insights that originate from such figures, are great. But what is not so great is when you try to read a paper containing one of these plots and your PDF reader hangs as it struggles to render every facet of your beautiful, vectorized plot.
-
-I myself am [guilty of this](https://ui.adsabs.harvard.edu/abs/2017ApJ...851..132C/abstract).
-
-If you are using Matplotlib to plot many dense plots (in astronomy this includes high resolution spectra, exoplanet discoveries, MCMC traces, and more) consider using the `rasterized` [keyword option](https://matplotlib.org/api/_as_gen/matplotlib.artist.Artist.set_rasterized.html#matplotlib.artist.Artist.set_rasterized) to prepare your figures and significantly reduce the workload for the PDF readers of your future audience. (Note that if you *aren't* making dense plots, or are already producing rasterized plots (like with `imshow`), the following suggestions won't help you much).
+If you are using Matplotlib to visualize a large collection of data points (in astronomy this includes high resolution spectra, exoplanet discoveries, MCMC traces, and more) consider using the `rasterized` [keyword option](https://matplotlib.org/api/_as_gen/matplotlib.artist.Artist.set_rasterized.html#matplotlib.artist.Artist.set_rasterized) to prepare your figures and significantly reduce the workload for the PDF readers of your future audience. (Note that if you *aren't* making dense plots, or are already producing rasterized plots (like with `imshow`), the following suggestions won't help you much).
 
 To rasterize large collections of points/lines, simply include `rasterized=True` to your `plot` commands. You'll also likely want to include a `dpi=600` option to your `savefig` command (or change this in your `matplotlibrc`), since the default values are usually so low as to result in pixelated plots. Here is a script to create both a default (fully vectorized) version and a rasterized version:
 
