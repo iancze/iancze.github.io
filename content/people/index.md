@@ -22,7 +22,26 @@ people:
     - name: Ian Czekala
       stage: prof 
       src: Ian_Czekala.jpeg
-      blurb: Ian is a lecturer in the [School of Physics and Astronomy](https://www.st-andrews.ac.uk/physics-astronomy/) at the [University of St. Andrews](https://www.st-andrews.ac.uk/) in Scotland. He is broadly interested in star and planet formation, machine learning, and Bayesian inference for astrophysics.
+      blurb: Ian is a lecturer in the [School of Physics and Astronomy](https://www.st-andrews.ac.uk/physics-astronomy/) at the [University of St Andrews](https://www.st-andrews.ac.uk/) in Scotland. He is broadly interested in star and planet formation, machine learning, and Bayesian inference for astrophysics.
+    - name: Kristin Hopley
+      stage: former
+      src: Kristin_Hopley.jpeg
+      link: https://www.linkedin.com/in/kristinhopley237/
+      blurb: Kristin completed her MPhys thesis "Mapping the Inner Edge and Interior Cavity of a Kepler-Analog Circumbinary Protoplanetary Disk" at the University of St Andrews from 2023-24.
+    - name: Marylyn Rosenqvist
+      stage: former
+      src: Marylyn_Rosenqvist.jpg
+      link: https://www.linkedin.com/in/marylyn-rosenqvist/
+      blurb: Marylyn completed her MPhys thesis "Mapping Kinematic Perturbations in the Protoplanetary Disk of HD 163296 Using Molecular Tracers CO and HCN" at the University of St Andrews from 2023-24.
+    - name: Carol Ballinger
+      stage: former
+      src: Carol_Ballinger.jpg
+      link: https://www.linkedin.com/in/carol-ballinger-7507061b3/
+      blurb: Carol completed her MPhys thesis "Hierarchical Bayesian Modelling of Protoplanetary Disk Evolution Across Star Forming Regions" at the University of St Andrews from 2023-24.
+    - name: Mila De Fougerolles 
+      stage: former
+      src: Mila_DeFougerolles.jpeg
+      blurb: Mila completed her BSc thesis "High Dimensional Parametric Models for Protoplanetary Disk Surface Brightness Modelling" at the University of St Andrews from 2023-24.
     - name: Jeff Jennings
       stage: former
       src: Jeff_Jennings.jpeg
