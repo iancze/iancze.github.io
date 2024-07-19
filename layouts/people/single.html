@@ -30,55 +30,88 @@
 {{ end }}
 
 {{ define "main" }}
-<!-- Be sure to set type: publications in frontmatter -->
+<!-- Be sure to set type: people in frontmatter -->
 <!-- https://discourse.gohugo.io/t/single-template-lookup-revisited/16517 -->
 <main>
     <article>
         <header>
             <h1>{{.Title}}</h1>
         </header>
-        {{ range $stageKey := .Params.stageOrder}} {{/* Loop over all career stages */}}
-        {{ $stageName := (index $.Params.stageNames $stageKey) }}
-        <h2>{{ $stageName }}</h2> {{/* Create an entry for the stage name */}}
-        <div class="container">
+
+        {{/* Remap $.Params.people into a useful data structure.
+        * create empty dict name data
+        * check if stage exists as key in data
+            * if it does, append this person to the slice
+            * if it doesn't, create a new slice with this person
+        */}}
+
+        {{ $data := dict }}
+        {{range $person := $.Params.people }}
+
+            {{ $stage := (index $person "stage")}}
+            {{ if (isset $data $stage)}}
+                {{/* append person to this slice */}}
+                {{ $s := (index $data $stage) }}
+                {{ $s = $s | append $person }}
+                {{/* update original dict entry */}}
+                {{ $data = merge $data (dict $stage $s) }}
+            {{ else }}
+                {{/* create new slice with person and add to data */}}
+                {{ $data = merge $data (dict $stage (slice $person))}}
+            {{ end }}
+        {{ end }}
 
 
-            {{/* Loop over all people */}}
-            {{ range $person := $.Params.people }}
+        {{/* Now, do the rendering.
+            Loop over all career stages in our pre-defined order */}}
+        {{ range $stageKey := .Params.stageOrder}} 
+        
+        {{/* Test to see whether this career stage exists in data, otherwise skip */}}
+        {{ if (isset $data $stageKey) }}
 
-            {{/* if their career stage matches the current stage, add their entry */}}
-            {{ if eq (index $person "stage") $stageKey }}
-            <div class="item-photo">
-                {{/* If a photo exists, link to it */}}
-                {{ with (index $person "src") }}
+            {{/* Get a properly formatted title */}}
+            {{ $stageName := (index $.Params.stageNames $stageKey) }}
 
-                {{/* Get the file as a resource */}}
-                {{ $image := ($.Resources.GetMatch . )}}
-                {{/* Make sure that we actually found something before querying the resource */}}
-                {{ with $image }}
-                {{ $image := $image.Fit "250x250" }}
-                {{ $name := (index $person "name")}}
-                <figure>
-                    {{/* Link to homepage if exists */}}
-                    {{ with (index $person "link") }}<a href={{.}}>{{end}}
-                        <img src={{ $image.RelPermalink }} class="person" alt=$name />
-                        {{/* Close link to homepage if exists */}}
-                        {{ with (index $person "link") }}</a>{{end}}
-                    <figcaption>{{ $name }}</figcaption>
-                </figure>
+            <h2>{{ $stageName }}</h2> {{/* Create an entry for the stage name */}}
+            <div class="container">
+
+                {{/* Loop over all people in this stage */}}
+                {{ range $person := (index $data $stageKey) }}
+
+                {{/* if their career stage matches the current stage, add their entry */}}
+                {{ if eq (index $person "stage") $stageKey }}
+                <div class="item-photo">
+                    {{/* If a photo exists, link to it */}}
+                    {{ with (index $person "src") }}
+
+                    {{/* Get the file as a resource */}}
+                    {{ $image := ($.Resources.GetMatch . )}}
+                    {{/* Make sure that we actually found something before querying the resource */}}
+                    {{ with $image }}
+                    {{ $image := $image.Fit "250x250" }}
+                    {{ $name := (index $person "name")}}
+                    <figure>
+                        {{/* Link to homepage if exists */}}
+                        {{ with (index $person "link") }}<a href={{.}}>{{end}}
+                            <img src={{ $image.RelPermalink }} class="person" alt=$name />
+                            {{/* Close link to homepage if exists */}}
+                            {{ with (index $person "link") }}</a>{{end}}
+                        <figcaption>{{ $name }}</figcaption>
+                    </figure>
+                    {{ end }}
+                    {{ end }}
+                </div>
+                <div class="item-blurb">
+                    {{/* If a blurb exists, put it here */}}
+                    {{ with (index $person "blurb") }}
+                    {{ . | markdownify }}
+                    {{ end }}
+                </div>
                 {{ end }}
-                {{ end }}
-            </div>
-            <div class="item-blurb">
-                {{/* If a blurb exists, put it here */}}
-                {{ with (index $person "blurb") }}
-                {{ . | markdownify }}
+
                 {{ end }}
             </div>
             {{ end }}
-
-            {{ end }}
-        </div>
         {{ end }}
         <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
         {{.Content}}

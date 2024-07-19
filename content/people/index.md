@@ -24,10 +24,10 @@ people:
       src: Ian_Czekala.jpeg
       blurb: Ian is a lecturer in the [School of Physics and Astronomy](https://www.st-andrews.ac.uk/physics-astronomy/) at the [University of St. Andrews](https://www.st-andrews.ac.uk/) in Scotland. He is broadly interested in star and planet formation, machine learning, and Bayesian inference for astrophysics.
     - name: Jeff Jennings
-      stage: postdoc
+      stage: former
       src: Jeff_Jennings.jpeg
       link: https://science.psu.edu/astro/people/jzj5732
-      blurb: Jeff is an [Eberly Research Fellow](https://science.psu.edu/astro/people/jzj5732) postdoc in the Astronomy and Astrophysics department at Pennsylvania State University. He focuses on protoplanetary disk science and statistical techniques for data analysis, including applications to image synthesis for astronomical interferometry. 
+      blurb: Jeff was an [Eberly Research Fellow](https://science.psu.edu/astro/people/jzj5732) postdoc in the Astronomy and Astrophysics department at Pennsylvania State University. He focuses on protoplanetary disk science and statistical techniques for data analysis, including applications to image synthesis for astronomical interferometry. Jeff is now a software engineer at the Flatiron Institute / Center for Computational Astrophysics. 
     - name : Brianna Zawadzki
       stage: former 
       src: Brianna_Zawadzki.png
@@ -40,7 +40,7 @@ people:
     - name: Zoe Ko
       stage: former 
       src: Zoe_Ko.png
-      blurb: Zoe worked with our group as an undergraduate student and physics major at the University of California, Berkeley. She worked on high resolution stellar spectroscopy and radial velocity analysis for circumbinary protoplanetary disks. Zoe will begin a Ph.D. in Astronomy at Johns Hopkins University in 2024.
+      blurb: Zoe worked with our group as an undergraduate student and physics major at the University of California, Berkeley. She worked on high resolution stellar spectroscopy and radial velocity analysis for circumbinary protoplanetary disks. Zoe started a Ph.D. in Astronomy at Johns Hopkins University in 2024.
     - name: Tyler Quinn
       stage: former 
       src: Tyler_Quinn.png
@@ -48,7 +48,7 @@ people:
     - name: Hannah Grzybowski
       stage: former 
       src: Hannah_Grzybowski.jpg
-      blurb: Hannah worked on regularized maximum likelihood imaging algorithms in 2021, while she was an undergraduate student and astronomy and astrophysics major at Pennsylvania State University. Hannah is now a Ph.D. student in Astronomy and Astrophysics at Penn State University (since 2023).
+      blurb: Hannah worked on regularized maximum likelihood imaging algorithms in 2021, while she was an undergraduate student and astronomy and astrophysics major at Pennsylvania State University. Hannah started a Ph.D. in Astronomy and Astrophysics at Penn State University in 2023.
     - name: Robert Frazier
       stage: former 
       src: Robert_Frazier.jpeg
