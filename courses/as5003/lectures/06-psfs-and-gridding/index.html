@@ -1,4 +1,35 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Slides [PDF] [Keynote (better for movies)] References for today Interferometry and Synthesis in Radio Astronomy by Thompson, Moran, and Swenson, particularly Appendix 2.1 Essential Radio Astronomy by James Condon and Scott Ransom The Fourier Transform and its Applications by R. Bracewell Review of last time We talked about R.A., Dec., and direction cosines as coordinates on the sky We introduced a two-element interferometer with multiply and add correlator backend We introduced the fringe pattern \(F(l)\) of a two-antenna interferometer, which is a cosine wave on the sky We discussed how the frequency of this fringe pattern (i."><meta name=generator content="Hugo 0.129.0"><title>2D Interferometry, PSFs, Gridding, and Dirty Images | Czekala Group</title>
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+Slides [PDF] [Keynote (better for movies)]
+
+References for today
+
+Interferometry and Synthesis in Radio Astronomy by Thompson, Moran, and Swenson, particularly Appendix 2.1
+Essential Radio Astronomy by James Condon and Scott Ransom
+The Fourier Transform and its Applications by R. Bracewell
+
+Review of last time
+
+We talked about R.A., Dec., and direction cosines as coordinates on the sky
+We introduced a two-element interferometer with multiply and add correlator backend
+We introduced the fringe pattern \(F(l)\) of a two-antenna interferometer, which is a cosine wave on the sky
+We discussed how the frequency of this fringe pattern (i.e., the spatial frequency) changes as a function of baseline length between the two antennas
+We introduced the visibility function \(\mathcal{V}(u)\) as the Fourier transform of the sky-brightness \(I(l)\)
+And discussed how the output from the interferometer changes in response to a point source and an extended source
+
+This time
+
+Extend our discussion to a general interferometer with north-south and east-west baselines
+Discuss arrays with multiple antennas
+Earth aperture synthesis
+\(u,v\) sampling distributions for various arrays
+point spread functions (PSFs) and their relationship to the sampling distribution
+
+Wrapping up 1D
+Last time, we had said the response \(R(l)\) of the interferometer to some sky distribution \(I(l)\) is to act as a convolution
+$$
+R(l) = \cos(2 \pi u l) * I(l).
+$$
+In this case, you can think of the fringe function as a point spread function (a terrible one), that is convolving out the true sky brightness distribution."><meta name=generator content="Hugo 0.134.2"><title>2D Interferometry, PSFs, Gridding, and Dirty Images | Czekala Group</title>
 <link rel=canonical href=/courses/as5003/lectures/06-psfs-and-gridding/><script async src="https://www.googletagmanager.com/gtag/js?id=G-W5586VESJK"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-W5586VESJK")}</script><script src=https://cdn.jsdelivr.net/npm/vega@5.20.2></script><script src=https://cdn.jsdelivr.net/npm/vega-lite@5.1.0></script><script src=https://cdn.jsdelivr.net/npm/vega-embed@6.17.0></script><link rel=stylesheet href=/css/base.min.e9a98f863db62272e3c41bb8784b2588cd338ebba264b169f66d736c05d1b47f.css integrity="sha256-6amPhj22InLjxBu4eEsliM0zjruiZLFp9m1zbAXRtH8=" crossorigin=anonymous></head><body><nav class=u-background><div class=u-wrapper><ul class=Banner><li class="Banner-item Banner-item--title"><a class="Banner-link u-clickable" href=/>Czekala Group</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/people/>People</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/posts/>Posts</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/publications/>CV and publications</a></li><li class=Banner-item><a class="Banner-link u-clickable" href=/courses/>Courses</a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><main><article><header><h1>2D Interferometry, PSFs, Gridding, and Dirty Images</h1></header><ul><li>Slides [<a href=beams-and-arrays.pdf>PDF</a>] [<a href=beams-and-arrays.key>Keynote</a> (better for movies)]</li></ul><h2 id=references-for-today>References for today</h2><ul><li><a href=https://catalog.libraries.psu.edu/catalog/20789467>Interferometry and Synthesis in Radio Astronomy</a> by Thompson, Moran, and Swenson, particularly Appendix 2.1</li><li><a href=https://www.cv.nrao.edu/~sransom/web/xxx.html>Essential Radio Astronomy</a> by James Condon and Scott Ransom</li><li><a href=https://catalog.libraries.psu.edu/catalog/2010095>The Fourier Transform and its Applications</a> by R. Bracewell</li></ul><h2 id=review-of-last-time>Review <em>of last time</em></h2><ul><li>We talked about R.A., Dec., and direction cosines as coordinates on the sky</li><li>We introduced a two-element interferometer with multiply and add correlator backend</li><li>We introduced the fringe pattern \(F(l)\) of a two-antenna interferometer, which is a cosine wave on the sky</li><li>We discussed how the frequency of this fringe pattern (i.e., the <em>spatial frequency</em>) changes as a function of baseline length between the two antennas</li><li>We introduced the visibility function \(\mathcal{V}(u)\) as the Fourier transform of the sky-brightness \(I(l)\)</li><li>And discussed how the output from the interferometer changes in response to a point source and an extended source</li></ul><h2 id=this-time>This time</h2><ul><li>Extend our discussion to a general interferometer with north-south and east-west baselines</li><li>Discuss arrays with multiple antennas</li><li>Earth aperture synthesis</li><li>\(u,v\) sampling distributions for various arrays</li><li>point spread functions (PSFs) and their relationship to the sampling distribution</li></ul><h2 id=wrapping-up-1d>Wrapping up 1D</h2><p>Last time, we had said the response \(R(l)\) of the interferometer to some sky distribution \(I(l)\) is to act as a convolution
 $$
 R(l) = \cos(2 \pi u l) * I(l).

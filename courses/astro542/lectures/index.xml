@@ -327,86 +327,86 @@ faculty, staff, and students possess and will endorse to make ECoS a place where
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Week&lt;/th>
-&lt;th>Date&lt;/th>
-&lt;th>Activity&lt;/th>
-&lt;th>Topic&lt;/th>
+&lt;th style="text-align: left">Week&lt;/th>
+&lt;th style="text-align: left">Date&lt;/th>
+&lt;th style="text-align: left">Activity&lt;/th>
+&lt;th style="text-align: left">Topic&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>1&lt;/td>
-&lt;td>T 12 Sep&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">T 12 Sep&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Intro and Overview
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>1&lt;/td>
-&lt;td>W 13 Sep&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">W 13 Sep&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 The Fourier Transform: Analytical
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>1&lt;/td>
-&lt;td>F 15 Sep&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">1&lt;/td>
+&lt;td style="text-align: left">F 15 Sep&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 The Fourier Transform: Numerical
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>2&lt;/td>
-&lt;td>T 19 Sep&lt;/td>
-&lt;td>Tutorial&lt;/td>
-&lt;td>The Fourier Transform and Digital Signal Processing&lt;/td>
+&lt;td style="text-align: left">2&lt;/td>
+&lt;td style="text-align: left">T 19 Sep&lt;/td>
+&lt;td style="text-align: left">Tutorial&lt;/td>
+&lt;td style="text-align: left">The Fourier Transform and Digital Signal Processing&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>2&lt;/td>
-&lt;td>W 20 Sep&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">2&lt;/td>
+&lt;td style="text-align: left">W 20 Sep&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Interferometry in Practice
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>2&lt;/td>
-&lt;td>F 22 Sep&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">2&lt;/td>
+&lt;td style="text-align: left">F 22 Sep&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Making Images: PSFs, Gridding, and Dirty Images
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>3&lt;/td>
-&lt;td>T 26 Sep&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">3&lt;/td>
+&lt;td style="text-align: left">T 26 Sep&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Image Plane Deconvolution (CLEAN)
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>3&lt;/td>
-&lt;td>W 27 Sep&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">3&lt;/td>
+&lt;td style="text-align: left">W 27 Sep&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Regularized Maximum Likelihood (RML)
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>3&lt;/td>
-&lt;td>F 29 Sep&lt;/td>
-&lt;td>Tutorial&lt;/td>
-&lt;td>Imaging in Practice, Concept Review&lt;/td>
+&lt;td style="text-align: left">3&lt;/td>
+&lt;td style="text-align: left">F 29 Sep&lt;/td>
+&lt;td style="text-align: left">Tutorial&lt;/td>
+&lt;td style="text-align: left">Imaging in Practice, Concept Review&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>4&lt;/td>
-&lt;td>T 3 Oct&lt;/td>
-&lt;td>Peer Study&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">4&lt;/td>
+&lt;td style="text-align: left">T 3 Oct&lt;/td>
+&lt;td style="text-align: left">Peer Study&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Fall 2022 Class Schedule</title><link>https://iancze.github.io/courses/astro589/schedule/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/schedule/</guid><description>&lt;p>ASTRO 589 meets &lt;strong>once a week on Wednesdays from 10:10am to 11:00am ET (prompt) in Davey Lab Room 538&lt;/strong>.&lt;/p>
@@ -415,106 +415,106 @@ Regularized Maximum Likelihood (RML)
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Date&lt;/th>
-&lt;th>Activity&lt;/th>
-&lt;th>Topic&lt;/th>
+&lt;th style="text-align: left">Date&lt;/th>
+&lt;th style="text-align: left">Activity&lt;/th>
+&lt;th style="text-align: left">Topic&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Aug 24&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Aug 24&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Intro and Overview
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Aug 31&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Aug 31&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 The Fourier Transform I
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Sep 7&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Sep 7&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 The Fourier Transform II
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Sep 14&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Sep 14&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 The Fast Fourier Transform and Numerical Implementation
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Sep 21&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Sep 21&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Interferometry in Practice
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Sep 28&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Sep 28&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Making Images: PSFs, Gridding, and Dirty Images
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Oct 5&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Oct 5&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Bayesian Inference and Model Fitting
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Oct 12&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Oct 12&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Image Plane Deconvolution (CLEAN)
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Oct 19&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Oct 19&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Regularized Maximum Likelihood (RML) I
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Oct 26&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Oct 26&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Regularized Maximum Likelihood (RML) II
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Nov 2&lt;/td>
-&lt;td>Project presentation&lt;/td>
-&lt;td>TBD&lt;/td>
+&lt;td style="text-align: left">Nov 2&lt;/td>
+&lt;td style="text-align: left">Project presentation&lt;/td>
+&lt;td style="text-align: left">TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Nov 9&lt;/td>
-&lt;td>Project presentation&lt;/td>
-&lt;td>TBD&lt;/td>
+&lt;td style="text-align: left">Nov 9&lt;/td>
+&lt;td style="text-align: left">Project presentation&lt;/td>
+&lt;td style="text-align: left">TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Nov 16&lt;/td>
-&lt;td>Project presentation&lt;/td>
-&lt;td>TBD&lt;/td>
+&lt;td style="text-align: left">Nov 16&lt;/td>
+&lt;td style="text-align: left">Project presentation&lt;/td>
+&lt;td style="text-align: left">TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Nov 30&lt;/td>
-&lt;td>Project presentation&lt;/td>
-&lt;td>TBD&lt;/td>
+&lt;td style="text-align: left">Nov 30&lt;/td>
+&lt;td style="text-align: left">Project presentation&lt;/td>
+&lt;td style="text-align: left">TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Dec 7&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Dec 7&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Correlation in ALMA data
 &lt;/td>
 &lt;/tr>
@@ -525,294 +525,294 @@ Correlation in ALMA data
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Date&lt;/th>
-&lt;th>Activity&lt;/th>
-&lt;th>Topic&lt;/th>
+&lt;th style="text-align: left">Date&lt;/th>
+&lt;th style="text-align: left">Activity&lt;/th>
+&lt;th style="text-align: left">Topic&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Mon Aug 23&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Aug 23&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/01-introduction-and-overview/>Introduction and Course Overview&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Aug 25&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Wed Aug 25&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/02-collisional-processes/>Collisional Processes&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Aug 27&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Fri Aug 27&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/03-stat-mech/>Statistical Mechanics and Thermodynamic Equilibrium&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Aug 30&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Aug 30&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/04-energy-levels-atoms/>Energy Levels of Atoms, Ions, and Molecules&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Sep 1&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Wed Sep 1&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/05-emission-and-absorption/>Spontaneous Emission, Stimulated Emission, and Absorption&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Sep 3&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Fri Sep 3&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/06-radiative-transfer/>Radiative Transfer&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Sep 8&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Wed Sep 8&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/07-hi-21cm/>H I 21-cm Emission and Absorption&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Sep 10&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Fri Sep 10&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/08-absorption-lines/>Absorption Lines and Curve of Growth&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Sep 13&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Sep 13&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/09-emission-absorption-plasma/>Emission and Absorption by a Thermal Plasma&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Sep 15&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Wed Sep 15&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/10-wave-propagation/>Propagation of Radio Waves through the ISM&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Sep 17&lt;/td>
-&lt;td>Presentation by Laura Duffy (#1)&lt;/td>
-&lt;td>&lt;a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.485L..93R/abstract">H I 21 cm mapping of the host galaxy of AT2018cow: a fast-evolving luminous transient within a ring of high column density gas&lt;/a>&lt;/td>
+&lt;td style="text-align: left">Fri Sep 17&lt;/td>
+&lt;td style="text-align: left">Presentation by Laura Duffy (#1)&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.485L..93R/abstract">H I 21 cm mapping of the host galaxy of AT2018cow: a fast-evolving luminous transient within a ring of high column density gas&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Sep 20&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Sep 20&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/11-intro-radio-astronomy/>Introduction to Radio Astronomy and ALMA&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Sep 22&lt;/td>
-&lt;td>&lt;strong>Exam 1&lt;/strong>&lt;/td>
-&lt;td>Lectures up to Sep 13 (incl)&lt;/td>
+&lt;td style="text-align: left">Wed Sep 22&lt;/td>
+&lt;td style="text-align: left">&lt;strong>Exam 1&lt;/strong>&lt;/td>
+&lt;td style="text-align: left">Lectures up to Sep 13 (incl)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Sep 24&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Fri Sep 24&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/12-ionization-processes/>Interstellar Radiation Fields, Ionization Processes, and Recombination of Ions with Electrons&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Sep 27&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Sep 27&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/13-photoionized-gas-hii/>Photoionized Gas (HII regions)&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Sep 29&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Wed Sep 29&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/14-ionization-neutral-regions/>Ionization in Predominantly Neutral Regions (cool &amp;#43; warm HI regions)&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Oct 1&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Fri Oct 1&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/15-collisional-excitation/>Collisional Excitation&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Oct 4&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Oct 4&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/16-nebular-diagnostics/>Nebular Diagnostics&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Oct 6&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Wed Oct 6&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/17-radiative-trapping/>Radiative Trapping&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Oct 8&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Fri Oct 8&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/18-dust/>Interstellar Dust&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Oct 11&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Oct 11&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/19-scattering-absorption/>Scattering and Absorption by Small Particles&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Oct 13&lt;/td>
-&lt;td>Presentation by Malinda Baer (#2)&lt;/td>
-&lt;td>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Malinda+Baer+Presentation/1_jlz3to67">Tracing PAH Size in Prominent Nearby Mid-Infrared Environments&lt;/a>&lt;/td>
+&lt;td style="text-align: left">Wed Oct 13&lt;/td>
+&lt;td style="text-align: left">Presentation by Malinda Baer (#2)&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Malinda+Baer+Presentation/1_jlz3to67">Tracing PAH Size in Prominent Nearby Mid-Infrared Environments&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Oct 15&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Fri Oct 15&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/20-telescope-proposal-tac/>Telescope Proposals and Time Allocation Committees&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Oct 18&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Oct 18&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Dust Composition
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Oct 20&lt;/td>
-&lt;td>&lt;strong>Exam 2&lt;/strong>&lt;/td>
-&lt;td>Lectures up to Oct 11 (inclusive)&lt;/td>
+&lt;td style="text-align: left">Wed Oct 20&lt;/td>
+&lt;td style="text-align: left">&lt;strong>Exam 2&lt;/strong>&lt;/td>
+&lt;td style="text-align: left">Lectures up to Oct 11 (inclusive)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Oct 25&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Oct 25&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/22-grain-temp-dynamics/>Grain Temperatures, Physics, and Dynamics&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Oct 27&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Wed Oct 27&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/23-hii-heating-cooling/>Heating and Cooling of HII regions&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Oct 29&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Fri Oct 29&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/24-hi-heating-cooling/>HI Clouds: Observations, Heating and Cooling&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Nov 1&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Nov 1&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/25-molecular-hydrogen/>Molecular Hydrogen&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Nov 3&lt;/td>
-&lt;td>Mock TAC discussion pt 1&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">Wed Nov 3&lt;/td>
+&lt;td style="text-align: left">Mock TAC discussion pt 1&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Nov 5&lt;/td>
-&lt;td>Mock TAC discussion pt 2&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">Fri Nov 5&lt;/td>
+&lt;td style="text-align: left">Mock TAC discussion pt 2&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Nov 8&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Nov 8&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/26-molecular-clouds/>Molecular Clouds, Observations, Chemistry, and Ionization&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Nov 10&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Wed Nov 10&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/27-fluid-dynamics/>Fluids and Shocks&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Nov 12&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Fri Nov 12&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/28-winds-sne-grb/>Supernovae Remnants and the Hot Ionized Medium&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Nov 15&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Nov 15&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/29-star-formation-theory/>Gravitational Collapse and Star Formation: Theory&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Nov 17&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Wed Nov 17&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/>Star Formation: Observations&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Nov 19&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Fri Nov 19&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 Protostars to PPDs
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Nov 29&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Mon Nov 29&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/>Circumstellar Disks&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Dec 1&lt;/td>
-&lt;td>&lt;strong>Exam 3&lt;/strong>&lt;/td>
-&lt;td>Lectures up to TBD&lt;/td>
+&lt;td style="text-align: left">Wed Dec 1&lt;/td>
+&lt;td style="text-align: left">&lt;strong>Exam 3&lt;/strong>&lt;/td>
+&lt;td style="text-align: left">Lectures up to TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Dec 3&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Fri Dec 3&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/>Exoplanets and Planet Formation&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Mon Dec 6&lt;/td>
-&lt;td>Presentation by Megan Delamer (#3)&lt;/td>
-&lt;td>TBD&lt;/td>
+&lt;td style="text-align: left">Mon Dec 6&lt;/td>
+&lt;td style="text-align: left">Presentation by Megan Delamer (#3)&lt;/td>
+&lt;td style="text-align: left">TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Wed Dec 8&lt;/td>
-&lt;td>Lecture&lt;/td>
-&lt;td>
+&lt;td style="text-align: left">Wed Dec 8&lt;/td>
+&lt;td style="text-align: left">Lecture&lt;/td>
+&lt;td style="text-align: left">
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/>Astrochemistry&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Fri Dec 10&lt;/td>
-&lt;td>Workshop&lt;/td>
-&lt;td>ALMA proposals&lt;/td>
+&lt;td style="text-align: left">Fri Dec 10&lt;/td>
+&lt;td style="text-align: left">Workshop&lt;/td>
+&lt;td style="text-align: left">ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Regularized Maximum Likelihood (RML)</title><link>https://iancze.github.io/courses/as5003/lectures/08-rml/</link><pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/as5003/lectures/08-rml/</guid><description>&lt;h2 id="references-for-today">References for today&lt;/h2>
@@ -1654,7 +1654,7 @@ alt="Credit: Tools of Radio Astronomy, Fig 7.1">&lt;figcaption>
 &lt;/figcaption>
 &lt;/figure>
 &lt;figure>&lt;a href="http://www.aoc.nrao.edu/events/synthesis/2022/slides/Fundamentals-2022.pdf">&lt;img src="https://iancze.github.io/courses/as5003/lectures/05-interferometry/fringe-beam.png"
-alt="The fringe pattern modified by the antenna power pattern. Credit: Rick Perley&amp;amp;rsquo;s slides, NRAO summer synthesis imaging school 2022.">&lt;/a>&lt;figcaption>
+alt="The fringe pattern modified by the antenna power pattern. Credit: Rick Perley&amp;rsquo;s slides, NRAO summer synthesis imaging school 2022.">&lt;/a>&lt;figcaption>
 &lt;p>The fringe pattern modified by the antenna power pattern. Credit: Rick Perley&amp;rsquo;s slides, NRAO summer synthesis imaging school 2022.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -1888,13 +1888,13 @@ alt="The shah function is its own Fourier transform. Via the similarity theorem,
 &lt;/figure>
 &lt;p>Now let&amp;rsquo;s consider a function and its Fourier transform&lt;/p>
 &lt;figure>&lt;img src="https://iancze.github.io/courses/as5003/lectures/03-fourier-transform-ii/function.png"
-alt="A generic function (left) and its Fourier transform (right). We say that this function is &amp;amp;lsquo;band-limited&amp;amp;rsquo; because its Fourier transform is 0 for all frequencies above some cutoff frequency \(|s| &amp;amp;gt; s_c\). Credit: Bracewell Fig 10.2">&lt;figcaption>
+alt="A generic function (left) and its Fourier transform (right). We say that this function is &amp;lsquo;band-limited&amp;rsquo; because its Fourier transform is 0 for all frequencies above some cutoff frequency \(|s| &amp;gt; s_c\). Credit: Bracewell Fig 10.2">&lt;figcaption>
 &lt;p>A generic function (left) and its Fourier transform (right). We say that this function is &amp;lsquo;band-limited&amp;rsquo; because its Fourier transform is 0 for all frequencies above some &lt;em>cutoff frequency&lt;/em> \(|s| &amp;gt; s_c\). Credit: Bracewell Fig 10.2&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
 &lt;p>As before, we will use multiplication by the shah function to represent sampling of the function.&lt;/p>
 &lt;figure>&lt;img src="https://iancze.github.io/courses/as5003/lectures/03-fourier-transform-ii/sampled-function.png"
-alt="Left: the sampled version of \(f\), which has the Fourier transform on the right. So long as the sampling frequency exceeds twice the cutoff frequency, the Fourier transform &amp;amp;lsquo;islands&amp;amp;rsquo; do not overlap (top two rows). Credit: Bracewell Fig 10.3">&lt;figcaption>
+alt="Left: the sampled version of \(f\), which has the Fourier transform on the right. So long as the sampling frequency exceeds twice the cutoff frequency, the Fourier transform &amp;lsquo;islands&amp;rsquo; do not overlap (top two rows). Credit: Bracewell Fig 10.3">&lt;figcaption>
 &lt;p>Left: the sampled version of \(f\), which has the Fourier transform on the right. So long as the sampling frequency exceeds twice the cutoff frequency, the Fourier transform &amp;lsquo;islands&amp;rsquo; do not overlap (top two rows). Credit: Bracewell Fig 10.3&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -2401,7 +2401,7 @@ alt="A graphical representation of the convolution of two functions \(f(x)\) and
 &lt;/figcaption>
 &lt;/figure>
 &lt;figure>&lt;img src="https://iancze.github.io/courses/as5003/lectures/02-fourier-transform-i/convolution-2.png"
-alt="In general, convolution by most functions (e.g., boxcars, Gaussians, etc&amp;amp;hellip;) results in a smoothing out of high-frequency structure. Credit: Bracewell Ch. 3">&lt;figcaption>
+alt="In general, convolution by most functions (e.g., boxcars, Gaussians, etc&amp;hellip;) results in a smoothing out of high-frequency structure. Credit: Bracewell Ch. 3">&lt;figcaption>
 &lt;p>In general, convolution by most functions (e.g., boxcars, Gaussians, etc&amp;hellip;) results in a smoothing out of high-frequency structure. Credit: Bracewell Ch. 3&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -2546,7 +2546,7 @@ alt="Atmospheric windows for astronomy. Credit: ESA/Hubble (F. Granato) and Esse
 &lt;li>black hole accretion disks (EHT)&lt;/li>
 &lt;/ul>
 &lt;figure>&lt;a href="https://www.nasa.gov/mission_pages/hubble/science/hercules-a.html">&lt;img src="https://iancze.github.io/courses/as5003/lectures/01-introduction/hercules.jpg"
-alt="Radio jets from the elliptical galaxy Hercules A (overlaid with an optical image from Hubble). Karl Jansky VLA. Credit: NASA, ESA, S. Baum and C. O&amp;amp;rsquo;Dea (RIT), R. Perley and W. Cotton (NRAO/AUI/NSF), and the Hubble Heritage Team (STScI/AURA).">&lt;/a>&lt;figcaption>
+alt="Radio jets from the elliptical galaxy Hercules A (overlaid with an optical image from Hubble). Karl Jansky VLA. Credit: NASA, ESA, S. Baum and C. O&amp;rsquo;Dea (RIT), R. Perley and W. Cotton (NRAO/AUI/NSF), and the Hubble Heritage Team (STScI/AURA).">&lt;/a>&lt;figcaption>
 &lt;p>Radio jets from the elliptical galaxy Hercules A (overlaid with an optical image from Hubble). Karl Jansky VLA. Credit: NASA, ESA, S. Baum and C. O&amp;rsquo;Dea (RIT), R. Perley and W. Cotton (NRAO/AUI/NSF), and the Hubble Heritage Team (STScI/AURA).&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -2642,7 +2642,7 @@ alt="The geometry surrounding the concept of specific intensity. The normal vect
 &lt;p>When we are making astrophysical &lt;em>observations&lt;/em> from the earth, though,
 we are making or acquiring images of regions of the celestial sky. So we generally talk of \(I_\nu(\alpha, \delta)\), where \(\alpha\) and \(\delta\) are R.A. and declination offsets from some direction, respectively. We&amp;rsquo;re always looking from the same place (at least compared to the size of the universe), so we don&amp;rsquo;t worry about specifying position within 3D space. But if we went to the Andromeda Galaxy and started mapping the celestial sky, we would need to, then. In the end though, images are have the same units because they represent specific intensity. It&amp;rsquo;s very common to refer to \(I_\nu(\alpha, \delta)\) as the &lt;em>surface brightness&lt;/em>.&lt;/p>
 &lt;figure>&lt;img src="https://iancze.github.io/courses/as5003/lectures/01-introduction/solid-angle.png"
-alt="When we&amp;amp;rsquo;re discussing images of astronomical sources, we&amp;amp;rsquo;re usually using RA \(\alpha\) and Dec \(\delta\). A solid angle simply describes the area on a unit sphere (e.g., the sky), the area itself need not be circular. The Very Large Array, located in Socorro, NM. Credit: NRAO">&lt;figcaption>
+alt="When we&amp;rsquo;re discussing images of astronomical sources, we&amp;rsquo;re usually using RA \(\alpha\) and Dec \(\delta\). A solid angle simply describes the area on a unit sphere (e.g., the sky), the area itself need not be circular. The Very Large Array, located in Socorro, NM. Credit: NRAO">&lt;figcaption>
 &lt;p>When we&amp;rsquo;re discussing images of astronomical sources, we&amp;rsquo;re usually using RA \(\alpha\) and Dec \(\delta\). A solid angle simply describes the area on a unit sphere (e.g., the sky), the area itself need not be circular. The Very Large Array, located in Socorro, NM. Credit: NRAO&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -3667,7 +3667,7 @@ alt="Credit: Tools of Radio Astronomy, Fig 7.1">&lt;figcaption>
 &lt;/figcaption>
 &lt;/figure>
 &lt;figure>&lt;a href="http://www.aoc.nrao.edu/events/synthesis/2022/slides/Fundamentals-2022.pdf">&lt;img src="https://iancze.github.io/courses/astro589/lectures/05-interferometry/fringe-beam.png"
-alt="The fringe pattern modified by the antenna power pattern. Credit: Rick Perley&amp;amp;rsquo;s slides, NRAO summer synthesis imaging school 2022.">&lt;/a>&lt;figcaption>
+alt="The fringe pattern modified by the antenna power pattern. Credit: Rick Perley&amp;rsquo;s slides, NRAO summer synthesis imaging school 2022.">&lt;/a>&lt;figcaption>
 &lt;p>The fringe pattern modified by the antenna power pattern. Credit: Rick Perley&amp;rsquo;s slides, NRAO summer synthesis imaging school 2022.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -4064,13 +4064,13 @@ alt="The shah function is its own Fourier transform. Via the similarity theorem,
 &lt;/figure>
 &lt;p>Now let&amp;rsquo;s consider a function and its Fourier transform&lt;/p>
 &lt;figure>&lt;img src="https://iancze.github.io/courses/astro589/lectures/03-fourier-transform-ii/function.png"
-alt="A generic function (left) and its Fourier transform (right). We say that this function is &amp;amp;lsquo;band-limited&amp;amp;rsquo; because its Fourier transform is 0 for all frequencies below some cutoff frequency \(|s| &amp;amp;lt; s_c\). Credit: Bracewell Fig 10.2">&lt;figcaption>
+alt="A generic function (left) and its Fourier transform (right). We say that this function is &amp;lsquo;band-limited&amp;rsquo; because its Fourier transform is 0 for all frequencies below some cutoff frequency \(|s| &amp;lt; s_c\). Credit: Bracewell Fig 10.2">&lt;figcaption>
 &lt;p>A generic function (left) and its Fourier transform (right). We say that this function is &amp;lsquo;band-limited&amp;rsquo; because its Fourier transform is 0 for all frequencies below some &lt;em>cutoff frequency&lt;/em> \(|s| &amp;lt; s_c\). Credit: Bracewell Fig 10.2&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
 &lt;p>As before, we will use multiplication by the shah function to represent sampling of the function.&lt;/p>
 &lt;figure>&lt;img src="https://iancze.github.io/courses/astro589/lectures/03-fourier-transform-ii/sampled-function.png"
-alt="Left: the sampled version of \(f\), which has the Fourier transform on the right. So long as the sampling frequency exceeds twice the cutoff frequency, the Fourier transform &amp;amp;lsquo;islands&amp;amp;rsquo; do not overlap (top two rows). Credit: Bracewell Fig 10.3">&lt;figcaption>
+alt="Left: the sampled version of \(f\), which has the Fourier transform on the right. So long as the sampling frequency exceeds twice the cutoff frequency, the Fourier transform &amp;lsquo;islands&amp;rsquo; do not overlap (top two rows). Credit: Bracewell Fig 10.3">&lt;figcaption>
 &lt;p>Left: the sampled version of \(f\), which has the Fourier transform on the right. So long as the sampling frequency exceeds twice the cutoff frequency, the Fourier transform &amp;lsquo;islands&amp;rsquo; do not overlap (top two rows). Credit: Bracewell Fig 10.3&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -4477,7 +4477,7 @@ alt="A graphical representation of the convolution of two functions \(f(x)\) and
 &lt;/figcaption>
 &lt;/figure>
 &lt;figure>&lt;img src="https://iancze.github.io/courses/astro589/lectures/02-fourier-transform-i/convolution-2.png"
-alt="In general, convolution by most functions (e.g., boxcars, Gaussians, etc&amp;amp;hellip;) results in a smoothing out of high-frequency structure. Credit: Bracewell Ch. 3">&lt;figcaption>
+alt="In general, convolution by most functions (e.g., boxcars, Gaussians, etc&amp;hellip;) results in a smoothing out of high-frequency structure. Credit: Bracewell Ch. 3">&lt;figcaption>
 &lt;p>In general, convolution by most functions (e.g., boxcars, Gaussians, etc&amp;hellip;) results in a smoothing out of high-frequency structure. Credit: Bracewell Ch. 3&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -4621,7 +4621,7 @@ alt="Atmospheric windows for astronomy. Credit: ESA/Hubble (F. Granato) and Esse
 &lt;li>black hole accretion disks (EHT)&lt;/li>
 &lt;/ul>
 &lt;figure>&lt;a href="https://www.nasa.gov/mission_pages/hubble/science/hercules-a.html">&lt;img src="https://iancze.github.io/courses/astro589/lectures/01-introduction/hercules.jpg"
-alt="Radio jets from the elliptical galaxy Hercules A (overlaid with an optical image from Hubble). Karl Jansky VLA. Credit: NASA, ESA, S. Baum and C. O&amp;amp;rsquo;Dea (RIT), R. Perley and W. Cotton (NRAO/AUI/NSF), and the Hubble Heritage Team (STScI/AURA).">&lt;/a>&lt;figcaption>
+alt="Radio jets from the elliptical galaxy Hercules A (overlaid with an optical image from Hubble). Karl Jansky VLA. Credit: NASA, ESA, S. Baum and C. O&amp;rsquo;Dea (RIT), R. Perley and W. Cotton (NRAO/AUI/NSF), and the Hubble Heritage Team (STScI/AURA).">&lt;/a>&lt;figcaption>
 &lt;p>Radio jets from the elliptical galaxy Hercules A (overlaid with an optical image from Hubble). Karl Jansky VLA. Credit: NASA, ESA, S. Baum and C. O&amp;rsquo;Dea (RIT), R. Perley and W. Cotton (NRAO/AUI/NSF), and the Hubble Heritage Team (STScI/AURA).&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -4717,7 +4717,7 @@ alt="The geometry surrounding the concept of specific intensity. The normal vect
 &lt;p>When we are making astrophysical &lt;em>observations&lt;/em> from the earth, though,
 we are making or acquiring images of regions of the celestial sky. So we generally talk of \(I_\nu(\alpha, \delta)\), where \(\alpha\) and \(\delta\) are R.A. and declination offsets from some direction, respectively. We&amp;rsquo;re always looking from the same place (at least compared to the size of the universe), so we don&amp;rsquo;t worry about specifying position within 3D space. But if we went to the Andromeda Galaxy and started mapping the celestial sky, we would need to, then. In the end though, images are have the same units because they represent specific intensity. It&amp;rsquo;s very common to refer to \(I_\nu(\alpha, \delta)\) as the &lt;em>surface brightness&lt;/em>.&lt;/p>
 &lt;figure>&lt;img src="https://iancze.github.io/courses/astro589/lectures/01-introduction/solid-angle.png"
-alt="When we&amp;amp;rsquo;re discussing images of astronomical sources, we&amp;amp;rsquo;re usually using RA \(\alpha\) and Dec \(\delta\). A solid angle simply describes the area on a unit sphere (e.g., the sky), the area itself need not be circular. The Very Large Array, located in Socorro, NM. Credit: NRAO">&lt;figcaption>
+alt="When we&amp;rsquo;re discussing images of astronomical sources, we&amp;rsquo;re usually using RA \(\alpha\) and Dec \(\delta\). A solid angle simply describes the area on a unit sphere (e.g., the sky), the area itself need not be circular. The Very Large Array, located in Socorro, NM. Credit: NRAO">&lt;figcaption>
 &lt;p>When we&amp;rsquo;re discussing images of astronomical sources, we&amp;rsquo;re usually using RA \(\alpha\) and Dec \(\delta\). A solid angle simply describes the area on a unit sphere (e.g., the sky), the area itself need not be circular. The Very Large Array, located in Socorro, NM. Credit: NRAO&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -4899,7 +4899,7 @@ $$
 $$
 Observationally, this is usually calculated using observations done at 2.2 microns (K-band) and 10 microns (N-band), which are observable from the ground.&lt;/p>
 &lt;figure>&lt;a href="https://ui.adsabs.harvard.edu/abs/2019PhDT........31V/abstract">&lt;img src="https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/vanthoff_thesis.png"
-alt="Schematic overview of the different stages of low-mass star formation (left) and the observational classification based on the spectral energy distribution (right). The embedded phase is characterized by Stage 0 and Stage 1. Credit: Merel van&amp;amp;rsquo;t Hoff, Ph.D. thesis.">&lt;/a>&lt;figcaption>
+alt="Schematic overview of the different stages of low-mass star formation (left) and the observational classification based on the spectral energy distribution (right). The embedded phase is characterized by Stage 0 and Stage 1. Credit: Merel van&amp;rsquo;t Hoff, Ph.D. thesis.">&lt;/a>&lt;figcaption>
 &lt;p>Schematic overview of the different stages of low-mass star formation (left) and the observational classification based on the spectral energy distribution (right). The embedded phase is characterized by Stage 0 and Stage 1. Credit: Merel van&amp;rsquo;t Hoff, Ph.D. thesis.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -5584,7 +5584,7 @@ alt="Schematic diagram of a photodissociation region. The shielded molecular gas
 &lt;/figcaption>
 &lt;/figure>
 &lt;figure>&lt;a href="https://webbtelescope.org/contents/media/images/2021/024/01F5KKSNNM6YWR7MNMDJ2NEBCN?news=true">&lt;img src="https://iancze.github.io/courses/astro542/lectures/25-molecular-hydrogen/anatomy_of_h.png"
-alt="This graphic depicts the stratified nature of a photodissociation region (PDR) such as the Orion Bar. Once thought to be homogenous areas of warm gas and dust, PDRs are now known to contain complex structure and four distinct zones. The box at the left shows a portion of the Orion Bar within the Orion Nebula. The box at the top right illustrates a massive star-forming region whose blasts of ultraviolet radiation are affecting a PDR. The box at the bottom right zooms in on a PDR to depict its four, distinct zones: 1) the molecular zone, a cold and dense region where the gas is in the form of molecules and where stars could form; 2) the dissociation front, where the molecules break apart into atoms as the temperature rises; 3) the ionization front, where the gas is stripped of electrons, becoming ionized, as the temperature increases dramatically; and 4) the fully ionized flow of gas into a region of atomic, ionized hydrogen. For the first time, Webb will be able to separate and study these different zones&amp;amp;rsquo; physical conditions. Credits: ILLUSTRATION: NASA, ESA, CSA, Jason Champion (CNRS), Pam Jeffries (STScI), PDRs4ALL ERS Team">&lt;/a>&lt;figcaption>
+alt="This graphic depicts the stratified nature of a photodissociation region (PDR) such as the Orion Bar. Once thought to be homogenous areas of warm gas and dust, PDRs are now known to contain complex structure and four distinct zones. The box at the left shows a portion of the Orion Bar within the Orion Nebula. The box at the top right illustrates a massive star-forming region whose blasts of ultraviolet radiation are affecting a PDR. The box at the bottom right zooms in on a PDR to depict its four, distinct zones: 1) the molecular zone, a cold and dense region where the gas is in the form of molecules and where stars could form; 2) the dissociation front, where the molecules break apart into atoms as the temperature rises; 3) the ionization front, where the gas is stripped of electrons, becoming ionized, as the temperature increases dramatically; and 4) the fully ionized flow of gas into a region of atomic, ionized hydrogen. For the first time, Webb will be able to separate and study these different zones&amp;rsquo; physical conditions. Credits: ILLUSTRATION: NASA, ESA, CSA, Jason Champion (CNRS), Pam Jeffries (STScI), PDRs4ALL ERS Team">&lt;/a>&lt;figcaption>
 &lt;p>This graphic depicts the stratified nature of a photodissociation region (PDR) such as the Orion Bar. Once thought to be homogenous areas of warm gas and dust, PDRs are now known to contain complex structure and four distinct zones. The box at the left shows a portion of the Orion Bar within the Orion Nebula. The box at the top right illustrates a massive star-forming region whose blasts of ultraviolet radiation are affecting a PDR. The box at the bottom right zooms in on a PDR to depict its four, distinct zones: 1) the molecular zone, a cold and dense region where the gas is in the form of molecules and where stars could form; 2) the dissociation front, where the molecules break apart into atoms as the temperature rises; 3) the ionization front, where the gas is stripped of electrons, becoming ionized, as the temperature increases dramatically; and 4) the fully ionized flow of gas into a region of atomic, ionized hydrogen. For the first time, Webb will be able to separate and study these different zones&amp;rsquo; physical conditions. Credits: ILLUSTRATION: NASA, ESA, CSA, Jason Champion (CNRS), Pam Jeffries (STScI), PDRs4ALL ERS Team&lt;/p>
 &lt;/figcaption>
 &lt;/figure></description></item><item><title>HI Clouds: Observations, Heating and Cooling</title><link>https://iancze.github.io/courses/astro542/lectures/24-hi-heating-cooling/</link><pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro542/lectures/24-hi-heating-cooling/</guid><description>&lt;p>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Lecture+Oct+29/1_vfna4zcb">Zoom link&lt;/a>&lt;/p>
@@ -6252,7 +6252,7 @@ A_\lambda = 2.5 \log_{10}(e^{\tau_\nu}) \approx 1.086 \tau_\lambda.
 $$&lt;/p>
 &lt;p>The exctinction curve as a function of wavelength looks like the following&lt;/p>
 &lt;figure>&lt;img src="https://iancze.github.io/courses/astro542/lectures/18-dust/fig6-2.jpg"
-alt="Dust exctinction as a function of wavelength, normalized relative to \(A_V\), the extinction in the V band. Credit: Ryden and Pogge, Figure 6.2. data from Cardelli&amp;#43;94 and O&amp;amp;rsquo;Donnell 94.">&lt;figcaption>
+alt="Dust exctinction as a function of wavelength, normalized relative to \(A_V\), the extinction in the V band. Credit: Ryden and Pogge, Figure 6.2. data from Cardelli&amp;#43;94 and O&amp;rsquo;Donnell 94.">&lt;figcaption>
 &lt;p>Dust exctinction as a function of wavelength, normalized relative to \(A_V\), the extinction in the V band. Credit: Ryden and Pogge, Figure 6.2. data from Cardelli+94 and O&amp;rsquo;Donnell 94.&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -7156,7 +7156,7 @@ alt="Sharp edges will result in power at high spatial frequencies. Credit: David
 &lt;/figcaption>
 &lt;/figure>
 &lt;figure>&lt;a href="http://www.aoc.nrao.edu/events/synthesis/2010/lectures/wilner_synthesis10.pdf">&lt;img src="https://iancze.github.io/courses/astro542/lectures/11-intro-radio-astronomy/lo.png"
-alt="A real image (such as this picture of former NRAO director Fred Lo) has complicated structure on many scales. In general, a &amp;amp;rsquo;natural&amp;amp;rsquo; image will typically have more power at lower spatial frequencies than higher spatial frequencies. An example of a non-natural image is one containing text or artifical borders (lots of sharp lines), like the Galileoscope logo. Credit: David Wilner">&lt;/a>&lt;figcaption>
+alt="A real image (such as this picture of former NRAO director Fred Lo) has complicated structure on many scales. In general, a &amp;rsquo;natural&amp;rsquo; image will typically have more power at lower spatial frequencies than higher spatial frequencies. An example of a non-natural image is one containing text or artifical borders (lots of sharp lines), like the Galileoscope logo. Credit: David Wilner">&lt;/a>&lt;figcaption>
 &lt;p>A real image (such as this picture of former NRAO director Fred Lo) has complicated structure on many scales. In general, a &amp;rsquo;natural&amp;rsquo; image will typically have more power at lower spatial frequencies than higher spatial frequencies. An example of a non-natural image is one containing text or artifical borders (lots of sharp lines), like the Galileoscope logo. Credit: David Wilner&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -7513,7 +7513,7 @@ $$&lt;/li>
 &lt;/ul>
 &lt;p>Now let&amp;rsquo;s examine this emission spectrum for a hydrogen plasma&lt;/p>
 &lt;figure>&lt;img src="https://iancze.github.io/courses/astro542/lectures/09-emission-absorption-plasma/fig_10_2.jpg"
-alt="Solid line is the continuous emission spectrum of a \(T=8000)) K hydrogen plasma, including free-free emission, recombination continuum emission, and two-photon emission. (Emission lines not shown). Notice the &amp;amp;lsquo;semi-circle&amp;amp;rsquo; shape from the recombination emissivity. Credit: Draine Figure 10.2">&lt;figcaption>
+alt="Solid line is the continuous emission spectrum of a \(T=8000)) K hydrogen plasma, including free-free emission, recombination continuum emission, and two-photon emission. (Emission lines not shown). Notice the &amp;lsquo;semi-circle&amp;rsquo; shape from the recombination emissivity. Credit: Draine Figure 10.2">&lt;figcaption>
 &lt;p>Solid line is the continuous emission spectrum of a \(T=8000)) K hydrogen plasma, including free-free emission, recombination continuum emission, and two-photon emission. (Emission lines not shown). Notice the &amp;lsquo;semi-circle&amp;rsquo; shape from the recombination emissivity. Credit: Draine Figure 10.2&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
@@ -8397,7 +8397,7 @@ where \(\boldsymbol{I}\) is the quantized spin angular momentum.&lt;/p>
 &lt;h2 id="vibrational-transitions">Vibrational Transitions&lt;/h2>
 &lt;p>Due to the quantization of the vibrational energy as atoms stretch on the internuclear axis.&lt;/p>
 &lt;figure>&lt;img src="https://iancze.github.io/courses/astro542/lectures/04-energy-levels-atoms/rybicki-11-1.png"
-alt="The potential between two atoms in a molecule as a function of their separation. Attribution: Figure 11.1 from &amp;amp;lsquo;Radiative Processes&amp;amp;rsquo; by Rybicki and Lightman">&lt;figcaption>
+alt="The potential between two atoms in a molecule as a function of their separation. Attribution: Figure 11.1 from &amp;lsquo;Radiative Processes&amp;rsquo; by Rybicki and Lightman">&lt;figcaption>
 &lt;p>The potential between two atoms in a molecule as a function of their separation. Attribution: Figure 11.1 from &amp;lsquo;Radiative Processes&amp;rsquo; by Rybicki and Lightman&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
