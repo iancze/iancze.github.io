@@ -327,86 +327,86 @@ faculty, staff, and students possess and will endorse to make ECoS a place where
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Week&lt;/th>
-&lt;th style="text-align: left">Date&lt;/th>
-&lt;th style="text-align: left">Activity&lt;/th>
-&lt;th style="text-align: left">Topic&lt;/th>
+&lt;th>Week&lt;/th>
+&lt;th>Date&lt;/th>
+&lt;th>Activity&lt;/th>
+&lt;th>Topic&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">T 12 Sep&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>1&lt;/td>
+&lt;td>T 12 Sep&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Intro and Overview
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">W 13 Sep&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>1&lt;/td>
+&lt;td>W 13 Sep&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 The Fourier Transform: Analytical
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">F 15 Sep&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>1&lt;/td>
+&lt;td>F 15 Sep&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 The Fourier Transform: Numerical
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">2&lt;/td>
-&lt;td style="text-align: left">T 19 Sep&lt;/td>
-&lt;td style="text-align: left">Tutorial&lt;/td>
-&lt;td style="text-align: left">The Fourier Transform and Digital Signal Processing&lt;/td>
+&lt;td>2&lt;/td>
+&lt;td>T 19 Sep&lt;/td>
+&lt;td>Tutorial&lt;/td>
+&lt;td>The Fourier Transform and Digital Signal Processing&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">2&lt;/td>
-&lt;td style="text-align: left">W 20 Sep&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>2&lt;/td>
+&lt;td>W 20 Sep&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Interferometry in Practice
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">2&lt;/td>
-&lt;td style="text-align: left">F 22 Sep&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>2&lt;/td>
+&lt;td>F 22 Sep&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Making Images: PSFs, Gridding, and Dirty Images
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">3&lt;/td>
-&lt;td style="text-align: left">T 26 Sep&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>3&lt;/td>
+&lt;td>T 26 Sep&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Image Plane Deconvolution (CLEAN)
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">3&lt;/td>
-&lt;td style="text-align: left">W 27 Sep&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>3&lt;/td>
+&lt;td>W 27 Sep&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Regularized Maximum Likelihood (RML)
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">3&lt;/td>
-&lt;td style="text-align: left">F 29 Sep&lt;/td>
-&lt;td style="text-align: left">Tutorial&lt;/td>
-&lt;td style="text-align: left">Imaging in Practice, Concept Review&lt;/td>
+&lt;td>3&lt;/td>
+&lt;td>F 29 Sep&lt;/td>
+&lt;td>Tutorial&lt;/td>
+&lt;td>Imaging in Practice, Concept Review&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">4&lt;/td>
-&lt;td style="text-align: left">T 3 Oct&lt;/td>
-&lt;td style="text-align: left">Peer Study&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>4&lt;/td>
+&lt;td>T 3 Oct&lt;/td>
+&lt;td>Peer Study&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Fall 2022 Class Schedule</title><link>https://iancze.github.io/courses/astro589/schedule/</link><pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/astro589/schedule/</guid><description>&lt;p>ASTRO 589 meets &lt;strong>once a week on Wednesdays from 10:10am to 11:00am ET (prompt) in Davey Lab Room 538&lt;/strong>.&lt;/p>
@@ -415,106 +415,106 @@ Regularized Maximum Likelihood (RML)
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Date&lt;/th>
-&lt;th style="text-align: left">Activity&lt;/th>
-&lt;th style="text-align: left">Topic&lt;/th>
+&lt;th>Date&lt;/th>
+&lt;th>Activity&lt;/th>
+&lt;th>Topic&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Aug 24&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Aug 24&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Intro and Overview
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Aug 31&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Aug 31&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 The Fourier Transform I
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Sep 7&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Sep 7&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 The Fourier Transform II
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Sep 14&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Sep 14&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 The Fast Fourier Transform and Numerical Implementation
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Sep 21&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Sep 21&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Interferometry in Practice
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Sep 28&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Sep 28&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Making Images: PSFs, Gridding, and Dirty Images
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Oct 5&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Oct 5&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Bayesian Inference and Model Fitting
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Oct 12&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Oct 12&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Image Plane Deconvolution (CLEAN)
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Oct 19&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Oct 19&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Regularized Maximum Likelihood (RML) I
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Oct 26&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Oct 26&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Regularized Maximum Likelihood (RML) II
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Nov 2&lt;/td>
-&lt;td style="text-align: left">Project presentation&lt;/td>
-&lt;td style="text-align: left">TBD&lt;/td>
+&lt;td>Nov 2&lt;/td>
+&lt;td>Project presentation&lt;/td>
+&lt;td>TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Nov 9&lt;/td>
-&lt;td style="text-align: left">Project presentation&lt;/td>
-&lt;td style="text-align: left">TBD&lt;/td>
+&lt;td>Nov 9&lt;/td>
+&lt;td>Project presentation&lt;/td>
+&lt;td>TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Nov 16&lt;/td>
-&lt;td style="text-align: left">Project presentation&lt;/td>
-&lt;td style="text-align: left">TBD&lt;/td>
+&lt;td>Nov 16&lt;/td>
+&lt;td>Project presentation&lt;/td>
+&lt;td>TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Nov 30&lt;/td>
-&lt;td style="text-align: left">Project presentation&lt;/td>
-&lt;td style="text-align: left">TBD&lt;/td>
+&lt;td>Nov 30&lt;/td>
+&lt;td>Project presentation&lt;/td>
+&lt;td>TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Dec 7&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Dec 7&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Correlation in ALMA data
 &lt;/td>
 &lt;/tr>
@@ -525,294 +525,294 @@ Correlation in ALMA data
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">Date&lt;/th>
-&lt;th style="text-align: left">Activity&lt;/th>
-&lt;th style="text-align: left">Topic&lt;/th>
+&lt;th>Date&lt;/th>
+&lt;th>Activity&lt;/th>
+&lt;th>Topic&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Mon Aug 23&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Aug 23&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/01-introduction-and-overview/>Introduction and Course Overview&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Aug 25&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Wed Aug 25&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/02-collisional-processes/>Collisional Processes&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Aug 27&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Fri Aug 27&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/03-stat-mech/>Statistical Mechanics and Thermodynamic Equilibrium&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Aug 30&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Aug 30&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/04-energy-levels-atoms/>Energy Levels of Atoms, Ions, and Molecules&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Sep 1&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Wed Sep 1&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/05-emission-and-absorption/>Spontaneous Emission, Stimulated Emission, and Absorption&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Sep 3&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Fri Sep 3&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/06-radiative-transfer/>Radiative Transfer&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Sep 8&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Wed Sep 8&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/07-hi-21cm/>H I 21-cm Emission and Absorption&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Sep 10&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Fri Sep 10&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/08-absorption-lines/>Absorption Lines and Curve of Growth&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Sep 13&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Sep 13&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/09-emission-absorption-plasma/>Emission and Absorption by a Thermal Plasma&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Sep 15&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Wed Sep 15&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/10-wave-propagation/>Propagation of Radio Waves through the ISM&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Sep 17&lt;/td>
-&lt;td style="text-align: left">Presentation by Laura Duffy (#1)&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.485L..93R/abstract">H I 21 cm mapping of the host galaxy of AT2018cow: a fast-evolving luminous transient within a ring of high column density gas&lt;/a>&lt;/td>
+&lt;td>Fri Sep 17&lt;/td>
+&lt;td>Presentation by Laura Duffy (#1)&lt;/td>
+&lt;td>&lt;a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.485L..93R/abstract">H I 21 cm mapping of the host galaxy of AT2018cow: a fast-evolving luminous transient within a ring of high column density gas&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Sep 20&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Sep 20&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/11-intro-radio-astronomy/>Introduction to Radio Astronomy and ALMA&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Sep 22&lt;/td>
-&lt;td style="text-align: left">&lt;strong>Exam 1&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">Lectures up to Sep 13 (incl)&lt;/td>
+&lt;td>Wed Sep 22&lt;/td>
+&lt;td>&lt;strong>Exam 1&lt;/strong>&lt;/td>
+&lt;td>Lectures up to Sep 13 (incl)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Sep 24&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Fri Sep 24&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/12-ionization-processes/>Interstellar Radiation Fields, Ionization Processes, and Recombination of Ions with Electrons&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Sep 27&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Sep 27&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/13-photoionized-gas-hii/>Photoionized Gas (HII regions)&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Sep 29&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Wed Sep 29&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/14-ionization-neutral-regions/>Ionization in Predominantly Neutral Regions (cool &amp;#43; warm HI regions)&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Oct 1&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Fri Oct 1&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/15-collisional-excitation/>Collisional Excitation&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Oct 4&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Oct 4&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/16-nebular-diagnostics/>Nebular Diagnostics&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Oct 6&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Wed Oct 6&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/17-radiative-trapping/>Radiative Trapping&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Oct 8&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Fri Oct 8&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/18-dust/>Interstellar Dust&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Oct 11&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Oct 11&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/19-scattering-absorption/>Scattering and Absorption by Small Particles&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Oct 13&lt;/td>
-&lt;td style="text-align: left">Presentation by Malinda Baer (#2)&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Malinda+Baer+Presentation/1_jlz3to67">Tracing PAH Size in Prominent Nearby Mid-Infrared Environments&lt;/a>&lt;/td>
+&lt;td>Wed Oct 13&lt;/td>
+&lt;td>Presentation by Malinda Baer (#2)&lt;/td>
+&lt;td>&lt;a href="https://psu.mediaspace.kaltura.com/media/Astro+542A+Malinda+Baer+Presentation/1_jlz3to67">Tracing PAH Size in Prominent Nearby Mid-Infrared Environments&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Oct 15&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Fri Oct 15&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/20-telescope-proposal-tac/>Telescope Proposals and Time Allocation Committees&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Oct 18&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Oct 18&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Dust Composition
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Oct 20&lt;/td>
-&lt;td style="text-align: left">&lt;strong>Exam 2&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">Lectures up to Oct 11 (inclusive)&lt;/td>
+&lt;td>Wed Oct 20&lt;/td>
+&lt;td>&lt;strong>Exam 2&lt;/strong>&lt;/td>
+&lt;td>Lectures up to Oct 11 (inclusive)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Oct 25&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Oct 25&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/22-grain-temp-dynamics/>Grain Temperatures, Physics, and Dynamics&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Oct 27&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Wed Oct 27&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/23-hii-heating-cooling/>Heating and Cooling of HII regions&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Oct 29&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Fri Oct 29&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/24-hi-heating-cooling/>HI Clouds: Observations, Heating and Cooling&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Nov 1&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Nov 1&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/25-molecular-hydrogen/>Molecular Hydrogen&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Nov 3&lt;/td>
-&lt;td style="text-align: left">Mock TAC discussion pt 1&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>Wed Nov 3&lt;/td>
+&lt;td>Mock TAC discussion pt 1&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Nov 5&lt;/td>
-&lt;td style="text-align: left">Mock TAC discussion pt 2&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>Fri Nov 5&lt;/td>
+&lt;td>Mock TAC discussion pt 2&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Nov 8&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Nov 8&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/26-molecular-clouds/>Molecular Clouds, Observations, Chemistry, and Ionization&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Nov 10&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Wed Nov 10&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/27-fluid-dynamics/>Fluids and Shocks&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Nov 12&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Fri Nov 12&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/28-winds-sne-grb/>Supernovae Remnants and the Hot Ionized Medium&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Nov 15&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Nov 15&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/29-star-formation-theory/>Gravitational Collapse and Star Formation: Theory&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Nov 17&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Wed Nov 17&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/30-star-formation-observations/>Star Formation: Observations&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Nov 19&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Fri Nov 19&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 Protostars to PPDs
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Nov 29&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Mon Nov 29&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/32-circumstellar-disks/>Circumstellar Disks&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Dec 1&lt;/td>
-&lt;td style="text-align: left">&lt;strong>Exam 3&lt;/strong>&lt;/td>
-&lt;td style="text-align: left">Lectures up to TBD&lt;/td>
+&lt;td>Wed Dec 1&lt;/td>
+&lt;td>&lt;strong>Exam 3&lt;/strong>&lt;/td>
+&lt;td>Lectures up to TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Dec 3&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Fri Dec 3&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/33-exoplanets-planet-formation/>Exoplanets and Planet Formation&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Mon Dec 6&lt;/td>
-&lt;td style="text-align: left">Presentation by Megan Delamer (#3)&lt;/td>
-&lt;td style="text-align: left">TBD&lt;/td>
+&lt;td>Mon Dec 6&lt;/td>
+&lt;td>Presentation by Megan Delamer (#3)&lt;/td>
+&lt;td>TBD&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Wed Dec 8&lt;/td>
-&lt;td style="text-align: left">Lecture&lt;/td>
-&lt;td style="text-align: left">
+&lt;td>Wed Dec 8&lt;/td>
+&lt;td>Lecture&lt;/td>
+&lt;td>
 &lt;a href=https://iancze.github.io/courses/astro542/lectures/35-astrochemistry/>Astrochemistry&lt;/a>
 &lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Fri Dec 10&lt;/td>
-&lt;td style="text-align: left">Workshop&lt;/td>
-&lt;td style="text-align: left">ALMA proposals&lt;/td>
+&lt;td>Fri Dec 10&lt;/td>
+&lt;td>Workshop&lt;/td>
+&lt;td>ALMA proposals&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Regularized Maximum Likelihood (RML)</title><link>https://iancze.github.io/courses/as5003/lectures/08-rml/</link><pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate><guid>https://iancze.github.io/courses/as5003/lectures/08-rml/</guid><description>&lt;h2 id="references-for-today">References for today&lt;/h2>
