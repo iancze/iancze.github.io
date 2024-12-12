@@ -1,7 +1,7 @@
 ---
 title: AS5003
 date: 2023-08-25
-publishdate: 2023-86-25
+publishDate: 2023-08-25
 description: "StA Contemporary Astrophysics: Radio Interferometry and Imaging"
 weight: 1
 ---
