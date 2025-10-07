@@ -23,6 +23,16 @@ people:
       stage: prof 
       src: Ian_Czekala.jpeg
       blurb: Ian is a lecturer in the [School of Physics and Astronomy](https://www.st-andrews.ac.uk/physics-astronomy/) at the [University of St Andrews](https://www.st-andrews.ac.uk/) in Scotland. He is broadly interested in star and planet formation, machine learning, and Bayesian inference for astrophysics.
+    - name: Rory Brown
+      stage: former
+      src: Rory_Brown.jpg
+      link: https://www.linkedin.com/in/rory-brown-4a5671324/
+      blurb: Rory completed their MPhys thesis "Using Physics Informed Neural Networks to Model the Structure of Protoplanetary Disks via Radiative Transfer" at the University of St Andrews from 2024-25. Rory is now an ML/AI Engineer at Ace Aquatec.
+    - name: Patrick Connor
+      stage: former
+      src: Patrick_Connor.jpg
+      link: https://www.linkedin.com/in/patrick-connor-b35947246/
+      blurb: Patrick completed his BSc thesis "Using Physics-Informed Neural Networks to Solve Radiative Transfer Problems" at the University of St Andrews from 2024-25.
     - name: Kristin Hopley
       stage: former
       src: Kristin_Hopley.jpeg
@@ -78,5 +88,3 @@ people:
       link: https://murphyjm.github.io/
       blurb: Joey is a [graduate student](https://murphyjm.github.io/) in the astronomy and astrophysics department at University of California, Santa Cruz, working on exoplanet detection and characterization. While Joey was a co-terminal masters student at Stanford University, Joey and Ian worked on flexible spectroscopic models for accretion signatures of pre-main sequence stars.
 ---
-
-{{< figure src="RSN.jpg" link="https://science.psu.edu/diversity-initiatives/rainbow-science-network/about-us">}}
