@@ -18,6 +18,7 @@
 
 # MacOS
 .DS_Store
+layouts/.DS_Store
 
 # public build 
 public
