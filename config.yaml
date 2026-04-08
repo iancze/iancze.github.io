@@ -10,6 +10,7 @@ params:
   color: black
   width: 48rem
   summaries: false
+  author: "Ian Czekala"
 
   # site-wide custom CSS and JS
   css:
