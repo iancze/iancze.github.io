@@ -22,7 +22,7 @@ params:
   #   - bar.js
 
 menu:
-  nav:
+  main:
     - name: People
       url: people/
       weight: 1
