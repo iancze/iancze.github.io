@@ -22,7 +22,7 @@ people:
     - name: Ian Czekala
       stage: prof 
       src: Ian_Czekala.jpeg
-      blurb: Ian is a lecturer in the [School of Physics and Astronomy](https://www.st-andrews.ac.uk/physics-astronomy/) at the [University of St Andrews](https://www.st-andrews.ac.uk/) in Scotland. He is broadly interested in star and planet formation, machine learning, and Bayesian inference for astrophysics.
+      blurb: Ian is a Senior Research Scientist at CSIRO/ATNF. He is broadly interested in star and planet formation, machine learning, and Bayesian inference for astrophysics.
     - name: Rory Brown
       stage: former
       src: Rory_Brown.jpg

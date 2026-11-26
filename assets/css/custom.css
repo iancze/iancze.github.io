@@ -1,0 +1,25 @@
+figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+figure img,
+main img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+}
+
+figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+figure.img-sm img {
+  max-width: 320px;
+}

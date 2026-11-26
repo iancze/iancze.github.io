@@ -16,6 +16,7 @@ params:
   # site-wide custom CSS and JS
   css:
     - css/table.css
+    - css/custom.css
   #   - bar.css
   # js:
   # - js/ganalytics.js
